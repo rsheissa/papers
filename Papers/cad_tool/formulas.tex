@@ -1,0 +1,36 @@
+\documentclass[10pt]{book}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+
+Las ecuaciones para los cuatro topolog\'ias b\'asicas son:
+
+\begin{displaymath}
+u_{n,eq,in}=u_{nsource}+u_{nnullor}+(R_s+\frac{R_1R_2}{R_1+R_2})i_{nullor}+\frac{\frac{R_1R_2}{R_1+R_2}}{R_1}u_{n_{R_1}}+\frac{\frac{R_1R_2}{R_1+R_2}}{R_2}u_{n_{R_2}}\quad(V-V)
+\end{displaymath}
+\begin{displaymath}
+u_{n,eq,in}=u_{n_{source}}+u_{n_{nullor}}+(R_s+R_1)i_{nullor}+R_1i_{n_{R_1}}\quad(V-I)
+\end{displaymath}
+\begin{displaymath}
+i_{n,eq,in}=i_{n_{source}}+i_{n_{nullor}}+(\frac{1}{R_s}+\frac{1}{R_1})u_{nullor}+\frac{1}{R_1}u_{n_{R_1}}\quad(I-V)
+\end{displaymath}
+\begin{displaymath}
+i_{n,eq,in}=i_{nsource}+i_{nnullor}+(\frac{1}{R_s}+\frac{1}{R_1+R_2})u_{nullor}+\frac{R2}{R_1+R_2}i_{n_{R_2}}+\frac{R_1}{R_1+R_2}i_{n_{R_1}}\quad(I-I)
+\end{displaymath}
+
+Para la topolog\'ia sencilla de doble lazo las ecuaciones son:
+\begin{displaymath}
+u_{n,eq,in}=u_{nsource}-u_{nnullor}+(R_s-\frac{R_1R_2}{R_1-R_2})i_{nullor}+\frac{\frac{R_1R_2}{R_1-R_2}}{R_1}u_{n_{R_1}}+\frac{\frac{R_1R_2}{R_1-R_2}}{R_2}u_{n_{R_2}}\quad(V-V)
+\end{displaymath}
+\begin{displaymath}
+u_{n,eq,in}=u_{nsource}-u_{nnullor}+(R_s-\frac{R_1R_s}{R_1-R_2})i_{nullor}+\frac{R_1R_2}{R_1-R_2}i_{n_{R_2}}+\frac{R_1R_s}{R_1-R_2}i_{n_{R_1}}\quad(V-I)
+\end{displaymath}
+\begin{displaymath}
+i_{n,eq,in}=i_{nsource}+i_{nnullor}+(\frac{1}{R_1-R_2}-\frac{1}{R_s})u_{nullor}+\frac{1}{R_1-R_2}u_{n_{R_2}}+\frac{R_2}{(R_1-R_2)R_s}u_{n_{R_1}}\quad(I-V)
+\end{displaymath}
+\begin{displaymath}
+i_{n,eq,in}=i_{nsource}+i_{nnullor}+(\frac{1}{R_1-R_2}-\frac{1}{R_s})u_{nullor}+\frac{R_2}{R_1-R_2}i_{n_{R_2}}+\frac{R_1}{R_1-R_2}i_{n_{R_1}}\quad(I-I)
+\end{displaymath}
+\end{document}

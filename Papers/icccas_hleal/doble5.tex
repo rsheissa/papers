@@ -1,0 +1,400 @@
+%\documentclass[twocolumn]{article}
+
+
+\documentclass{article}
+\usepackage{spconf}
+
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{rotate}
+\usepackage{rotating}
+
+\bibliographystyle{IEEEbib}
+
+\input{/home/hleal/papers/doblelim/macros/lin_alg.tex}
+\input{/home/hleal/papers/doblelim/macros/math_aux.tex}
+\input{/home/hleal/papers/doblelim/macros/jac_mtrx.tex}
+\input{/home/hleal/papers/doblelim/macros/cset_aux.tex}
+
+\newtheorem{Theod}{{\bf Definition}}
+\newtheorem{Theos}{{\bf Statement}}
+\newtheorem{Theor}{{\bf Theorem}}
+\newtheorem{Theoc}{{\bf Corallary}}
+
+\setlength{\oddsidemargin}{-7mm}
+\setlength{\evensidemargin}{-7mm}
+\setlength{\topmargin}{-1mm}
+\setlength{\textwidth}{176mm}
+\setlength{\columnsep}{8mm}
+\setlength{\textheight}{22.8cm}
+
+
+\name{H\'ector V\'azquez-Leal, Luis Hern\'andez-Mart\'{\i}nez and Arturo Sarmiento-Reyes}
+
+\address{National Institute for Astrophysics, Optics and Electronics \\
+Electronics Department, CAD Group, P.O. Box 51, 72000, Puebla, Pue., Mexico \\
+Email: {\tt hleal@inaoep.mx} 
+}
+
+
+\title{\vspace{1mm} Numerical Continuation Scheme for tracing the Double Bounded Homotopy for analysing  nonlinear circuits}
+
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+%REDACTAR TODO
+A numerical continuation for tracing a novel homotopy method for obtaining  DC solutions of 
+nonlinear circuits is proposed.
+The homotopy method is called {\it double bounded homotopy} and it is used  to f\text{i}nd multiple DC solutions 
+with the advantage of having
+a stop criterion  which is based on the property of having a double bounded trajectory. 
+The main properties of this homotopy are explained by using the Lambert $\cal W$ function.
+F\text{i}nally, key aspects of the implementetion of the numerical continuation
+for thes new homotopy are explained.
+\end{abstract}
+
+
+\section{Introduction}
+
+
+The problem of f\text{i}nding the DC operating point is important because
+it constitutes the starting point for other kinds of analyses such as
+the ac small signal and transient analyses \cite{homo_ogrodzki}.
+It consists in f\text{i}nding the roots of the nonlinear algebraic equations
+(NAEs) emanating from nonlinear resistive networks, NAEs that have the
+general form given by:
+\begin{equation}
+\pig{f}(\pig{x}) = \pig{0}
+\label{fofx}
+\end{equation}
+where $\pig{x}$ are the unknowns accordingly to the circuit analysis method
+used to set-up the equilibrium equation of the circuit.
+\par
+As it is well-known, equation (\ref{fofx}) may posses a single solution,
+no solution at all, or multiple solutions.
+In this paper, the attention is focused on the last case, where most
+of the Newton-Raphson (NR) methods fail to converge. Homotopy methods
+have been considered as a good choice of methods that overcome the
+shortcomings of the NR-like methods
+\cite{homo_ArtificialP},\cite{homo_DWolfMulti},\cite{cont_leu1}.
+
+
+Homotopy methods are based on forming an auxiliary equation in order to
+convert the problem of f\text{i}nding the roots of a NAE (a static problem)
+into
+a problem of f\text{i}nding the solution of an associated ordinary differential equation
+(a dynamic problem)
+\cite{homo_ogrodzki},\cite{cont_bra}. 
+This auxiliary equation, also called the homotopy equation, is formed
+by adding a parameter to the original equation:
+\begin{equation}
+\pig{H}(
+\pig{f}(\pig{x}), \lambda
+) = \pig{0}
+\label{fofx2}
+\end{equation}
+where  $\pig{H}(\cdot)$ is the homotopy relationship, $\pig{f}(\pig{x})$ is the original equilibrium equation of
+the circuit and $\lambda$ is the homotopy parameter.
+The solution is found by using a {\it numerical path following} procedure, where
+$\lambda$ is used as the integration parameter that varies from
+an initial value
+$\lambda_0$
+to a value
+$\lambda^{\ast}$ where a solution $\pig{x}^{\ast}$, to the original system
+(\ref{fofx}) is found.
+From this point, the integration procedure continues in order to search for
+another solution.
+The whole procedure results in tracing  a
+path where the solutions lie.
+%%Therefore, the homotopy trajectory is the set of solutions
+%%of $\pig{H}^{-1}(\pig{0})$.
+
+Although, homotopy methods are able to f\text{i}nd more than one solution to
+(\ref{fofx}), they still exhibit several lacks.
+Among them, it is worthy to mention:
+\begin{itemize}
+\item No global convergence. The capability of f\text{i}nding all solutions
+cannot be always guaranteed. In fact, this depends on a series of issues,
+such as the initial point where the homotopy starts to trace the solution,
+the trace method and the type of nonlinear equation.
+\item Stop criterion. Because there are two types of paths of solutions,
+open and closed paths, the main problem is when to stop searching for
+more solutions?. For closed paths, this can be solved by testing whether
+a new solution has previously been found. For open paths, this is a serious
+drawback, because there is no reasonable and reliable stop criterion
+to decide when to stop seeking for more solutions.
+\end{itemize}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \cite{homo_green}, a method was proposed  to bound the homotopy trajectory (in order to have a stop criterion) whithin the interval $\lambda \in [0,2]$.
+This method is applied under two condutions: f\text{i}rst, it is necessary to know {\it a priori} one DC solution in order to be used
+as initial point in the method, and second, the circuit needs to be passive in the rank $\lambda \in [0,2]$.
+The main goal of our work is to introduce a method for
+creating a stop criterion for a homotopy that can be applied
+to general nonlinear circuits.
+
+\section{The doble bounded Homotopy}
+
+
+The proposed homotopy is called {\bf double bounded homotopy} which is def\text{i}ned as
+\begin{Theod}
+The {\bf double bounded homotopy} is def\text{i}ned by
+\begin{equation}
+H(f(x),\lambda)=CQ+e^Q\ln(Df^2(x)+1)
+\label{fx}
+\end{equation}
+where $f(x)$ is the function to solve, $\lambda$ is the homotopy parameter, $a$ and $b$ are the values where the homotopy funcion solutions
+are the same than the solutions of $f(x)$,
+$C$ and $D$ are positive constants of the homotopy, and $Q$ is given by:
+\begin{displaymath}
+(\lambda-a)(\lambda-b)
+\end{displaymath}
+\label{InestCond3}
+\end{Theod}
+The term $(Df^2(x)+1)$ must be used in order
+to assure that the argument of the log-function  never becomes negative. This homotopy has the main propertie of
+bounding the trajectory in both $x$- and $\lambda$ directions.
+
+
+The double bounded homotopy has a  symmetry axis, which  gives  an important advantage that traditional homotopies
+does not have, because it can
+be used to shorten the lenght of the trajectory  by tracing only one of the symmetrical branches.
+ The F\text{i}gure \ref{halftrack} depicts
+the tracing strategy by shading the half side to be traced,
+where the initial and f\text{i}nal points ($x_i$ and $x_f$ respectively) of the homotopy trajectory  are located
+at the value of:
+
+\begin{displaymath}
+\begin{array}{l}
+(x_i,\lambda_i)=(x_i,(a+b)/2)\\
+(x_f,\lambda_f)=(x_f,(a+b)/2)
+\end{array}
+\end{displaymath}
+
+
+\begin{figure}[hbtp]
+\psfrag{xi}{{\small $[x_i,(a+b)/2]$}}
+\psfrag{xf}{{\small $[x_f,(a+b)/2]$}}
+\psfrag{o}{$\lambda$}
+\centerline{
+\epsfxsize=40mm
+\epsffile{/home/hleal/papers/doblelim/figs/halftrack.eps}}
+\caption{Numerical path following  based on symetrical properties}
+\label{halftrack}
+\end{figure}
+
+\subsection{Properties}
+
+The homotopy function  can be solved for $\lambda$. It has two solutions:
+{
+\small
+\begin{displaymath}
+\begin{array}{c}
+\lambda_1=0.5(a+b)+0.5\sqrt{(b-a)^2-4{\cal{W}}(\ln(Df^2(x)+1)/C)} \\
+\lambda_2=0.5(a+b)-0.5\sqrt{(b-a)^2-4{\cal{W}}(\ln(Df^2(x)+1)/C)}
+\end{array}
+\end{displaymath}
+}
+In fact,  $\lambda_1$ and $\lambda_2$ represent the mirrored branches of
+the  homotopy trajectory. Analysis of these expressions allows us to
+determine the ranks of values for the functions  $\lambda_1$ and $\lambda_2$:
+\begin{displaymath}
+\begin{array}{l}
+0.5(a+b) \leqslant \lambda_1 \leqslant b\\\\
+\hspace{13mm}a \leqslant \lambda_2 \leqslant 0.5(a+b)
+\end{array}
+\end{displaymath}
+as shown in F\text{i}gure \ref{halftrack}.\par
+
+
+The ranks of the branches in the  $x$-direction  are def\text{i}ned by the function $f(x)$, when  $f(x)$ satisf\text{i}es:
+
+\begin{displaymath}
+\begin{array}{l}
+|f(x)|\leqslant(1/D)\sqrt{D(e^{(C/4)(b-a)^2 e^{(a-b)^2/4}}-1)}\\
+\end{array}
+\end{displaymath}
+
+
+
+\section{Numerical Path following aspects}
+
+The path following is a mixture of a variety of numerical methods, focussed on designing 
+a path in order to accomplish specif\text{i}c needs of a homotopy formulation.\par
+
+For the proposed homotopy formulation, the path
+following consists in tracing the curve implicitly def\text{i}ned by Equation \ref{fx}.
+The path following procedure resorts to a well-known predictor-corrector scheme.
+The predictor  calculates the tangent to
+$(x^j,\lambda_j)$ and using a step length calculates the $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$
+over the tangent. The corrector uses the solution of the predictor in order to obtain
+a new point on the homotopy trajectory, given by  $(x^{j+1},\lambda_{j+1})$.
+An important task whithin the predictor-corrector scheme is the step control.\par
+Another important block is the so-called end-zero strategy that is 
+triggered (by each solution) when the homotopy trajectory bounces in $\lambda=a$ or $\lambda=b$
+depending on the branch where the solution lies.
+F\text{i}nally, the path following stops tracing when the trajectory returns to the symmetry axis
+$\lambda=(a+b)/2$.
+F\text{i}gure \ref{bloques} depicts the basic blocks of the numerical path following procedure, where the dashed blocks
+are the specif\text{i}c characteristics added to the procedure in order to include a stop criterion. 
+
+
+
+
+\begin{figure}[h]
+\psfrag{p}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{c}{{$(x^{j+1},\lambda_{j+1})$}}
+\psfrag{s}{{$h_{j+2}=h_{j+1}\zeta$}}
+\psfrag{l1}{{\small $sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 $}}
+\psfrag{l2}{{\small $ \lambda \ne (a+b)/2$}}
+\psfrag{l}{{\small $\lambda=(a+b)/2$}}
+\centerline{
+\epsfxsize=44mm
+\epsffile{/home/hleal/papers/iberchip/figs/bloques.eps}}
+\caption{Block diagram of the numerical path following}
+\label{bloques}
+\end{figure}
+
+
+
+\subsubsection{Predictor}
+
+The predictor point for $(x^j,\lambda_j)$ is given by:
+
+\begin{displaymath}
+(\bar{\pig{x}}^{j+1},\bar{\lambda}_{j+1})=(\pig{x}^j,\lambda_j)+h*\pig{t}
+\end{displaymath}
+where $h$ is an appropriate step length and $\pig{t}$ is a normalised vector tangent to the
+homotopy trajectory (see F\text{i}gure \ref{pcorrector}). This predictor can be considered as a step of the Euler
+method for solving the differential equation that describes the homotopy trajectory (continuation path). 
+Predictor steps are usually based on tangent predictions but there are
+different alternatives like the secant predictor \cite{homo_seydel}, interpolation predictor
+\cite{homo_allgower}, Taylor polynomial predictor \cite{homo_allgower}. 
+
+
+\begin{figure}[hbtp]
+\psfrag{A}{{$(x^j,\lambda_j)$}}
+\psfrag{B}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{C}{{$(x^{j+1},\lambda_{j+1})$}}
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/hleal/papers/doblelim/figs/pcorrector.eps}}
+\caption{Predictor-corrector steps}
+\label{pcorrector}
+\end{figure}
+
+ 
+\subsubsection{Corrector}
+
+When the predictor step f\text{i}nishes, it is necessary to f\text{i}t the homotopy trajectory by
+using a corrector step. This step  solves the Equation \ref{fx} by starting
+from $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$ (see F\text{i}gure \ref{pcorrector}). The common
+way to solve this equation is by using the Newton-Gauss method \cite{homo_allgower}, which
+can solved for systems of the type $R^{N+1} \Rightarrow R^N$.
+
+\subsubsection{Step Control}
+
+The Predictor-Corrector scheme can be optimized for tracing acceleration by
+using a step length control. A small constant step length can trace the curve successfully
+but not eff\text{i}ciently, because this process involves too many steps along ``f\text{l}at'' branches.
+Therefore, it is necessary to adapt the step length to the convergence behavior at each
+predictor-corrector step. The basic criterion is to control the step by observing the
+convergence quality of the corrector step. A change of the number of iterations in the corrector step produces
+a compensation factor $\zeta$, which affects the step length as follows:
+
+
+\begin{displaymath}
+h_{j+2}=h_{j+1} \zeta
+\label{zero}
+\end{displaymath}
+
+
+\subsubsection{F\text{i}nd Zero Strategy}
+
+Without an eff\text{i}cient f\text{i}nding zero strategy
+the path following is incomplete and the homotopy could fail to converge some operating
+points (maybe not any solution at all).
+The tracing of the homotopy trajectory begins in $\lambda=0$ and it ``ends''\footnote{In fact if it is wanted to f\text{i}nd multiple solutions the path
+following should follow beyond $\lambda=1$.} when $\rho=1$. Therefore,
+when the tracing is near to $\lambda=1$ the {\it f\text{i}nd Zero Strategy} begins. The most simple example
+of strategy is to use $[\pig{x}_f,\lambda_f]$ (of the last iteration) like the initial point
+to solve the $\pig{f}(\pig{x})$ with Newton method. 
+
+
+Nevertheless, as Newton method has local convergence it still could fail
+to f\text{i}nd the solution. In \cite{homo_sosonkina} are reported some techniques to do the {\it f\text{i}nd Zero Strategy} accurately and
+reliable.  The basic idea is
+to use two points ($p_1 < 1$ and $p_2 \geq 1$) around to $\lambda=1$, next, interpolate the point in $\lambda=1$ in order to
+obtain a point nearly to the real solution and use a like Newton method to f\text{i}nd the solution
+of the original system $\pig{f}(\pig{x})$.
+The double bounded homotopy has the characteristic of never cross the $\lambda=1$, hence, the f\text{i}ndig zero strategy
+should start when  bouncing in the bounding lines. A good way to achieve this process is to monitor the
+change of sign of the  $\Delta\lambda$ produced in the predictor step. This can be done by multipplaying
+the  $\Delta\lambda$ of two consecutive predictor steps.
+
+\begin{displaymath}
+sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 
+\label{zero1}
+\end{displaymath}
+
+
+
+\section{Circuit Case}
+F\text{i}gure \ref{chua} depict the chua's benchmark circuit of nine solutions. This circuit has 4 bipolar transistors modeled by the half-side Ebers-Moll model.
+
+The equations system formulation is the same of \cite{homo_chua} which is based
+on the brach voltages $v_1$, $v_2$, $v_3$, $v_4$. F\text{i}gure \ref{chuaf} depict
+the homotopy trajectory and the six solutions found versus the branch voltage $v_1$.
+
+\begin{figure}[h]
+\centerline{
+\epsfxsize=80mm
+\epsffile{/home/hleal/papers/doblelim/figs/chiaf.eps}}
+\caption{Solution of the Chua's circuit}
+\label{chuaf}
+\end{figure}
+
+
+\begin{figure}[h]
+\psfrag{F}{{\tiny $I_D=10^{-9}(e^{40v_D}-1)$}}
+\psfrag{b}{{\tiny $\alpha=0.98$}}
+\centerline{
+\epsfxsize=80mm
+\epsffile{/home/hleal/papers/iscas2004/figs/chua.eps}}
+\caption{Chua's circuit with nine solutions}
+\label{chua}
+\end{figure}
+%\newpage
+
+\section{Conclusions}
+In this work presents a numerical path following for tracing a new homotopy
+method to obtain the operating points of nonlinear circuits having
+multiple solutions. 
+This homotopy method is called the double bounded homotopy and it overcomes the shortcomings of
+traditional homotopy schemes regarding the stop criterion. The geometrical properties of the method have been
+analysed by using the Lambert $\cal W$ function. The key aspects of the implementation of the numerical path following were depicted.
+
+
+
+ 
+
+\bibliography{/home/hleal/papers/doblelim/bib/homoto,/home/hleal/papers/doblelim/bib/contin,/home/hleal/papers/doblelim/bib/netwth}
+\end{document}
+
+
+
+
+
+
+
+
+

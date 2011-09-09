@@ -1,0 +1,62 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{homo_allgower}
+E.~L. Allgower and K.~Georg, \emph{Numerical path following}, 1994.
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c}, \emph{Artif\text{i}cial parameter homotopy
+  methods for the dc operating point problem}, IEEE transactions on
+  computer-aided design of integrated circuits and systems \textbf{12} (1997),
+  no.~6, 861--877.
+
+\bibitem{BLHOM2}
+J.~Roychowdhury and R.~Melville, \emph{Delivering global dc convergence for
+  large mixed-signal circuits via homotopy/continuation methods}, IEEE
+  Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  \textbf{25} (2006), no.~1, 66.
+
+\bibitem{homo_sosonkina}
+M.~Sosonkina, L.~T. Watson, and D.~E. Stewart, \emph{Note on the end game in
+  homotopy zero curve tracking}, ACM Transantions On Mathematical Software
+  \textbf{22} (1996), no.~3, 281--287.
+
+\bibitem{homo_chua}
+A.~Ushida and {L. O. Chua}, \emph{Tracing solution curves of non-linear
+  equations with sharp turning points}, Circuit Theory and Applications
+  \textbf{12} (1984), 1--21.
+
+\bibitem{homo_iscas05}
+H.~V\'azquez-L., L.~Hern\'andez-M., and A.~Sarmiento-R., \emph{Double-bounded
+  homotopy for analysing nonlinear resistive circuits}, International Symposium
+  on Circuits and Systems (2005).
+
+\bibitem{homo_hk}
+\bysame, \emph{Numerical continuation scheme for tracing the double bounded
+  homotopy for analysing nonlinear circuits}, International Conference on
+  Communications, Circuits and Systems (2005).
+
+\bibitem{homo_dobletrazado}
+H.~V\'azquez-L., L.~Hern\'andez-M., A.~Sarmiento-R., and R.~S. Murphy-A.,
+  \emph{Improving multi-parameter homotopy via symbolic analysis techniques for
+  circuit simulation}, 2003 European Conference on Circuit Theory and Design
+  \textbf{II} (2003), 402--405.
+
+\bibitem{homo_DWolfMulti}
+D.~M. Wolf and S.~R. Sanders, \emph{Multiparameter homotopy methods for
+  f\text{i}nding dc operating points of nonlinear circuits}, IEEE transactions
+  on circuits and systems-I: fundamental theory and aplications \textbf{43}
+  (1996), no.~10, 824--837.
+
+\bibitem{hiper}
+Kiyotaka Yamamura, \emph{Simple algorithms for tracing solution curves}, IEEE
+  transactions on Circuits and Systems I: Fundamental Theory and Applications
+  \textbf{40} (1993), no.~8, 537--541.
+
+\end{thebibliography}

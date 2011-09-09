@@ -1,0 +1,312 @@
+@STRING{ieeetcas="IEEE Transactions on Circuits and Systems"}
+@STRING{ieeetcas1="IEEE Transactions on Circuits and Systems - I"}
+
+
+
+@article{c++1,
+	Author	= "B. Stroustrup",
+	Title	= "What Is Object-oriented Programming? (1991 Revised Version)",
+	journal = "Proc. 1st European Software Festival",
+	Month	= "February",
+	Year	=  1991}
+@article{homo_lambertsec,
+	Author	= "Robert M. Corless and David J. Jeffrey and Donald E. Knuth",
+	Title	= "A Sequence of Series for the Lambert W Function",
+	journal = "Proceedings ISSAC",
+	Pages	= "197-204",
+	Year	=  1997}
+
+@article{homo_lambertmaple,
+	Author	= "Robert M. Corless and G. H. Gonnet and D. E. G. Hare and D. J. Jeffrey",
+	Title	= "Lambert's W Function in Maple",
+	journal = "Maple Technical Newsletter 9",
+	Pages	= "12-22",
+	Year	=  1993}
+
+@article{homo_seydel,
+	Author	= "R. Seydel",
+	Title	= "Tracing Branches",
+	journal = "World of Bifurcation",
+        Month	= "June",
+	Year	=  1999}
+
+@article{homo_sosonkina,
+	Author	= "Maria Sosonkina and Layne T. Watson and David E. Stewart",
+	Title	= "Note on the End Game in homotopy Zero Curve Tracking",
+	journal = "ACM Transantions On Mathematical Software",
+        Volume	= "22",
+	Number	= "3",
+        Month	= "September",
+	Pages	= "281-287",
+	Year	=  1996}
+
+
+@phdthesis{stoffels,
+	  Author= "J. Stoffels",
+	  Title	= "Automation in High-performance Negative Feedback Amplifier Design",
+          School= "Delft University of Technology",
+	  Year	= 1988}
+
+
+
+@Book{verhoeven,
+	Author	= "C.J.M. Verhoeven and A.van Staveren and G.L.E. Monna and M.H.L. Kouwenhoven",
+	Title	= "Strutured Electronic Design, Negative-feedback Amplifiers",
+        Publisher= "Delftese Uitgevers Maatschappij",     
+	Year	= 2001}
+
+@Book{nordholt,
+        Author  = "E.H. Nordholt",
+        Title   = "Design of High Performance Negative-feedback amplifiers",
+        Publisher= "Elsevier Scientific",
+        Year    = 1983}
+
+@article{homo_BSIM,
+	Author	= "Jen, S.H. and Sheu, B.J. and Oshima, Y.",
+	Title	= "A Unified Approach to Submicron DC MOS Transistor Modeling for Low-Voltage ICs",
+	journal = "Analog Integrated Circuits and Signal Processing",
+	Volume	= "12",
+	Pages	= "107-118",
+	Year	=  1997}
+
+@article{homo_MOS,
+	Author	= "{J.S.} Roychowdhury and {R.C.} Melville",
+	Title	= "Homotopy Techinques for Obtaining a DC solution of Large-Scal MOS Circuits",
+	journal = "Design Automation Conference",
+	Volume	= "33rd",
+	Year	=  1996}
+
+
+
+@article{homo_unspice,
+	Author	= "M. M. Green and {A. N. Willson}",
+	Title	= "An Algorithm for identifying unstable
+operating points using spice",
+	journal = "IEEE transactions on computer-aided design of
+integrated circuits and systems",
+	Volume	= "14",
+	Number	= "3",
+	Pages	= "360-361",
+	Month	= "March",
+	Year	= 1995 }
+
+
+@article{homo_chua,
+	Author	= "A. Ushida and {L. O. Chua}",
+	Title	= "Tracing Solution curves of non-linear equations
+with sharp turning points",
+	journal = "Circuit Theory and Applications",
+	Volume	= "12",
+	Pages	= "1-21",
+	Year	= 1984 }
+
+
+@article{homo_ekv,
+	Author	= "Matthias Bucher and Christophe Lallement and Christian Enz and Fabien Th\'eodoloz and Francois Krummenacher",
+	Title	= "The {EPFL-EKV MOSFET} model equations for simulation",
+	journal = "Technical report",
+        Month	= "July",
+	Year	=  1998}
+
+@article{homo_unspice,
+	Author	= "M. M. Green and {A. N. Willson}",
+	Title	= "An Algorithm for identifying unstable
+operating points using spice",
+	journal = "IEEE transactions on computer-aided design of
+integrated circuits and systems",
+	Volume	= "14",
+	Number	= "3",
+	Pages	= "360-361",
+	Month	= "March",
+	Year	= 1995 }
+
+
+@article{homo_mmganw,
+	Author	= "Michel M. Green and {Alan N. Willson}",
+	Title	= "On the relationship between negative
+differential and stability of nonlinear one-ports",
+	journal = "IEEE transactions on circuits
+and systems-I: fundamental theory and aplications",
+	Volume	= "43",
+	Number	= "5",
+	Month	= "May",
+	Year	=  1996}
+
+@Book{homo_ogrodzki,
+	Author	= "Jan Ogrodzki",
+	Title	= "Circuit simulations methods and algorithms",
+	Publisher= "CRC Press Inc",
+	Year	= 1994}
+
+@article{homo_DWolfMulti,
+	Author	= "Denise M. Wolf and Seth R. Sanders",
+	Title	= "Multiparameter Homotopy Methods for finding
+DC operating points of Nonlinear Circuits",
+	journal = "IEEE transactions on circuits and
+systems-I: fundamental theory and aplications",
+	Volume	= "43",
+	Number	= "10",
+	Pages	= "824-837",
+	Month	= "October",
+	Year	= 1996 }
+
+
+@article{homo_ArtificialP,
+	Author	= "R. C. Melville and L. Trajkovi\'{c}",
+	Title	= "Artificial Parameter Homotopy Methods for
+the DC Operating Point Problem",
+	journal = "IEEE transactions on computer-aided design of
+integrated circuits and systems",
+	Volume	= "12",
+	Number	= "6",
+	Pages	= "861-877",
+	Month	= "June",
+	Year	=  1997 }
+
+
+@article{homo_nishi1,
+	Author	= "T. N. and L. O. Chua",
+	Title	= "Topological criteria for nonlinear restive circuits containing controlled sources to have a unique solution",
+	journal = "IEEE transactions on circuits
+and systems",
+	Volume	= "31",
+	Number	= "8",
+        Pages	= "722-741",
+	Month	= "August",
+	Year	=  1984}
+
+@article{homo_Allan1,
+	Author	= "A. N. Willson",
+	Title	= "Some aspects of the theory of nonlinear networks",
+	journal = "Proceedings of the IEEE",
+	Volume	= "66",
+	Number	= "8",
+	Pages	= "1092-1113",
+        Month	= "August",
+	Year	=  1973}
+@article{homo_sar,
+	Author	= "A. Sarmiento-Reyes and M.E. Miranda-Varela and L. Hern\'adez-Mart\'{\i}nez and R. Vargas-Bernal and H. V\'azquez Leal and R. Shibayama and A. Bocanegra-Haro",
+	Title	= "Powering homotopy-based simulation with symbolic analysis ",
+	journal = "SMACD 2000",
+	Volume	= "",
+	Number	= "",
+	Pages	= "135--138",
+        Month	= "October",
+	Year	=  2000}
+
+@article{homo_yamamura,
+	Author	= "Kiyotaka Yamamura and Tooru Sekiguchi and Yasuki Inuoe",
+	Title	= "A fixed-point homotopy method for solving modified nodal equations",
+	journal = "IEEE transactions on circuits and
+systems-I: fundamental theory and aplications",
+	Volume	= "46",
+	Number	= "6",
+	Pages	= "654-664",
+        Month	= "June",
+	Year	=  1999}
+
+@article{homo_embedding,
+	Author	= "Wolfgang Mathis and Ljiljana Trajkovi\'{c} and Uwe Feldmann",
+	Title	= "Parameter embedding methods for finding dc operating points of transistor circuits",
+	journal = "",
+	Volume	= "",
+	Number	= "",
+	Pages	= "",
+        Month	= "",
+	Year	=  1995}
+@article{homo_embeddingapp,
+	Author	= "Ljiljana Trajkovi\'{c} and Wolfgang Mathis",
+	Title	= "Parameter embedding methods for finding dc operating points: formulation and implementation",
+	journal = "",
+	Volume	= "",
+	Number	= "",
+	Pages	= "",
+        Month	= "",
+	Year	=  1995}
+@article{homo_threading,
+	Author	= "Ross Geoghgan and Jeffrey C. Lagarias and Robert C. Melville",
+	Title	= "Threading homotopies and dc operating points of nonlinear circuits",
+	journal = "Society for Industrial And Applied Mathematics ",
+	Volume	= "9",
+	Number	= "1",
+	Pages	= "159-178",
+        Month	= "December",
+	Year	=  1998}
+
+@Misc{maple1,
+	Author	= "Bruce W. Char and Keith O.Geddes and Gaston H. Gonnet",
+	Title	= "Maple {V} language reference manual",
+	Howpublished= "Springer-Verlag, New York, 1994. ISBN/ISSN:0-387-97622-1"}
+@Misc{maple2,
+	Author	= "Andre Heck",
+	Title	= "Introduction to maple",
+	Howpublished= "Springer-Verlag, New York, 1993. ISBN/ISSN:0-387-97622-0"}
+
+
+@article{homo_SMACD,
+	Author	= "Arturo Sarmiento Reyes and H\'ector V\'azquez Leal",
+	Title	= "Powering homotopy-based simulation with symbolic analysis",
+	journal = "International  Workshop on Symbolic Methods in Circuit Design",
+	Pages	= "135-138",
+	Month	= "October",
+	Year	= 2000 }
+
+
+
+@article{homo_ICECS,
+	Author	= "Arturo Sarmiento Reyes and H\'ector V\'azquez Leal",
+	Title	= "An optimal reordering schema of homotopy equations for analysis of nonlinear resistive circuits",
+	journal = "International IEEE Conference on Electronics, Circuits, and Systems",
+	Pages	= "764-767",
+	Month	= "Diciembre",
+	Year	= 2000}
+
+
+@article{homo_CONIELECOMP,
+	Author	= "Arturo Sarmiento Reyes and H\'ector V\'azquez Leal",
+	Title	= "Effect of the coupled variables in homotopic simulation of nonlinear resistive circuits",
+	journal = "Congreso Internacional de Electr\'onica, Comunicaciones y Computadoras",
+	Pages	= "220-223",
+	Month	= "Febrero",
+	Year	= 2001}
+
+
+@article{homo_ECCTD,
+	Author	= "Arturo Sarmiento Reyes and H\'ector V\'azquez Leal",
+	Title	= "Using symbolic techniques to determine the effect of coupled variables in homotopic simulation",
+	journal = "Enviado a European Conference on Circuit Theory and Design",
+	Month	= "Agosto",
+	Year	= 2001}
+
+@article{homo_MIDWEST,
+	Author	= "Arturo Sarmiento Reyes and Roberto Murphy Arteaga and H\'ector V\'azquez Leal",
+	Title	= "A maple-based homotopic circuit simulation package",
+	journal = "A enviarse a IEEE Midwest Symposium on Circuits and Systems",
+	Month	= "Agosto",
+	Year	= 2001}
+
+
+@Misc{homo_Manny,
+	Author	= "Mar\'{\i}a de las Nieves Ju\'arez Manny",
+	Title	= "Desarrollo de un algoritmo de homotop\'{\i}a para la soluci\'on de circuitos electricos no lineales",
+	Howpublished = "Tesis de Licenciatura",
+        Note= "Buap, 1999"}
+
+@Misc{homo_Rodrigo,
+	Author	= "Rodrigo Rodriguez Torres",
+	Title	= "Topological Implications in BJT Circuits Having Multiple DC Operating Points",
+	Howpublished = "Tesis de Maestr\'{\i}a",
+        Note= "INAOE, 1997"}
+
+
+@Misc{homo_Ventura,
+	Author	= "Ma. Del Rocio de Jes\'us Ventura",
+	Title	= "Simulaci\'on de Circuitos Resistivos No Lineales vajo el Ambiente de MAPLE",
+	Howpublished = "Tesis de Licenciatura",
+        Note= "Instituto Tecnologico de Veracruz, 1999"}
+
+
+
+
+
+

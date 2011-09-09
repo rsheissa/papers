@@ -1,0 +1,296 @@
+%\documentclass[twocolumn]{article}
+%\documentclass{ecctd01}
+%\usepackage{cas_conf}
+\documentclass[letterpaper]{ecctd01}
+
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{rotate}
+\usepackage{rotating}
+\usepackage{abstract}
+
+\bibliographystyle{/home/roberto/pruebas/noise_castour/ieeebib}
+
+\input{/home/roberto/pruebas/noise_castour/macros/lin_alg.tex}
+%\input{/home/roberto/papers/macros/math_aux.tex}
+\input{/home/roberto/pruebas/noise_castour/macros/jac_mtrx.tex}
+\input{/home/roberto/pruebas/noise_castour/macros/cset_aux.tex}
+
+\newtheorem{Theod}{{\bf Definition}}
+\newtheorem{Theos}{{\bf Statement}}
+\newtheorem{Theor}{{\bf Theorem}}
+\newtheorem{Theoc}{{\bf Corallary}}
+
+%\setlength{\oddsidemargin}{0mm}
+%\setlength{\evensidemargin}{0mm}
+%\setlength{\topmargin}{0mm}
+%\setlength{\textwidth}{16.5cm}
+%\setlength{\columnsep}{5mm}
+%\setlength{\textheight}{21cm}
+%\pagestyle{headings} %%Encabezados
+
+\title{A Hierarchical Method of Noise Analysis for the Design of Negative-Feedback Amplifiers}
+
+
+\author{Arturo Sarmiento-Reyes\footnote{National Institute for Astrophysics, Optics and Electronics
+Electronics Department, CAD Group, P.O. Box 51, 72000, Puebla, Pue., Mexico, Email: {\tt jarocho@inaoep.mx}},
+Roberto Casta\~neda Sheissa\footnotemark[1], L. Hern\'andez Mart\'inez\footnotemark[1]}
+
+\begin{document}
+%\maketitle
+
+\maketitle
+
+\begin{abstract}
+The design of high-performance negative-feedback amplifiers is aimed to design with a systematic and hierarchical method \cite{nordholt1}, where the nullor is the starting point for the synthesis of the amplifier. In this context, this paper shows how to improve the noise performance at the negative-feedback amplifiers through equivalent input noise source. This equivalent noise source is obtained with a method which allows to show the main noise sources and key parameters that determine the noise behaviour of the amplifier. So the noise will be evaluated and techniques will be applied to improve the noise performance.
+\end{abstract}
+
+\section{Introduction}
+
+In a negative-feedback amplifier (NFA) two main blocks can be distinguished, the feedback network and the active part \cite{gray}. There are two main steps in the design of high performance negative-feedback network \cite{nordholt}, (a) the design of the feedback network, under the assumption that the nullor is the active part, and (b) the design of an active part which constitute the synthesis of the nullor. Furthermore, in this design strategy three fundamental signal-processing quality aspects are of importance, {\it{noise, bandwidth}} and {\it{distortion}}. These aspects are optimized under the assumption that they are orthogonal.
+
+Particulary, for a noisy amplifier, the noise determines the minimum signal that the amplifier can process. It is possible to obtain an equivalent input noise source \cite{netzer,chang} of a noisy amplifier, and the amplifier is considered to be noise-free as shown in figure \ref{trans3}. This article shows how to obtain the equivalent input noise source through by four transformations \cite{gilbert}, everything in the context of the design strategy of high-performance negative-feedback amplifiers. The nullor and the synthesis of the feedback network are revised in section 2. Section 3 revises the noise. Section 4 revises the transformations. Section 5 shows an example and results. Section 6 gives conclusions.
+
+\section{Nullor And Amplifiers}
+
+The nullor is composed of two elements: {\it the nullator} connected at its input port where $u_i=i_i=0$ and {\it the norator} connected at its output port where $u_o=i_o=arbitrary$, as shown in figure \ref{figure1}. This ideal active element has zero at its ABCD matrix \cite{carlin,moschytz}, as shown in equation (\ref{eq:abcd}). Therefore the nullor has infinite voltage gain ($\mu$), current gain ($\alpha$), trans-conductance ($\gamma$) and trans-impedance ($\zeta$). Furthermore, the nullor does not produce noise, distortion, and does not limit the overall bandwidth.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/fig_nullor.eps}}
+\caption{The nullor.}
+\label{figure1}
+\end{figure} 
+
+\begin{equation}\label{eq:abcd}
+\binom{u_i}{i_i}=\bigg(
+\begin{array}{cc}
+{1/{\mu}}&{1/{\gamma}}\\
+{1/{\zeta}}&{1/{\beta}}
+\end{array}\bigg)
+\binom{u_o}{i_o}=
+\bigg(\begin{array}{cc}
+0&0\\
+0&0
+\end{array}\bigg)\binom{u_o}{i_o}
+\end{equation}
+
+Four negative-feedback amplifiers are obtained when the feedback network is synthesized with passive components, and the active part is a nullor, as shown in figure \ref{figure2}. For each amplifier the feedback network determines the transfer function, and then their ABCD matrix has only one element non zero as shown in equations (\ref{eq:mabcd1}),(\ref{eq:mabcd2}),(\ref{eq:mabcd3}),(\ref{eq:mabcd4})
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=70mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/grupo_eng.eps}}
+\caption{Negative-feedback amplifiers.}
+\label{figure2}
+\end{figure} 
+
+\begin{equation}\label{eq:mabcd1}
+M_{ABCD}=\bigg(\begin{array}{cc}
+\frac{1}{1+R_1/R_2}&0\\
+0&0
+\end{array}\bigg){\text{, for NFA V-V}}
+\end{equation}
+
+\begin{equation}\label{eq:mabcd2}
+M_{ABCD}=\bigg(\begin{array}{cc}
+0&-R_1\\
+0&0
+\end{array}\bigg){,\text{ for NFA V-C}}
+\end{equation}
+
+\begin{equation}\label{eq:mabcd3}
+M_{ABCD}=\bigg(\begin{array}{cc}
+0&0\\
+\frac{-1}{R_1}&0
+\end{array}\bigg){,\text{ for NFA C-V}}
+\end{equation}
+
+\begin{equation}\label{eq:mabcd4}
+M_{ABCD}=\bigg(\begin{array}{cc}
+0&0\\
+0&\frac{1}{1+R_2/R_1}
+\end{array}\bigg){,\text{ for NFA C-C}}
+\end{equation}
+
+\section{Noise In Amplifiers}
+
+The power spectral density of the ouput $S_{n,y}(w)$ of a LTI system, in response to a wide-sense stationary input noise $S_{n,x}(w)$ is given by \cite{davenport,peebles}: $S_{n,y}=|H(w)|^2S_{n,x}(w)$, where $H(w)$ is the transfer function. This method is a straight-forward way to evaluate noise in amplifiers, by evaluating the ciircuit's equations of the amplifier. However it does not yield much insight about the dominant noise contribution, and hides the key design parameters that are essential to optimize the noise behavior. In this article, four transformations are used to obtain the equivalent input noise source, this method allows to show the dominant factors and the key parameters that determine the noise behavior of the amplifier. The power spectral density of the equivalent input noise source $S_{n,eq,in}(w)$ can be expressed as \footnote{It is assumed that the noise sources are uncorrelated and each source has mean square value equal to zero.}
+
+\begin{equation}\label{eq:density}
+\begin{split}
+S_{n,eq,in}(w)& =\sum_{i=1}^n|H_{2i}(w)|^2S_{u_{n,2i}}(w)+\\
+& \quad \; \sum_{k=0}^m|H_{2k+1}(w)|^2S_{i_{n,2k+1}}(w)
+\end{split}
+\end{equation}
+
+where $S_{u_{n,2i}}(w)$ and $S_{i_{n,2k+1}}(w)$ are the power spectral densities of the noise sources of voltage and currecnt, respectively.
+
+The figure \ref{figure3} shows the noisy amplifiers. Where $u_{n,n}$ and $i_{n,n}$ model completely the noise in a two-port system \cite{haus} \footnote{Despite that the two-port system is a nullor, the two noisy sources are considered for the analysis because they appear later as a result of the nullor synthesis}, and each noise source of the resistors \footnote{The noise source of the load is not considered in order to simplify the nullor synthesis} is shown in the table~\ref{tbl:noise_res}. The sort source (voltage or current) is selected such that in the section 4 the transformations are performed easily.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=70mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/grupo_noise.eps}}
+\caption{Noisy Negative-Feedback Amplifiers.}
+\label{figure3}
+\end{figure} 
+
+\begin{table}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+ Elements &  \multicolumn{4}{|c|}{NFA} \\
+ \cline{2-5}
+  &  V-V &  V-C &  C-V & C-C \\
+\hline
+$R_S$ &  $u_{ns}$ &  $u_{ns}$ &  $u_{ns}$ & $u_{ns}$ \\
+\hline
+$R$ & $-$ & $i_{nR}$ & $u_{nR}$ & $-$ \\
+\hline
+$R_1$ & $u_{nR_1}$ & $-$ & $-$ & $i_{nR_1}$ \\
+\hline
+$R_2$ & $u_{nR_2}$ & $-$ & $-$ & $i_{nR_2}$ \\
+\hline
+\end{tabular}
+\end{center}
+\caption{Resistor's noise sources}
+\label{tbl:noise_res}
+\end{table}
+
+\section{Transformations}
+
+The goal of the transformations is to move noisy sources to the input or output of the amplifier.
+
+\begin{itemize}
+\item {\bf Transformation 1} {\it V-Shift. Let N be a network as shown in figure {\ref{v-shift}(1)}. The transformation V-shift on $u_n$ is obtained to remove it through node b as shown in figure {\ref{v-shift}(2)}. After the transformation is performed the nodes a and b are clustered.}
+\end{itemize}
+
+\begin{figure}[hbtp]
+\vspace{-2mm}
+\centerline{
+\epsfxsize=30mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/v_shift.eps}}
+\caption{V-Shift Transformation.}
+\label{v-shift}
+\end{figure} 
+
+\begin{itemize}
+\item {\bf Transformation 2} {\it I-Shift. Let N be a network as shown in figure {\ref{i-shift}(1)}. The transformation I-shift on $i_n$ is obtained by splitting it into two ocurrence of $i_n$, as shown if figure {\ref{i-shift}(2)}}
+\end{itemize}
+
+\begin{figure}[hbtp]
+\vspace{-2mm}
+\centerline{
+\epsfxsize=25mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/i_shift.eps}}
+\caption{I-Shift Transformation.}
+\vspace{-5mm}
+\label{i-shift}
+\end{figure} 
+
+\begin{itemize}
+\item {\bf Transformation 3} {\it Norton-Thevenin. The theorems of Thevenin and Norton are used to transform voltage sources into current sources and viceversa.}
+\end{itemize}
+
+
+\begin{itemize}
+\item {\bf Transformation 4} {\it Two-port shift. Let N be a two-port network as shown if figure {\ref{2port}(1)}, where $u_o$ and $i_o$ are the (noise) voltage and (noise) current output for the two-port network; then, the shift from the ouput to the input port is shown in figure {\ref{2port}(2)} such that $u_o$ and $i_o$ are accounted in the input.}
+\end{itemize} 
+
+\begin{figure}[hbtp]
+\vspace{-2mm}
+\centerline{
+\epsfxsize=75mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/two_port_trans.eps}}
+\caption{Two-Port Shift.}
+\label{2port}
+\end{figure} 
+
+\section{Example and Conclusions}
+
+The amplifier V-C is used to show how to perform transformations. The result is the equivalent input noise source.
+
+\begin{itemize}
+\item {\bf Step 1} $u_{nn}$ and $u_{ns}$ of the figure \ref{trans1} are added, the result is $u_{n,eq,1}$ as shown in figure \ref{trans2}.
+\end{itemize}
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/transadmittance_noise_amp.eps}}
+\caption{Transadmittance Amplifier with Noise Sources Added.}
+\label{trans1}
+\end{figure} 
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/transadmittance_1.eps}}
+\caption{Voltage Noise Sources Added and I-Shift Applied.}
+\label{trans2}
+\end{figure} 
+
+\begin{itemize}
+\item {\bf Step 2} The I-shift is used on $i_{nn}$ as shown in figure \ref{trans2}. The Norton-Thevenin transformation is applied on $i_{nn}$ and $R_s$, the result is added to $u_{n,eq,1}$, this equalls to $u_{n,eq,2}$ as shown in figure \ref{trans3}. The figure \ref{trans2} shows $i_{nn}$ and $i_{nR}$ in parallel with $R$, these noise sources are added and the result is $i_{n,eq,1}$ as depicted in figure \ref{trans3}.
+\end{itemize}
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/transadmittance_2.eps}}
+\caption{Voltage Noise Sources Added and I-Shift Applied.}
+\label{trans3}
+\end{figure} 
+
+\begin{itemize}
+\item {\bf Step 3} The I-shift is applied on $i_{n,eq,1}$ as shown in figure \ref{trans3}. For the current noise source $i_{n,eq,1}$ located directly in parallel to the output port of the nullor, if we apply the two-port transformation to the nullor it will show us that this source will not yield any equivalent input noise source, since all chain parameters of the nullor equal zero.
+\end{itemize}
+
+\begin{itemize}
+\item {\bf Step 4} The two-port transformation is used on the source $i_{n,eq,1}$ which is located at the amplier output. The result is added with $u_{n,eq,2}$ and the result becomes the equivalent input noise source $u_{n,eq,in}$ as shown in figure \ref{trans4}. Then a noiseless-amplifier is obtained.
+\end{itemize}
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/roberto/pruebas/noise_castour/figuras/transadmittance_3.eps}}
+\caption{Voltage Noise Sources Added and I-Shift Applied.}
+\label{trans4}
+\end{figure} 
+
+The result from the previous steps is shown in equation (\ref{eq:transadmi}) which is the equivalent input noise source. Similarly, it is possible to obtain the equivalent input noise sources for the V-V, C-V and C-C amplifiers. These are shown in equations (\ref{eq:volt}), (\ref{eq:transimp}) and (\ref{eq:curr}), respectively.
+
+\begin{equation}\label{eq:transadmi}
+u_{n,eq,in}=u_{ns}+u_{nn}+(R_s+R)i_{nn}+Ri_{nR}
+\end{equation}
+
+\begin{equation}\label{eq:volt}
+\begin{split}
+u_{n,eq,in}=u_{ns}+u_{nn}+\bigg(R_s+\frac{R_1R_2}{R_1+R_2}\bigg)i_{nn}\\
++\frac{R_2}{R_1+R_2}u_{nR_1}+\frac{R_1}{R_1+R_2}u_{nR_2}
+\end{split}
+\end{equation}
+
+\begin{equation}\label{eq:transimp}
+i_{n,eq,in}=i_{ns}+i_{nn}+(\frac{1}{R_s}+\frac{1}{R})u_{nn}+\frac{1}{R}u_{nR}
+\end{equation}
+
+\begin{equation}\label{eq:curr}
+\begin{split}
+u_{n,eq,in}=i_{ns}+i_{nn}+\bigg(\frac{1}{R_s}+\frac{1}{R_1+R_2}\bigg)i_{nn}\\
++\frac{R_2}{R_1+R_2}i_{nR_2}+\frac{R_1}{R_1+R_2}i_{nR_1}
+\end{split}
+\end{equation}
+
+\section{Conclusions}
+
+A hierarchical noise analysis has been performed on the four basic negative-feedback amplifiers. The equivalent input noise source is obtained using four simple transformations, this allows us to understand the contribution of the main noise source. This main source is comprised of the source's resistance, active part and the feedback network. The largest noise contribution is usually identified by being from the source resistance. The results show that feedback network adds noise to the active part, so we can perform techniques to reduce noise in both the active part and feedback network. In particular $u_{nn}$ is increased for the V-V and V-C amplifiers as shown in equations \ref{eq:volt} and \ref{eq:transadmi}; $i_{nn}$ is increased in the case of C-V and C-C amplifiers, as shown in equations \ref{eq:transimp} and \ref{eq:curr}.
+
+\bibliography{/home/roberto/pruebas/noise_castour/bib/noisecastour}
+\end{document}

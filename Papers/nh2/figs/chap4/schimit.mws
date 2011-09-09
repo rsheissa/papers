@@ -1,0 +1,375 @@
+{VERSION 3 0 "IBM INTEL NT" "3.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 1007 "restart:\nwith(plots):\nfis:=1.09:\nVfb:=-
+0.4:\ngam1:=0.95:\ngam2:=0.6:\nKs:=0.9:\nKnz:=0.2:\nKnb:=0.04:\netaz:=
+0.007:\netal:=0.001:\nMov:=450.0:\nDeltaL:=0.1:\nDeltaW:=0.1:\nUgsz:=0
+.25:\nUgsl:=0.06:\nUds:=0.05:\nUbs:=0.02:\ntox:=130.0:\nEcrit:=10:\nla
+md:=0.2:\nlamg:=0.5:\nlamb:=2.0:\nlambs:=1.0:\nfid:=0.05:\neta:=1.5:\n
+Kh1:=1.01:\nKh2:=1.05:\nKgsh:=1.01:\nKsig:=0.01:\nKsub:=.1:\nT:=300.0:
+\nRs:=40.0:\nRd:=40.0:\nkbol:=8.61706e-5:\neox:=3.45313e-13: #\nCox:=e
+ox/tox*1.0e8:\nVb:=Vs:\nWeff:=W-DeltaW:\nLeff0:=L-DeltaL:\n\npow:=proc
+(f,p)\nRETURN(f^p):\nend:\n\n#Funci\363n VBST:  Definida en el modelo
+\nVBST:=fis-pow((gam1-gam2)/Ks+sqrt(fis),2):\n#Funci\363n hiperb\363li
+ca VBSH:  Definida  en  el  modelo\nVBSH:=0.5*(Vb-Vs+Kh1*VBST+sqrt(pow
+(Vb-Vs+Kh1*VBST, 2.0)-4.0*(Vb-Vs)*VBST)):\n\n#Funci\363n  VT:  Calcula
+ el voltaje de encendido\nterm1:=Vfb+fis+gam1*(sqrt(fis-VBSH)-sqrt(fis
+)):\nterm2:=-0.5*Ks*pow(sqrt(fis-VBSH)-sqrt(fis),2):\nterm3:=gam2*(sqr
+t(fis-Vb+Vs)-sqrt(fis-VBSH)):\nterm4:=(Knz+Knb*(Vb-Vs))/Weff-(etaz+eta
+l/Leff)*(Vd-Vs):\nVT:=(term1+term2+term3+term4)*p2:\n\n" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 911 "#Funci\363n hiperb\363lica VGSH:  \+
+Definida  en  el  modelo\nVGSH:=0.5*(Vg-Vs+Kgsh*VT+sqrt(pow((Vg-Vs+Kgs
+h*VT), 2.0)-4.0*(Vg-Vs)*VT)):\n\n\n#Funci\363n FG:  Definida en el mod
+elo\nFG:=1.0-1.0/(1.744+0.8364*(fis-Vb+Vs)):\n\n#Funci\363n FA:  Defin
+ida  en el modelo*/\nFA:=1.0+FG*gam1/(2*sqrt(fis-Vb+Vs)):\n\n#Funci
+\363n VC:  Definida en el modelo*/\nVC:=(VGSH-VT)/(FA*Ecrit*Leff):\n\n
+#Funci\363n VDSSAT:  Voltaje de saturaci\363n\nK:=0.5*(1.0+VC+sqrt(1.0
++2*VC)):\nVDSSAT:=(Vg-Vs-VT)/(FA*sqrt(K)):\n\n\n#Funci\363n hiperb\363
+lica VDSH:  Definida  en  el  modelo\nterm1:=Vd-Vs+Kh2*VDSSAT:\nterm2:
+=pow(Vd-Vs+Kh2*VDSSAT,2)-4.0*(Vd-Vs)*VDSSAT:\nVDSH:=0.5*(term1-sqrt(te
+rm2)):\n\n\n#Funci\363n fs:  Definida  en  el modelo\nfs:=0.5*(1-(Vg-V
+s-VT)/sqrt(pow(Vg-Vs-VT,2.0)+Ksig)):\n\n#Funci\363n fl:  Definida en e
+l modelo\nterm1:=lamd*(sqrt(fid+Vd-Vs-VDSH)-sqrt(fid)):\nterm2:=pow(VG
+SH-VT, 1.5)+lamg:\nterm3:=lamb/(1.0-(Vb-Vs)/lambs):\nfl:=term1/(term2*
+term3):\n#fl:=subs(Leff=Leff0,fl):\n" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 736 "#Funci\363n Alfa:  Definida  en  el modelo\nterm1:=(
+2.0*eta*eta/FA)*pow(kbol*T,2.0)*exp(Ksub*fs):term2:=1.0-fs*exp(-(Vd-Vs
+)*p3/(kbol*T)):\nterm3:=1.0+(1.0-fs)*fl:\nAlfa:=term1*term2*term3:\n\n
+#Funci\363n Efe:  Definida en el modelo\nEfe:=(Vg-Vs-VT)*VDSH-0.5*FA*p
+ow(VDSH,2.0):\n\n#Funci\363n meff:  Calculo de movilidad efectiva\nter
+m1:=1.0+(Ugsz+Ugsl/Leff)*(VGSH-VT):\nterm2:=Ubs*(sqrt(fis-VBSH)-sqrt(f
+is))+Uds*VDSH:\nterm3:=1.0+VDSH*(1.0-fs)/(Ecrit*Leff):\nMR:=(term1-ter
+m2)*term3:\nmeff:=Mov/MR:\n\n#Funci\363n Ids:  Corriente de drenaje pa
+ra todas las regiones de operaci\363n\nmovilidad:=meff:\nKsw:=1.0-2*fs
+:\nbeta:=(Cox*movilidad*Weff/Leff):\nterm1:=sqrt(0.5*Efe*FA/pow(eta,2)
+):\nterm2:=exp(term1*Ksw/(kbol*T)):\nterm3:=pow(ln(1.0+term2),2.0):\nI
+ds:=Alfa*beta*term3:\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 2278 
+"## Funciones adicionales\n##-----------------------\n## evalmatf(f,x,
+vals_x);\n## evalua una funcion f de R^n* R^n -> R^n*R^n\n## respecto \+
+a las variables x que pertenece a R^n, con los valores vals_x\n## dond
+e f(x) es una matrix  de funciones -debido a que se utilizara para eva
+luar el\n## jacobiano tambien.\n##\nevalmatf:=proc(f,x,vals_x)\nlocal \+
+result,rowdf,coldf,rowdvar, i0,i1,i2:\nresult:=copy(f):\nrowdf:=rowdim
+(f):\ncoldf:=coldim(f):\nrowdvar:=rowdim(x):\nfor i0  from 1  by 1  to
+ rowdf  do\n    for i1 from 1 by 1 to coldf  do\n\011for  i2 from 1 by
+ 1 to rowdvar   do\n\011 result[i0,i1]:=evalf(subs(x[i2,1]=vals_x[i2,1
+],result[i0,i1])):\n\011 od:\n     od:\nod:\nRETURN(op(result)):\nend:
+\n##\n##\n##-----------------------\n## evalbranchf(f,x,xval);\n## Thi
+s procedure is in order to evaluate a branch relation of the\n## eleme
+nt whit values xval.\nevalbranchf:=proc(f,x,xval)\nlocal result,rowdva
+r,i0:\nresult:=copy(f):\nrowdvar:=rowdim(x):\nfor  i0 from 1 by 1 to r
+owdvar   do\n result:=evalf(subs(x[i0,1]=xval[i0,1],result)):\n od:\nR
+ETURN(result):\nend:\n##\n##\n##--------------------------------------
+---------------------------------------\n##chktol(fxk,epsi); regresa t
+rue o false\n##Funcion para aplicar el criterio de paro, en el caso \n
+##n-dimensional, donde fxk es una matriz con el valor \n##f(x^\{k\}) y
+ tol es igual a epsilon.\n## || f( x_\{k\} )|| <=  epsilon\n##\nchktol
+:=proc(fxk,epsi)\nlocal rowdf,coldf,i0,i1:\nrowdf:=rowdim(fxk):\ncoldf
+:=coldim(fxk):\nfor i0  from 1  by  1  to  rowdf  do \n    for i1  fro
+m 1  by 1  to  coldf do\n      if abs(fxk[i0,i1])>epsi then\n        R
+ETURN(false):\n      fi:\n    od:\nod:\nRETURN(true):\nend:\n\n##-----
+-------\n##\n##Esta funci\\'on es por lo mientras, su proposito\n##ser
+\\'a no se aun si stepsize o deltax\n##\nmodifica:=proc(x)\nlocal resu
+lt,rdx,cdx,i0,i1:\nresult:=copy(x);\nrdx:=rowdim(x);\ncdx:=coldim(x);
+\nfor i0 from 1 by 1 to rdx do\n    for i1  from 1 by 1 to cdx do\n   \+
+     result[i0,i1]:=x[i0,i1]+ 3/4*x[i0,i1];\n    od:\nod:\nRETURN(op(r
+esult)):\nend:\n\n##------------\n##\n##Esta funci\\'on es por lo mien
+tras, su proposito\n##ser\\'a no se aun si stepsize o deltax\n##\nmaxi
+mo:=proc(matrix)\nlocal k6,k7,k8,k9:\nk6:=rowdim(matrix):\nk7:=abs(mat
+rix[1,1]):\nk9:=1:\nfor k8 from 1 by 1 to k6 do\n   if abs(matrix[k8,1
+])>k7 then\n      k7:=matrix[k8,1]:\n      k9:=k8:\n   fi:\nod:\nRETUR
+N(k9):\nend:\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 357 "evalmatfM:=proc(
+f,x,vals_x)\nlocal result,rowdf,coldf,rowdvar, i0,i1,i2:\nresult:=copy
+(f):\nrowdf:=rowdim(f):\ncoldf:=coldim(f):\nrowdvar:=rowdim(x):\nfor i
+0  from 1  by 1  to rowdf  do\n    for i1 from 1 by 1 to coldf  do\n
+\011for  i2 from 1 by 1 to rowdvar   do\n\011 result[i0,i1]:=limit(res
+ult[i0,i1],x[i2,1]=vals_x[i2,1]):\n\011 od:\n     od:\nod:\nRETURN(op(
+result)):\nend:\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 227 "#W:=1.75:L:=0.625:Vs:=0.0:
+\n#Vb:=0.0:\n#flT:=subs(Leff=Leff0,fl):\n#IdsF1:=subs(Vg=Vg*p1,Ids):\n
+#IdsF2:=subs(Leff=Leff0(1.0+flT),IdsF1):\n#IdsF3:=subs(\{p1=0,p2=0,p3=
+0\},IdsF2):\n#plot3d(IdsF3,Vd=0..5,Vg=0..3,labels=[\"Vd\",\"Vg\",\"Ie
+\"]);\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+22 "#for tt from 1 to 5 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "#pn1:
+=evalf(tt/4,3)-.25:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "#for jj from
+ 1 to 5 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "#pn2:=evalf(jj/4,3)-.
+25:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "#c1:=cat(\"p1=\",convert(pn1
+,string),\", p2=\",convert(pn2,string),\", p3=0\");" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 41 "#IdsF3:=subs(\{p1=pn1,p2=pn2,p3=0\},IdsF2):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 87 "#dd||tt||jj:=plot3d(IdsF3,Vd=0..3,V
+g=0..3,title=c1,labels=[\"Vd\",\"Vg\",\"Ie\"],axes=boxed):" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 4 "#od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#o
+d:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "#for jj from 1 \+
+to 5 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "#for tt from 1 to 5 do" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#print(dd||tt||jj);" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 4 "#od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#od;
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 74 "#c1:=cat(\"p1=\",convert(pn1,string),\", #p2=
+\",convert(pn2,string),\", p3=1\");" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+113 "#IdsF3:=subs(\{p1=1,p2=1,p3=1\},IdsF2):\n#plot3d(IdsF3,Vd=0..3,Vg
+=0..3,title=c1,labels=[\"Vd\",\"Vg\",\"Ie\"],axes=boxed);" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "with(stats,random);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 13 "with(linalg):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "W:=40:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 6 "L:=.8:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "#Vs:=
+0.0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "#Vb:=0.0:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 25 "flT:=subs(Leff=Leff0,fl):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "IdsF1:=subs(Leff=Leff0(1.0+flT),Ids):" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 29 "IdsF1P:=subs(Vg=Vg*p1,IdsF1):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 79 "IdsF1P:=subs(\{p1=1,p2=1,p3=1\},IdsF1P): #TEST T
+EST#TEST TEST#TEST TEST#TEST TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "Ids1:=subs(\{Vd=`1`,Vs=0,Vg=`2`\},IdsF1P):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 40 "Ids2:=subs(\{Vd=`2`,Vs=0,Vg=`1`\},IdsF1P):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "r:=500;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 105 "A:=matrix([[1/r*`1`-1/r*`3`+`1`^2], [1/r*`2`-1/r*`3`
++`2`^3], [-1/r*`1`-1/r*`2`+2/r*`3`+V1_rc], [`3`-3]]);" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "fo
+r i from 1 to 4 do f.i:=subs(\{`1`^2=Ids1,`2`^3=Ids2\},A[i,1]) od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+89 "#fsolve(\{f||1,f||2,f||3,f||4\},\{`1`,`2`,`3`,V1_rc\},\{`1`=0..3,`
+2`=0..3,V1_rc=-0.01..0.01\});" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "for i from 1 to 4 do g.i:=
+subs(\{`1`^2=Ids1,`2`^3=Ids2,`3`=3\},A[i,1]) od:" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 148 "Z1:=im
+plicitplot3d(\{g.1\},`1`=0..3.5,`2`=0..3.5,V1_rc=-0.01..0.000,grid=[15
+,15,10],labels=[\"v1\",\"v2\",\"Ie\"],axes=boxed,style=PATCHCONTOUR,sh
+ading=XY):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 130 "Z2:=implicit
+plot3d(\{g.2\},`1`=0..3.5,`2`=0..3.5,V1_rc=-0.01..0.000,grid=[18,18,10
+],labels=[\"v1\",\"v2\",\"Ie\"],axes=boxed,color=green):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 149 "Z3:=implicitplot3d(\{g.3\},`1`=0..
+3.5,`2`=0..3.5,V1_rc=-0.01..0.000,grid=[18,18,10],labels=[\"v1\",\"v2
+\",\"Ie\"],axes=boxed,shading=ZHUE,style=PATCHNOGRID):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "display(Z1,Z2,Z3,orientation=[-115,45]);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 64 "[`1` = .7381210757, `2` = 2.990983730, V1_rc =
+ -.4541790389e-2];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "[`1` = 2.9909
+83730, `2` = .7381210757, V1_rc = -.4541790389e-2];" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 64 "[`1` = 1.818618311, `2` = 1.818618311, V1_rc = -.4
+725526756e-2];" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 20 "Equations by Se
+ader:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7947 "homotopy :=proc(Eqns1::
+\{equation, list, vector\}, Vars::\{list(name=numeric),vector(name=num
+eric),equation\},Parameter::\{equation,set,list\})\n#\n#   Procedure f
+or solving systems of nonlinear equations\n#   using homotopy continua
+tion method\n#\n#   Version 1: Written by Ross Taylor, Clarkson Univer
+sity, Potsdam, NY, Nov - Dec 1993\n#   Version 2: Arnoud Higler, Septe
+mber 1997\n#\n#   Arguments\n#   ----------------\n#   Eqns1   - Vecto
+r of equations (or expressions)\n#   Vars       - Vector of variables
+\n#   Parameter - Specifications for the independent parameter\n#\n#  \+
+The subroutine returns a list of lists, with all points\n#  on the hom
+otopy curve. The first point on each list is the\n#  homotopy paramete
+r, followed by the variables in the same\n#  order as specified in `na
+mes`\n#\nlocal  neqns, nvars, i, j, ndir, nind, nind2, istep, x, Fvec,
+ Jmat, Ht, dfij, t, tfinal, xx, delx, ff, del1, del2, JJ, hh, tmp, del
+tat, dmax, h, fnorm, dt, result, fnrm, Eqns, Varlist, eps, xstart, max
+it, nsteps, infolevel, hstep, a, lha, rha, names, iter;\n#\n#  Linear \+
+algebra package required:\n    with(linalg);\n#\n#\n#  If required, re
+write the equations in a suitable form\n#\n    if type(Eqns1, equation
+) and type(Vars, equation) then \n      Eqns:=[Eqns1];\n      Varlist:
+=[Vars]\n    else  \n      Eqns:=Eqns1;\n      Varlist:=Vars\n    fi:
+\n#\n# Determine the number of equations\n#\n    neqns := vectdim(Eqns
+);\n    nvars:= vectdim(Varlist)+1;\n#\n#  Check for the correct numbe
+r of equations and variables\n#\n    if neqns +1 <> nvars then\n      \+
+ERROR(`Number of variables not consistent with number of equations`)\n
+    fi;\n#\n#  Initialize the some of the parameters to default values
+:\n#\n    iter := 0;\n    eps := 10^(-Digits+2);\n    infolevel:=vecto
+r([0,0,0,0,0,0,0]);\n    maxit := 10;\n    nsteps:= 10;\n    hstep := \+
+0.05;\n#\n#  Use optional arguments for further initialization\n#\n   \+
+ for a in [args[4..nargs]] do\n      if not type(a,equation) then \n  \+
+      ERROR(`Incorrect optional argument`,a)\n      fi:\n      lha :=l
+hs(a);\n      rha := rhs(a);\n      if lha = tolerance then\n        e
+ps := rha;\n        if eps < 10^(-Digits+2) then\n          lprint(`Wa
+rning: tolerance may be too small`)\n        fi:\n      elif lha = out
+put then\n        if type(rha,list) or type(rha,set) then\n          i
+f member(norm,rha) then infolevel[1] := 1 fi;\n          if member(var
+iables,rha) then infolevel[2] := 1 fi;\n          if member(functions,
+rha) then infolevel[3] := 1 fi;\n          if member(jacobian,rha) the
+n infolevel[4] := 1 fi;\n          if member(sparsity,rha) then infole
+vel[5] := 1 fi;\n          if member(symbolics,rha) then infolevel[6] \+
+:= 1 fi;\n          if member(parameter,rha) then infolevel[7] := 1 fi
+;\n        fi;\n      elif lha = iterations then maxit := rha\n      e
+lif lha = steps then nsteps := rha\n      elif lha = stepsize then hst
+ep := rha\n      fi\n    od;\n#\n#  Initialize vectors\n#\n    xstart \+
+:= vector(neqns);\n    x := vector(neqns);\n    Fvec := vector(neqns);
+\n    Jmat := array(sparse,1..neqns,1..neqns);\n    Ht := vector(neqns
+);\n    result := [];\n#\n#  Define the variable list and initialize t
+he variables\n#\n    for i to neqns do\n      names[i] := lhs(Varlist[
+i]);\n      xstart[i] := rhs(Varlist[i]);\n    od;\n    names[nvars] :
+= lhs(Parameter[1]);\n    if type(rhs(op(Parameter)),`..`) then\n     \+
+ t := op(1,rhs(Parameter[1]));\n      tfinal := op(2,rhs(Parameter[1])
+)\n    else\n      t:=rhs(Parameter[1]);\n      tfinal := 1\n    fi;\n
+#\n#    Create the function vector\n#\n    for i to neqns do\n      if
+ type(Eqns[i],`=`) then\n        Fvec[i] := unapply(lhs(Eqns[i])-rhs(E
+qns[i]),seq(names[k],k=1..nvars))\n      else\n        Fvec[i] := unap
+ply(Eqns[i],seq(names[k],k=1..nvars))\n      fi\n    od;\n#\n#  Print \+
+symbolics if required\n#\n    if 0 < infolevel[6] then\n      print(Fv
+ec(seq(names[k],k=1..nvars)))\n    fi;\n#\n#  Create symbolic jacobian
+\n#\n    for i to neqns do\n      Ht[i] := unapply(diff(Fvec[i](seq(na
+mes[k],k=1..nvars)),names[nvars]), seq(names[k],k=1..nvars));\n      f
+or j to neqns do\n        dfij := diff(Fvec[i](seq(names[k],k=1..nvars
+)),names[j]);\n        if dfij <> 0 then \n          Jmat[i,j] := unap
+ply(dfij,seq(names[k],k=1..nvars))\n        fi;\n      od\n    od;\n#
+\n#  Print symbolic jacobian\n#\n    if 0 < infolevel[6] then\n      p
+rint(Jmat(seq(names[k],k=1..nvars)))\n    fi;\n#\n#  Print sparsity pa
+ttern\n#\n    if 0 < infolevel[5] then\n      print(plots[sparsematrix
+plot](Jmat(seq(names[k],k=1..nvars)),title = `Sparsity pattern of jaco
+bian (upside down)`))\n    fi;\n#\n#  Variable and help vectors:\n#\n \+
+   xx := vector([seq(xstart[i],i=1..neqns)]);\n    delx := vector(neqn
+s);\n    ff := vector(neqns);\n    del1 := vector (neqns);\n    del2 :
+= vector (neqns);\n    JJ := array(sparse,1..neqns,1..neqns);\n    ndi
+r := vector(neqns+1);\n    hh := vector(neqns);\n    nind := nvars;\n \+
+   istep := 0;\n#\n#  Initialize the direction\n#\n   ndir[nind] := 1:
+\n   if tfinal < t then\n    ndir[nind] := -1:\n  fi; \n#\n#  Begin of
+ the main loop\n#\n    while abs(t - tfinal)>hstep*0.1 and istep < nst
+eps do\n#\n#   Evaluate functions\n#\n      ff := Fvec(seq(xx[k],k=1..
+neqns),t);\n      JJ := Jmat(seq(xx[k],k=1..neqns),t);\n      hh:= Ht(
+seq(xx[k],k=1..neqns),t);\n      fnrm := evalf(norm(ff,2));\n#\n#   Pr
+int information\n#\n      if 0 < infolevel[1] then\n        print(`Ite
+ration `, iter,`Norm = `,fnrm)\n      fi;\n      if 0 < infolevel[2] t
+hen\n        print(seq(names[k] = xx[k],k=1..neqns),names[nvars] = t)
+\n      fi;\n      if 0 < infolevel[3] then\n        print(seq(f[k]=ff
+[k],k=1..neqn))\n      fi;\n      if 0< infolevel[4] then\n        pri
+nt(JJ,hh)\n      fi;\n      if 0 < infolevel[7] then\n        print(`H
+omotopy parameter : `,names[nvars] = t, ` independent variable `,names
+[nind])\n      fi;\n#\n#    Swap columns and results vector for indepe
+ndent variable\n# \n    if nind < nvars then\n      for i to neqns do
+\n        tmp := JJ[i,nind];\n        JJ[i,nind] := hh[i];\n        hh
+[i] := tmp;\n      od\n    fi;\n#\n#  Solve the linear system\n#\n    \+
+delx := evalf(linsolve(JJ,hh));\n#\n#  Calculate the derivative of the
+ independent variable\n#\n    deltat := ndir[nind]/sqrt(1+dotprod(delx
+,delx));\n#\n# Calculate all other derivatives\n#\n    for i to neqns \+
+do\n      del1[i] := - deltat * delx[i]\n    od;\n#\n#   Switch variab
+les bac to original order\n#\n    if nind < nvars then \n      tmp := \+
+del1[nind];\n      del1[nind] := deltat;\n      deltat := tmp;\n    fi
+;\n#\n#  Select the largest value for delx\n#\n    nind2 := nvars;\n  \+
+  dmax := abs(deltat);\n    for i to neqns do\n      if dmax < abs(del
+1[i]) then\n        dmax := abs(del1[i]);\n        nind2 := i\n      f
+i;\n    od;\n#\n#  Determine direction of all derivatives\n#\n    for \+
+i to neqns do\n      ndir[i] := 1;\n      if del1[i] < 0 then\n       \+
+ ndir[i] := -1\n      fi\n    od;\n    ndir[nvars] := 1;\n    if  delt
+at < 0 then ndir[nvars] := -1;fi;\n#\n#  Integrate the differential eq
+uations\n#  Currently using euler's method\n#\n    for i to neqns do\n
+      xx[i] := xx[i] + hstep * del1[i]\n    od;\n    t := t + hstep * \+
+deltat;\n#\n#   Correct the newly obtained solution\n#\n    fnorm := 1
+;\n    iter := 0;\n#\n#  Check if the curve is close to the final solu
+tion\n#\n    if abs(t - tfinal) < hstep* deltat then\n      t:= tfinal
+;\n      nind2 := nvars\n    fi:\n#\n#  Do correction\n#\n    while ep
+s < fnorm and iter < maxit do\n      ff := Fvec(seq(xx[k],k=1..neqns),
+t);\n      JJ := Jmat(seq(xx[k],k=1..neqns),t);\n      hh:=Ht(seq(xx[k
+],k=1..neqns),t);\n      fnorm:= evalf(norm(ff,2));\n#\n#   Swap colum
+ns (if necessary)\n#\n      if nind2 < nvars then\n        for i to ne
+qns do\n          JJ[i,nind2] := hh[i]\n        od:\n      fi:\n#\n#  \+
+Solve linear system\n#\n    del2 := linsolve(JJ,ff);\n#\n#  Rearrange \+
+the results vector\n#  \n    dt := 0;\n    if nind2 < nvars then\n    \+
+  dt := del2[nind2];\n      del2[nind2] := 0;\n    fi;\n#\n#  Evaluate
+ the new variable vector\n#\n    for i to neqns do\n      xx[i] := xx[
+i] - del2[i]\n    od;\n    t := t - dt;\n    iter := iter + 1\n  od;\n
+#\n    nind := nind2;\n    istep := istep + 1;\n    result := [op(resu
+lt),[seq(xx[i],i=1..neqns),t]]\nod;\nRETURN(result);\nend:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "#read`c:/media/homotopia/hp/homotopy.mpl`;" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 49 "e1:=.1e-1*x^4-.16*x^3+.86*x^2-1.76*x+1.05
+-y=0:e1;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "e2:=y=0:e2;" }}
+}{EXCHG {PARA 0 "" 0 "" {TEXT -1 42 "Homotopy equations around startin
+g point::" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 70 "sp := [V1_rc = -.4541790478e-2, `1` = 2.99098
+3715, `2` = .7381210474];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+47 "#fx:=[(y-1)*(y-4)*(y-6)+x,(x-3)*(x-6)*(x-9)+y];" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 40 "ht1:=t*(t-1)+exp(t*(t-1))*ln(g.1^2+1)=0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 38 "#ht1:=e1 - (1-t) * (subs(sp,e1)):ht1;;" }
+}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 40 "ht2:=t*(t-1)+exp(t*(t-1))*ln(g.2^2+1)=0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 40 "ht3:=t*(t-1)+exp(t*(t-1))*ln(g.3^2+1)=0:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 36 "#ht2:=e2-(1-t) * (subs(sp,e2)):ht2;;" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 19 "g11:=subs(t=1,ht1):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "g22:=subs(t=1,ht2):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 19 "g33:=subs(t=1,ht3):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+81 "fsolve(\{g11,g22,g33\},\{V1_rc,`1`,`2`\},\{V1_rc = -0.01..0, `1` =
+ 2..4, `2` = 0..1\});" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "\{
+V1_rc = -.4541790478e-2, `2` = .7381210474, `1` = 2.990983715*c\};" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "Eqns:=[ht1,ht2,ht3]:" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "param:=[t=1..2];" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 14 "initpoint:=sp;" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 13 "st := time():" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+121 "pts:=homotopy(Eqns,initpoint,param,steps =200, stepsize = -0.15,s
+tepcontrol =adaptive, tolerance = 1e-5,iterations = 30):" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 12 "time() - st;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "pts[100];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "nops(p
+ts);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "p1:=plot([seq([pts[i][4],pts[i][2]]
+,i=1..nops(pts))],style=line,thickness=1,color = red):" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "pp:=implicitplot(x=1,x=0..1,y=0..8,
+color=green):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "display(pp,p1);" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "display(pp,p1,view=[0.9999..1,0..8
+]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 12 "XX:=x=0..10:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "
+YY:=y=-1..10:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "ZZ:=t=0..1:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 93 "#a:=implicitplot3d(\{ht1\},X
+X,YY,ZZ,grid=[25,25,25],axes=boxed,shading=ZHUE,style=PATCHNOGRID):" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "#a1:=implicitplot3d(\{ht2\},XX,YY,
+ZZ,grid=[25,25,25],axes=boxed,style=PATCHNOGRID):\n" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 68 "#tray:=plots[spacecurve](pts,color = black,axes= b
+oxed,thickness=4):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 46 "#display(a,a1,tray,view=[-2..10,-2..10,0..1])
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "#plots[spacecur
+ve](pts,color = red,axes= boxed,axes=normal);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 64 "#plots[pointplot3d](pts,color = red,axes= boxed,
+symbol=diamond);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 106 "p1:=pointplot3d([seq([pts[i
+][2],pts[i][3],pts[i][1]],i=1..nops(pts))],style=line,thickness=6,colo
+r = red):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "ht3;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 17 "kk:=solve(ht3,t):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "tt1:=su
+bs(t=kk[1],ht1):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "tt2:=su
+bs(t=kk[1],ht2):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "XX:=`1`=0..3.5:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 15 "YY:=`2`=0..3.5:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+19 "ZZ:=V1_rc=-0.01..0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 92 "a:=implicitplot3d(\{tt1\},XX,YY,ZZ,
+grid=[15,15,15],axes=boxed,shading=ZHUE,style=PATCHNOGRID):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 80 "a1:=implicitplot3d(\{tt2\},XX,YY,ZZ,grid=
+[15,15,15],axes=boxed,style=PATCHNOGRID):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "display(a,a1,
+p1,view=[0..3.5,0..3.5,-0.012..0]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "CONVERGER:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "while (CONVERGER=0 )do #PASOS COR
+RECTIVOS! ---------------------------------" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "FXmv:=convert(e
+valmat(FXm,uv,v_i_0_t),Matrix): #EVALUA H(x,lamda) " }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 63 "Bi:=convert(evalmat(JFX,uv,v_i_0_t),Matrix): #EVAL
+UA JACOBIANO " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "v_i_k:=v_i_0_t-Mul
+tiply(MatrixInverse(Bi),FXmv);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "E
+RRc:=evalmat(FXm,uv,v_i_k);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "v_i_
+0_t:=v_i_k:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "#i:=i+1:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 22 "#traj||i:=copy(v_i_k):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "k:=k+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "##print(
+\"correct\",v_i_k):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "if (norm(ERR
+c)<0.0001) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "CONVERGER:=1: # \+
+rompe el bucle correctivo" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "##prin
+t(\"pasos correctivos\",k+1):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "##
+print(\"ERRc\",norm(ERRc)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "end i
+f:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "52" 0 }{VIEWOPTS 
+1 1 0 1 1 1803 }

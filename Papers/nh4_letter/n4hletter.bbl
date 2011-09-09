@@ -1,0 +1,68 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{homo_allgower}
+E.~L. Allgower and K.~Georg, \emph{Numerical path following}, 1994.
+
+\bibitem{cont_quasi}
+{J. E.} Dennis and {Jorge J.} Mor{\'e}, \emph{{Quasi-Newton} methods,
+  motivation and theory}, Siam Review \textbf{19} (1977), no.~1.
+
+\bibitem{netwth_4q}
+J.~C. Lagarias and L.~Trajkovi{\'c}, \emph{Bounds for the number of dc
+  operating points of transistor circuits}, IEEE Transactions on Circuits and
+  Systems-I: Fundamental Theory and Applications \textbf{46} (1999), no.~10,
+  1216--1221.
+
+\bibitem{homo_ogrodzki}
+J.~Ogrodzki, \emph{Circuit simulation: methods and algorithms},  (1994).
+
+\bibitem{homo_richter}
+S.L. Richter and R.A. DeCarlo, \emph{Continuation methods: Theory and
+  applications}, IEEE Transactions on Circuits and Systems \textbf{CAS-30}
+  (1983), no.~6, 347--352.
+
+\bibitem{homo_MOS}
+{J.S.} Roychowdhury and {R.C.} Melville, \emph{Homotopy techinques for
+  obtaining a dc solution of large-scal mos circuits}, Design Automation
+  Conference \textbf{33rd} (1996).
+
+\bibitem{mnaxx}
+Chung-Wen~Ho Ruehli and {P.} {A.}~Brennan, \emph{The modified nodal approach to
+  network analysis}, IEEE Transactions on Circuits and Systems \textbf{22}
+  (1975), no.~6, 504.
+
+\bibitem{Schwa_book}
+{A. F.} Schwarz, \emph{Computer-aided design of microelectronic circuits and
+  systems: Volume 1},  (1987), ISBN 0-12-632431-X.
+
+\bibitem{homo_tadeusiewicz}
+M.~Tadeusiewicz and K.~Glowienka, \emph{A contraction algorithm for finding all
+  the dc solutions of piecewise-linear circuits}, J. Circuits, Syst. Comput.
+  \textbf{4} (1994), 319--336.
+
+\bibitem{homo_DWolfMulti}
+D.~M. Wolf and S.~R. Sanders, \emph{Multiparameter homotopy methods for
+  f\text{i}nding dc operating points of nonlinear circuits}, IEEE transactions
+  on circuits and systems-I: fundamental theory and aplications \textbf{43}
+  (1996), no.~10, 824--837.
+
+\bibitem{homo_yamamurawise}
+K.~Yamamura and T.~Ohshima, \emph{Finding all solutions of piecewise-linear
+  resistive circuits using linear programming}, IEEE transactions on circuits
+  and systems-I: fundamental theory and aplications \textbf{45} (1998),
+  434--445.
+
+\bibitem{homo_yamamura}
+K.~Yamamura, T.~Sekiguchi, and Y.~Inuoe, \emph{A f\text{i}xed-point homotopy
+  method for solving modif\text{i}ed nodal equations}, IEEE transactions on
+  circuits and systems-I: fundamental theory and aplications \textbf{46}
+  (1999), no.~6, 654--664.
+
+\end{thebibliography}

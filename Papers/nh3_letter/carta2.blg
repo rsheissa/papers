@@ -1,0 +1,50 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: carta2.aux
+The style file: amsplain.bst
+Database file #1: carta2.bib
+Warning--missing journal name in homo_ogrodzki
+Warning--missing pages in homo_ogrodzki
+Warning--missing journal name in Schwa_book
+Warning--missing pages in Schwa_book
+You've used 7 entries,
+            2213 wiz_defined-function locations,
+            553 strings with 5311 characters,
+and the built_in function-call counts, 1982 in all, are:
+= -- 168
+> -- 84
+< -- 0
++ -- 34
+- -- 26
+* -- 184
+:= -- 330
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 34
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 77
+empty$ -- 171
+format.name$ -- 26
+if$ -- 401
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 14
+newline$ -- 31
+num.names$ -- 14
+pop$ -- 38
+preamble$ -- 1
+purify$ -- 27
+quote$ -- 0
+skip$ -- 41
+stack$ -- 0
+substring$ -- 111
+swap$ -- 11
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 28
+warning$ -- 4
+while$ -- 19
+width$ -- 8
+write$ -- 68
+(There were 4 warnings)

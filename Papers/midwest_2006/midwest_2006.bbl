@@ -1,0 +1,56 @@
+\begin{thebibliography}{1}
+\providecommand{\url}[1]{#1}
+\csname url@rmstyle\endcsname
+\providecommand{\newblock}{\relax}
+\providecommand{\bibinfo}[2]{#2}
+\providecommand\BIBentrySTDinterwordspacing{\spaceskip=0pt\relax}
+\providecommand\BIBentryALTinterwordstretchfactor{4}
+\providecommand\BIBentryALTinterwordspacing{\spaceskip=\fontdimen2\font plus
+\BIBentryALTinterwordstretchfactor\fontdimen3\font minus
+  \fontdimen4\font\relax}
+\providecommand\BIBforeignlanguage[2]{{%
+\expandafter\ifx\csname l@#1\endcsname\relax
+\typeout{** WARNING: IEEEtran.bst: No hyphenation pattern has been}%
+\typeout{** loaded for the language `#1'. Using the pattern for}%
+\typeout{** the default language instead.}%
+\else
+\language=\csname l@#1\endcsname
+\fi
+#2}}
+
+\bibitem{verhoeven}
+C.~Verhoeven, A.~Staveren, G.~Monna, M.~Kouwenhoven, and E.~Yildiz,
+  \emph{Strutured Electronic Design, Negative-feedback Amplifiers}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Kluwer Academic Publishers, 2003.
+
+\bibitem{nordholt}
+E.~Nordholt, \emph{Design of High Performance Negative-feedback
+  amplifiers}.\hskip 1em plus 0.5em minus 0.4em\relax Elsevier Scientific,
+  1983.
+
+\bibitem{stoffels}
+J.~Stoffels, ``Automation in high-performance negative feedback amplifier
+  design,'' Ph.D. dissertation, Delft University of Technology, 1988.
+
+\bibitem{carlin}
+H.~Carlin, ``Singular network elements,'' \emph{IEEE Trans. Circuit Theory},
+  vol.~11, pp. 67--72, March 1964.
+
+\bibitem{moschytz}
+G.~Moschytz, ``Linear integrated networks: Fundamentals,'' \emph{Bell
+  Laboratory Series}, 1974.
+
+\bibitem{ott}
+H.~W. Ott, \emph{Noise Reduction Techniques in Electron Systems}.\hskip 1em
+  plus 0.5em minus 0.4em\relax John Wiley \& Sons, 1976.
+
+\bibitem{sarmiento}
+A.~Sarmiento, R.~Casta{\~n}eda, L.~Hern\'andez, and P.~L\'opez, ``Hierarchy in
+  noise expressions for nullor-based amplifiers,'' in \emph{ICED Proceedings},
+  2004.
+
+\bibitem{booch}
+G.~Brooch, \emph{Object Oriented Design With Applications}.\hskip 1em plus
+  0.5em minus 0.4em\relax The Benjamin/Cummings Publishing Company, 1991.
+
+\end{thebibliography}

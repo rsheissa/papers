@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c},
+\newblock ``Artif\text{i}cial parameter homotopy methods for the dc operating
+  point problem,''
+\newblock {\em IEEE transactions on computer-aided design of integrated
+  circuits and systems}, vol. 12, no. 6, pp. 861--877, June 1997.
+
+\bibitem{homo_DWolfMulti}
+Denise~M. Wolf and Seth~R. Sanders,
+\newblock ``Multiparameter homotopy methods for f\text{i}nding dc operating
+  points of nonlinear circuits,''
+\newblock {\em IEEE transactions on circuits and systems-I: fundamental theory
+  and aplications}, vol. 43, no. 10, pp. 824--837, October 1996.
+
+\bibitem{cont_leu1}
+Lieven Vandenberghe and Joos Vandewalle,
+\newblock ``Variable dimension algorithms for solving resistive circuits,''
+\newblock {\em International Journal of Circuit Theory and Applications}, vol.
+  18, no. 5, pp. 443--474, September 1990.
+
+\bibitem{homo_iscas05}
+Hector V\'azquez-Leal, Luis Hern\'andez-Mart\'{\i}nez, and Arturo
+  Sarmiento-Reyes,
+\newblock ``Double-bounded homotopy for analysing nonlinear resistive
+  circuits,''
+\newblock {\em Accepted in ISCAS'05}, May 2005.
+
+\bibitem{homo_iberchip03}
+Hector V\'azquez-Leal, Luis Hern\'andez-Mart\'{\i}nez, and Arturo
+  Sarmiento-Reyes,
+\newblock ``Numerical path following for double bounded homotopy scheme for
+  analysing nonlinear resistive circuits,''
+\newblock {\em IBERCHIP}, 2003.
+
+\bibitem{homo_seydel}
+R.~Seydel,
+\newblock ``Tracing branches,''
+\newblock {\em World of Bifurcation}, June 1999.
+
+\bibitem{homo_allgower}
+Eugene~L. Allgower and Kurt Georg,
+\newblock {\em Numerical Path Following},
+\newblock 1994.
+
+\bibitem{homo_sosonkina}
+Maria Sosonkina, Layne~T. Watson, and David~E. Stewart,
+\newblock ``Note on the end game in homotopy zero curve tracking,''
+\newblock {\em ACM Transantions On Mathematical Software}, vol. 22, no. 3, pp.
+  281--287, September 1996.
+
+\bibitem{homo_BSIM}
+S.H. Jen, B.J. Sheu, and Y.~Oshima,
+\newblock ``A unified approach to submicron dc mos transistor modeling for
+  low-voltage ics,''
+\newblock {\em Analog Integrated Circuits and Signal Processing}, vol. 12, pp.
+  107--118, 1997.
+
+\bibitem{homo_chua}
+A.~Ushida and {L. O. Chua},
+\newblock ``Tracing solution curves of non-linear equations with sharp turning
+  points,''
+\newblock {\em Circuit Theory and Applications}, vol. 12, pp. 1--21, 1984.
+
+\end{thebibliography}

@@ -1,0 +1,207 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "restart:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 10 "Digit:=15:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 12 "with(plots):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "f1a:=x^3-x-10-x^2/(x-2);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "#solve(f1a);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 19 "fsolve(f1a,x=0..2);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "fsolve(f1a,x=2..4);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "plot(f1a,x=-2..
+4);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "f1b:=x^
+4-x^3-x^2+x-10-x/(x-2);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "
+fsolve(f1b,x=2..3);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "fsolve(f1b,x
+=0..2);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "fsolve(f1b,x=-3..0);" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "plot(f1b,x=-2..6);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "f1c:=exp(-x^3-x
+^2+x+1)-3+exp(1/(x-3)^2);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "fsolve
+(f1c,x=-2..-1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "fsolve(f1c,x=-1.
+.0);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "fsolve(f1c,x=.5..1);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "fsolve(f1c,x=2..2.3);" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 21 "fsolve(f1c,x=3.2..4);" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 22 "limit(f1c,x=infinity);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "plot(f1c,x=3.7..5);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "f1d:=(exp(-x^3-x^2+x+1)-2);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 12 "fsolve(f1d);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "#plot(f1d,x=-2..1.5);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "f1e:=(exp(sin(x)-x/10)-2)*x+29;" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 20 "plot(f1e,x=-23..23);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "f1
+f:=(exp(sin(y)-x/15)-2)*x+(exp(sin(2*x)-y/15)-2)*x;" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 20 "f1g:=x^2+2*y^2-11^2;" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 71 "#s1:=implicitplot(\{f1f\},x=-22..22,y=-22..22,grid=[2
+00,200],color=blue):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "#ss:=implicitplot(\{f1g\},x=-22..22
+,y=-22..22,grid=[100,100],color=green):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "#display(\{s1,ss\});" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "#fsolve(\{f1f,f1g\});" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "#plot3d(\{f1f,f1g,0\},x=-12..12,y=-10..10,grid=[60,60
+]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "f1:=3*(x-1)^2-3*(y-1
+)^2-10;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "f2:=(x)^2-.3*(y)^2-10;" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "#d1:=implicitplot(\{f1\},
+x=-10..10,y=-10..10,color=red,tickmarks=[20,20]):" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 73 "#d2:=implicitplot(\{f2\},x=-10..10,y=-10..10,color=
+blue,tickmarks=[20,20]):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 
+"#display(\{d1,d2\});" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "Hr
+1:=(z-1)+z*f1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "Hr2:=(z-1)+z*f2;
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 101 "#q1:=implicitplot3d(\{Hr1\},x=
+-10..10,y=-10..15,z=-.5..1,grid=[35,35,35],axes=boxed,style=PATCHNOGRI
+D):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 115 "#q2:=implicitplot3d(\{Hr2\}
+,x=-10..10,y=-10..15,z=-.5..1,grid=[35,35,35],axes=boxed,style=PATCHCO
+NTOUR,shading=ZHUE):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "#display(q1
+,q2);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "z11:=so
+lve(Hr1,z):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "z22:=solve(Hr2,z):" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "x11:=z11=z22;" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "#implicitplot(x11,x=-5..5,y=
+-5..8,grid=[220,220],tickmarks=[20,20]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "Ho1:=100
+0*z*(z-1)+exp(z*(z-1))*ln(.01*f1^2+1);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 46 "Ho2:=10*z*(z-1)+exp(z*(z-1))*ln(.0001*f2^2+1);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "
+z11:=solve(Ho1,z):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "z22:=solve(Ho
+2,z):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "x11:=z11[2]=z22[2]
+:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 81 "#implicitplot3d(Hr1,x=
+-5..5,y=-5..8,z=0..1,grid=[30,30,35],tickmarks=[10,10,10]);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 68 "#implicitplot(x11,x=-5..5,y=-5..8,grid=[220,220],tick
+marks=[20,20]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 77 "#POINT, HIDDEN, PATCH, WIREFRAME, CONTOUR, PATCHNOGRI
+D, PATCHCONTOUR, or LINE" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "#XYZ, X
+Y, Z, ZGRAYSCALE, ZHUE, NONE." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 97 "q1:=implicitplot3d(\{Ho1\},x=-5..5
+,y=-5..8,z=1.99..2,grid=[35,35,35],axes=boxed,style=PATCHNOGRID):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 111 "q2:=implicitplot3d(\{Ho2\},
+x=-5..5,y=-5..8,z=1.99..2,grid=[35,35,35],axes=boxed,style=PATCHCONTOU
+R,shading=ZHUE):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "display
+(q1,q2);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+26 "expand((x-1)*(x-5)*(x-8));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "f1:=x^3-40+y:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 18 "f2:=53*x-14*x^2-y:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "d1:=implicitplot(\{f1\},x=-10..10,y
+=-10..60,color=red):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "d2:=implici
+tplot(\{f2\},x=-10..10,y=-10..60,color=blue):" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 17 "display(\{d1,d2\});" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "f1:=(y-1)*(y-4)*(y-6)+x:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "f2:=(x-3)*(x-6)*(x-9)+y:" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "#f1:=
+2.5*(y-1)*(y-4)*(y-6)+x:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "#f2:=0.
+8*(x-3)*(x-6)*(x-9)+y:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "fsolve(\{f1,f2\},\{x=2..4,y=5..6\});" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 32 "fsolve(\{f1,f2\},\{x=2..4,y=4..6\});" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "implicitplot(\{f1,f2\},x=-22..10,y=
+-11..11,grid=[60,60]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "a
+lias(W=LambertW);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "Ho1:=(z-1)*(y)
++z*f1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "Ho2:=(z-1)*(x)+z*f2:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+17 "d1:=solve(Ho1,z);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "d2:=solve(
+Ho2,z):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "xd1:=d1=d2
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "#Ho4:=f1*f2;" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "#Ho4:=10*(z)*(z-1)+exp((z)*(z-1))*
+ln(0.01*(f2*f1)^2+1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "#Ho3:=f1*f
+2;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "Ho3:=10*(z-2)*(z-1)+exp((z-2)
+*(z-1))*ln(0.01*(f2*f2)+1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "Ho4:
+=10*(z-2)*(z-1)+exp((z-2)*(z-1))*ln(0.01*(f1*f1)+1);" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "#Ho
+3:=10*(z)*(z-1)*(x-A)^2*(x-B)^2+exp((z)*(z-1))*ln(0.01*(f2*f2)+1);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "#Ho4:=10*(z)*(z-1)*(y-A1)^2*(y-B1)^
+2+exp((z)*(z-1))*ln(0.01*(f1*f1)+1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "#d1:=subs(\{z=0.5,x=0,y=0
+\},Ho3);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "#d2:=subs(\{z=0.5,x=10,
+y=10\},Ho3);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "#ff1:=solve(\{d1,d2
+\});" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 19 "#At:=rhs(ff1[2,1]);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 19 "#Bt:=rhs(ff1[2,2]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "#Ho3r:=subs(\{A=At,B=Bt\},Ho
+3);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "#a1:=su
+bs(\{z=0.5,y=0,x=0\},Ho4);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "#a2:=
+subs(\{z=0.5,y=10,x=10\},Ho4);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "#
+ff2:=solve(\{a1,a2\});" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#At:=rhs(
+ff2[2,1]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#Bt:=rhs(ff2[2,2]);" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "#Ho4r:=subs(\{A1=At,B1=Bt\},Ho4);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "z1:=solve(Ho3,z):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 17 "z2:=solve(Ho4,z):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 16 "x1:=z1[1]=z2[1]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "##xx1:=
+solve(x1,y):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 8 "#xx1[1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 77 "#POINT, HIDDEN, PATCH, WIREFRAME, CONTOUR, PATCHNOG
+RID, PATCHCONTOUR, or LINE" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "#XYZ,
+ XY, Z, ZGRAYSCALE, ZHUE, NONE." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 103 "#q1:=implicitplot3d(\{Ho1\},x=-10..15,y=-10..15
+,z=-0.5..10,grid=[35,35,35],axes=boxed,style=PATCHNOGRID):" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 117 "#q2:=implicitplot3d(\{Ho2\},x=-10..15,y=-1
+0..15,z=-0.5..10,grid=[35,35,35],axes=boxed,style=PATCHCONTOUR,shading
+=ZHUE):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 108 "#q3:=implicitpl
+ot3d(\{Ho3\},x=1..10,y=0..7,z=0..1,grid=[25,25,25],axes=boxed,style=PA
+TCHCONTOUR,shading=ZHUE):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "#XX:=x
+=0..11:#XX:=x=0..11:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "#YY:=y=-1..
+8:#YY:=y=-1..8:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "XX:=x=0..11:YY:=
+y=-1..8:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 98 "q3:=implicitplot3d(\{Ho3\},XX,YY,z=1..2,grid=[25,25,2
+5],axes=boxed,style=PATCHCONTOUR,shading=ZHUE):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 104 "q4:=implicitplot3d(\{Ho4\},XX,YY,z=1..2,grid=
+[25,25,25],axes=boxed,shading=ZGRAYSCALE,style=PATCHCONTOUR):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 92 "#implicitplot3d(tt,XX,YY,z=0..1,grid=[25,25,25],axes=
+boxed,style=PATCHCONTOUR,shading=ZHUE);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 131 "#lln:=implicitplot3d(ln
+(f2*f2+1)+ln(f1*f1+1)-z,x=0..11,y=-1..8,z=0..11,grid=[45,45,45],axes=b
+oxed,style=PATCHCONTOUR,shading=ZHUE):" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 67 "#implicitplot(x1,x=0..11,y=0..10,grid=[160,160],tickm
+arks=[20,20]);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 89 "#plot(\{xx1[1],xx1[2],xx1[3],xx1[4],xx1[5
+],xx1[6]\},x=0..10, numpoints=700,resolution=700);" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "#impl
+icitplot(xd1,x=-10..10,y=-10..10,grid=[60,60],tickmarks=[20,20]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 16 "#display(q1,q2);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "display(q3,q4,o
+rientation=[-46,48]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#HH1:=(z-1)+z*f1^2;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#HH2:=(z-1)+z*f2^2;" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#Q1:=implicitplot3d(\{HH1\},
+x=0..12,y=-5..12,z=0..2,grid=[45,45,45],axes=boxed,style=PATCHNOGRID):
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 110 "#Q2:=implicitplot3d(\{
+HH2\},x=0..12,y=-5..12,z=0..2,grid=[45,45,45],axes=boxed,style=PATCHCO
+NTOUR,shading=ZHUE):" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "#Q3
+:=implicitplot3d(\{z=1\},x=0..12,y=0..12,z=0..2,grid=[45,45,45],axes=b
+oxed):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "#display(Q1,Q2);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 12 "LambertW(0);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 77 "implicitplot3d(\{Ho3\},XX,YY,z=0..1,grid=[25,25,25],axes=boxed
+,c,shading=ZHUE);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 100 "impli
+citplot3d(\{Ho4\},XX,YY,z=0..1,grid=[25,25,25],axes=boxed,shading=ZGRA
+YSCALE,style=PATCHCONTOUR);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}}{MARK "77" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 
+1 2 33 1 1 }

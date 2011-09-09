@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1150"
+   height="835"
+   id="svg4072"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="curvatura.svg">
+  <defs
+     id="defs4074">
+    <marker
+       inkscape:stockid="Arrow1Lend"
+       orient="auto"
+       refY="0.0"
+       refX="0.0"
+       id="Arrow1Lend"
+       style="overflow:visible;">
+      <path
+         id="path4848"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         style="fill-rule:evenodd;stroke:#000000;stroke-width:1.0pt;marker-start:none;"
+         transform="scale(0.8) rotate(180) translate(12.5,0)" />
+    </marker>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.68075036"
+     inkscape:cx="563.30712"
+     inkscape:cy="350.09113"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="921"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="xygrid"
+       id="grid4328"
+       empspacing="1"
+       dotted="true"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata4077">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-217.36218)">
+    <polyline
+       points="14929,2173 "
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline4157"
+       transform="matrix(0.0746124,0,0,0.0746124,-393.88832,-232.97451)" />
+    <polyline
+       points="14929,2173 "
+       style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+       id="polyline4159"
+       transform="matrix(0.0746124,0,0,0.0746124,-393.88832,-232.97451)" />
+    <g
+       id="g3048">
+      <rect
+         id="rect4105"
+         style="fill:#ffff00;stroke:#0000ff;stroke-width:0.59689921;stroke-linecap:butt;stroke-linejoin:miter"
+         rx="8.2073641"
+         height="525.19666"
+         width="419.47092"
+         y="361.26767"
+         x="675.36707" />
+      <circle
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="circle4107"
+         style="fill:#00ff00;stroke:#0000ff;stroke-width:8"
+         r="130"
+         cy="13393"
+         cx="11399"
+         sodipodi:cx="11399"
+         sodipodi:cy="13393"
+         sodipodi:rx="130"
+         sodipodi:ry="130"
+         d="m 11529,13393 c 0,71.797 -58.203,130 -130,130 -71.797,0 -130,-58.203 -130,-130 0,-71.797 58.203,-130 130,-130 71.797,0 130,58.203 130,130 z" />
+      <circle
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="circle4109"
+         style="fill:#00ff00;stroke:#0000ff;stroke-width:8"
+         r="130"
+         cy="17786"
+         cx="11399"
+         sodipodi:cx="11399"
+         sodipodi:cy="17786"
+         sodipodi:rx="130"
+         sodipodi:ry="130"
+         d="m 11529,17786 c 0,71.797 -58.203,130 -130,130 -71.797,0 -130,-58.203 -130,-130 0,-71.797 58.203,-130 130,-130 71.797,0 130,58.203 130,130 z" />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.07928697,188.96882,-641.30524)"
+         id="polyline4119"
+         style="fill:none;stroke:#ff0000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:41, 41"
+         points="11385,11574 11433,19937 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="polyline4121"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="6614,18944 6614,19133 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="polyline4123"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="6519,19039 11559,19039 " />
+      <polygon
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="polygon4125"
+         style="fill:#000000;stroke:#000000;stroke-width:16;stroke-miterlimit:8"
+         points="11541,18999 11541,19078 11541,19078 11698,19039 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="polyline4127"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="10960,18944 10960,19133 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,188.96882,-548.10829)"
+         id="polyline4135"
+         style="fill:none;stroke:#000000;stroke-width:48;stroke-linecap:butt;stroke-linejoin:bevel"
+         points="6566,18850 6567,18850 6571,18850 6577,18850 6586,18850 6600,18850 6619,18850 6643,18849 6672,18849 6709,18849 6752,18848 6803,18848 6859,18847 6923,18846 6995,18845 7072,18844 7156,18843 7247,18840 7343,18838 7445,18836 7551,18834 7662,18831 7777,18828 7893,18825 8013,18820 8135,18817 8258,18813 8381,18808 8504,18803 8627,18797 8749,18792 8870,18786 8990,18780 9106,18773 9222,18766 9333,18759 9442,18751 9548,18743 9651,18734 9751,18725 9847,18716 9941,18706 10030,18696 10116,18685 10198,18674 10278,18662 10353,18649 10426,18637 10494,18624 10560,18609 10623,18596 10682,18581 10739,18565 10792,18550 10843,18533 10891,18515 10936,18497 10979,18478 11019,18458 11057,18437 11091,18416 11125,18394 11155,18372 11184,18348 11211,18324 11236,18299 11265,18265 11291,18232 11314,18196 11335,18158 11354,18119 11370,18079 11383,18038 11394,17995 11403,17951 11409,17905 11414,17858 11417,17809 11417,17759 11416,17708 11413,17655 11407,17602 11401,17546 11393,17489 11382,17432 11371,17373 11358,17313 11344,17253 11329,17191 11313,17129 11296,17066 11277,17003 11259,16939 11239,16876 11220,16811 11200,16747 11180,16683 11160,16618 11139,16554 11119,16490 11098,16427 11079,16363 11059,16300 11040,16238 11022,16176 11004,16115 10987,16055 10972,15995 10957,15937 10943,15879 10931,15821 10919,15764 10910,15709 10901,15654 10894,15600 10888,15546 10883,15492 10881,15441 10880,15382 10881,15324 10886,15267 10891,15209 10897,15152 10907,15096 10917,15040 10929,14983 10942,14928 10957,14872 10973,14816 10991,14761 11008,14705 11028,14649 11048,14595 11069,14540 11090,14486 11112,14432 11134,14379 11156,14325 11179,14272 11200,14221 11222,14170 11243,14119 11262,14069 11282,14020 11301,13972 11318,13925 11335,13880 11350,13835 11363,13791 11376,13748 11385,13706 11394,13665 11401,13625 11405,13586 11407,13548 11408,13512 11406,13477 11402,13442 11395,13408 11386,13375 11374,13343 11360,13312 11342,13281 11322,13252 11304,13228 11285,13205 11261,13183 11237,13160 11211,13138 11182,13116 11150,13095 11116,13072 11079,13051 11039,13029 10996,13008 10951,12987 10902,12965 10850,12944 10795,12922 10737,12901 10676,12879 10611,12857 10542,12834 10470,12812 10394,12789 10316,12766 10234,12742 10148,12719 10059,12695 9967,12670 9871,12645 9774,12621 9674,12596 9572,12571 9468,12545 9363,12521 9257,12496 9151,12472 9045,12448 8941,12424 8838,12401 8738,12379 8640,12358 8546,12337 8457,12318 8373,12299 8295,12283 8221,12267 8155,12254 8095,12241 8043,12229 7996,12220 7958,12212 7925,12205 7899,12200 7879,12196 7864,12193 7854,12191 7847,12190 7843,12188 7842,12188 " />
+      <text
+         id="text4147"
+         font-size="227"
+         font-weight="bold"
+         font-style="italic"
+         y="904.14746"
+         x="675.36707"
+         xml:space="preserve"
+         style="font-size:16.93701553px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">0.9</text>
+      <text
+         id="text4149"
+         font-size="215"
+         font-weight="normal"
+         font-style="normal"
+         y="268.36218"
+         x="1024"
+         xml:space="preserve"
+         style="font-size:16.04166603px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:'Times,Symbol'">λ=1</text>
+      <text
+         id="text4151"
+         font-size="227"
+         font-weight="bold"
+         font-style="italic"
+         y="858.33545"
+         x="985.60541"
+         xml:space="preserve"
+         style="font-size:16.93701553px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">0.99</text>
+      <text
+         id="text4153"
+         font-size="252"
+         font-weight="bold"
+         font-style="italic"
+         y="1003.134"
+         x="869.92206"
+         xml:space="preserve"
+         style="font-size:18.8023243px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">(b)</text>
+      <text
+         id="text4145"
+         font-size="252"
+         font-weight="bold"
+         font-style="italic"
+         y="1002.895"
+         x="260.05084"
+         xml:space="preserve"
+         style="font-size:18.8023243px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">(a)</text>
+      <rect
+         id="rect4103"
+         style="fill:#ffff00;stroke:#0000ff;stroke-width:0.59689921;stroke-linecap:butt;stroke-linejoin:miter"
+         rx="8.2073641"
+         height="359.48254"
+         width="21.115309"
+         y="479.483"
+         x="456.48206" />
+      <circle
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="circle4111"
+         style="fill:#00ff00;stroke:#0000ff;stroke-width:8"
+         r="80"
+         cy="6472"
+         cx="11385"
+         sodipodi:cx="11385"
+         sodipodi:cy="6472"
+         sodipodi:rx="80"
+         sodipodi:ry="80"
+         d="m 11465,6472 c 0,44.1828 -35.817,80 -80,80 -44.183,0 -80,-35.8172 -80,-80 0,-44.1828 35.817,-80 80,-80 44.183,0 80,35.8172 80,80 z" />
+      <circle
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="circle4113"
+         style="fill:#00ff00;stroke:#0000ff;stroke-width:8"
+         r="80"
+         cy="3826"
+         cx="11399"
+         sodipodi:cx="11399"
+         sodipodi:cy="3826"
+         sodipodi:rx="80"
+         sodipodi:ry="80"
+         d="m 11479,3826 c 0,44.1828 -35.817,80 -80,80 -44.183,0 -80,-35.8172 -80,-80 0,-44.1828 35.817,-80 80,-80 44.183,0 80,35.8172 80,80 z" />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polyline4115"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="11196,9496 11196,9685 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polyline4117"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="5858,9496 5858,9685 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polyline4133"
+         style="fill:none;stroke:#000000;stroke-width:32;stroke-linecap:butt;stroke-linejoin:bevel"
+         points="5858,9401 5859,9401 5862,9401 5868,9400 5878,9399 5891,9398 5909,9397 5933,9395 5963,9393 5997,9390 6039,9385 6087,9382 6140,9377 6199,9372 6263,9366 6333,9360 6407,9353 6486,9346 6566,9339 6651,9331 6738,9322 6827,9314 6916,9306 7006,9297 7096,9288 7186,9279 7275,9270 7362,9260 7448,9251 7533,9241 7616,9233 7697,9224 7776,9214 7853,9205 7927,9195 7998,9186 8069,9176 8137,9168 8203,9159 8266,9149 8329,9140 8389,9129 8448,9120 8506,9110 8561,9100 8616,9090 8669,9080 8722,9069 8773,9058 8825,9047 8875,9036 8924,9024 8974,9012 9023,9000 9078,8985 9132,8971 9187,8956 9241,8940 9296,8924 9351,8908 9404,8891 9459,8873 9513,8854 9568,8835 9622,8816 9676,8795 9731,8775 9784,8753 9839,8731 9892,8708 9946,8685 10000,8661 10052,8637 10104,8612 10157,8586 10207,8560 10259,8533 10308,8506 10358,8478 10405,8450 10452,8422 10498,8393 10543,8364 10586,8334 10629,8305 10670,8276 10710,8245 10749,8215 10786,8184 10822,8154 10856,8123 10890,8093 10921,8062 10952,8031 10981,8001 11008,7969 11036,7938 11061,7907 11084,7876 11107,7843 11129,7812 11149,7779 11171,7741 11192,7703 11211,7666 11229,7626 11246,7586 11261,7545 11276,7503 11290,7461 11302,7417 11314,7373 11324,7328 11334,7281 11343,7235 11351,7188 11357,7140 11363,7090 11369,7041 11373,6991 11376,6940 11378,6890 11380,6839 11381,6788 11382,6737 11382,6686 11381,6635 11380,6584 11379,6534 11377,6483 11375,6434 11373,6385 11370,6337 11366,6288 11363,6241 11360,6195 11357,6149 11354,6103 11352,6058 11349,6014 11345,5970 11342,5927 11340,5884 11338,5842 11336,5798 11334,5754 11333,5710 11332,5666 11331,5620 11331,5576 11330,5531 11330,5487 11330,5442 11331,5396 11331,5351 11332,5304 11333,5258 11334,5211 11335,5165 11337,5119 11339,5071 11340,5025 11342,4979 11344,4933 11346,4887 11349,4841 11352,4796 11354,4751 11356,4707 11358,4664 11361,4621 11363,4578 11365,4537 11367,4496 11371,4456 11373,4417 11375,4379 11376,4341 11378,4303 11380,4267 11381,4230 11383,4196 11384,4160 11385,4125 11386,4087 11387,4049 11387,4011 11388,3972 11388,3933 11387,3895 11386,3856 11385,3817 11382,3777 11380,3737 11376,3697 11372,3656 11367,3615 11361,3574 11355,3533 11346,3492 11338,3451 11329,3411 11318,3371 11307,3330 11294,3290 11280,3250 11266,3210 11250,3171 11233,3133 11215,3096 11196,3059 11176,3022 11155,2986 11133,2951 11109,2916 11085,2881 11060,2848 11034,2814 11005,2781 10976,2748 10952,2722 10927,2696 10901,2669 10874,2644 10846,2618 10816,2591 10786,2564 10754,2538 10721,2511 10687,2483 10651,2456 10615,2429 10577,2401 10537,2373 10496,2345 10455,2318 10412,2289 10368,2261 10323,2233 10277,2205 10229,2177 10181,2150 10132,2121 10082,2094 10032,2067 9981,2040 9929,2013 9878,1987 9825,1962 9772,1935 9719,1911 9666,1886 9612,1863 9559,1839 9505,1817 9451,1794 9398,1772 9343,1751 9290,1730 9236,1710 9183,1690 9129,1671 9076,1652 9021,1633 8967,1615 8913,1598 8867,1583 8819,1569 8772,1554 8724,1541 8675,1527 8625,1513 8576,1500 8524,1486 8472,1472 8418,1460 8363,1446 8307,1433 8248,1420 8188,1406 8128,1393 8064,1379 7998,1365 7930,1352 7861,1338 7790,1323 7715,1310 7639,1295 7561,1280 7481,1266 7399,1251 7316,1235 7231,1220 7145,1206 7058,1190 6971,1175 6883,1161 6796,1146 6711,1131 6627,1117 6545,1103 6466,1090 6390,1078 6319,1066 6251,1055 6188,1044 6132,1036 6079,1027 6034,1020 5993,1014 5960,1007 5931,1003 5908,1000 5890,997 5877,995 5868,994 5862,993 5859,992 5858,992 " />
+      <text
+         id="text4137"
+         font-size="215"
+         font-weight="normal"
+         font-style="normal"
+         y="268.36218"
+         x="450"
+         xml:space="preserve"
+         style="font-size:16.04166603px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:'Times,Symbol'">λ=1</text>
+      <text
+         id="text4139"
+         font-size="227"
+         font-weight="bold"
+         font-style="italic"
+         y="979.98297"
+         x="40.517944"
+         xml:space="preserve"
+         style="font-size:16.93701553px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">0.5</text>
+      <text
+         id="text4141"
+         font-size="227"
+         font-weight="bold"
+         font-style="italic"
+         y="969.46259"
+         x="435.29214"
+         xml:space="preserve"
+         style="font-size:16.93701553px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">0.9</text>
+      <text
+         id="text4143"
+         font-size="215"
+         font-weight="normal"
+         font-style="normal"
+         y="268.36218"
+         x="31"
+         xml:space="preserve"
+         style="font-size:16.04166603px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:'Times,Symbol'">λ=0.5</text>
+      <polyline
+         transform="matrix(0.0746124,0,0,0.07561133,-382.45975,222.82936)"
+         id="polyline4155"
+         style="fill:none;stroke:#ff0000;stroke-width:16;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:41, 41"
+         points="11385,708 11433,9921 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polyline4161"
+         style="fill:none;stroke:#000000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter"
+         points="5763,9590 11795,9590 " />
+      <polygon
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polygon4163"
+         style="fill:#000000;stroke:#000000;stroke-width:16;stroke-miterlimit:8"
+         points="11777,9629 11934,9590 11777,9550 11777,9629 " />
+      <polyline
+         transform="matrix(0.0746124,0,0,0.0746124,-382.45975,232.73978)"
+         id="polyline4165"
+         style="fill:none;stroke:#ff0000;stroke-width:8;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:31, 15, 10, 15"
+         points="5858,566 5858,9779 " />
+      <path
+         transform="translate(0,217.36218)"
+         inkscape:connector-curvature="0"
+         inkscape:connector-type="polyline"
+         id="path4332"
+         d="m 477.59736,410.0852 197.76971,0"
+         style="fill:none;stroke:#000000;stroke-width:2.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;marker-end:url(#Arrow1Lend)" />
+    </g>
+  </g>
+</svg>

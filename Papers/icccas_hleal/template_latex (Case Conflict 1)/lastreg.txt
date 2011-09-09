@@ -1,0 +1,11 @@
+ Numerical continuation scheme for tracing the double bounded homotopy for analysing nonlinear circuits
+Area:  	Theory, Design and Implementation of Circuits and Systems
+Subarea:  	Nonlinear Circuits and Systems
+Paper ID:   	(DO NOT FORGET IT!)
+Abstract:  	A numerical continuation for tracing the double bounded homotopy for obtaining DC solutions of nonlinear circuits is proposed. The double bounded homotopy is used to find multiple DC solutions with the advantage of having a stop criterion which is based on the property of having a double bounded trajectory. The key aspects of the implementation of the numerical continuation are presented in this paper. Besides, in order to trace and apply the stop criterion some blocks of the numerical continuation are modified and explained.
+File Name:  	hleal.pdf
+Size:  	257kb
+Upload Time:  	2005-01-21 09:00:45
+
+
+080209

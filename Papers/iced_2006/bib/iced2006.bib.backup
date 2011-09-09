@@ -1,0 +1,712 @@
+@Manual{aplac,
+  title = 	 {APLAC Circuit Simulation \& Design Tool 7.80 Manual},
+  organization = {APLAC Solutions Corporation},
+  address =	 {Helsinki, Finland},
+  year =	 2002
+}
+
+@Book{barnes,
+  author =	 {Timothy J. Barnes},
+  title = 	 {Electronic CAD Frameworks},
+  publisher = 	 {Kluwer Academic Publishers},
+  year = 	 1992
+}
+
+@Unpublished{barnes1,
+  author = 	 {T. Barnes},
+  title = 	 {CODEM: The Cooperative Development Model},
+  note = 	 {Unpublished paper, National Semiconductor Corporation},
+  year =	 1988
+}
+
+@Manual{bfr520,
+  title = 	 {BFR520 Product data sheet},
+  organization = {Philips Electronics},
+  month =	 {September},
+  year =	 2004
+}
+
+@Book{boite,
+  editor =	 {R. Boite and P. Dewilde},
+  title = 	 {Circuit Theory and Design},
+  publisher = 	 {Delft University Press/North-Holland Publishing Co.},
+  year = 	 1981
+}
+
+@PhdThesis{boon,
+  author = 	 {C.A.M. Boon},
+  title = 	 {Design of High-Performance Negative-Feedback Oscillators},
+  school = 	 {Delft University of Technology},
+  year = 	 1989,
+  address =	 {The Netherlands}
+}
+
+@article{c++1,
+  Author =	 "B. Stroustrup",
+  Title =	 "What Is Object-oriented Programming? (1991 Revised Version)",
+  journal =	 "Proc. 1st European Software Festival",
+  Month =	 "February",
+  Year =	 1991
+}
+
+@Manual{cadence,
+  title = 	 {CADENCE Reference Manual},
+  organization = {Cadence Design Systems},
+  year =	 2003
+}
+
+@Article{carlin,
+  author = 	 {H.J. Carlin},
+  title = 	 {Singular Network Elements},
+  journal = 	 {IEEE Trans. Circuit Theory},
+  year = 	 1964,
+  volume =	 11,
+  pages =	 {67-72},
+  month =	 {March}
+}
+
+@InProceedings{chang,
+  author = 	 {H. Chang and A. Sangiovanni-Vincentelli and F. Balarin and E. Charbon and G. Jusuf and E. Liu and E. Malavasi and R. Beff and P. Gray},
+  title = 	 {A Top-Down, Constraint-Driven Design Methodology for Analog Integrated Circuits},
+  booktitle =	 {Custom Integrated Circuits Conference},
+  pages =	 {841-846},
+  year =	 1992,
+  month =	 {May},
+  organization = {IEEE}
+}
+
+@Article{chawla,
+  author = 	 {B.R. Chawla and H.K. Gummel},
+  title = 	 {A Boundary Technique for Calculation of distributed resistances},
+  journal = 	 {IEEE Trans. Electron Devices},
+  year = 	 1970,
+  volume =	 {ED-17},
+  number =	 10,
+  month =	 {October}
+}
+
+@Book{davidse,
+  author =	 {J. Davidse},
+  title = 	 {Analog Electronic Circuit Design},
+  publisher = 	 {Prentice Hall},
+  year = 	 1991,
+  note =	 {New York}
+}
+
+@InProceedings{demers,
+  author = 	 {L. Demers and P. Jacques and S. Fauvel and E. Cerny},
+  title = 	 {CHESHIRE: An Object-Oriented Integration of VLSI CAD Tools},
+  booktitle =	 {24th ACM/IEEE Design Automation Conference},
+  pages =	 {750-756},
+  year =	 1987
+}
+
+@InProceedings{doboli,
+  author = 	 {A. Doboli and A. Nunez and N. Dhanwada and S. Ganesan and R. Vemur},
+  title = 	 {Behavioral Synthesis of Analog Systems Using Two-layered Design Space Exploration},
+  booktitle =	 {Design Automation Conference},
+  pages =	 {951-957},
+  year =	 1999
+}
+
+
+
+@Misc{engl,
+  author =	 {W.L. Engl and others},
+  title =	 {GALENE structure simulator},
+  howpublished = {IEDM Tech. Dig.},
+  year =	 1992
+}
+
+@Manual{geda,
+  title = 	 {gEDA: GNU Electronic Design Assistant},
+  organization = {Univeristy of Seoul},
+  address =	 {Seoul, Korea},
+  year =	 2005
+}
+
+@Manual{glade,
+  title = 	 {Glade Manual V2.0},
+  author =	 {M. Vance},
+  organization = {GNOME Documentation Project},
+  address =	 {California, USA},
+  year =	 2004
+}
+
+@Manual{gnucap,
+  title = 	 {The GNU Circuit Analysis Package User Manual},
+  author =	 {A. Davis},
+  year =	 2004,
+  note =	 {Version 0.34}
+}
+
+@PhdThesis{groenewold,
+  author = 	 {G. Groenewold},
+  title = 	 {Optimal Dynamic Range Integrated Continous-Time Filters},
+  school = 	 {Delft University of Technology},
+  year = 	 1992,
+  address =	 {The Netherlands}
+}
+
+
+@Article{gummel,
+  author = 	 {H.K. Gummel and H.C. Poon},
+  title = 	 {An Integral Charge-Control Model for Bipolar Transistors},
+  journal = 	 {Bell Syst. Tech. J.},
+  year = 	 1970,
+  volume =	 49,
+  number =	 5,
+  pages =	 {827-852},
+  month =	 {May}
+}
+
+@Article{harjani,
+  author = 	 {R. Harjani and R.A. Rutenbar and L.R. Carley},
+  title = 	 {OASYS: A Framework for Analog Circuit Synthesis},
+  journal = 	 {IEEE Trans. on Computer-Aided Design},
+  year = 	 1989,
+  volume =	 8,
+  number =	 12,
+  pages =	 {1247-1266},
+  month =	 {December}
+}
+
+@Book{herniter,
+  author =	 {M.E. Herniter},
+  title = 	 {Schematic Capture with Cadence PSpice},
+  publisher = 	 {Prentice-Hall},
+  year = 	 2002,
+  edition =	 {Second}
+}
+
+@Book{holden,
+  author =	 {T. Holden},
+  title = 	 {Knowledge Based CAD and Micro-electronics},
+  publisher = 	 {Elsevier Science Publishers},
+  year = 	 1987
+}
+
+
+@Book{hossain,
+  author =	 {A. Hossain},
+  title = 	 {Computer Aided Electronic Circuit Board Design and Fabrication: Using OrCAD/SDT and OrCAD/PCB Software Tools},
+  publisher = 	 {Prentice-Hall},
+  year = 	 1995,
+  edition =	 {First}
+}
+
+
+@Manual{hspice,
+  title = 	 {Star-Hspice Manual},
+  organization = {Avant! Software},
+  year =	 2001,
+  note =	 {\mbox{Release 2001.2}}
+}
+
+@Manual{insydes,
+  title = 	 {Analog Insydes Manual},
+  author =	 {J. Broz and others},
+  organization = {Fraunhofer ITWM},
+  address =	 {Germany},
+  year =	 2005,
+  note =         {Version 2.1}
+}
+
+@Article{jacobs,
+  author = 	 {W. Jacobs},
+  title = 	 {The \mbox{SATURN Technology CAD System}},
+  journal = 	 {Technology CAD Systems},
+  year = 	 1993,
+  pages =	 {147-162},
+  month =	 {September}
+}
+
+@Article{knepper,
+  author = 	 {R.W. Knepper and J.B. Johnson and S. Furkay and J.Slinkman and X. Tian and E.M. Buturla and R. Young and G. Fiorenza and R. Logan and Y.S. Huang and R.R. O'Brien and C.S. Murthy and P.C. Murley and J. Peng and H.H.K. Tang and G.R. Srinivasan and M.M. Pelella and D.A. Sunderland and J. Mandelman and D. Lieber and E. Farrel and M. Kurasic},
+  title = 	 {Technology \mbox{CAD at IBM}},
+  journal = 	 {Technology CAD Systems},
+  year = 	 1993,
+  pages =	 {25-62},
+  month =	 {September}
+}
+
+@InProceedings{koza,
+  author = 	 {J.R. Koza and F.H. Bennett III and D. Andre and M.A. Keane},
+  title = 	 {Automated Design of Both the Topology and Sizing of Analog Electrical Circuits Using Genetic Programming},
+  booktitle =	 {Artificial Intelligence in Design},
+  pages =	 {151-170},
+  year =	 1996,
+  editor =	 {J.S. Gero and F. Sudweeks},
+  address =	 {Dordrecht},
+  publisher =	 {Kluwer Academic}
+}
+
+@Article{lee,
+author = {D.K. Shaeffer and T.H. Lee},
+title = {A 1.5V 1.5GHz CMOS Low Noise Amplifier},
+journal = {VLSI Circuits Symp. Dig. Tech. Papers},
+year = 1996,
+pages =		 {32-33},
+month =		 {June}
+}
+
+@Misc{lenahan,
+  key =		 {52174-120988-01},
+  author =	 {T.A. Lenahan},
+  title =	 {Calculation of Transmission-Line Parameters for \mbox{2D IC} Interconnects},
+  howpublished = {AT\&T Technical Memorandum},
+  year =	 1988
+}
+
+@PhdThesis{lety,
+  author = 	 {Leticia Osorio Roque},
+  title = 	 {Lenguaje de Alto Nivel para la Descripci\'on y Simulaci\'on de Circuitos Anal\'ogicos},
+  school = 	 {INAOE},
+  year = 	 2003
+}
+
+@Article{lloyd,
+  author = 	 {P. Lloyd and C.C. McAndrew and M.J. McLennan and S. Nassif and K. Singhal and Ku. Singal and P.M. zeitzoff and M.N. Darwish and K. Haruta and J.L. Lentz and H. Vuong and M.R. Pinto and C.S. Rafferty and I.C. Kizilyalli},
+  title = 	 {Technology \mbox{CAD at AT\&T}},
+  journal = 	 {Technology CAD Systems},
+  year = 	 1993,
+  pages =	 {1-24},
+  month =	 {September}
+}
+
+@Misc{maple1,
+  Author =	 "Bruce W. Char and Keith O.Geddes and Gaston H. Gonnet",
+  Title =	 "Maple {V} language reference manual",
+  Howpublished = "Springer-Verlag, New York,
+                  1994. ISBN/ISSN:0-387-97622-1"
+}
+
+@Book{maple2,
+  author =	 {Andre Heck},
+  title = 	 {Introduction to Maple},
+  publisher = 	 {Springer-Verlag},
+  year = 	 1993,
+  key =		 {0-387-97622-0},
+  address =	 {New York}
+}
+
+@Book{mathematica,
+  author =	 {Martha L. Abell and James P. Braselton},
+  title = 	 {The Mathematica Handbook},
+  publisher = 	 {AP Professional},
+  year = 	 1992
+}
+
+@Book{matlab,
+  author =	 {J. O. Attia},
+  title = 	 {PSPICE and Matlab for Electronics},
+  publisher = 	 {CRC Press Inc.},
+  year = 	 2002
+}
+
+@electronic{lohn,
+  author =       {Jason D. Lohn and Silvano P. Colombano},
+  title =        {Automated Analog Circuit Synthesis Using a Linear Representation},
+  year =         1998,
+  url =          http://citeseer.ist.psu.edu/lohn98automated.html
+}
+
+@PhdThesis{monna,
+  author = 	 {G.L.E. Monna},
+  title = 	 {Design of Low-Voltage Integrated Filter-Mixer Systems},
+  school = 	 {Delft University of Technology},
+  year = 	 1996,
+  address =	 {Delft, The Netherlands}
+}
+
+@Article{moschytz,
+  author = 	 {G.S. Moschytz},
+  title = 	 {Linear Integrated Networks: Fundamentals},
+  journal = 	 {Bell Laboratory Series},
+  year = 	 1974
+}
+
+@electronic{azizi,
+  author =       {Navid Azizi},
+  title =        {Automated Analog Circuit Design Using Genetic Algorithms},
+  year =         2000,
+  url =          http://citeseer.ist.psu.edu/azizi01automated.html
+}
+
+@InProceedings{nagel,
+  author = 	 {L.W. Nagel},
+  title = 	 {ADVICE for Circuit Simulation},
+  booktitle =	 {ISCAS},
+  year =	 1980,
+  month =	 {April}
+}
+
+@PhdThesis{nauta,
+  author = 	 {B. Nauta},
+  title = 	 {Analog CMOS Filter for Very-High Frequencies},
+  school = 	 {Delft University of Technology},
+  year = 	 1991,
+  address =	 {Enschede, The Netherlands}
+}
+
+@Article{netzer,
+author = {Y. Netzer},
+title = {The Design of Low-Noise Amplifiers},
+journal = {Proc. IEEE},
+year = {1981},
+volume = {69},
+number = {6},
+pages = {728-742},
+month = {June},
+}
+
+
+@Manual{ngspice,
+  title = 	 {NGSPICE User Manual},
+  author =	 {P. Nenzi and others},
+  organization = {IEEE},
+  address =	 {Roma, Italy},
+  month =	 {March},
+  year =	 2001
+}
+
+
+@Book{nordholt,
+  Author =	 "E.H. Nordholt",
+  Title =	 "Design of High Performance Negative-feedback
+                  amplifiers",
+  Publisher =	 "Elsevier Scientific",
+  Year =	 1983
+}
+
+@InProceedings{nordholt1,
+  author = 	 {E.H. Norholt},
+  title = 	 {Strategies and Routines in Analog Design},
+  booktitle =	 {Proceedings of the Workshop Advances in Analog Circuit},
+  pages =	 {369-396},
+  year =	 1992,
+  month =	 {April}
+}
+
+@InProceedings{nunez,
+  author = 	 {N.R. Dhanwada and A. Nunez and R. Vemuri},
+  title = 	 {Hierachical Constraint Transformation Using Directed Interval Search for Analog Systems},
+  booktitle =	 {DATE '99},
+  pages =	 {328-335},
+  year =	 1999
+}
+
+@InProceedings{nunez1,
+  author = 	 {N.R. Dhanwada and A. Nunez-Aldana and R. Vemuri},
+  title = 	 {Automatic Constraint Transformation with Integrated Parameter Space Exploration in Analog System Synthesis},
+  booktitle =	 {ASP-DAC},
+  year =	 1999
+}
+
+@Book{ott,
+  author =	 "Henry W. Ott",
+  title = 	 "Noise Reduction Techniques in Electron Systems",
+  publisher = 	 "John Wiley \& Sons",
+  year = 	 1976
+}
+
+@InProceedings{pinto,
+  author =       {M.R. Pinto and D.M. Boulin and C.S. Rafferty and R.K. Smith and W.M. Coughran and I.C. Kizilyalli and M.J. Thoma},
+  title = 	 {Three-dimensional Characterization of Bipolar Transistors in a Submicron BiCMOS Technology Using Integrated Process and Device Simulation},
+  year = 	 1992,
+  booktitle =	 {IEDM Technical Digest},
+  pages =	 {923-926},
+  month =	 {December}
+}
+
+@InProceedings{pinto1,
+  author =       {M.R. Pinto},
+  title = 	 {Simulation of \mbox{ULSI} Device Effects},
+  year = 	 1991,
+  booktitle =	 {1991 ULSI Science and Technology},
+  editor =	 {J. Andrews and G.Cellar},
+  volume =	 {91-11},
+  pages =	 {43-51},
+  organization = {Electrochem. Soc. Proc.}
+}
+
+@Manual{qt,
+  title = 	 {Qt Reference Documentation},
+  organization = {Trolltech},
+  address =	 {Oslo, Norway},
+  year =	 2005,
+  note =	 {Ver. 3.3.4}
+}
+
+@InProceedings{rafferty,
+  author = 	 {C.S. Rafferty and M.D. Giles and H.-H. Vuong and S.A. Eshraghi and M.R. Pinto and S.J. Hillenius},
+  title = 	 {Anomalus Short-channel Body Coefficients Due to Transcient Enhanced Difussion},
+  booktitle =	 {VLSI Process/Device Modelling Workshop (VPAD)},
+  year =	 1993,
+  month =	 {May}
+}
+
+@Book{rashid,
+  author =	 {M:H. Rashid},
+  title = 	 {Introduction to PSpice Using OrCAD for Circuits and Electronics},
+  publisher = 	 {Prentice-Hall},
+  year = 	 2003,
+  edition =	 {Third}
+}
+
+@Book{renbold,
+  author =	 {U. Renbold and R. Dillman},
+  title = 	 {Computer-Aided Design and Manufacturing},
+  publisher = 	 {Springer-Verlag},
+  year = 	 1986,
+  edition =	 {Second}
+}
+
+@Article{rohrer,
+author = {R. Rohrer and L. Nagel and R. Meyer and L. Weber},
+title = {Computationally Efficient \mbox{Electronic-Circuit} Noise Calculations},
+journal = {IEEE J. Solid-State Circuits},
+year = {1971},
+OPTvolume = {SC-6},
+OPTnumber = {4},
+OPTpages = {204-213},
+OPTmonth = {August},
+}
+
+
+@InProceedings{sarmiento,
+  author = 	 "Arturo Sarmiento and Roberto Casta{\~n}eda and Luis Hern\'andez and Pr\'ospero L\'opez",
+  title = 	 "Hierarchy in Noise Expressions for Nullor-Based Amplifiers",
+  booktitle =	 "ICED Proceedings",
+  year =	 2004}
+
+@Article{scheckler,
+  author = 	 {E.W. Scheckler and A.S. Wong and R.H. Wang and J.R. Camagna and A.R. Camagna and A.R. Neureuther and G. Chin and R.W. Dutton},
+  title = 	 {SIMPLE},
+  journal = 	 {IEEE Trans. on CAD},
+  year = 	 1992,
+  volume =	 11
+}
+
+@Article{shannon,
+  author = 	 {C.E. Shannon},
+  title = 	 {A Mathematical Theory of Communication},
+  journal = 	 {The Bell System Technical Journal},
+  year = 	 1948,
+  volume =	 27,
+  number =	 3,
+  pages =	 {379-432 and 623-656},
+  month =	 {July}
+}
+
+@InProceedings{shao,
+  author = 	 {J. Shao and R. Harjani},
+  title = 	 {Macromodeling of Analog Circuits For Hierarchical Circuit Design},
+  booktitle =	 {IEEE ICCAD},
+  pages =        {656-663},
+  year =	 1994,
+  month =	 {November}
+}
+
+@InProceedings{shao1,
+  author = 	 {J. Shao and R. Harjani},
+  title = 	 {Feasibility Region Modelling of Analog Circuits for Hierarchical Circuit Design},
+  booktitle =	 {Midwest Symposium on Circuits and Systems},
+  year =	 1994,
+  organization = {IEEE}
+}
+
+@Misc{smith,
+  author =	 {D. Smith and others},
+  title =	 {Designing the Star User Interface},
+  howpublished = {Byte},
+  month =	 {April},
+  year =	 1982,
+  note =	 {pp. 242-282}
+}
+
+@Manual{spice,
+title = {SPICE3 Version 3f3 User's Manual},	
+author =	 {T. Quarles and A.R. Newton and D.O. Perderson and A. Sangiovanni},
+organization =	 {University of California},
+address =	 {Berkeley, Ca., 94720},
+month =		 {May},
+year =		 1993
+}
+
+@Article{staveren,
+  author = 	 {A. van Staveren and C,J.M. Verhoeven and A.H.M. van Roermund},
+  title = 	 {The Influence of the Reverse Early Effect on the Performance of Bandgap References},
+  journal = 	 {IEEE Transactions on Circuits and System I},
+  year = 	 1996,
+  volume =	 43,
+  number =	 5,
+  pages =	 {418-421},
+  month =	 {May}
+}
+
+@Article{staveren1,
+  author = 	 {A. van Staveren and C,J.M. Verhoeven and A.H.M. van Roermund},
+  title = 	 {The Design of Low-Noise Bandgap References},
+  journal = 	 {IEEE Transactions on Circuits and System I},
+  year = 	 1996,
+  volume =	 43,
+  number =	 4,
+  pages =	 {290-300},
+  month =	 {April}
+}
+
+@phdthesis{stoffels,
+	  Author= "J. Stoffels",
+	  Title	= "Automation in High-performance Negative Feedback Amplifier Design",
+          School= "Delft University of Technology",
+	  Year	= 1988}
+
+@InProceedings{stoffels1,
+  author = 	 {J. Stoffels and C. Reeuwijk},
+  title = 	 {AMPES: A Program for the Synthesis of High-Performance Amplifiers},
+  booktitle =	 {Proceedings of the European Conference on Design Automation},
+  pages =	 {474-479},
+  year =	 1992,
+  month =	 {March}
+}
+
+@InCollection{svelto,
+  author = 	 {F. Svelto and E. Sacchi and F. Gatta and D. Manstretta and R. Castello},
+  title = 	 {CMOS Low-noise Amplifier Design},
+  booktitle = 	 {Low-power Design Techniques and CAD Tools for Analog and RF Integrated Circuits},
+  pages =	 {251-265},
+  publisher =	 {Kluwer Academic Publishers},
+  year =	 2001
+}
+
+@Manual{syrup,
+  title = 	 {syrup: A Symbolic Circuit Analyzer for Maple},
+  author =	 {Joseph Riel},
+  month =	 {August},
+  year =	 2002,
+  note =	 {Version 7.1-01}
+}
+
+@Book{vergers,
+	Author	= "Charles A. Vergers",
+	Title	= "Handbook of Electrical Noise",
+	Publisher= "TAB Books",
+	Year	= 1979}
+
+@Book{verhoeven,
+	Author	= "C.J.M. Verhoeven and A.van Staveren and G.L.E. Monna and M.H.L. Kouwenhoven",
+	Title	= "Strutured Electronic Design, Negative-feedback Amplifiers",
+        Publisher= "Delftese Uitgevers Maatschappij",     
+	Year	= 2001}
+
+@PhdThesis{verhoeven1,
+  author = 	 {C.J.M. Verhoeven},
+  title = 	 {First-Order Oscillators},
+  school = 	 {Delft University of Technology},
+  year = 	 1990,
+  address =	 {The Netherlands}
+}
+
+@Book{verhoeven2,
+  author =	 {C.J.M. Verhoven and J.R. Westra and A. van Staveren},
+  editor =	 {J.H. Huising and et al},
+  title = 	 {Analog Circuit Design},
+  publisher = 	 {Kluwer Academic Publishers},
+  year = 	 1996,
+  address =	 {Dordrecht, The Netherlands}
+}
+
+@PhdThesis{voorman,
+  author = 	 {J.O. Voorman},
+  title = 	 {The Gyrator as a Monolithic Circuit in Electronic Systems},
+  school = 	 {University of Nijmegen},
+  year = 	 1977,
+  address =	 {Nijmegen, The Netherlands}
+}
+
+@InProceedings{westra,
+  author = 	 {J.R. Westra and R.T. Godjin and C.J.M. Verhoeven and A.H.M. van Roermund},
+  title = 	 {Coupled Relaxation oscillators with Highly Stable and Accurate Quadrature Outputs},
+  booktitle =	 {Proceedings of the 1st IEEE-CAS Region 8 Workshop on Analog and Mixed IC Design},
+  pages =	 {32-35},
+  year =	 1996,
+  address =	 {Pavia, Italy},
+  month =	 {September}
+}
+
+@PhdThesis{wong,
+  author = 	 {A.S. Wong},
+  title = 	 {PROSE: Process Simulation Environment},
+  school = 	 {Univerity of California},
+  year = 	 1992,
+  month =	 {March}
+}
+
+@Article{peterson,
+author = {D. G. Peterson},
+title = {Noise Performance of Transistors},
+journal = {IRE Trans. Electron Devices},
+year = {1962},
+volume = {ED-4},
+pages = {296-303},
+month = {May},
+}
+
+@Book{ziel,
+author = {A. \mbox{Van der Ziel}},
+title = {Fluctuation Phenomena in Semiconductors},
+year = {1959},
+note = {\mbox{London:Butterworth}},
+}
+
+@Article{noname,
+author = {----},
+title = {Thermal Noise in Field-Effect Transistors},
+journal = {Proc. IRE},
+year = {1962},
+volume = {50},
+pages = {1808-1812},
+month = {August},
+}
+
+@Article{jordan,
+author = {A. G. Jordan and N. A. Jordan},
+title = {Theory of Noise in Metal-Oxide Semiconductor Devices},
+journal = {IEEE Trans. Electron Devices},
+year = {1965},
+volume = {ED-12},
+pages = {148-156},
+month = {March},
+}
+
+@Article{radeka,
+author = {V. Radeka},
+title = {1/f noise in physical measurements},
+journal = {IEEE Trans. Nuclear Sci.},
+year = {1969},
+volume = {NS-16},
+pages = {17-35},
+month = {October},
+}
+
+@PhdThesis{dukelow,
+author = {R. A. Dukelow},
+title = {An Experimental Investigation of Very Low Frequency Semiconductors Noise},
+school = {California Inst. Technol., Pasadena},
+year = {1974}
+}
+
+@Book{booch,
+  author =	 "G. Booch",
+  title = 	 "Object Oriented Design With Applications",
+  publisher = 	 {The Benjamin/Cummings Publishing Company, Inc.},
+  year = 	 1991
+}
+
+@Book{joyanes,
+  author =	 {L. Joyanes-Aguilar},
+  title = 	 {Borland C++},
+  publisher = 	 {McGraw-Hill },
+  year = 	 1993
+}

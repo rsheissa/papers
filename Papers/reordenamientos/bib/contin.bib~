@@ -1,0 +1,294 @@
+@Article{cont_bra,
+	Author	= "F. H. {Branin, Jr }",
+	Title	= "Widely Convergent Method for finding multiple
+		   solutions of simultaneous nonlinear equations",
+	Journal	= "IBM Journal on Research and Dev.",
+	Volume	= 16,
+	Pages	= "504-522",
+	Year	= 1972,
+	Month	= "September",
+	Abstract=
+		"A new method has been developed for solving a system
+		of nonlinear equations g(x) = 0. This method is based
+		on solving the related system of differential equations 
+		dg/dt +- g(x) = 0 wherein the sign is changed whenever
+		the corresponding trajectory x(t) encounters a change
+		in sign of the Jacobian determinant or arives at a
+		solution point of g(x)=0. This procedure endows the
+		method with a much wider region of convergence than
+		other methods (occasionally, even global convergence)
+		and enables it to find multiple solutions of g(x)=0 one
+		after other. The principal limitations of the method
+		relate the extraneous singularities of the differential
+		equations. The role of these singularities is illustrated
+		by several examples. In addition, the extension of the
+		method to the problem of finding multiple extrema of a
+		function of N variables is explained and some examples
+		are given" }
+
+@Article{cont_kao,
+	Author	= "{Kwong-shu} Chao and {Dan-kai} Liu and {Ching-tsai} Pan",
+	Title	= "A systematic search method for obtaining multiple
+		   solutions of simultaneous nonlinear equations",
+	Journal	= "IEEE Transactions on Circuits and Systems",
+	Volume	= 22,
+	Number	= 9,
+	Pages	= "748-752",
+	Year	= 1975,
+	Month	= "September",
+	Abstract=
+		"A systematic search method has been developed for
+		obtaining the multiple solutions a nonlinear equation
+		of the form f(x)=0, where f is a continuously
+		differentiable function from R^n --> R^n. The method
+		is based on numerical integration of the associated
+		differential equations dfi/dt = -f_i
+		for i = 1,2,...,n-1 and dfn/dt = +-fn along the space
+		curve l of interseccion f_i(x)=0 i=1,2,...,n-1. The
+		plus or minus sign is chosen so as to make {x_k} move
+		in the desired direction on l." }
+
+@Article{cont_chu1,
+	Author	= "{L. O.} Chua and A. Ushida",
+	Title	= "A switching-parameter algorithm for finding multiple
+		   solutions of nonlinear resistive circuits",
+	Journal	= "International Journal of Circuit Theory and Applications",
+	Volume	= "4",
+	Number	= "3",
+	Month	= "July",
+	Pages	= "215-239",
+	Year	= "1976"	}
+
+@Article{cont_inca,
+	Author	= "{Kwong-shu} Khao and Richard Saeks",
+	Title	= "Continuation Methods in Circuit Analysis",
+	Journal	= "Proceedings of the IEE",
+	Volume	= 65,
+	Number	= 8,
+	Pages	= "1187-1194",
+	Month	= "August",
+	Year	= 1977	}
+
+@Article{cont_curvsharp,
+	Author	= "Roska Tam{\'a}s and J{\'a}nos Klim{\'o}",
+	Title	= "On the solvability of DC equations and the implicit
+		   integration formula",
+	Journal	= "International Journal of Circuit Theory and Applications",
+	Volume	= 1,
+	Number	= 3,
+	Pages	= "273-280",
+	Month	= "September",
+	Year	= 1973	}
+
+@Article{cont_hun,
+	Author	= "A. Ushida and {L. O.} Chua",
+	Title	= "Tracing solution curves of nonlinear equations with
+		   sharp turning points",
+	Journal	= "International Journal of Circuit Theory and Applications",
+	Volume	= 12,
+	Number	= 1,
+	Month	= "January",
+	Pages	= "1-21",
+	Year	= 1984	}
+
+@Article{cont_leu1,
+	Author	= "Lieven Vandenberghe and Joos Vandewalle",
+	Title	= "Variable dimension algorithms for solving resistive
+		   circuits",
+	Journal	= "International Journal of Circuit Theory and Applications",
+	Volume	= 18,
+	Number	= 5,
+	Month	= "September-October",
+	Pages	= "443-474",
+	Year	= 1990	}
+
+@Article{cont_leu11,
+	Author	= "Lieven Vandenberghe and Joos Vandewalle",
+	Title	= "A continuous deformation method for resistive circuits
+		   containing active and non-reciprocal elements",
+	journal = "Proceedings of the IEEE ISCAS, Singapore",
+	Pages	= "762-765",
+	Year	= 1991	}
+
+@Article{cont_yunk,
+	Author	= "{C. W.} Yun and {K. S.} Chao",
+	Title	= "Simple Solution Curves of Non-linear Resistive Networks",
+	Journal	= "International Journal of Circuit Theory and Applications",
+	Volume	= 11,
+	Number	= 1,
+	Month	= "January",
+	Pages	= "47-55",
+	Year	= 1983	}
+
+@inproceedings{cont_mila,
+	Author	= "Yasuaki Inoue",
+	Title	= "{DC} Analysis of Non-linear Circuits Using Solution Tracing
+		   Circuits",
+	booktitle= "Proceedings of the Seventeenth European Solid-State
+		    Circuits Conference",
+	Pages	= "41-44",
+	Address	= "Milan/Italy",
+	Year	= 1991	}
+
+@Article{cont_koya1,
+	Author	= "Masakazu Kojima and Yoshitsugu Yamamoto",
+	Title	= "Variable Dimension Algorithms : Basic Theory,
+		   Interpretations and Extensions of some existing methods",
+	Journal	= "Mathematical Programming",
+	Volume	= 24,
+	Pages	= "177-215",
+	Year	= 1982	}
+
+@Article{cont_koya2,
+	Author	= "Masakazu Kojima and Yoshitsugu Yamamoto",
+	Title	= "A Unified Approach to the Implementation of Several
+		   Restart Fixed point Algorithms and a new variable
+		   dimension algorithm",
+	Journal	= "Mathematical Programming",
+	Volume	= 28,
+	Pages	= "288-328",
+	Year	= 1983	}
+
+@Article{cont_yama,
+	Author	= "Yoshitsugu Yamamoto",
+	Title	= "A Variable Dimension Fixed point Algorithm and
+		   the orientation of simplices",
+	Journal	= "Mathematical Programming",
+	Volume	= 30,
+	Pages	= "301-312",
+	Year	= 1984	}
+
+@Article{cont_mizu,
+	Author	= "{Shinji Mizuno}",
+	Title	= "An analysis of the solution set to a homotopy equation
+		   with real coefficients",
+	Journal	= "Mathematical Programming",
+	Volume	= 28,
+	Pages	= "329-336",
+	Year	= 1984	}
+
+@Article{cont_vuams1,
+	Author	= "{G. van der} Laan and {A. J. J.} Talman",
+	Title	= "A class of simplicial Restart Fixed point
+		   Algorithms without an extra dimension",
+	Journal	= "Mathematical Programming",
+	Volume	= 20,
+	Pages	= "33-48",
+	Year	= 1981	}
+
+@Article{cont_vuams2,
+	Author	= "{Gerard van der} Laan",
+	Title	= "On the existence and approximation of zeroes",
+	Journal	= "Mathematical Programming",
+	Volume	= 28,
+	Pages	= "1-24",
+	Year	= 1984	}
+
+@Article{cont_vuams3,
+	Author	= "{G. van der} Laan and {Seelen, L. P.}",
+	Title	= "Efficiency and Implementation of simplicial 
+		   zero point Algorithms",
+	Journal	= "Mathematical Programming",
+	Volume	= 30,
+	Pages	= "196-217",
+	Year	= 1984	}
+
+@Article{cont_garc,
+	Author	= "{C. B.} Garc\'{\i}a and {F. J.} Gould",
+	Title	= "Relations between several path following algorithms
+		   and local and global {Newton} methods",
+	Journal	= "Siam Review",
+	Volume	= 22,
+	Number	= 3,
+	Pages	= "263-274",
+	Month	= "July",
+	Year	= 1980	}
+
+@Article{cont_quasi,
+	Author	= "{J. E.} Dennis and {Jorge J.} Mor{\'e}",
+	Title	= "{Quasi-Newton} methods, motivation and theory",
+	Journal	= "Siam Review",
+	Volume	= 19,
+	Number	= 1,
+	Month	= "January",
+	Year	= 1977	}
+
+@Article{cont_homo,
+	Author	= "{Layne T.} Watson",
+	Title	= "Numerically linear algebra aspects of globally convergent
+		   homotopy methods",
+	Journal	= "Siam Review",
+	Volume	= 28,
+	Number	= 4,
+	Pages	= "529-545",
+	Month	= "December",
+	Year	= 1986	}
+
+@Article{cont_mix,
+	Author	= "{E.} Allgower and {K.} Georg",
+	Title	= "Simplicial and continuation methods for approximating
+		   fixed points and solutions to systems of equations",
+	Journal	= "Siam Review",
+	Volume	= 22,
+	Number	= 1,
+	Pages	= "28-85",
+	Month	= "January",
+	Year	= 1980	}
+
+@Article{cont_more,
+	Author	= "Renpu Ge",
+	Title	= "Finding more and more solutions of a system of
+		   nonlinear equations",
+	Journal	= "Applied Mathematics and Computations",
+	Volume	= 36,
+	Numbre	= 1,
+	Pages	= "15-30",
+	Month	= "March",
+	Year	= 1990	}
+
+@Article{cont_fx0,
+	Author	= "Morris W. Hirsch  and Stephen Smale",
+	Title	= "On algorithms for solving $f(x) = 0$.",
+	Journal	= "Communications on Pure and Applied Mathematics",
+	Volume	= 32,
+	Numbre	= 3,
+	Month	= "May",
+	Pages	= "281-312",
+	Year	= 1979	}
+
+@Article{cont_figue,
+	Author	= "{R. J. P. de} Figueiredo and  {K. S.} Khao",
+	Title	= "Optimally controlled iterative schemes for obtaining
+		   the solution of a nonlinear equation",
+	Journal	= "Int. Journal on Control",
+	Volume	= 18,
+	Number	= 2,
+	Pages	= "377-384",
+	Month	= "March-April",
+	Year	= 1973	}
+
+@Article{cont_ritch,
+	Author	= "{Stephen L.} Ritcher and  R. {DeCarlo}",
+	Title	= "Continuation methods: Theory and applications",
+	Journal	= "IEEE Trans. on Circuits and Systems",
+	Volume	= 30,
+	Number	= 6,
+	Pages	= "347-352",
+	Month	= "Juni",
+	Year	= 1983	}
+
+@Article{cont_homrect,
+	Author	= "Kiyotaka Yamamura and Kazuo Horiuchi",
+	Title	= "Solving nonlinear resistive networks by a homotopy
+		   method using rectangular subdivision",
+	journal = "Proceedings of the IEEE ISCAS, Helsinki",
+	Pages	= "1225-1232",
+	Year	= 1988	}
+
+@Article{cont_gansong,
+	Author	= "{Jian} Gan and {Ya-Min} Song",
+	Title	= "All DC solutions of nonlinear circuits",
+	journal = "Proceedings of the IEEE ISCAS",
+	Pages	= "918-921",
+	Year	= 1990	}
+

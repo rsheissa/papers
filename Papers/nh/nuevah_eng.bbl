@@ -1,0 +1,195 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{cont_mix}
+{E.} Allgower and {K.} Georg, \emph{Simplicial and continuation methods for
+  approximating fixed points and solutions to systems of equations}, Siam
+  Review \textbf{22} (1980), no.~1, 28--85.
+
+\bibitem{homo_allgower2}
+E.~L. Allgower and K.~Georg, \emph{Continuation and path following}, 1992.
+
+\bibitem{homo_allgower}
+\bysame, \emph{Numerical path following}, 1994.
+
+\bibitem{homo_ebersmoll}
+P.~Antognetti and G.~Massobrio, \emph{Semiconductor device modeling with
+  spice}, New York: McGraw-Hill (1988).
+
+\bibitem{homo_banwell2}
+T.~C. Banwell, \emph{Bipolar transistor circuit analysis using the lambert
+  $w$-function}, Electronics letters \textbf{36} (1999), no.~4, 291--292.
+
+\bibitem{homo_banwell}
+T.C Banwell and A.~Jayakumar, \emph{Exact analytical solution for current flow
+  through with series resistence}, Electronics letters \textbf{36} (1999),
+  no.~4, 291--292.
+
+\bibitem{cont_bra}
+F.~H. {Branin, Jr }, \emph{Widely convergent method for finding multiple
+  solutions of simultaneous nonlinear equations}, IBM Journal on Research and
+  Dev. \textbf{16} (1972), 504--522.
+
+\bibitem{cont_kao}
+{K-s} Chao, {D-k} Liu, and {C-t} Pan, \emph{A systematic search method for
+  obtaining multiple solutions of simultaneous nonlinear equations}, IEEE
+  Transactions on Circuits and Systems \textbf{22} (1975), no.~9, 748--752.
+
+\bibitem{cont_chu1}
+{L. O.} Chua and A.~Ushida, \emph{A switching-parameter algorithm for finding
+  multiple solutions of nonlinear resistive circuits}, International Journal of
+  Circuit Theory and Applications \textbf{4} (1976), no.~3, 215--239.
+
+\bibitem{homo_lambertmaple}
+R.~M. Corless, G.~H. Gonnet, D.~E.~G. Hare, and D.~J. Jeffrey, \emph{Lambert's
+  $w$ function in maple}, Maple Technical Newsletter 9 (1993), 12--22.
+
+\bibitem{homo_onlambert}
+R.~M. Corless, G.~H. Gonnet, D.~E.~G. Hare, D.~J. Jeffrey, and D.~E. Knuth,
+  \emph{On the lambert $w$ function}, Advances in Computational Mathematics
+  \textbf{5} (1996), 329--359.
+
+\bibitem{homo_lambertsec}
+R.~M. Corless, D.~J. Jeffrey, and D.~E. Knuth, \emph{A sequence of series for
+  the lambert $w$ function}, Proceedings ISSAC (1997), 197--204.
+
+\bibitem{homo_threading}
+R.~Geoghgan, J.~C. Lagarias, and R.~C. Melville, \emph{Threading homotopies and
+  dc operating points of nonlinear circuits}, Society for Industrial and
+  Applied Mathematics \textbf{9} (1998), no.~1, 159--178.
+
+\bibitem{cont_koya1}
+Masakazu Kojima and Yoshitsugu Yamamoto, \emph{Variable dimension algorithms :
+  Basic theory, interpretations and extensions of some existing methods},
+  Mathematical Programming \textbf{24} (1982), 177--215.
+
+\bibitem{homo_jaewook}
+J.~Lee and C.~Hsiao-D, \emph{Constructive homotopy methods for finding all or
+  multiple dc operating points of nonlinear circuits and systems}, IEEE
+  Transactions on Circuits and Systems I-Fundamental Theory and Applications
+  \textbf{48} (2001), no.~1, 51--66.
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c}, \emph{Artif\text{i}cial parameter homotopy
+  methods for the dc operating point problem}, IEEE transactions on
+  computer-aided design of integrated circuits and systems \textbf{12} (1997),
+  no.~6, 861--877.
+
+\bibitem{stat_1}
+S.~Natarajan, \emph{A systematic method for obtaining state equations using
+  mna}, IEE Proceedings Part G (1991), 341--346.
+
+\bibitem{netwth_ns80}
+R.~O. Nielsen and {A. N. Willson}, \emph{A fundamental result concerning the
+  topology of transistor circuits with multiple equilibria}, Proceedings of the
+  IEEE \textbf{68} (1980), no.~2, 196--208.
+
+\bibitem{BHLHOM}
+Roychowdhury and R.~J.~Melville, \emph{Delivering global dc convergence for
+  large mixed-signal circuits via homotopy/continuation methods}, IEEE
+  Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  \textbf{25} (2006), no.~1, 66.
+
+\bibitem{mnaxx}
+Chung-Wen~Ho Ruehli and {P.} {A.}~Brennan, \emph{The modified nodal approach to
+  network analysis}, IEEE Transactions on Circuits and Systems \textbf{22}
+  (1975), no.~6, 504.
+
+\bibitem{homo_zeroes}
+{S. Nee-C.}, {J. Mallet-P.}, and {J. A. Yorke}, \emph{Finding zeroes of maps:
+  homotopy methods that are constructive with probability one},  \textbf{32}
+  (1978), no.~143, 887--899.
+
+\bibitem{netwth_lasr}
+A.~Sarmiento-R., \emph{A partition method for the determination of multiple dc
+  operating points}, Ph.D. Thesis, Delft University of Technology, (to be
+  published in March, 1994).
+
+\bibitem{homo_shur}
+M.~Shur, \emph{Introduction to electronic devices},  (1996).
+
+\bibitem{homo_sze}
+S.~M. Sze, \emph{Semiconductor devices: Physics and technology},  (1985).
+
+\bibitem{homo_tadeusiewicz}
+M.~Tadeusiewicz and K.~Glowienka, \emph{A contraction algorithm for finding all
+  the dc solutions of piecewise-linear circuits}, J. Circuits, Syst. Comput.
+  \textbf{4} (1994), 319--336.
+
+\bibitem{homo_coercitivo}
+L.~Trajkovi\'{c}, R.~C. Melville, and S.~C. Fang, \emph{Passivity and no-gain
+  properties establish global convergence of a homotopy for dc operating
+  points}, IEEE International Symposium on Circuit and Systems (1990).
+
+\bibitem{cont_hun}
+A.~Ushida and {L. O.} Chua, \emph{Tracing solution curves of nonlinear
+  equations with sharp turning points}, International Journal of Circuit Theory
+  and Applications \textbf{12} (1984), no.~1, 1--21.
+
+\bibitem{homo_chua}
+A.~Ushida and {L. O. Chua}, \emph{Tracing solution curves of non-linear
+  equations with sharp turning points}, Circuit Theory and Applications
+  \textbf{12} (1984), 1--21.
+
+\bibitem{homo_ushida1}
+{A.} Ushida, {Y.} Yamagami, {I. Kinouchi}, {Y. Nishio}, and {Y.} Inoue,
+  \emph{An efficient algorithm for finding multiple dc solutions based on the
+  spice-oriented newton homotopy method}, IEEE Transactions on Computer-Aided
+  Design of Integrated Circuits and Systems \textbf{21} (2002), no.~3,
+  337--348.
+
+\bibitem{homo_wfisica}
+S.~R. Valluri, D.J. Jeffrey, and R.~M. Corless, \emph{Some applications of
+  lambert $w$ function to physics}, Can. J. Phys. \textbf{78} (2000), no.~9,
+  823--831.
+
+\bibitem{cont_leu1}
+Lieven Vandenberghe and Joos Vandewalle, \emph{Variable dimension algorithms
+  for solving resistive circuits}, International Journal of Circuit Theory and
+  Applications \textbf{18} (1990), no.~5, 443--474.
+
+\bibitem{homo_iberchip03}
+H.~V\'azquez-L., L.~Hern\'andez-M., and A.~Sarmiento-R., \emph{Numerical path
+  following for double bounded homotopy scheme for analysing nonlinear
+  resistive circuits}, IBERCHIP (2003).
+
+\bibitem{homo_iscas05}
+\bysame, \emph{Double-bounded homotopy for analysing nonlinear resistive
+  circuits}, International Symposium on Circuits and Systems (2005).
+
+\bibitem{homo_dobletrazado}
+H.~V\'azquez-L., L.~Hern\'andez-M., A.~Sarmiento-R., and R.~S. Murphy-A.,
+  \emph{Improving multi-parameter homotopy via symbolic analysis techniques for
+  circuit simulation}, 2003 European Conference on Circuit Theory and Design
+  \textbf{II} (2003), 402--405.
+
+\bibitem{homo_DWolfMulti}
+D.~M. Wolf and S.~R. Sanders, \emph{Multiparameter homotopy methods for
+  f\text{i}nding dc operating points of nonlinear circuits}, IEEE transactions
+  on circuits and systems-I: fundamental theory and aplications \textbf{43}
+  (1996), no.~10, 824--837.
+
+\bibitem{cont_yama}
+Yoshitsugu Yamamoto, \emph{A variable dimension fixed point algorithm and the
+  orientation of simplices}, Mathematical Programming \textbf{30} (1984),
+  301--312.
+
+\bibitem{homo_yamamurawise}
+K.~Yamamura and T.~Ohshima, \emph{Finding all solutions of piecewise-linear
+  resistive circuits using linear programming}, IEEE transactions on circuits
+  and systems-I: fundamental theory and aplications \textbf{45} (1998),
+  434--445.
+
+\bibitem{homo_yamamura}
+K.~Yamamura, T.~Sekiguchi, and Y.~Inuoe, \emph{A f\text{i}xed-point homotopy
+  method for solving modif\text{i}ed nodal equations}, IEEE transactions on
+  circuits and systems-I: fundamental theory and aplications \textbf{46}
+  (1999), no.~6, 654--664.
+
+\end{thebibliography}

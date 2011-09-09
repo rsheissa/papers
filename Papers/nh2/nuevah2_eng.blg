@@ -1,0 +1,65 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: nuevah2_eng.aux
+The style file: amsplain.bst
+Database file #1: nuevah2.bib
+Warning--to sort, need author or key in homo_hspice
+Warning--to sort, need author or key in homo_spectre
+Warning--to sort, need author or key in homo_aplac
+Warning--missing author in homo_hspice
+Warning--missing journal name in homo_hspice
+Warning--missing author in homo_spectre
+Warning--missing journal name in homo_spectre
+Warning--missing author in homo_aplac
+Warning--missing journal name in homo_aplac
+Warning--missing pages in homo_aplac
+Warning--missing pages in cont_quasi
+Warning--missing journal name in homo_ogrodzki
+Warning--missing pages in homo_ogrodzki
+Warning--missing journal name in Schwa_book
+Warning--missing pages in Schwa_book
+Warning--missing journal name in homo_shur
+Warning--missing pages in homo_shur
+Warning--missing journal name in homo_sze
+Warning--missing pages in homo_sze
+You've used 21 entries,
+            2213 wiz_defined-function locations,
+            631 strings with 6814 characters,
+and the built_in function-call counts, 5669 in all, are:
+= -- 476
+> -- 220
+< -- 0
++ -- 95
+- -- 68
+* -- 525
+:= -- 906
+add.period$ -- 21
+call.type$ -- 21
+change.case$ -- 97
+chr.to.int$ -- 0
+cite$ -- 40
+duplicate$ -- 231
+empty$ -- 520
+format.name$ -- 68
+if$ -- 1165
+int.to.chr$ -- 0
+int.to.str$ -- 21
+missing$ -- 41
+newline$ -- 73
+num.names$ -- 36
+pop$ -- 123
+preamble$ -- 1
+purify$ -- 76
+quote$ -- 0
+skip$ -- 120
+stack$ -- 0
+substring$ -- 336
+swap$ -- 37
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 19
+while$ -- 50
+width$ -- 23
+write$ -- 176
+(There were 19 warnings)

@@ -1,0 +1,1102 @@
+
+\documentclass[conference,letterpaper,onecolumn]{IEEEtran}
+%\usepackage[ansinew]{inputenc}
+\usepackage{graphicx}
+\usepackage{psfrag}\usepackage{stfloats}
+%\usepackage[spanish]{babel}
+\usepackage{epsfig}
+\usepackage{pifont}
+\usepackage{amssymb}\usepackage{fixltx2e}
+\usepackage{amsmath}
+\usepackage{rotate}\usepackage{anysize}
+%\usepackage{rotating}
+%\usepackage{fancybox}
+\usepackage{float}
+\usepackage{fancybox}
+
+\newcommand{\pig}[1]{\mbox{\boldmath ${#1}$}	}
+
+
+\newtheorem{Theod}{{\bf Definici\'on}}
+
+\def\boldtild{\mathaccent"0365 }
+\newcommand{\puttilde}[1]{\boldtild{\boldmath #1}}
+
+\setlength{\oddsidemargin}{5mm}
+\setlength{\evensidemargin}{5mm}
+\setlength{\topmargin}{4mm}
+\setlength{\textwidth}{15cm}
+\setlength{\columnsep}{5mm}
+\setlength{\textheight}{24cm}
+
+\begin{document}
+
+
+\title{Symbolic Analysis and Reordering of Nonlinear Circuit's equations in order to Accelerate Homotopic Simulation}
+
+\author{\authorblockN{H\'ector V\'azquez-Leal}
+\authorblockA{Universidad Veracruzana\\
+Facultad de Instrumentaci\'on Electr\'onica\\
+Xalapa, Veracruz, M\'exico\\
+Email: hvazquez@uv.mx}
+\and
+\authorblockN{Arturo Sarmiento-Reyes}
+\authorblockA{INAOE\\
+Departamento de Electr\'onica
+}
+\and
+\authorblockN{Luis Hern\'andez-Mart\'{\i}nez}
+\authorblockA{INAOE\\
+Departamento de Electr\'onica
+}
+\and
+\authorblockN{Roberto Casta\~neda-Sheissa and Jes\'us S\'anchez-Orea}
+\authorblockA{Universidad Veracruzana\\
+Facultad de Instrumentaci\'on Electr\'onica\\
+Xalapa, Veracruz, M\'exico\\
+}
+}
+
+
+\maketitle
+
+\begin{abstract}
+En el presente art{\'i}culo se realizar\'a un estudio simb\'olico para determinar el grado de no linealidad de las ecuaciones nodales emanadas del an\'alisis MNA de circuitos no lineales;
+Esto con el objetivo de establecer un criterio de reordenamiento de las ecuaciones nodales que acelere la simulaci\'on homot\'opica. Se establecer\'a
+un criterio de clasificacion de no linealidades, que permita de asignar de manera num\'erica un grado de no linealidad a las ecuaciones nodales para despues reordenar las ecuaciones en
+diversas simulaciones homot\'opicas de un circuito no lineal.
+\end{abstract}
+
+\section{Introducci\'on}
+
+
+La electr\'onica es una industria altamente competitiva, en donde las presiones del mercado de consumo producen
+una carrera tecnol\'ogica que incluye aspectos como: portabilidad, bajo consumo de energ{\'i}a e incremento en las funciones
+o funcionalidades. Un ejemplo de esta carrera tecnol\'ogica son los celulares. \'Estos comenzaron siendo productos voluminosos y pesados,
+que s\'olo serv{\'i}an para hablar, mientras que  ahora los celulares son ligeros, de peque\~nas dimensiones y tienen nuevas funcionalidades como: radio, televisi\'on, video-juegos, programas sofisticados de c\'omputo; ademas los celulares han absorvido productos como: las agendas electr\'onicas, alarmas, viper, entre otros productos, que antes s\'olo se vendian por separado. 
+Todo esto ha sido posible a partir de los nuevos procesos de fabricaci\'on, lo cual hace posible colocar m\'as transistores en la misma \'area de silicio. Por lo tanto, se ha logrado integrar un gran n\'umero de componentes en un s\'olo circuito integrado, aumentado as{\'i} la complejidad de los circuitos. De esta manera, al dise\~nar un circuito integrado se suele trabajar con un gran n\'umero de bloques de dise\~no diferentes (digital, anal\'ogico, interfaces seriales de alta velocidad, RF, circuitos de microondas) seg\'un sea el objetivo de las nuevas funcionalidades del producto. 
+Todo lo antes mencionado, se traduce en un aumento en las dimensiones y complejidad de la ecuaci\'on de equilibrio resultante del analisis en CD del circuito, generando as{\'i} la necesidad
+de nuevas y mejores herramientas num\'ericas que permitan localizar el punto de operaci\'on  o puntos de operaci\'on. En este contexto, los m\'etodos de homotop\'{\i}a \cite{stat_1} han sido recientemente utilizados en
+la tarea de encontrar el punto de operaci\'on, en circuitos resistivos no
+lineales, cuando la ecuaci\'on de equilibrio posee una soluci\'on dificil de encontrar o m\'as de una
+soluci\'on. Para analizar cualquier circuito se requiere establecer primeramente la
+ecuaci\'on de equilibrio del mismo. 
+
+
+El m\'etodo de Newton-Raphson  (NR) es usado en la mayor{\'i}a de los simuladores de circuitos integrados.  La raz\'on del uso tan amplio del m\'etodo de Newton es que la tasa de convergencia es cuadr\'atica \cite{cont_quasi} por lo que minimiza los tiempos de c\'omputo de las simulaciones. Sin embargo, el m\'etodo Newton-Raphson es propenso a ciertos problemas de convergencia [43] como: oscilaci\'on y divergencia. Dicho problema de convergencia  se hace especialmente presente en la electr\'onica cuando se resuelven sistemas de ecuaciones no lineales emanadas de circuitos complejos que mezclan bloques del tipo: digital, anal\'ogico, interfaces seriales de alta velocidad, RF, circuitos de microondas, entre otros. Por lo tanto es necesario el desarrollo de m\'etodos de respaldo o de remplazo
+del m\'etodo de Newton-Raphson. Adem\'as, los dise\~nadores de circuitos integrados tienen que lidiar con fallos de convergencia en el m\'etodo de Newton y los m\'etodos de respaldo, por lo que como \'ultimo recurso se acude a modificar algunos par\'ametros del motor num\'erico del simulador esperando que se logre la convergencia. Esta situaci\'on aumenta los tiempos de dise\~no haciendo m\'as costoso y lento el proceso completo, lo que afecta la competitividad. Esta situaci\'on por si misma justifica el uso de m\'etodos alternativos, al de Newton, como la homotop{\'i}a para localizar el punto de operaci\'on. Sin embargo, existen m\'as razones para usar los m\'etodos de homotop{\'i}a, tal como la existencia de m\'ultiples puntos de operaci\'on. La raz\'on es que al contrario del m\'etodo de Newton, la homotop{\'i}a \cite{netwth_lasr,homo_iscas05,homo_ArtificialP} puede localizar m\'ultiples puntos de operaci\'on. Esto es de gran importancia ya que  podr{\'i}a darse la situaci\'on desastrosa de que el dise\~nador califique como bueno un punto de operaci\'on en CD (encontrado por el m\'etodo de Newton) que no se presente f{\'i}sicamente en el circuito integrado ya fabricado. Esto se traduce en un mal funcionamiento del circuito con repercusiones costosas para la compa\~n{\'i}a.
+
+Los m\'etodos de homotop{\'i}a \cite{cont_bra,cont_kao,cont_chu1,cont_leu11,cont_ritch} han demostrado su utilidad para localizar m\'ultiples puntos de operaci\'on y para converger a las soluciones donde el m\'etodo de NR no lo hace. Sin embargo, los m\'etodos de homotop{\'i}a tienen el gran
+inconveniente de ser lentos, si se comparan con la velocidad del metodo de NR.
+
+A lo largo de este trabajo, se utilizar\'a el m\'etodo de an\'alisis nodal modificado \cite{mnaxx,stat_1}
+(MNA, del ingl\'es: Modified Nodal Analysis) para establecer esta ecuaci\'on.
+
+
+En su forma m\'as general, la ecuaci\'on de equilibrio de circuitos
+resistivos no lineales tiene la forma
+\begin{equation}
+\pig{f}(\pig{x})=\pig{0}
+\label{Fequilibrio3}
+\end{equation}
+donde $\pig{f}$ es un sistema de $n$ ecuaciones algebraicas no lineales
+y $\pig{x}$  es el vector con las inc\'ognitas del sistema. Cuando el
+m\'etodo MNA es utilizado, $\pig{x}$ es el vector que contiene los
+voltajes nodales y las corrientes de los elementos no NA compatibles
+\cite{Schwa_book}.
+
+Una vez obtenida la ecuaci\'on (\ref{Fequilibrio3}), se procede a establecer
+la ecuaci\'on homot\'opica, la cual tiene la forma general:
+\begin{equation}
+\pig{H}(\pig{f}(\pig{x}),\lambda )=0
+\label{homotopia3}
+\end{equation}
+donde $\lambda$ representa al par\'ametro homot\'opico.
+
+\section{Reordenamientos}
+
+Una posible manera de disminuir el tiempo de c\'omputo en las simulaciones homot\'opicas es cambiando
+el orden de las ecuaciones al inicio de la trayectoria homot\'opica. Por lo tanto, con el objeto de ilustrar el efecto que el ordenamiento
+de las ecuaciones tiene sobre la formulaci\'on homot\'opica, se analiza
+a continuaci\'on un ejemplo circuital muy sencillo aplicando el esquema
+de homotop\'{\i}a de Chao \cite{cont_kao}. En este m\'etodo, la ecuaci\'on homot\'opica est\'a dada por:
+\begin{equation}
+{ {{d f_i[\pig{x}(p)]} \over{dp}} + f_i[\pig{x}(p)]=0}
+\label{chao}
+\end{equation}
+con $f_i(\pig{x}(0))=0$ para $i=1,2,\ldots,n-1$.
+La $n$-\'esima ecuaci\'on es:
+\begin{equation}
+{  {{d f_n [\pig{x}(p)]} \over {dp} } \pm f_n [\pig{x}(p)]=0}
+\label{chao2}
+\end{equation}
+donde el cambio de signo de la $n$-\'esima ecuaci\'on, $f_n$, debe
+ocurrir en los puntos donde el Jacobiano cambia de signo (con el
+objetivo de evitar alejarse del camino de las soluciones) y en las
+soluciones (con el objetivo de continuar el proceso de b\'usqueda
+de m\'as soluciones).
+
+Este m\'etodo consiste en encontrar una trayectoria de soluciones,
+la cual coincide con la intersecci\'on de las ($n-1$) superficies
+definidas por $\pig{f}_i=\pig{0}$, $i=1, 2, \ldots, n-1$. De tal manera
+que la trayectoria homot\'opica es trazada sobre el plano de la
+$n$-\'esima ecuaci\'on.
+
+El comportamiento de la homotop\'{\i}a antes mencionada, depende
+fuertemente de la ecuaci\'on (\ref{chao2}), debido al cambio de signo,
+i.e. el procedimiento de continuaci\'on est\'a ligado exclusivamente
+a la $n$-\'esima ecuaci\'on. Sin embargo, cuando se establece la
+ecuaci\'on de equilibrio mediante el m\'etodo MNA, la $n$-\'esima
+ecuaci\'on {\bf siempre} corresponde a la relaci\'on de rama de
+cualquier elemento no NA compatible presente en el circuito.
+
+\begin{figure}[t]
+\centerline{
+\epsfxsize=70mm
+\epsffile{chap3/figs/erdd.eps}}
+\caption{Circuito con tres soluciones}
+\label{cirejemplo}
+\end{figure}
+
+Con la finalidad de mostrar como afecta el orden de las ecuaciones en
+la formulaci\'on de la ecuaci\'on de equilibrio, se usar\'a el
+circuito mostrado en la Figura (\ref{cirejemplo}), el cual cuenta
+con una conductancia lineal ({$K_a$}), un diodo ({$K_b$}) con funci\'on
+de rama exponencial, y una
+conductancia no lineal ($K_c$) con funci\'on de rama polinomial.
+Aplicando el m\'etodo MNA se obtiene el siguiente sistema:
+
+{%\tiny
+\begin{equation}
+\left[ \begin{array}{cccc}
+K_a  & -K_a & 0 & +1\\
+-K_a & K_a  & 0 & 0 \\
+0   & 0    & 0 & 0 \\
++1   & 0    & 0 & 0 
+\end{array} \right]
+\left[ \begin{array}{c}
+v_1\\ v_2\\ v_3\\ i_{V_1}
+\end{array} \right]
++ \newline \\
+\left[ \begin{array}{c}
+0\\ i_{K_b}\\-i_{K_b}+i_{K_c} \\ 0 \end{array} \right]
+-
+\left[ \begin{array}{c}
+0\\ 0\\ 0\\V_1 \end{array} \right]
+= \pig{0}
+\label{eqsimple}
+\end{equation}}
+donde $v_1$, $v_2$ y $v_3$  son los voltajes nodales,
+$i_{V_1}$ es la corriente de la fuente de voltaje independiente, y
+las corrientes $i_{K_b}$ e $i_{K_c}$ son las corrientes que fluyen
+por las conductancias no lineales, $K_b$ y $K_c$ respectivamente. 
+La cuarta ecuaci\'on  corresponde a la relaci\'on
+de rama de la fuente de voltaje independiente:
+\begin{displaymath}
+v_1-V_1=0
+\end{displaymath}
+Esta ecuaci\'on es una ecuaci\'on lineal, la cual es resuelta en la
+primera i\-te\-ra\-ci\'on, independientemente del m\'etodo n\'umerico que se
+haya utilizado para trazar el camino homot\'opico, de tal forma que el
+voltaje nodal $v_1$ se sujeta al valor de la fuente independiente de
+voltaje $V_1$.
+Por lo tanto, es poco \'util colocar esta ecuaci\'on al final durante la simulaci\'on homot\'opica.
+Entonces, ser\'{\i}a conveniente asociar el procedimiento de continuaci\'on
+a una $n$-\'esima ecuaci\'on cuya relaci\'on de rama sea no lineal.
+
+En la Figura (\ref{rutas}) se muestra la soluci\'on geom\'etrica del sistema
+de ecuaciones algebraicas no lineales de la ecuaci\'on (\ref{eqsimple}).
+En dicha figura se denotan tres planos:
+\begin{itemize}
+\item  El plano exponencial $S_1$ con la caracter\'{\i}stica del
+diodo $K_b$
+\item  El plano polinomial $S_2$ con la caracter\'{\i}stica de la
+conductancia no lineal $K_c$
+\item  El plano ``de carga'' $S_3$, el cual combina la ecuaci\'on de
+la fuente de voltaje $V_1$ con la caracter\'{\i}stica de la
+conductancia lineal $K_a$
+\end{itemize}
+Las soluciones al sistema de ecuaciones son denotadas por los puntos
+blancos en las intersecciones de los planos y representan los puntos
+de operaci\'on en CD del circuito de la Figura (\ref{cirejemplo}).
+
+\begin{figure}[!h]
+\centerline{
+\epsfxsize=70mm
+\epsffile{chap3/figs/p3.eps}}
+\caption{Trayectorias homot\'opicas asociadas a la ecuaci\'on de e\-qui\-li\-brio
+del circuito de la figura (\ref{cirejemplo})}
+\label{rutas}
+\end{figure}
+
+Para el circuito anterior hay tres caminos homot\'opicos:
+\begin{itemize}
+\item $P_a$, esta trayectoria se encuentra sobre el plano oblicuo
+\item $P_b$, esta trayectoria se encuentra sobre el plano exponencial
+\item $P_c$, esta trayectoria se encuentra sobre el plano polinomial
+\end{itemize}
+Cada trayectoria ($P_a,P_b$ y $P_c$) corresponde a la elecci\'on de una
+$n$-\'esima ecuaci\'on diferente, lo cual representa diferentes caminos
+homot\'opicos. Por lo tanto, la $n$-\'esima funci\'on ($f_n(\pig{x})$) debe ser
+seleccionada utilizando un criterio apropiado para calcular el grado de no linealidad de cada $f_i(\pig{x})$.
+
+
+\section{Clasificaci\'on de Funciones de Rama}
+\label{cfr}
+Para poder llevar a cabo la clasificaci\'on de las ecuaciones nodales
+por su grado de no linealidad, es necesario primero clasificar las
+funciones de rama de los elementos no lineales por su grado de no
+linealidad, ya que estos elementos aportan las corrientes que fluyen
+hacia los nodos y por lo tanto determinan el grado de no linealidad
+de la ecuaci\'on nodal relacionada con el nodo.
+
+Dado que el an\'alisis nodal modificado lleva a cabo la formulaci\'on
+de la ecuaci\'on de equilibrio basado en la ley de Kirchhoff de
+corrientes, que establece:
+\begin{Theod}
+La suma de todas las corrientes que entran y salen de un nodo es igual a cero.
+\end{Theod}
+
+Por lo tanto, se puede inferir el grado de no linealidad de una ecuacion nodal, midiendo
+el grado de no linealidad de las funciones de rama de cada elemento conectado al nodo bajo analisis.
+
+Con el objeto de llevar a cabo el an\'alisis de los tipos de funciones
+de rama, estas se clasifican en:
+
+\begin{itemize}
+\item {\bf Funci\'on Lineal}\hfill \par
+Son aquellas funciones en las que se cumplen los principios de homogeneidad y
+superposici\'on. Los elementos est\'aticos que cumplen con esto son
+los resistores y las conductancias lineales \cite{Vlach_book}, que
+tienen la caracter\'{\i}stica de rama dada por:
+\begin{displaymath}
+u= R i \qquad \mbox{y} \qquad i=G u
+\end{displaymath}
+respectivamente, donde $R$ y $G$ son los valores de resistencia y conductancia.
+
+
+\item {\bf Funci\'on No lineal}\hfill \par
+Son aquellas funciones que en contraposici\'on a las lineales, {\bf no} cumplen
+el princi\-pio de homogeneidad y superposici\'on.
+Con el objetivo de clasificar a las funciones de rama no lineales,
+en este trabajo se recurre a la clasificaci\'on dada en \cite{cont_leu11}.
+En este trabajo, las funciones de rama no lineales se clasifican
+inicialmente en:
+\begin{dinglist}{226}
+\item Funciones debilmente no lineales
+\item Funciones fuertemente no lineales
+\end{dinglist}
+\end{itemize}
+
+\subsection{Funciones d\'ebilmente no lineales}
+Las funciones no lineales d\'ebiles se clasifican como a
+continuaci\'on se muestra:
+\begin{itemize}
+\item {\bf No acotadas}\hfill\par
+      Esta clasificaci\'on se divide a su vez en:
+      \begin{itemize}
+      \item Tipo $U^+$\hfill \par
+	si $f(x)\to \infty$ cuando $x\to \infty$,
+            y $f(x)\to -\infty$ cuando $x\to -\infty$
+      \item Tipo $U^-$\hfill \par
+	si $f(x)\to \infty$ cuando $x\to -\infty$,
+            y $f(x)\to -\infty$ cuando $x\to \infty$      
+      \end{itemize}
+ 
+      En la Figura (\ref{UB}) se muestran las dos clases de funciones no acotadas.
+      \begin{figure}[!h]
+       \centerline{
+       \epsfxsize=80mm
+       \epsffile{chap3/figs/Ub.eps}}
+       \caption{Funciones no acotadas}
+       \label{UB}
+      \end{figure}
+\item {\bf Semi-acotadas}\hfill\par
+      Esta clasificaci\'on se divide a su vez en:
+      \begin{itemize}%%%Es de tipo ...
+      \item Tipo $H^+$ \hfill \par
+        si $f(x)\to \infty$ cuando $x\to \infty$,
+        y $|f(x)|$ permanece acotada conforme $x\to -\infty$
+      \item Tipo $H^-$\hfill\par
+            si $f(x)\to -\infty$ cuando $x\to -\infty$,
+            y $|f(x)|$ permanece acotada conforme $x\to \infty$
+      \end{itemize} 
+   En la Figura (\ref{HB}) se muestran las dos clases de funciones semi-acotadas.
+      \begin{figure}[!h]
+       \centerline{
+       \epsfxsize=80mm
+       \epsffile{chap3/figs/Hb.eps}}
+       \caption{Funciones  semi-acotadas}
+       \label{HB}
+      \end{figure}
+
+
+\item {\bf Doblemente acotadas}\hfill\par
+      \begin{itemize}
+      \item Tipo $B$\hfill\par
+        si $|f(x)|$ permanece acotada
+        conforme $|x|\to \infty$
+      \end{itemize}
+      En la Figura (\ref{BB}) se muestra una funci\'on doblemente acotada.
+      \begin{figure}[!h]
+       \centerline{
+       \epsfxsize=60mm
+       \epsffile{chap3/figs/bb.eps}}
+       \caption{Funci\'on doblemente acotada}
+       \label{BB}
+      \end{figure}
+\end{itemize}
+
+\subsection{Funciones fuertemente no lineales}
+Las funciones de rama no lineales {\bf fuertes} se pesan por el
+n\'umero de m\'aximos y m\'{\i}nimos locales. De tal forma, que
+a mayor n\'umero de m\'aximos y m\'{\i}nimos mayor grado de no linealidad.
+En la Figura (\ref{nl}) se muestra un ejemplo de funci\'on no lineal fuerte.
+\begin{figure}[!h]
+\centerline{
+\epsfxsize=60mm
+\epsffile{chap3/figs/nl.eps}}
+\caption{Funci\'on no lineal fuerte}
+\label{nl}
+\end{figure}
+
+\section{Asignaci\'on de Pesos a las Ramas no Lineales}
+
+
+Se ha mostrado una clasificaci\'on de funciones de rama no lineales,
+de tal forma que ahora ya es posible asignar pesos a cada tipo de
+funci\'on no lineal. En la Tabla (\ref{PesoRamas}) se muestran los pesos asignados a las
+funciones de rama no lineales d\'ebiles. Se le ha asignado el menor peso a las funciones de rama
+del tipo no acotadas ($U^{\pm}$) debido a que estas no tienen
+as\'{\i}ntotas y son las que tienen un comportamiento m\'as parecido al
+de una  resistencia o conductancia lineal.
+A las funciones de rama del tipo semi-acotadas ($H^{\pm}$) se les ha
+asignado un peso mayor debido a que tienen una as\'{\i}ntota.
+Por \'ultimo, la funci\'on de rama de mayor peso ha resultado ser la
+del tipo $B$ ya que cuenta con dos as\'{\i}ntotas.  El c\'alculo del peso de las funciones fuertemente no lineales se logra
+mediante la aplicaci\'on de la siguiente f\'ormula simple:
+\begin{displaymath}
+\beta=Z+3
+\end{displaymath}
+donde $Z$ es el n\'umero de m\'aximos y m\'{\i}nimos locales.
+
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+Tipos  & Peso $W$ \\ \hline\hline
+$U^{\pm}$ &  1 \\ \hline
+$H^{\pm}$ & 2 \\ \hline
+$B$ & 3 \\ \hline \hline
+\end{tabular}
+}
+\caption{Pesos de funciones de rama d\'ebilmente no lineales}
+\label{PesoRamas}
+\end{table}
+
+En caso de $Z=0$, se determina que la rama es del tipo no lineal d\'ebil.
+Entonces, el valor m\'{\i}nimo de $Z$ es 1, por lo que el peso
+m\'{\i}nimo de una rama no lineal fuerte es 4, as\'{\i} que siempre
+resultar\'a m\'as pesada que la funci\'on no lineal doblemente
+acotada ($B$).   
+
+\section{Criterio de Pesado de las Ecuaciones Nodales}
+En las secciones anterior se ha explicado de que manera el orden de las ecuaciones
+emanadas del m\'etodo MNA de circuitos no lineales afecta a las
+trayectorias homot\'opicas, debido a que el grado de no linealidad es
+diferente para cada ecuaci\'on.
+Por lo tanto es importante el pesado de las ecuaciones nodales
+por su grado de no linealidad. Ademas, ya se dio el primer paso para el pesado de
+las ecuaciones nodales al presentar una clasificaci\'on de funciones
+de rama no lineales. Partiendo de esta clasificaci\'on es posible
+determinar un criterio de pesado de las ecuaciones nodales.
+
+Se han elaborado dos criterios b\'asicos (\cite{homo_SMACD,homo_ICECS})
+en el pesado de las ecuaciones
+nodales, \'estos son el criterio de grado de incidencia no lineal
+y el criterio de tipos de no linealidades incidentes.
+
+A continuaci\'on se describen ambos criterios:
+\begin{description}
+\item {\bf Criterio de Grado de Incidencia NO lineal}\hfill\par
+Este criterio se basa en determinar el n\'umero de componentes no
+li\-nea\-les {\em incidentes}\, a cada nodo, considerando este n\'umero
+como el peso de la ecuaci\'on nodal asociada al nodo.
+Aplicando este criterio, resulta que en la Figura (\ref{rams}) el
+nodo con mayor no linealidad es el nodo ({\sf b}) ya que tiene m\'as
+ramas no lineales incidentes a \'el.
+\begin{figure}[!h]
+\centerline{
+\epsfxsize=120mm
+\epsffile{chap3/figs/twonodes.eps}}
+\caption{No linealidades conectadas a los nodos}
+\label{rams}
+\end{figure}
+
+
+
+Este criterio de pesado se puede resumir con la siguiente f\'ormula:
+\begin{equation}
+\puttilde{\delta}_i =  \mbox{\# de elementos no lineales incidentes}
+\end{equation}
+donde $\puttilde{\delta}_i$ es el grado de incidencia no lineal del nodo
+$i$-\'esimo.
+
+\item {\bf Criterio de Tipo de No Linealidades Incidentes}\hfill\par
+
+El criterio anterior puede llevar a consideraciones err\'oneas, ya que
+no toma en cuenta los tipos de no linealidades de las ramas incidentes en los nodos.
+De hecho podr\'{\i}a resultar que el nodo con mayor grado de incidencia
+no lineal, no resulte ser el nodo que tenga asociada la funci\'on nodal
+de mayor grado de no linealidad.
+En el caso opuesto, un nodo podr\'{\i}a tener el menor n\'umero de
+elementos no lineales incidentes a \'el, pero aun as\'{\i} tener
+asociada la funci\'on nodal m\'as no lineal. Por lo tanto, se ha creado un segundo criterio, el cual est\'a basado
+en asignar un peso espec\'{\i}fico a cada nodo (ecuaci\'on nodal)
+dependiendo del tipo de
+no linealidades incidentes a \'el. De tal forma que el peso del nodo es igual a la suma de los pesos de las
+funciones de rama de todos los elementos no lineales incidentes al nodo.
+Este criterio de pesado se puede resumir con la siguiente f\'ormula:
+\begin{equation}
+\puttilde{\zeta}_i = \Sigma \mbox{ pesos de las no linealidades incidentes}
+\end{equation}
+donde $\puttilde{\zeta}_i$ es la suma de los pesos de las no linealidades
+incidentes al nodo $i$-\'esimo.
+\end{description}
+
+\section{Tratamiento de los Transactores}
+Hasta ahora se han considerado funciones constitutivas de rama que
+involucran variables (voltaje y corriente) de la misma rama, i.e. no
+se han consi\-de\-rado elementos en los que una variable depende de la
+variable de otra rama, como es el caso de las funciones de rama
+de los transactores lineales o fuentes controladas.
+Los transactores lineales forman parte de
+los modelos de varios dispositivos entre los que se encuentran
+transistores bipolares, transistores de efecto de campo, amplificadores
+operacionales, etc. por lo que tienen importancia pr\'actica.
+Si bien los transactores son lineales, puede darse el caso de que la
+variable controladora provenga de un elemento no lineal, lo cual
+provoca que la no linealidad sea {\em heredada}\
+\cite{homo_ECCTD} por el transactor
+y que la rama de salida del mismo est\'e manejando una variable
+no lineal.
+Tal es el caso del modelo de se\~nal grande de Ebers-Moll del
+transistor bipolar \cite{misc_getr}, donde el transactor lineal
+es controlado por la corriente que fluye por una conductancia no
+lineal, de tal forma que el transactor maneja a su salida una
+corriente no lineal. Como resultado de esta situaci\'on, se deben tomar en cuenta los
+efectos de los transactores lineales en los criterios de pesado
+cuando la variable controladora proviene de un elemento no lineal,
+como se muestra esquem\'aticamente en la Figura (\ref{depX}).
+
+Dependiendo si la variable de salida del transactor es corriente
+o voltaje, la ecuaci\'on de equilibrio se ver\'a afectada; ya sea
+en la ecuaci\'on nodal correspondiente o en la relaci\'on de rama
+no NA compatible, tal y como se muestra en la Figura (\ref{depY}).
+En los transactores con corriente como variable de salida, \'esta
+es vista como una corriente no lineal que fluye hacia el nodo,
+mientras que para los transactores con voltaje como variable de salida,
+\'estos involucran una ecuaci\'on no NA compatible.
+
+\begin{figure}[!h]
+\psfrag{expre1}{\scriptsize{$EV_1 = \puttilde{f}(EV_2)$}}
+\psfrag{ivar}{\scriptsize{$\puttilde{\pig{\i}}$}}
+\psfrag{vvar}{\scriptsize{$\puttilde{\pig{u}}$}}
+\psfrag{exprea}{\small{$EV_{out} = \alpha \puttilde{\i}$}}
+\psfrag{expreb}{\small{$EV_{out} = \alpha \puttilde{u}$}}
+\centerline{
+\epsfxsize=70mm
+\epsffile{chap3/figs/ivdep.eps}
+}
+\caption{Transactores lineales involucrando variables no lineales}
+\label{depX}
+\end{figure}
+
+\begin{figure}[!h]
+\psfrag{outI}{\scriptsize{$\pig{i}_o = \alpha \puttilde{EV}$}}
+\psfrag{outU}{\scriptsize{$\pig{u}_o = \alpha \puttilde{EV}$}}
+\psfrag{ix}{\scriptsize{$\puttilde{\pig{i}}_o$}}
+\psfrag{vx}{\scriptsize{$\puttilde{\pig{u}}_o$}}
+\centerline{
+\epsfxsize=70mm
+\epsffile{chap3/figs/both.eps}
+}
+\caption{Variables de salida de los transactores afectando la ecuaci\'on
+de equilibrio}
+\label{depY}
+\end{figure}
+
+Segun el criterio de asignacion de pesos, el peso de los elementos no lineales $\rho$ es
+heredado a los transactores m\'ultiplicandolo por el factor $\alpha$  de acoplamiento,
+como se expresa en la siguiente ecuaci\'on:
+\begin{displaymath}
+w= \alpha\rho
+\end{displaymath}
+
+
+
+\section{Estudio de los Elementos no NA Compatibles}
+
+Cuando se utiliza el m\'etodo MNA para establecer la ecuaci\'on
+de equilibrio, dada en la ecuaci\'on \ref{Fequilibrio3}, \'esta tiene la forma general:
+\begin{displaymath}
+\pig{f}(\pig{x})=
+\left[\begin{array}{c}
+f_1(\pig{x}) \\ \vdots\\ f_j(\pig{x}) \\ \vdots\\ f_n (\pig{x})
+\\\hline
+r_1(\pig{x}) \\ \vdots\\ r_k(\pig{x}) \\ \vdots\\ r_m (\pig{x})
+\end{array} \right]
+= \pig{0}
+\end{displaymath}
+donde 
+$f_j(\pig{x})=0$ es la ecuaci\'on nodal del $j$-\'esimo nodo y
+$r_k(\pig{x})=0$ es la ecuaci\'on de rama del $k$-\'esimo elemento
+no NA compatible. Hay $n$ nodos y $m$ funciones de rama provenientes
+de los elementos no NA compatibles.
+Por lo tanto, la tarea de asignaci\'on de pesos a las ecuaciones
+emanadas del m\'etodo MNA a\'un no est\'a terminada ya que hasta el
+momento s\'olo se han pesado las $n$ ecuaciones nodales, faltando por
+asignar pesos a las $m$ ecuaciones introducidas por los elementos NA
+no compatibles. Puesto que los elementos no NA compatibles
+contribuyen con funciones adicionales, solamente se tiene que asignar
+el peso de la funci\'on de rama del $m$-\'esimo elemento de acuerdo
+a la clasificaci\'on de las funciones no lineales de rama $u$-$i$.
+
+\section{Procedimiento de Asignaci\'on de Peso}
+
+En esta secci\'on se resumen los conceptos de las secciones
+anteriores y se genera el procedimiento para llevar a cabo la
+asignaci\'on sistem\'atica de los pesos a las ecuaciones nodales. 
+El procedimiento de pesado puede resumirse en los siguientes pasos:
+\begin{enumerate}
+\item Identificar todos los elementos no lineales del circuito.
+\item Pesar todas las funciones de rama de los elementos no lineales.
+\item Identificar todos los transactores controlados por elementos no
+lineales y asignarles el peso de esa rama calculado en el paso anterior
+multiplicado por el factor de acoplamiento ($\alpha$) del transactor.
+\item Sumar los pesos de todas las funciones de rama no lineales
+de elementos incidentes al nodo.
+\end{enumerate}
+
+
+El procedimiento de pesado del nodo se puede resumir con la expresi\'on
+siguiente \cite{homo_ICECS,homo_SMACD}:
+
+\begin{equation}
+\begin{array}{l}
+\omega_a=\underbrace{\sum _{j=1}^{M}{|\alpha_j|\rho_j}}_{\mbox{Transactores}} + \underbrace{\sum _{k=1}^{N}{\beta_k}+\sum _{i=1}^{Q}{W_i}}_{\mbox{Tipos}}
+\end{array}
+\end{equation}
+donde $W_i$ es el peso de los elementos no lineales d\'ebiles, $\beta_i$ es el
+peso de los elementos fuertemente no lineales ,
+$\rho_j$ es el peso de las ramas controladoras no lineales,
+$M$ es el n\'umero de transactores que dependen de elementos no lineales,
+$\alpha$ es el factor de acoplamiento de los transactores,
+$N$ es el n\'umero de elementos no lineales fuertes,
+y
+$Q$ es el n\'umero de elementos no lineales d\'ebiles.
+
+\subsection{Criterios de Desempate}
+
+La aplicaci\'on de los criterios de pesado puede dar como
+resultado que algunas ecuaciones tengan el mismo peso. En estos casos
+es nescesario utilizar alg\'un criterio de desempate, el cual tome en cuenta
+los efectos de componentes que hasta el momento se han considerado
+como lineales. Las fuentes de voltaje ($V$) y de corriente ($I$) no cumplen con el principio
+de linealidad, por lo tanto se pueden tomar en cuenta
+en los criterios de pesado como elementos no lineales, y de esa forma
+tratar de desempatar los casos que den como resultado nodos de igual grado de no linealidad (peso).
+Las funciones de rama de dichos elementos se pueden clasificar como no
+lineales d\'ebiles y caen en la categor\'{\i}a de doblemente acotadas.
+Por lo tanto, s\'olo en el caso de que existan empates en el grado de
+no linealidad de las ecuaciones, el peso de las fuentes de voltaje y
+de corriente es 3.
+
+\subsection{Variantes de Asignaci\'on de Pesos}
+
+A continuaci\'on se presentan 3 posibles criterios de reordenamiento:
+\begin{enumerate}
+\item Reordenar las $n+m$ ecuaciones en forma ascendente de peso.
+\item Reordenar las $n+m$ ecuaciones en forma descendente de peso.
+\item Colocar la ecuaci\'on nodal m\'as no lineal en la \'ultima posici\'on $n+m$.
+\end{enumerate}
+
+La implementaci\'on del procedimiento de asignaci\'on de pesos y sus
+va\-rian\-tes ha sido realizada en Maple \cite{maple1} debido a que varias de las operaciones
+necesarias para llevar a cabo la clasificaci\'on de las ramas y la
+asignaci\'on de pesos se pueden ejecutar de manera m\'as eficiente por
+medio de t\'ecnicas de an\'alisis simb\'olico.
+Algunas de esas operaciones son \cite{homo_SMACD,homo_ECCTD}:
+\begin{dinglist}{242}
+\item Diferenciaci\'on simb\'olica.
+\item Determinar el n\'umero de m\'aximos y m\'{\i}nimos.
+\item Simple sustituci\'on num\'erica de las variables controladoras
+(voltaje o corriente) en la funci\'on de rama dentro de un intervalo dado. 
+\item Determinaci\'on del rango de variaci\'on para las variables controladoras.
+\item C\'alculo del valor l\'{\i}mite cuando la variable independiente tiende a
+      $\pm\infty$.
+\end{dinglist}  
+
+\section{Aplicaci\'on al M\'etodo de Chao}
+En esta secci\'on se aplica el procedimiento de pesado de las
+ecuaciones al m\'etodo homot\'opico de Chao. Repetimos aqu\'{\i} la
+ecuaci\'on homot\'opica, para facilitar la lectura:
+\begin{equation}
+{ {{d f_i[\pig{x}(p)]} \over{dp}} + f_i[\pig{x}(p)]=0}
+\label{chaobis1}
+\end{equation}
+donde $f_i(\pig{x}(0))=0$ para $i=1,2,\ldots,n-1$. Las
+funciones $f_i$ representan las ecuaciones emanadas del m\'etodo
+MNA. La $n$-\'esima ecuaci\'on est\'a dada por:
+\begin{equation}
+{  {{d f_n [\pig{x}(p)]} \over {dp} } \pm f_n [\pig{x}(p)]=0}
+\label{chaobis2}
+\end{equation}
+
+%\vspace{1ex}
+
+Debido a que \'esta homotop\'{\i}a depende fuertemente de la $n$-\'esima
+ecuaci\'on, el cambiar la ultima ecuaci\'on por otra m\'as no lineal afecta
+las trayectorias homot\'opicas.
+En la pr\'actica, s\'olo basta con intercambiar la \'ultima ecuaci\'on
+con alguna otra, ya que el orden de las primeras ($n-1$) ecuaciones no
+tiene relevancia dado que no tiene efectos en las trayectorias
+homot\'opicas. Por lo tanto se seleccion\'o el tercer criterio de reordenamiento.
+
+
+
+\section{Casos de estudio}
+
+\subsection{Circuito ERD}
+El primer circuito  (ERD) consiste de la conexi\'on en serie de
+una fuente independiente de voltaje ($V_1$),
+una resistencia lineal ($R_1$) y
+una conductancia no lineal ($K_1$). La conductancia no lineal tiene una funci\'on constitutiva de rama
+de un diodo t\'unel dada por una funci\'on polinomial de tercer grado:
+\begin{displaymath}
+i = \left( 0.8u^3-5.25u^2+9u \right) \times 10^{-3} \;A
+\end{displaymath}
+En la Figura \ref{cirERD} se muestra el circuito junto con los
+valores de los elementos.
+
+
+\begin{figure}[!h]
+\psfrag{om}{$\Omega$}
+\centerline{
+\epsfxsize=90mm
+\epsffile{chap4/figs/erd.eps}}
+\caption{Circuito ERD}
+\label{cirERD}
+\end{figure}
+
+
+\subsubsection{Aplicando el Criterio de Pesado}
+
+En la Tabla \ref{ERDpesosRamas}
+se muestra el resultado de aplicar el criterio de pesado de funciones
+de rama fuertemente no lineales. A partir de dicha tabla se calculo el grado
+de no linealidad de cada nodo como se muestra en la Tabla  \ref{ERDpesosNodos},
+en la cual se muestra que el grando de no linealidad del nodo \ding{173} es el m\'as mayor.
+Debido a que la fuente de voltaje $V_1$ es un elemento no NA
+compatible, se agrega una ecuaci\'on extra a la ecuaci\'on
+de equilibrio. Por lo tanto, es necesario pesar esta ecuaci\'on, el cual resulta ser cero.
+
+
+
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+Componentes  & Peso  \\ \hline\hline
+$R_1$ & 0 \\ \hline
+$V1$  & 0 \\ \hline
+$K_1$ & 5 \\ \hline \hline
+\end{tabular}
+}
+\caption{Pesos de las funciones de rama del circuito ERD}
+\label{ERDpesosRamas}
+\end{table}
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+    Nodo  & Peso \\ \hline
+    \ding{172}     &  0 \\ \hline
+    \ding{173}     &  5  \\ \hline \hline
+\end{tabular}
+}
+\caption{Pesos de los nodos del circuito ERD}
+\label{ERDpesosNodos}
+\end{table}
+
+
+
+El pesado de las ecuaciones del circuito ERD emanadas del m\'etodo MNA,
+permite reordenar las ecuaciones bajo los criterios de grado de no linealidad y
+simular para observar los efectos sobre la homotop\'{\i}a. A continuaci\'on
+se muestran los resultados para la homotop\'{\i}a de Chao.
+
+\subsubsection{Simulaci\'on Homot\'opica}
+
+El m\'etodo de Chao, contiene un algoritmo de arranque que calcula el punto de inicio de la trayectoria homot\'opica utilizando  un m\'etodo de 
+optimizaci\'on que consiste en calcular un punto $\pig{x}_0$ sobre
+la intersecci\'on de los planos de las primeras ($n+m-1$) ecuaciones del
+circuito, donde $n$ es el n\'umero de nodos del circuito y $m$ es el n\'umero
+de elementos no NA com\-pa\-ti\-bles. Por lo tanto s\'olo existen ($n+m$) combinaciones
+que dar\'an puntos de inicio diferentes, y por lo tanto trayectorias homot\'opicas
+diferentes.
+
+
+Una vez elegida la ecuacion final, los resultados de las simulaciones del m\'etodo de Chao han mostrado que el orden
+de las primeras ($n+m-1$) ecuaciones del circuito no afecta las
+trayectorias homot\'opicas, y por lo tanto \'unicamente la \'ultima
+ecuaci\'on determina el comportamiento de esta homotop\'{\i}a, de tal
+forma que s\'olo existen ($n+m$) combinaciones del orden de las
+ecuaciones que dar\'an trayectorias homot\'opicas diferentes.
+
+Los resultados de las simulaciones se presentan en la
+Tabla \ref{ERDchao}. En la primer columna se encuentra la ultima ecuaci\'on $n+m$ del sistema, en la segunda columna
+se encuentra las $n+m-1$ reordenadas y en la ultima columna el tiempo de computo (m\'aquina con microprocesador 486).
+De la segunda columna se puede concluir que efectivamente el no reordenar las  $n+m-1$ no afecta en nada a la trayectoria homot\'opica.
+sin embargo, el cambiar la \'ultima ecuaci\'on $n+m$  afecta definitivamente los resultados.
+Por un lado, la primer simulaci\'on de la Tabla \ref{ERDchao} corresponde
+al caso de reordenamiento en el cual se  coloca al final de la
+optimizaci\'on y de la homotop\'{\i}a la funci\'on de rama de la fuente
+de voltaje, y donde s\'olo se obtuvo una ra\'{\i}z, este caso de ordenamiento es el
+que se obtiene normalmente cuado no se aplican los criterios de reordenamiento. 
+Por otro lado, el mejor de los casos de reordenamiento es el \'ultimo, el
+cual es uno de los tres ordenamientos que lograron convergencia global,
+al tener al final del sistema de ecuaciones la ecuaci\'on del nodo
+\ding{172}; Anque el tiempo de c\'omputo se incrementa un \%33, se logra localizar tres soluciones
+en vez de una, lo cual compenza bastante bien la inversi\'on extra de tiempo de computo.
+
+
+
+Los valores de  las ra\'{\i}ces resultantes de la simulaci\'on con la
+ecuaci\'on del nodo \ding{172} al final del sistema de ecuaciones, en la
+optimizaci\'on y en la homotop\'{\i}a se muestran a continuaci\'on:
+\begin{displaymath}
+\begin{array}{r}
+\left[\begin{array}{r} v_1 \\ v_2  \\ i_{V_1}  \\ \end{array}\right]
+\begin{array}{r}
+ \\ = \\ \\
+\end{array}
+\underbrace{\left[\begin{array}{r}
+5.00000 \\
+0.82520  \\
+-0.00417 \\
+\end{array}\right]}_{\mbox{Soluci\'on \#1}},
+\underbrace{\left[\begin{array}{r}
+5.00000 \\
+2.32209 \\
+-0.00267 \\
+\end{array}\right]}_{\mbox{Soluci\'on \#2}}, 
+\underbrace{\left[\begin{array}{r}
+ 5.00000\\
+ 3.74245 \\
+ -0.00125 \\
+\end{array}\right]}_{\mbox{Soluci\'on \#3}}
+\end{array}
+\end{displaymath}
+
+\begin{table}[!h]
+\center{
+%\scriptsize{
+\footnotesize{
+\begin{tabular}{||c|c|c|c||}
+\hline\hline
+($n+m$)-\'esima & ($n+m-1$) & \# de & Tiempo \\
+Ecuaci\'on en  & Ecuaciones en &  Ra\'{\i}ces  & Total \\
+ Chao      & Optimizaci\'on &     &   \\
+\hline\hline
+${V_1}$ & \ding{172},\ding{173} & 1 & 3.000 \\ \hline
+${V_1}$ & \ding{172},${V_1}$ & 1 & 3.550  \\ \hline
+${V_1}$ & \ding{173},${V_1}$ & 1 & 3.569  \\ \hline
+\ding{173} & \ding{172},\ding{173} & 1 & 3.120  \\ \hline
+\ding{173} & \ding{172},${V_1}$ & 1 & 3.089  \\ \hline
+\ding{173} & \ding{173},${V_1}$ & 1 & 3.130  \\ \hline
+\ding{172} & \ding{172},\ding{173} & 3 & 4.369  \\ \hline
+\ding{172} & \ding{172},${V_1}$ & 3 & 4.139  \\ \hline
+\ding{172}  & \ding{173},${V_1}$ & 3 & 3.999 \\ \hline \hline
+\end{tabular}
+}}
+\caption{Simulaciones con el m\'etodo de  Chao del circuito ERD}
+\label{ERDchao}
+\end{table}
+
+\subsection{Circuito ERDD}
+El siguiente circuito de ejemplo consta de dos
+conductancias no lineales con funciones de rama polinomiales:
+\begin{displaymath}
+\begin{array}{r}
+i_{K_3}=(2.5u^3-10.5u^2+11.8u)\times 10^{-3} \;A \\
+i_{K_4}=(0.43u^3-2.69u^2+4.56u)\times 10^{-3} \;A
+\end{array}
+\end{displaymath}
+Dichas conductancias estan en serie con una resistencia lineal ($R_2$) y una fuente de voltaje
+($V_1$). El diagrama del circuito se muestra en la Figura (\ref{cirERDD})
+junto con los valores de los elementos lineales.
+
+\begin{figure}[!h]
+\psfrag{om}{$\Omega$}
+\centerline{
+\epsfxsize=70mm
+\epsffile{chap4/figs/erdd.eps}}
+\caption{Circuito ERDD}
+\label{cirERDD}
+\end{figure}
+
+
+
+\subsubsection{Aplicando el Criterio de Pesado}
+
+Los pesos de las ramas y las ecuaciones del circuito se presentan en
+las Tablas (\ref{ERDDpesosRamas}) y (\ref{ERDDpesosNodos})
+respectivamente. En la Tabla \ref{ERDDpesosNodos} se muestra que el nodo m\'as no lineal resulta ser el nodo \ding{174} ya
+que las dos conductancias no lineales ($K_3$ y $K_4$) inciden en dicho nodo.
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+Componentes  & Peso  \\ \hline\hline
+$V_1$ & 0 \\ \hline
+$R_2$  & 0 \\ \hline
+$K_3$ & 5 \\ \hline
+$K_4$ & 5 \\ \hline
+\end{tabular}
+}
+\caption{Pesos de las Funciones de Rama del Circuito ERDD}
+\label{ERDDpesosRamas}
+\end{table}
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+    Nodo  & Peso \\ \hline
+    \ding{172}     &  0 \\ \hline
+    \ding{173}     &  5  \\ \hline
+     \ding{174}     &  10  \\ \hline\hline
+\end{tabular}
+}
+\caption{Pesos de los nodos del circuito ERDD}
+\label{ERDDpesosNodos}
+\end{table}
+
+El peso de la \'ultima ecuaci\'on emanada del an\'alisis nodal es la
+de la fuente de voltaje $V_1$ por lo que se le asigna un peso de 0
+al aplicar los criterios de la secci\'on \ref{NONA}.
+A continuaci\'on se muestran los resultados
+de las simulaciones de este circuito para diferentes
+ordenamientos de ecuaciones.
+
+\subsubsection{Simulaci\'on Homot\'opica}
+
+Los resultados de las simulaciones se presentan en la Tabla (\ref{ERDDchao}).
+En este caso la homotop\'{\i}a fue mejorada al colocar al final del
+sistema de ecuaciones la ecuaci\'on \ding{173} en vez de \ding{172}, lo
+cual significo aumentar el grado de no linealidad de la $(n+m)$-\'esima
+ecuaci\'on.
+En ning\'un caso el reordenamiento de las ecuaciones en el m\'etodo de
+optimizaci\'on caus\'o diferencia en la convergencia del m\'etodo, la
+cual no fue global ya que el circuito cuenta con 9 soluciones.
+
+\begin{table}[!h]
+\center{
+\footnotesize{
+\begin{tabular}{||c|c|c|c||}
+\hline\hline
+($n+m$)-\'esima & ($n+m-1$) & \# de & Tiempo \\
+Ecuaci\'on en  & Ecuaciones en &  Ra\'{\i}ces  & Total \\
+ Chao      & Optimizaci\'on &     &   \\
+\hline\hline
+\ding{172} & $V_1$,\ding{174},\ding{173}& 1 & 2.754  \\ \hline
+\ding{172} & $V_1$,\ding{174},\ding{172}& 1 & 2.789  \\ \hline
+\ding{172} & $V_1$,\ding{173},\ding{172}& 1 & 2.849  \\ \hline
+\ding{172} & \ding{172},\ding{173},\ding{174}& 1 & 2.920  \\ \hline
+
+\ding{173} & $V_1$,\ding{174},\ding{173}& 2 & 2.685  \\ \hline
+\ding{173} & $V_1$,\ding{174},\ding{172}& 2 & 2.807  \\ \hline
+\ding{173} & $V_1$,\ding{173},\ding{172}& 2 & 3.027  \\ \hline
+\ding{173} & \ding{172},\ding{173},\ding{174}& 2 & 3.175  \\ \hline
+
+\ding{174} & $V_1$,\ding{174},\ding{173}& 1 & 2.781  \\ \hline
+\ding{174} & $V_1$,\ding{174},\ding{172}& 1 & 2.780  \\ \hline
+\ding{174} & $V_1$,\ding{173},\ding{172}& 1 & 2.865  \\ \hline
+\ding{174} & \ding{172},\ding{173},\ding{174} & 1 & 2.900  \\ \hline
+
+$V_1$ & $V_1$,\ding{174},\ding{173} & 1 & 2.980  \\ \hline
+$V_1$ & $V_1$,\ding{174},\ding{172}& 1 & 3.043  \\ \hline
+$V_1$ & $V_1$,\ding{173},\ding{172} & 1 & 3.159  \\ \hline
+$V_1$  & \ding{172},\ding{173},\ding{174}& 1 & 3.090 \\ \hline \hline
+\end{tabular}
+}}
+\caption{Simulaciones con el m\'etodo de Chao del circuito ERDD}
+\label{ERDDchao}
+\end{table}
+
+
+
+
+\subsection{Circuito Schmitt-trigger}
+En esta secci\'on se analizar\'a el circuito Schmitt-trigger, que
+cuenta con tres puntos de operaci\'on  y  se muestra con los valores
+de sus componentes en la Figura (\ref{Ftrigger}).
+En este ejemplo se utiliza el modelo de Ebers-Moll para los transistores
+bipolares, mostrado en la Figura (\ref{FEbersMoll}).
+Los valores para $\alpha_F$ y $\alpha_R$ de ambos transistores bipolares
+($Q_1$, $Q_2$) son de 0.99 y 0.01 respectivamente
+y las funciones constitutivas de rama de los diodos en el modelo de
+Ebers-Moll son:
+\begin{displaymath}
+\begin{array}{r}
+i_{D_C}= 1\times 10^{-9} (e^{40v_{BC}}-1) \;A \\
+i_{D_E}= 1\times 10^{-9} (e^{40v_{BE}}-1) \;A
+\end{array}
+\end{displaymath}
+
+\begin{figure}[!h]
+\psfrag{om}{$\Omega$}
+\centerline{
+\epsfxsize=80mm
+\epsffile{chap4/figs/trigger.eps}}
+\caption{Circuito Schmitt-trigger}
+\label{Ftrigger}
+\end{figure}
+
+\begin{figure}[!h]
+\psfrag{f}{$\alpha_F$}
+\psfrag{r}{$\alpha_R$}
+\centerline{
+\epsfxsize=40mm
+\epsffile{chap4/figs/ebersmoll.eps}}
+\caption{Modelo Ebers-Moll del transistor bipolar}
+\label{FEbersMoll}
+\end{figure}
+
+
+\subsubsection{Aplicando el Criterio de Pesado}
+Los pesos de las ecuaciones nodales del circuito se presentan en la Tabla
+(\ref{TriggerpesosNodos}).
+Como se puede observar los nodos \ding{173} y \ding{177} son los m\'as
+pesados del circuito, con un peso de 6 cada uno. Entonces, se puede
+aplicar el criterio de desempate antes descrito, 
+de tal forma que el nodo \ding{173} adquiere un peso total de 9 y por lo
+tanto se considera que el nodo \ding{173} tiene la ecuaci\'on nodal
+asociada, m\'as no lineal del circuito.
+
+\begin{table}[!h]
+\center{
+\begin{tabular}{||c|c||}
+\hline\hline
+    Nodo  & Peso \\ \hline
+    \ding{172}     &  0 \\ \hline
+    \ding{173}     &  6  \\ \hline
+    \ding{174}     &  3.98  \\ \hline
+    \ding{175}     &  4.04  \\ \hline
+    \ding{176}     &  3.98  \\ \hline
+    \ding{177}     &  6  \\ \hline \hline
+\end{tabular}
+}
+\caption{Pesos de los nodos del circuito Schmitt-trigger }
+\label{TriggerpesosNodos}
+\end{table}
+
+
+\subsubsection{Simulaci\'on Homot\'opica}
+
+Debido a un fallo de convergencia en el m\'etodo de optimizaci\'on, se eligi\'o un punto
+de inicio de manera arbitraria el cual es:
+\begin{displaymath}
+\begin{array}{r}
+\left[\begin{array}{r}
+v_1 \\ v_2  \\ v_3  \\ v_4 \\ v_5  \\ v_6  \\
+i_{V_1}  \\ i_{V_2}  \\
+\end{array}\right]
+\begin{array}{r}
+ \\ = \\ \\
+\end{array}
+\left[\begin{array}{r}
+8.33 \\ 1.20  \\ 4.87 \\ 0.90 \\ 0.98 \\ 1.24 \\
+0 \\ -0.01 \\
+\end{array}\right]
+\end{array}
+\end{displaymath}
+
+Los resultados de
+las simulaciones bajo diferentes ordenamiento se pueden observar en la Tabla \ref{Triggersimu}.
+
+\begin{table}[!h]
+\center{
+\footnotesize{
+\begin{tabular}{||c|c|c||}
+\hline\hline
+($n+m$)-\'esima & \# de & Tiempo \\
+Ecuaci\'on en  &  Ra\'{\i}ces  & Total \\
+ Chao      &     &   \\
+\hline\hline
+\ding{172} & 1 & 44.630  \\ \hline
+\ding{173} & 1 & 38.290  \\ \hline
+\ding{174} & 1 & 45.310  \\ \hline
+\ding{175} & 1 & 44.759  \\ \hline
+\ding{176} & 1 & 44.630  \\ \hline
+\ding{177} & 1 & 38.620  \\ \hline
+$V_1$ & 1 &  39.680  \\ \hline
+$V_2$ & 1 &  38.969  \\ \hline \hline
+\end{tabular}
+}}
+\caption{Simulaciones con el m\'etodo de  Chao del circuito Schmitt-trigger}
+\label{Triggersimu}
+\end{table}
+
+
+Es interesante observar la Tabla \ref{Triggersimu}, que el menor tiempo de
+computo fue resultado de colocar en la $(n+m)$-\'esima posici\'on
+la ecuaci\'on (nodo 6)  que obtuvo el mayor grado de no linealidad. 
+Por \'ultimo, la ra\'{\i}z que se encontr\'o con este m\'etodo es:
+
+\begin{displaymath}
+\begin{array}{r}
+\left[\begin{array}{r}
+v_1 \\ v_2  \\ v_3  \\ v_4 \\ v_5  \\ v_6  \\
+i_{V_1}  \\ i_{V_2}  \\ 
+\end{array}\right]
+\begin{array}{r}
+ \\
+= \\
+  \\
+\end{array}
+\left[\begin{array}{r}
+ 9.999999\\ 1.449999 \\ 5.764902\\ 1.091165\\ 1.223019\\ 1.541015\\
+ -0.000017\\ -0.010894\\
+\end{array}\right]
+\end{array}
+\end{displaymath}
+
+\section{Conclusiones}
+
+El desarrollo de los m\'etodos de homotop\'{\i}a en los \'ultimos a\~nos
+ha resultado importante para la simulaci\'on num\'erica de
+circuitos resistivos no lineales.
+El presente trabajo  se enfoc\'o a mejorar el rendimiento de las
+homotop\'{\i}as mediante el reordenamiento del sistema de ecuaciones no
+lineales emanadas del m\'etodo MNA.
+El criterio para llevar a cabo el reordenamiento ocurre a trav\'es de la
+asignaci\'on de pesos a las ecuaciones algebraicas no lineales.
+Se determinaron varios esquemas de asignaci\'on de pesos.
+Se ha demostrado que el reordenamiento es capaz de afectar la trayectoria
+de soluciones del m\'etodo de homotop\'{\i}a de Chao.
+Esto es debido fundamentalmente a que el mecanismo de continuaci\'on del
+m\'etodo de Chao reside en efectuar un cambio de signo en la \'ultima de las ecuaciones homot\'opicas, afectando asi la trayectoria homot\'opica.
+
+
+
+\bibliographystyle{amsplain}
+\bibliography{reord}
+\end{document}
+
+

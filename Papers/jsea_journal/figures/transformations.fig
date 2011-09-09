@@ -1,0 +1,67 @@
+#FIG 3.2
+Landscape
+Center
+Inches
+Letter  
+100.00
+Single
+-2
+1200 2
+6 1725 525 2175 975
+4 0 0 50 -1 0 10 0.0000 4 135 420 1740 675 Design\001
+4 0 0 50 -1 0 10 0.0000 4 105 375 1762 825 Starts\001
+4 0 0 50 -1 0 10 0.0000 4 105 300 1800 975 Here\001
+-6
+6 1725 9000 2175 9450
+4 0 0 50 -1 0 10 0.0000 4 135 420 1740 9150 Design\001
+4 0 0 50 -1 0 10 0.0000 4 105 300 1800 9450 Here\001
+4 0 0 50 -1 0 10 0.0000 4 105 300 1800 9300 Ends\001
+-6
+6 600 6825 1500 7500
+4 0 0 50 -1 0 10 0.0000 4 135 780 600 6975 Descriptions\001
+4 0 0 50 -1 0 10 0.0000 4 105 795 600 7200 contain more\001
+4 0 0 50 -1 0 10 0.0000 4 135 900 600 7425 physical detail\001
+-6
+6 600 3375 1425 3975
+4 0 0 50 -1 0 10 0.0000 4 135 780 600 3525 Descriptions\001
+4 0 0 50 -1 0 10 0.0000 4 105 795 600 3750 contain more\001
+4 0 0 50 -1 0 10 0.0000 4 105 690 600 3975 abstraction\001
+-6
+2 1 0 2 0 7 50 -1 -1 0.000 0 0 -1 1 0 2
+	1 1 1.00 60.00 120.00
+	 1950 1050 1950 8925
+2 1 0 1 0 7 50 -1 -1 0.000 0 0 -1 1 0 2
+	1 1 1.00 60.00 120.00
+	 1575 6675 1575 7500
+2 1 0 1 0 7 50 -1 -1 0.000 0 0 -1 0 1 2
+	1 1 1.00 60.00 120.00
+	 1575 3300 1575 4125
+4 0 0 50 -1 0 12 0.0000 4 180 2625 2250 2325 -A more tangible description of the\001
+4 0 0 50 -1 0 12 0.0000 4 180 2325 2250 2550  design in terms of a number of\001
+4 0 0 50 -1 0 12 0.0000 4 180 2520 2250 2775  loosely defined functional blocks\001
+4 0 0 50 -1 0 12 0.0000 4 180 2685 2250 1425 -Eg: "I need to design an amplifier."\001
+4 0 0 50 -1 0 12 0.0000 4 180 3120 2250 3675 - An accurate mathematical specification\001
+4 0 0 50 -1 0 12 0.0000 4 180 2340 2325 3900  of waht this amplifier must do.\001
+4 0 0 50 -1 0 12 0.0000 4 180 2505 2250 4125 - No regard paid as yet as to how\001
+4 0 0 50 -1 0 12 0.0000 4 180 2565 2250 4350   this might be physically realised.\001
+4 0 0 50 -1 1 12 0.0000 4 180 2400 2250 1650 -occupies one line of verbal text\001
+4 0 0 50 -1 1 12 0.0000 4 180 2685 2250 3000 -ocucupies about one shhet of paper\001
+4 0 0 50 -1 1 12 0.0000 4 180 3225 2250 4575 - a few pages of mathematical expressions.\001
+4 0 0 50 -1 0 12 0.0000 4 135 3510 2250 5325 - A modification of the behavioural level above\001
+4 0 0 50 -1 0 12 0.0000 4 180 3510 2250 5550   taking into account physical constraints such\001
+4 0 0 50 -1 0 12 0.0000 4 180 4755 2325 5775 as power limitations, noise, bandwidth and distortion behaviour\001
+4 0 0 50 -1 1 12 0.0000 4 180 3150 2250 6000 - still only few pages of mathematical text\001
+4 0 0 50 -1 0 12 0.0000 4 180 2955 2250 6750 - A description of the above in terms of\001
+4 0 0 50 -1 1 12 0.0000 4 180 2820 2250 7425 - equivalent of a width wide diagram.\001
+4 0 0 50 -1 0 12 0.0000 4 135 1200 2325 7200   between them.\001
+4 0 0 50 -1 0 12 0.0000 4 135 3330 2325 6975   basic device elements and the connections\001
+4 0 0 50 -1 0 12 0.0000 4 135 2760 2325 8550   and the connections between them.\001
+4 0 0 50 -1 0 12 0.0000 4 180 2895 2325 8325   individual transistors, their positions,\001
+4 0 0 50 -1 0 12 0.0000 4 180 3000 2250 8100 -  A description of the above in terms of\001
+4 0 0 50 -1 1 12 0.0000 4 180 3615 2250 8775 -  larger, but comparably sized, version of above.\001
+4 0 0 50 -1 2 12 0.0000 4 180 1635 2250 1200 Description of intent\001
+4 0 0 50 -1 2 12 0.0000 4 180 2340 2250 2100 Block Functional Description\001
+4 0 0 50 -1 2 12 0.0000 4 180 1815 2250 3450 Functional Description\001
+4 0 0 50 -1 2 12 0.0000 4 180 1965 2250 5100 Architectural Desciption\001
+4 0 0 50 -1 2 12 0.0000 4 180 1545 2250 6525 Device Description\001
+4 0 0 50 -1 2 12 0.0000 4 180 1500 2250 7875 Circuit Description\001

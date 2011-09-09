@@ -1,0 +1,59 @@
+\begin{thebibliography}{10}
+
+\bibitem{nordholt1}
+E.H. Nordholt,
+\newblock {\em Design of High-Performance Negative-Feedback Amplifiers},
+\newblock Ph.D. thesis, Delft University of Technology, The Nertherlands, 1980.
+
+\bibitem{gray}
+P.R. Gray and R.G. Meyer,
+\newblock {\em Analysis and Design of Analog Integrated Circuits},
+\newblock John Wiley and Sons, Inc, 1993.
+
+\bibitem{nordholt}
+E.H. Nordholt,
+\newblock {\em Design of High-Performance Negative-Feedback Amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\bibitem{netzer}
+Y.~Netzer,
+\newblock ``The design of low-noise amplifiers,''
+\newblock in {\em Proc. IEEE}, June 1981, vol.~69, pp. 728--742.
+
+\bibitem{chang}
+Z.Y. Chang and W.M.C. Sansen,
+\newblock {\em Low-Noise Wide-Band Amplifiers in Bipolar and CMOS
+  Technologies},
+\newblock Kluwer Academic, 1991.
+
+\bibitem{gilbert}
+George Moschytz, Chris Toumazou, and Barrie Gilbert,
+\newblock {\em Trade-Offs in Analog Circuit Design - The Designer's Companion},
+\newblock Kluwer Academic, 2002.
+
+\bibitem{carlin}
+H.J. Carlin,
+\newblock ``Singular network elements,''
+\newblock {\em IEEE Trans. Circuit Theory}, vol. 11, pp. 67--72, March 1964.
+
+\bibitem{moschytz}
+G.S. Moschytz,
+\newblock ``Linear integrated networks: Fundamentals,''
+\newblock in {\em Bell Laboratories Series}. Bell Laboratories, 1974.
+
+\bibitem{davenport}
+W.B. Davenport and W.L. Root,
+\newblock {\em An Introduction to the Theory of Random Signals and Noise},
+\newblock IEEE Press, 1987.
+
+\bibitem{peebles}
+P.Z. Peebles,
+\newblock {\em Probability, Random Variables, and Random Signal Principles},
+\newblock McGraw-Hill, 1980.
+
+\bibitem{haus}
+H.A. Haus,
+\newblock ``Representation of noise in linear two-ports,''
+\newblock in {\em Proc. IRE}, January 1960, vol.~48, pp. 69--74.
+
+\end{thebibliography}

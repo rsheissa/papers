@@ -1,0 +1,23 @@
+\begin{thebibliography}{1}
+
+\bibitem{booch}
+G.~Booch,
+\newblock {\em Object Oriented Design With Applications},
+\newblock The Benjamin/Cummings Publishing Company, Inc., 1991.
+
+\bibitem{joyanes}
+L.~Joyanes-Aguilar,
+\newblock {\em Borland C++},
+\newblock McGraw-Hill, 1993.
+
+\bibitem{verhoeven}
+C.J.M. Verhoeven, A.van Staveren, G.L.E. Monna, and M.H.L. Kouwenhoven,
+\newblock {\em Strutured Electronic Design, Negative-feedback Amplifiers},
+\newblock Delftese Uitgevers Maatschappij, 2001.
+
+\bibitem{nordholt}
+E.H.\ Nordholt,
+\newblock {\em Design of High Performance Negative-feedback amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\end{thebibliography}

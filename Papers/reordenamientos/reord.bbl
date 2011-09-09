@@ -1,0 +1,96 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{cont_bra}
+F.~H. {Branin, Jr }, \emph{Widely convergent method for finding multiple
+  solutions of simultaneous nonlinear equations}, IBM Journal on Research and
+  Dev. \textbf{16} (1972), 504--522.
+
+\bibitem{cont_kao}
+{K-s} Chao, {D-k} Liu, and {C-t} Pan, \emph{A systematic search method for
+  obtaining multiple solutions of simultaneous nonlinear equations}, IEEE
+  Transactions on Circuits and Systems \textbf{22} (1975), no.~9, 748--752.
+
+\bibitem{maple1}
+B.~W. Char, K.~O.Geddes, and G.~H. Gonnet, \emph{Maple {V} language reference
+  manual}, Springer-Verlag, New York, 1994. ISBN/ISSN:0-387-97622-1.
+
+\bibitem{cont_chu1}
+{L. O.} Chua and A.~Ushida, \emph{A switching-parameter algorithm for finding
+  multiple solutions of nonlinear resistive circuits}, International Journal of
+  Circuit Theory and Applications \textbf{4} (1976), no.~3, 215--239.
+
+\bibitem{cont_quasi}
+{J. E.} Dennis and {Jorge J.} Mor{\'e}, \emph{{Quasi-Newton} methods,
+  motivation and theory}, Siam Review \textbf{19} (1977), no.~1.
+
+\bibitem{misc_getr}
+{Ian E.} Getreu, \emph{Modelling the bipolar transistor}, {Computer-Aided
+  Design of Electronic Circuits}, Elsevier Scientific Publishing Company, 1971.
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c}, \emph{Artif\text{i}cial parameter homotopy
+  methods for the dc operating point problem}, IEEE transactions on
+  computer-aided design of integrated circuits and systems \textbf{12} (1997),
+  no.~6, 861--877.
+
+\bibitem{stat_1}
+S.~Natarajan, \emph{A systematic method for obtaining state equations using
+  mna}, IEE Proceedings Part G (1991), 341--346.
+
+\bibitem{cont_ritch}
+{Stephen L.} Ritcher and R.~{DeCarlo}, \emph{Continuation methods: Theory and
+  applications}, IEEE Trans. on Circuits and Systems \textbf{30} (1983), no.~6,
+  347--352.
+
+\bibitem{mnaxx}
+Chung-Wen~Ho Ruehli and {P.} {A.}~Brennan, \emph{The modified nodal approach to
+  network analysis}, IEEE Transactions on Circuits and Systems \textbf{22}
+  (1975), no.~6, 504.
+
+\bibitem{homo_ECCTD}
+A.~Sarmiento. and H.~V\'azquez-L., \emph{Using symbolic techniques to determine
+  the effect of coupled variables in homotopic simulation}, Enviado a European
+  Conference on Circuit Theory and Design (2001).
+
+\bibitem{netwth_lasr}
+A.~Sarmiento-R., \emph{A partition method for the determination of multiple dc
+  operating points}, Ph.D. Thesis, Delft University of Technology, (to be
+  published in March, 1994).
+
+\bibitem{homo_ICECS}
+A.~Sarmiento-R. and H.~V\'azquez-L., \emph{An optimal reordering schema of
+  homotopy equations for analysis of nonlinear resistive circuits},
+  International IEEE Conference on Electronics, Circuits, and Systems (2000),
+  764--767.
+
+\bibitem{homo_SMACD}
+\bysame, \emph{Powering homotopy-based simulation with symbolic analysis},
+  International Workshop on Symbolic Methods in Circuit Design (2000),
+  135--138.
+
+\bibitem{Schwa_book}
+{A. F.} Schwarz, \emph{Computer-aided design of microelectronic circuits and
+  systems: Volume 1},  (1987), ISBN 0-12-632431-X.
+
+\bibitem{cont_leu11}
+L.~Vandenberghe and J.~Vandewalle, \emph{A continuous deformation method for
+  resistive circuits containing active and non-reciprocal elements},
+  Proceedings of the IEEE ISCAS, Singapore (1991), 762--765.
+
+\bibitem{homo_iscas05}
+H.~V\'azquez-L., L.~Hern\'andez-M., and A.~Sarmiento-R., \emph{Double-bounded
+  homotopy for analysing nonlinear resistive circuits}, International Symposium
+  on Circuits and Systems (2005).
+
+\bibitem{Vlach_book}
+{J.} Vlach and {K.} Singhal, \emph{Computer methods for circuit analysis and
+  design}, Van Nostrand Reinhold Company, 1983.
+
+\end{thebibliography}

@@ -1,0 +1,19 @@
+CIRCUITO  Schimitt-trigger
+V1 2 0 1.45
+V2 1 0 10
+R1 3 1 2000
+R2 3 6 10000
+R3 5 1 1000
+R4 0 4 100
+KDC1 2 3 i=(1e-9)*(exp(u/0.025)-1)
+KDE1 2 4 i=(1e-9)*(exp(u/0.025)-1)
+FF1 3 2 I(KDE1) -0.99
+FR1 4 2 I(KDC1) -0.01
+KDC2 6 5 i=(1e-9)*(exp(u/0.025)-1)
+KDE2 6 4 i=(1e-9)*(exp(u/0.025)-1)
+FF2 5 6 I(KDE2) -0.99
+FR2 4 6 I(KDC2) -0.01
+
+# Sentencias de analisis
+DC OP
+end

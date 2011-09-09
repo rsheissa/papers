@@ -1,0 +1,4312 @@
+%!PS-Adobe-2.0
+%%Creator: dvips(k) 5.92b Copyright 2002 Radical Eye Software
+%%Title: abs_inaoeCAD.dvi
+%%Pages: 2
+%%PageOrder: Ascend
+%%BoundingBox: 0 0 612 792
+%%DocumentFonts: Times-Roman Times-BoldItalic Times-Bold Helvetica-Bold
+%%+ CMSY7 CMR10 Times-Italic
+%%EndComments
+%DVIPSWebPage: (www.radicaleye.com)
+%DVIPSCommandLine: dvips -P pdf -o abs_inaoeCAD.ps abs_inaoeCAD
+%DVIPSParameters: dpi=8000, compressed
+%DVIPSSource:  TeX output 2006.01.15:1552
+%%BeginProcSet: tex.pro
+%!
+/TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
+N}B/A{dup}B/TR{translate}N/isls false N/vsize 11 72 mul N/hsize 8.5 72
+mul N/landplus90{false}def/@rigin{isls{[0 landplus90{1 -1}{-1 1}ifelse 0
+0 0]concat}if 72 Resolution div 72 VResolution div neg scale isls{
+landplus90{VResolution 72 div vsize mul 0 exch}{Resolution -72 div hsize
+mul 0}ifelse TR}if Resolution VResolution vsize -72 div 1 add mul TR[
+matrix currentmatrix{A A round sub abs 0.00001 lt{round}if}forall round
+exch round exch]setmatrix}N/@landscape{/isls true N}B/@manualfeed{
+statusdict/manualfeed true put}B/@copies{/#copies X}B/FMat[1 0 0 -1 0 0]
+N/FBB[0 0 0 0]N/nn 0 N/IEn 0 N/ctr 0 N/df-tail{/nn 8 dict N nn begin
+/FontType 3 N/FontMatrix fntrx N/FontBBox FBB N string/base X array
+/BitMaps X/BuildChar{CharBuilder}N/Encoding IEn N end A{/foo setfont}2
+array copy cvx N load 0 nn put/ctr 0 N[}B/sf 0 N/df{/sf 1 N/fntrx FMat N
+df-tail}B/dfs{div/sf X/fntrx[sf 0 0 sf neg 0 0]N df-tail}B/E{pop nn A
+definefont setfont}B/Cw{Cd A length 5 sub get}B/Ch{Cd A length 4 sub get
+}B/Cx{128 Cd A length 3 sub get sub}B/Cy{Cd A length 2 sub get 127 sub}
+B/Cdx{Cd A length 1 sub get}B/Ci{Cd A type/stringtype ne{ctr get/ctr ctr
+1 add N}if}B/CharBuilder{save 3 1 roll S A/base get 2 index get S
+/BitMaps get S get/Cd X pop/ctr 0 N Cdx 0 Cx Cy Ch sub Cx Cw add Cy
+setcachedevice Cw Ch true[1 0 0 -1 -.1 Cx sub Cy .1 sub]{Ci}imagemask
+restore}B/D{/cc X A type/stringtype ne{]}if nn/base get cc ctr put nn
+/BitMaps get S ctr S sf 1 ne{A A length 1 sub A 2 index S get sf div put
+}if put/ctr ctr 1 add N}B/I{cc 1 add D}B/bop{userdict/bop-hook known{
+bop-hook}if/SI save N @rigin 0 0 moveto/V matrix currentmatrix A 1 get A
+mul exch 0 get A mul add .99 lt{/QV}{/RV}ifelse load def pop pop}N/eop{
+SI restore userdict/eop-hook known{eop-hook}if showpage}N/@start{
+userdict/start-hook known{start-hook}if pop/VResolution X/Resolution X
+1000 div/DVImag X/IEn 256 array N 2 string 0 1 255{IEn S A 360 add 36 4
+index cvrs cvn put}for pop 65781.76 div/vsize X 65781.76 div/hsize X}N
+/p{show}N/RMat[1 0 0 -1 0 0]N/BDot 260 string N/Rx 0 N/Ry 0 N/V{}B/RV/v{
+/Ry X/Rx X V}B statusdict begin/product where{pop false[(Display)(NeXT)
+(LaserWriter 16/600)]{A length product length le{A length product exch 0
+exch getinterval eq{pop true exit}if}{pop}ifelse}forall}{false}ifelse
+end{{gsave TR -.1 .1 TR 1 1 scale Rx Ry false RMat{BDot}imagemask
+grestore}}{{gsave TR -.1 .1 TR Rx Ry scale 1 1 false RMat{BDot}
+imagemask grestore}}ifelse B/QV{gsave newpath transform round exch round
+exch itransform moveto Rx 0 rlineto 0 Ry neg rlineto Rx neg 0 rlineto
+fill grestore}B/a{moveto}B/delta 0 N/tail{A/delta X 0 rmoveto}B/M{S p
+delta add tail}B/b{S p tail}B/c{-4 M}B/d{-3 M}B/e{-2 M}B/f{-1 M}B/g{0 M}
+B/h{1 M}B/i{2 M}B/j{3 M}B/k{4 M}B/w{0 rmoveto}B/l{p -4 w}B/m{p -3 w}B/n{
+p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{0 S
+rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
+
+%%EndProcSet
+%%BeginProcSet: alt-rule.pro
+%!
+% Patch by TVZ
+% Makes dvips files draw rules with stroke rather than fill.
+% Makes narrow rules more predictable at low resolutions
+% after distilling to PDF.
+% May have unknown consequences for very thick rules.
+% Tested only with dvips 5.85(k).
+TeXDict begin
+/QV {
+  gsave newpath /ruleY X /ruleX X
+  Rx Ry gt
+  { ruleX ruleY Ry 2 div sub moveto Rx 0 rlineto Ry }
+  { ruleX Rx 2 div add ruleY moveto 0 Ry neg rlineto Rx }
+  ifelse
+  setlinewidth 0 setlinecap stroke grestore
+} bind def
+end
+
+%%EndProcSet
+%%BeginProcSet: texc.pro
+%!
+/TeXDict 300 dict def TeXDict begin/N{def}def/B{bind def}N/S{exch}N/X{S
+N}B/A{dup}B/TR{translate}N/isls false N/vsize 11 72 mul N/hsize 8.5 72
+mul N/landplus90{false}def/@rigin{isls{[0 landplus90{1 -1}{-1 1}ifelse 0
+0 0]concat}if 72 Resolution div 72 VResolution div neg scale isls{
+landplus90{VResolution 72 div vsize mul 0 exch}{Resolution -72 div hsize
+mul 0}ifelse TR}if Resolution VResolution vsize -72 div 1 add mul TR[
+matrix currentmatrix{A A round sub abs 0.00001 lt{round}if}forall round
+exch round exch]setmatrix}N/@landscape{/isls true N}B/@manualfeed{
+statusdict/manualfeed true put}B/@copies{/#copies X}B/FMat[1 0 0 -1 0 0]
+N/FBB[0 0 0 0]N/nn 0 N/IEn 0 N/ctr 0 N/df-tail{/nn 8 dict N nn begin
+/FontType 3 N/FontMatrix fntrx N/FontBBox FBB N string/base X array
+/BitMaps X/BuildChar{CharBuilder}N/Encoding IEn N end A{/foo setfont}2
+array copy cvx N load 0 nn put/ctr 0 N[}B/sf 0 N/df{/sf 1 N/fntrx FMat N
+df-tail}B/dfs{div/sf X/fntrx[sf 0 0 sf neg 0 0]N df-tail}B/E{pop nn A
+definefont setfont}B/Cw{Cd A length 5 sub get}B/Ch{Cd A length 4 sub get
+}B/Cx{128 Cd A length 3 sub get sub}B/Cy{Cd A length 2 sub get 127 sub}
+B/Cdx{Cd A length 1 sub get}B/Ci{Cd A type/stringtype ne{ctr get/ctr ctr
+1 add N}if}B/id 0 N/rw 0 N/rc 0 N/gp 0 N/cp 0 N/G 0 N/CharBuilder{save 3
+1 roll S A/base get 2 index get S/BitMaps get S get/Cd X pop/ctr 0 N Cdx
+0 Cx Cy Ch sub Cx Cw add Cy setcachedevice Cw Ch true[1 0 0 -1 -.1 Cx
+sub Cy .1 sub]/id Ci N/rw Cw 7 add 8 idiv string N/rc 0 N/gp 0 N/cp 0 N{
+rc 0 ne{rc 1 sub/rc X rw}{G}ifelse}imagemask restore}B/G{{id gp get/gp
+gp 1 add N A 18 mod S 18 idiv pl S get exec}loop}B/adv{cp add/cp X}B
+/chg{rw cp id gp 4 index getinterval putinterval A gp add/gp X adv}B/nd{
+/cp 0 N rw exit}B/lsh{rw cp 2 copy get A 0 eq{pop 1}{A 255 eq{pop 254}{
+A A add 255 and S 1 and or}ifelse}ifelse put 1 adv}B/rsh{rw cp 2 copy
+get A 0 eq{pop 128}{A 255 eq{pop 127}{A 2 idiv S 128 and or}ifelse}
+ifelse put 1 adv}B/clr{rw cp 2 index string putinterval adv}B/set{rw cp
+fillstr 0 4 index getinterval putinterval adv}B/fillstr 18 string 0 1 17
+{2 copy 255 put pop}for N/pl[{adv 1 chg}{adv 1 chg nd}{1 add chg}{1 add
+chg nd}{adv lsh}{adv lsh nd}{adv rsh}{adv rsh nd}{1 add adv}{/rc X nd}{
+1 add set}{1 add clr}{adv 2 chg}{adv 2 chg nd}{pop nd}]A{bind pop}
+forall N/D{/cc X A type/stringtype ne{]}if nn/base get cc ctr put nn
+/BitMaps get S ctr S sf 1 ne{A A length 1 sub A 2 index S get sf div put
+}if put/ctr ctr 1 add N}B/I{cc 1 add D}B/bop{userdict/bop-hook known{
+bop-hook}if/SI save N @rigin 0 0 moveto/V matrix currentmatrix A 1 get A
+mul exch 0 get A mul add .99 lt{/QV}{/RV}ifelse load def pop pop}N/eop{
+SI restore userdict/eop-hook known{eop-hook}if showpage}N/@start{
+userdict/start-hook known{start-hook}if pop/VResolution X/Resolution X
+1000 div/DVImag X/IEn 256 array N 2 string 0 1 255{IEn S A 360 add 36 4
+index cvrs cvn put}for pop 65781.76 div/vsize X 65781.76 div/hsize X}N
+/p{show}N/RMat[1 0 0 -1 0 0]N/BDot 260 string N/Rx 0 N/Ry 0 N/V{}B/RV/v{
+/Ry X/Rx X V}B statusdict begin/product where{pop false[(Display)(NeXT)
+(LaserWriter 16/600)]{A length product length le{A length product exch 0
+exch getinterval eq{pop true exit}if}{pop}ifelse}forall}{false}ifelse
+end{{gsave TR -.1 .1 TR 1 1 scale Rx Ry false RMat{BDot}imagemask
+grestore}}{{gsave TR -.1 .1 TR Rx Ry scale 1 1 false RMat{BDot}
+imagemask grestore}}ifelse B/QV{gsave newpath transform round exch round
+exch itransform moveto Rx 0 rlineto 0 Ry neg rlineto Rx neg 0 rlineto
+fill grestore}B/a{moveto}B/delta 0 N/tail{A/delta X 0 rmoveto}B/M{S p
+delta add tail}B/b{S p tail}B/c{-4 M}B/d{-3 M}B/e{-2 M}B/f{-1 M}B/g{0 M}
+B/h{1 M}B/i{2 M}B/j{3 M}B/k{4 M}B/w{0 rmoveto}B/l{p -4 w}B/m{p -3 w}B/n{
+p -2 w}B/o{p -1 w}B/q{p 1 w}B/r{p 2 w}B/s{p 3 w}B/t{p 4 w}B/x{0 S
+rmoveto}B/y{3 2 roll p a}B/bos{/SS save N}B/eos{SS restore}B end
+
+%%EndProcSet
+%%BeginProcSet: 8r.enc
+% File  8r.enc as of 2002-03-12 for PSNFSS 9
+%
+% This is the encoding vector for Type1 and TrueType fonts to be used
+% with TeX.  This file is part of the PSNFSS bundle, version 9
+% 
+% Authors: S. Rahtz, P. MacKay, Alan Jeffrey, B. Horn, K. Berry, W. Schmidt
+%
+% Idea is to have all the characters normally included in Type 1 fonts
+% available for typesetting. This is effectively the characters in Adobe
+% Standard Encoding + ISO Latin 1 + extra characters from Lucida + Euro.
+% 
+% Character code assignments were made as follows:
+% 
+% (1) the Windows ANSI characters are almost all in their Windows ANSI
+% positions, because some Windows users cannot easily reencode the
+% fonts, and it makes no difference on other systems. The only Windows
+% ANSI characters not available are those that make no sense for
+% typesetting -- rubout (127 decimal), nobreakspace (160), softhyphen
+% (173). quotesingle and grave are moved just because it's such an
+% irritation not having them in TeX positions.
+% 
+% (2) Remaining characters are assigned arbitrarily to the lower part
+% of the range, avoiding 0, 10 and 13 in case we meet dumb software.
+% 
+% (3) Y&Y Lucida Bright includes some extra text characters; in the
+% hopes that other PostScript fonts, perhaps created for public
+% consumption, will include them, they are included starting at 0x12.
+% 
+% (4) Remaining positions left undefined are for use in (hopefully)
+% upward-compatible revisions, if someday more characters are generally
+% available.
+% 
+% (5) hyphen appears twice for compatibility with both ASCII and Windows.
+%
+% (6) /Euro is assigned to 128, as in Windows ANSI
+% 
+/TeXBase1Encoding [
+% 0x00 (encoded characters from Adobe Standard not in Windows 3.1)
+  /.notdef /dotaccent /fi /fl
+  /fraction /hungarumlaut /Lslash /lslash
+  /ogonek /ring /.notdef
+  /breve /minus /.notdef 
+% These are the only two remaining unencoded characters, so may as
+% well include them.
+  /Zcaron /zcaron 
+% 0x10
+ /caron /dotlessi 
+% (unusual TeX characters available in, e.g., Lucida Bright)
+ /dotlessj /ff /ffi /ffl 
+ /.notdef /.notdef /.notdef /.notdef
+ /.notdef /.notdef /.notdef /.notdef
+ % very contentious; it's so painful not having quoteleft and quoteright
+ % at 96 and 145 that we move the things normally found there down to here.
+ /grave /quotesingle 
+% 0x20 (ASCII begins)
+ /space /exclam /quotedbl /numbersign
+ /dollar /percent /ampersand /quoteright
+ /parenleft /parenright /asterisk /plus /comma /hyphen /period /slash
+% 0x30
+ /zero /one /two /three /four /five /six /seven
+ /eight /nine /colon /semicolon /less /equal /greater /question
+% 0x40
+ /at /A /B /C /D /E /F /G /H /I /J /K /L /M /N /O
+% 0x50
+ /P /Q /R /S /T /U /V /W
+ /X /Y /Z /bracketleft /backslash /bracketright /asciicircum /underscore
+% 0x60
+ /quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o
+% 0x70
+ /p /q /r /s /t /u /v /w
+ /x /y /z /braceleft /bar /braceright /asciitilde
+ /.notdef % rubout; ASCII ends
+% 0x80
+ /Euro /.notdef /quotesinglbase /florin
+ /quotedblbase /ellipsis /dagger /daggerdbl
+ /circumflex /perthousand /Scaron /guilsinglleft
+ /OE /.notdef /.notdef /.notdef
+% 0x90
+ /.notdef /.notdef /.notdef /quotedblleft
+ /quotedblright /bullet /endash /emdash
+ /tilde /trademark /scaron /guilsinglright
+ /oe /.notdef /.notdef /Ydieresis
+% 0xA0
+ /.notdef % nobreakspace
+ /exclamdown /cent /sterling
+ /currency /yen /brokenbar /section
+ /dieresis /copyright /ordfeminine /guillemotleft
+ /logicalnot
+ /hyphen % Y&Y (also at 45); Windows' softhyphen
+ /registered
+ /macron
+% 0xD0
+ /degree /plusminus /twosuperior /threesuperior
+ /acute /mu /paragraph /periodcentered
+ /cedilla /onesuperior /ordmasculine /guillemotright
+ /onequarter /onehalf /threequarters /questiondown
+% 0xC0
+ /Agrave /Aacute /Acircumflex /Atilde /Adieresis /Aring /AE /Ccedilla
+ /Egrave /Eacute /Ecircumflex /Edieresis
+ /Igrave /Iacute /Icircumflex /Idieresis
+% 0xD0
+ /Eth /Ntilde /Ograve /Oacute
+ /Ocircumflex /Otilde /Odieresis /multiply
+ /Oslash /Ugrave /Uacute /Ucircumflex
+ /Udieresis /Yacute /Thorn /germandbls
+% 0xE0
+ /agrave /aacute /acircumflex /atilde
+ /adieresis /aring /ae /ccedilla
+ /egrave /eacute /ecircumflex /edieresis
+ /igrave /iacute /icircumflex /idieresis
+% 0xF0
+ /eth /ntilde /ograve /oacute
+ /ocircumflex /otilde /odieresis /divide
+ /oslash /ugrave /uacute /ucircumflex
+ /udieresis /yacute /thorn /ydieresis
+] def
+
+%%EndProcSet
+%%BeginProcSet: bbad153f.enc
+% Thomas Esser, Dec 2002. public domain
+%
+% Encoding for:
+%     cmsy10 cmsy5 cmsy6 cmsy7 cmsy8 cmsy9
+%
+/TeXbbad153fEncoding [
+/minus /periodcentered /multiply /asteriskmath /divide /diamondmath
+/plusminus /minusplus /circleplus /circleminus /circlemultiply
+/circledivide /circledot /circlecopyrt /openbullet /bullet
+/equivasymptotic /equivalence /reflexsubset /reflexsuperset /lessequal
+/greaterequal /precedesequal /followsequal /similar /approxequal
+/propersubset /propersuperset /lessmuch /greatermuch /precedes /follows
+/arrowleft /arrowright /arrowup /arrowdown /arrowboth /arrownortheast
+/arrowsoutheast /similarequal /arrowdblleft /arrowdblright /arrowdblup
+/arrowdbldown /arrowdblboth /arrownorthwest /arrowsouthwest /proportional
+/prime /infinity /element /owner /triangle /triangleinv /negationslash
+/mapsto /universal /existential /logicalnot /emptyset /Rfractur /Ifractur
+/latticetop /perpendicular /aleph /A /B /C /D /E /F /G /H /I /J /K
+/L /M /N /O /P /Q /R /S /T /U /V /W /X /Y /Z /union /intersection
+/unionmulti /logicaland /logicalor /turnstileleft /turnstileright
+/floorleft /floorright /ceilingleft /ceilingright /braceleft /braceright
+/angbracketleft /angbracketright /bar /bardbl /arrowbothv /arrowdblbothv
+/backslash /wreathproduct /radical /coproduct /nabla /integral
+/unionsq /intersectionsq /subsetsqequal /supersetsqequal /section
+/dagger /daggerdbl /paragraph /club /diamond /heart /spade /arrowleft
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/minus /periodcentered /multiply /asteriskmath /divide /diamondmath
+/plusminus /minusplus /circleplus /circleminus /.notdef /.notdef
+/circlemultiply /circledivide /circledot /circlecopyrt /openbullet
+/bullet /equivasymptotic /equivalence /reflexsubset /reflexsuperset
+/lessequal /greaterequal /precedesequal /followsequal /similar
+/approxequal /propersubset /propersuperset /lessmuch /greatermuch
+/precedes /follows /arrowleft /spade /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+] def
+
+%%EndProcSet
+%%BeginProcSet: f7b6d320.enc
+% Thomas Esser, Dec 2002. public domain
+%
+% Encoding for:
+%     cmb10 cmbx10 cmbx12 cmbx5 cmbx6 cmbx7 cmbx8 cmbx9 cmbxsl10
+%     cmdunh10 cmr10 cmr12 cmr17cmr6 cmr7 cmr8 cmr9 cmsl10 cmsl12 cmsl8
+%     cmsl9 cmss10cmss12 cmss17 cmss8 cmss9 cmssbx10 cmssdc10 cmssi10
+%     cmssi12 cmssi17 cmssi8cmssi9 cmssq8 cmssqi8 cmvtt10
+%
+/TeXf7b6d320Encoding [
+/Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi /Omega
+/ff /fi /fl /ffi /ffl /dotlessi /dotlessj /grave /acute /caron /breve
+/macron /ring /cedilla /germandbls /ae /oe /oslash /AE /OE /Oslash
+/suppress /exclam /quotedblright /numbersign /dollar /percent /ampersand
+/quoteright /parenleft /parenright /asterisk /plus /comma /hyphen
+/period /slash /zero /one /two /three /four /five /six /seven /eight
+/nine /colon /semicolon /exclamdown /equal /questiondown /question /at
+/A /B /C /D /E /F /G /H /I /J /K /L /M /N /O /P /Q /R /S /T /U /V /W /X
+/Y /Z /bracketleft /quotedblleft /bracketright /circumflex /dotaccent
+/quoteleft /a /b /c /d /e /f /g /h /i /j /k /l /m /n /o /p /q /r /s /t /u
+/v /w /x /y /z /endash /emdash /hungarumlaut /tilde /dieresis /suppress
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /space
+/Gamma /Delta /Theta /Lambda /Xi /Pi /Sigma /Upsilon /Phi /Psi /.notdef
+/.notdef /Omega /ff /fi /fl /ffi /ffl /dotlessi /dotlessj /grave /acute
+/caron /breve /macron /ring /cedilla /germandbls /ae /oe /oslash /AE
+/OE /Oslash /suppress /dieresis /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+/.notdef /.notdef /.notdef /.notdef /.notdef /.notdef /.notdef
+] def
+
+%%EndProcSet
+%%BeginProcSet: texps.pro
+%!
+TeXDict begin/rf{findfont dup length 1 add dict begin{1 index/FID ne 2
+index/UniqueID ne and{def}{pop pop}ifelse}forall[1 index 0 6 -1 roll
+exec 0 exch 5 -1 roll VResolution Resolution div mul neg 0 0]FontType 0
+ne{/Metrics exch def dict begin Encoding{exch dup type/integertype ne{
+pop pop 1 sub dup 0 le{pop}{[}ifelse}{FontMatrix 0 get div Metrics 0 get
+div def}ifelse}forall Metrics/Metrics currentdict end def}{{1 index type
+/nametype eq{exit}if exch pop}loop}ifelse[2 index currentdict end
+definefont 3 -1 roll makefont/setfont cvx]cvx def}def/ObliqueSlant{dup
+sin S cos div neg}B/SlantFont{4 index mul add}def/ExtendFont{3 -1 roll
+mul exch}def/ReEncodeFont{CharStrings rcheck{/Encoding false def dup[
+exch{dup CharStrings exch known not{pop/.notdef/Encoding true def}if}
+forall Encoding{]exch pop}{cleartomark}ifelse}if/Encoding exch def}def
+end
+
+%%EndProcSet
+%%BeginProcSet: special.pro
+%!
+TeXDict begin/SDict 200 dict N SDict begin/@SpecialDefaults{/hs 612 N
+/vs 792 N/ho 0 N/vo 0 N/hsc 1 N/vsc 1 N/ang 0 N/CLIP 0 N/rwiSeen false N
+/rhiSeen false N/letter{}N/note{}N/a4{}N/legal{}N}B/@scaleunit 100 N
+/@hscale{@scaleunit div/hsc X}B/@vscale{@scaleunit div/vsc X}B/@hsize{
+/hs X/CLIP 1 N}B/@vsize{/vs X/CLIP 1 N}B/@clip{/CLIP 2 N}B/@hoffset{/ho
+X}B/@voffset{/vo X}B/@angle{/ang X}B/@rwi{10 div/rwi X/rwiSeen true N}B
+/@rhi{10 div/rhi X/rhiSeen true N}B/@llx{/llx X}B/@lly{/lly X}B/@urx{
+/urx X}B/@ury{/ury X}B/magscale true def end/@MacSetUp{userdict/md known
+{userdict/md get type/dicttype eq{userdict begin md length 10 add md
+maxlength ge{/md md dup length 20 add dict copy def}if end md begin
+/letter{}N/note{}N/legal{}N/od{txpose 1 0 mtx defaultmatrix dtransform S
+atan/pa X newpath clippath mark{transform{itransform moveto}}{transform{
+itransform lineto}}{6 -2 roll transform 6 -2 roll transform 6 -2 roll
+transform{itransform 6 2 roll itransform 6 2 roll itransform 6 2 roll
+curveto}}{{closepath}}pathforall newpath counttomark array astore/gc xdf
+pop ct 39 0 put 10 fz 0 fs 2 F/|______Courier fnt invertflag{PaintBlack}
+if}N/txpose{pxs pys scale ppr aload pop por{noflips{pop S neg S TR pop 1
+-1 scale}if xflip yflip and{pop S neg S TR 180 rotate 1 -1 scale ppr 3
+get ppr 1 get neg sub neg ppr 2 get ppr 0 get neg sub neg TR}if xflip
+yflip not and{pop S neg S TR pop 180 rotate ppr 3 get ppr 1 get neg sub
+neg 0 TR}if yflip xflip not and{ppr 1 get neg ppr 0 get neg TR}if}{
+noflips{TR pop pop 270 rotate 1 -1 scale}if xflip yflip and{TR pop pop
+90 rotate 1 -1 scale ppr 3 get ppr 1 get neg sub neg ppr 2 get ppr 0 get
+neg sub neg TR}if xflip yflip not and{TR pop pop 90 rotate ppr 3 get ppr
+1 get neg sub neg 0 TR}if yflip xflip not and{TR pop pop 270 rotate ppr
+2 get ppr 0 get neg sub neg 0 S TR}if}ifelse scaleby96{ppr aload pop 4
+-1 roll add 2 div 3 1 roll add 2 div 2 copy TR .96 dup scale neg S neg S
+TR}if}N/cp{pop pop showpage pm restore}N end}if}if}N/normalscale{
+Resolution 72 div VResolution 72 div neg scale magscale{DVImag dup scale
+}if 0 setgray}N/psfts{S 65781.76 div N}N/startTexFig{/psf$SavedState
+save N userdict maxlength dict begin/magscale true def normalscale
+currentpoint TR/psf$ury psfts/psf$urx psfts/psf$lly psfts/psf$llx psfts
+/psf$y psfts/psf$x psfts currentpoint/psf$cy X/psf$cx X/psf$sx psf$x
+psf$urx psf$llx sub div N/psf$sy psf$y psf$ury psf$lly sub div N psf$sx
+psf$sy scale psf$cx psf$sx div psf$llx sub psf$cy psf$sy div psf$ury sub
+TR/showpage{}N/erasepage{}N/setpagedevice{pop}N/copypage{}N/p 3 def
+@MacSetUp}N/doclip{psf$llx psf$lly psf$urx psf$ury currentpoint 6 2 roll
+newpath 4 copy 4 2 roll moveto 6 -1 roll S lineto S lineto S lineto
+closepath clip newpath moveto}N/endTexFig{end psf$SavedState restore}N
+/@beginspecial{SDict begin/SpecialSave save N gsave normalscale
+currentpoint TR @SpecialDefaults count/ocount X/dcount countdictstack N}
+N/@setspecial{CLIP 1 eq{newpath 0 0 moveto hs 0 rlineto 0 vs rlineto hs
+neg 0 rlineto closepath clip}if ho vo TR hsc vsc scale ang rotate
+rwiSeen{rwi urx llx sub div rhiSeen{rhi ury lly sub div}{dup}ifelse
+scale llx neg lly neg TR}{rhiSeen{rhi ury lly sub div dup scale llx neg
+lly neg TR}if}ifelse CLIP 2 eq{newpath llx lly moveto urx lly lineto urx
+ury lineto llx ury lineto closepath clip}if/showpage{}N/erasepage{}N
+/setpagedevice{pop}N/copypage{}N newpath}N/@endspecial{count ocount sub{
+pop}repeat countdictstack dcount sub{end}repeat grestore SpecialSave
+restore end}N/@defspecial{SDict begin}N/@fedspecial{end}B/li{lineto}B
+/rl{rlineto}B/rc{rcurveto}B/np{/SaveX currentpoint/SaveY X N 1
+setlinecap newpath}N/st{stroke SaveX SaveY moveto}N/fil{fill SaveX SaveY
+moveto}N/ellipse{/endangle X/startangle X/yrad X/xrad X/savematrix
+matrix currentmatrix N TR xrad yrad scale 0 0 1 startangle endangle arc
+savematrix setmatrix}N end
+
+%%EndProcSet
+%%BeginFont: CMR10
+%!PS-AdobeFont-1.1: CMR10 1.00B
+%%CreationDate: 1992 Feb 19 19:54:52
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.00B) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMR10) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle 0 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMR10 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 0 /.notdef put
+readonly def
+/FontBBox{-251 -250 1009 969}readonly def
+/UniqueID 5000793 def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA052A014267B7904EB3C0D3BD0B83D891
+016CA6CA4B712ADEB258FAAB9A130EE605E61F77FC1B738ABC7C51CD46EF8171
+9098D5FEE67660E69A7AB91B58F29A4D79E57022F783EB0FBBB6D4F4EC35014F
+D2DECBA99459A4C59DF0C6EBA150284454E707DC2100C15B76B4C19B84363758
+469A6C558785B226332152109871A9883487DD7710949204DDCF837E6A8708B8
+2BDBF16FBC7512FAA308A093FE5CF7158F1163BC1F3352E22A1452E73FECA8A4
+87100FB1FFC4C8AF409B2067537220E605DA0852CA49839E1386AF9D7A1A455F
+D1F017CE45884D76EF2CB9BC5821FD25365DDEA6E45F332B5F68A44AD8A530F0
+92A36FAC8D27F9087AFEEA2096F839A2BC4B937F24E080EF7C0F9374A18D565C
+295A05210DB96A23175AC59A9BD0147A310EF49C551A417E0A22703F94FF7B75
+409A5D417DA6730A69E310FA6A4229FC7E4F620B0FC4C63C50E99E179EB51E4C
+4BC45217722F1E8E40F1E1428E792EAFE05C5A50D38C52114DFCD24D54027CBF
+2512DD116F0463DE4052A7AD53B641A27E81E481947884CE35661B49153FA19E
+0A2A860C7B61558671303DE6AE06A80E4E450E17067676E6BBB42A9A24ACBC3E
+B0CA7B7A3BFEA84FED39CCFB6D545BB2BCC49E5E16976407AB9D94556CD4F008
+24EF579B6800B6DC3AAF840B3FC6822872368E3B4274DD06CA36AF8F6346C11B
+43C772CC242F3B212C4BD7018D71A1A74C9A94ED0093A5FB6557F4E0751047AF
+D72098ECA301B8AE68110F983796E581F106144951DF5B750432A230FDA3B575
+5A38B5E7972AABC12306A01A99FCF8189D71B8DBF49550BAEA9CF1B97CBFC7CC
+96498ECC938B1A1710B670657DE923A659DB8757147B140A48067328E7E3F9C3
+7D1888B284904301450CE0BC15EEEA00E48CCD6388F3FC3C8578EF9A20A0E06E
+4F7ADDAF0E7D1E182D115BF1AD931977325AD391E72E2B13CC108E3726C11099
+E2000623188AAAC9F3E233EB253BDD8B0A4759A66A113E066238B0086AC1B634
+5ABFF90E4B5ED3FA69C22541981B2BFC9710AEF6B50A8BB53431C7B4D380D721
+639E005D6B4688EE16BFF48443E7C9E5FB5BC5883E271CB0342893C0BBC0A879
+B7220832FB50103F72F8B5D9AC07708DB8EEF4D4DD64B26607F7709A06DAD652
+EE45B91A5C948F6669E096DA43FB8F69CBE0BB547363573B8CECD3547B09089A
+122F4B40FBF8C8D10EF1EE915FC1A0DC4FF513DD142742657413F5CA41A20311
+568F00ECD53D198E85EDB04DFE819AD23F2905A986707B6152A8F11444A54BF6
+A3947FB6E14B1E1784B74CD7568E16815A50DD66EE350D507376D384E13A1071
+670BB6E1BD33C533F0A38C3A1D02454B92CCE836AB91D35A3DCB6F4CE9B00613
+1E4647006202A05064AF5C26BEF6477845C08AD2791981D2C88FAA39B761FF62
+A429086709CABCF3B97C0C219521D4141EC8342CB3628363F76A50EEF67802C9
+146EAF879DB1A266089709DC0CC3C0912973B55DD5630D634C558272A38E2A1B
+3AC4DE4CA6922F995C8BF7452DB285953C1D85B269997E9D568E68F84C92A845
+6768661F56DCF206E0F210973A71C8CEF328BE6C2BD69A61
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+%%BeginFont: CMSY7
+%!PS-AdobeFont-1.1: CMSY7 1.0
+%%CreationDate: 1991 Aug 15 07:21:52
+% Copyright (C) 1997 American Mathematical Society. All Rights Reserved.
+11 dict begin
+/FontInfo 7 dict dup begin
+/version (1.0) readonly def
+/Notice (Copyright (C) 1997 American Mathematical Society. All Rights Reserved) readonly def
+/FullName (CMSY7) readonly def
+/FamilyName (Computer Modern) readonly def
+/Weight (Medium) readonly def
+/ItalicAngle -14.035 def
+/isFixedPitch false def
+end readonly def
+/FontName /CMSY7 def
+/PaintType 0 def
+/FontType 1 def
+/FontMatrix [0.001 0 0 0.001 0 0] readonly def
+/Encoding 256 array
+0 1 255 {1 index exch /.notdef put} for
+dup 0 /.notdef put
+readonly def
+/FontBBox{-15 -951 1252 782}readonly def
+/UniqueID 5000817 def
+currentdict end
+currentfile eexec
+D9D66F633B846A97B686A97E45A3D0AA052F09F9C8ADE9D907C058B87E9B6964
+7D53359E51216774A4EAA1E2B58EC3176BD1184A633B951372B4198D4E8C5EF4
+A213ACB58AA0A658908035BF2ED8531779838A960DFE2B27EA49C37156989C85
+E21B3ABF72E39A89232CD9F4237FC80C9E64E8425AA3BEF7DED60B122A52922A
+221A37D9A807DD01161779DDE7D251491EBF65A98C9FE2B1CF8D725A70281949
+8F4AFFE638BBA6B12386C7F32BA350D62EA218D5B24EE612C2C20F43CD3BFD0D
+F02B185B692D7B27BEC7290EEFDCF92F95DDEB507068DE0B0B0351E3ECB8E443
+E611BE0A41A1F8C89C3BC16B352C3443AB6F665EAC5E0CC4229DECFC58E15765
+424C919C273E7FA240BE7B2E951AB789D127625BBCB7033E005050EB2E12B1C8
+E5F3AD1F44A71957AD2CC53D917BFD09235601155886EE36D0C3DD6E7AA2EF9C
+C402C77FF1549E609A711FC3C211E64E8F263D60A57E9F2B47E3480B978AAF63
+868AEA25DA3D5413467B76D2F02F8097D2841EDA6677731A6ACFEC0BABF1016A
+089B2D24FBC2009A342AB5BF1051B4793C27A0D4A7CE3FAD66C744C762EB58FB
+6816A6D8A84ACB07884DB74E94B9B7284B4DA11885283FAA8BD286D8FB3145AC
+26C54930F81CBE6530673B0AB7A64B56E616EC7D2F72D2B663A3D697D6D5A637
+59A4A421A6D4CB65EEF4BE31D2DD8BF13C981C8991C8F27105EE43A8A3D57E02
+2FC725CA99A50E317A491470E2459EF62779D6DD122EA08FC91FD49F817EB8B4
+75C65DF8981A785BF3D88D7F8DB6A2FB59411288212269BE3FB9ED799F00DE81
+BD44E6D5E879F3F3EFBDFB6A5D
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+0000000000000000000000000000000000000000000000000000000000000000
+cleartomark
+%%EndFont 
+TeXDict begin 40258431 52099146 1000 8000 8000 (abs_inaoeCAD.dvi)
+@start /Fa 134[393 1[591 393 443 246 344 344 443 443
+443 443 639 246 393 1[246 443 443 246 393 443 393 443
+443 10[541 639 492 443 541 1[541 1[591 738 492 2[295
+639 1[541 541 639 591 541 541 8[443 443 1[443 1[443 443
+1[443 1[221 295 221 4[295 689 35[443 2[{ TeXBase1Encoding ReEncodeFont }
+52 885.568 /Times-Italic rf /Fb 245[799 10[{
+ TeXf7b6d320Encoding ReEncodeFont }1 1106.96 /CMR10 rf
+/Fc 240[454 15[{ TeXbbad153fEncoding ReEncodeFont }1
+774.872 /CMSY7 rf /Fd 139[369 431 491 1[615 553 615 922
+308 2[308 1[553 1[491 615 2[553 17[861 799 1045 8[799
+2[799 23[369 369 37[615 2[{ TeXBase1Encoding ReEncodeFont }21
+1106.96 /Times-Bold rf /Fe 138[676 369 1[431 2[676 676
+1[308 3[676 2[615 3[615 97[{ TeXBase1Encoding ReEncodeFont }9
+1106.96 /Helvetica-Bold rf /Ff 75[369 27[369 1107 553
+27[491 553 553 799 553 553 308 431 369 1[553 553 553
+861 308 553 308 308 553 553 369 491 553 491 553 491 3[369
+1[369 1[799 1[1045 799 1[676 615 738 799 615 799 799
+984 676 1[431 369 799 799 615 676 799 738 738 799 3[624
+1[308 308 553 553 553 553 553 553 553 553 553 553 308
+277 369 277 624 1[369 369 37[615 2[{ TeXBase1Encoding ReEncodeFont }74
+1106.96 /Times-Roman rf /Fg 75[295 27[295 1[443 1[393
+393 24[393 443 443 639 443 443 246 344 295 1[443 443
+443 689 246 443 246 246 443 443 295 393 443 393 443 393
+3[295 1[295 2[639 836 639 639 541 492 591 639 492 639
+639 787 541 639 344 295 639 639 492 541 639 591 591 639
+6[246 443 443 443 443 443 443 443 443 443 443 1[221 295
+221 5[689 35[492 2[{ TeXBase1Encoding ReEncodeFont }72
+885.568 /Times-Roman rf /Fh 104[996 29[498 1[719 498
+554 332 388 442 1[554 498 554 830 277 554 1[277 554 498
+332 442 554 442 554 498 12[665 5[719 1[665 2[388 7[719
+18[249 332 249 2[332 332 332 36[554 2[{ TeXBase1Encoding ReEncodeFont }
+35 996.264 /Times-Bold rf /Fi 139[277 388 388 14[442
+498 498 31[665 65[{ TeXBase1Encoding ReEncodeFont }7
+996.264 /Times-BoldItalic rf /Fj 75[405 27[405 29[541
+609 609 2[609 338 474 405 1[609 609 609 947 338 2[338
+609 1[405 541 609 541 609 541 13[677 812 1[677 879 879
+1082 744 2[405 879 879 1[744 879 812 812 879 9[609 1[609
+2[609 609 609 1[304 405 304 26[338 17[{ TeXBase1Encoding ReEncodeFont }
+46 1217.66 /Times-Roman rf /Fk 136[1918 1[1328 739 1033
+885 1[1328 1328 1328 2067 739 2[739 1[1328 885 1180 1328
+2[1180 12[1623 5[1918 1[1623 7[1918 1772 1772 1918 19[885
+42[1477 2[{ TeXBase1Encoding ReEncodeFont }25 2656.7
+/Times-Roman rf end
+%%EndProlog
+%%BeginSetup
+%%Feature: *Resolution 8000dpi
+TeXDict begin
+ end
+%%EndSetup
+%%Page: 1 1
+TeXDict begin 1 0 bop -1391 697 a Fk(A)930 b(CAD)g(T)-213
+b(ool)931 b(for)f(Automated)f(Design)h(of)g(Lo)-66 b(w-noise)12672
+3797 y(Nullor)930 b(Based)g(Ampli\002ers)5996 7284 y
+Fj(Arturo)427 b(Sarmiento-Re)-18 b(yes,)427 b(Roberto)f(Casta)25925
+7278 y(\230)25823 7284 y(neda-Sheissa,)f(Luis)h(Hern)38004
+7278 y(\264)37936 7284 y(andez-Mart)43515 7278 y(\264)43548
+7284 y(\021nez)11382 8763 y(National)h(Institute)h(for)f(Astroph)-6
+b(ysics,)426 b(Optics)g(and)g(Electronics)16754 10243
+y(Electronics)g(Department,)h(CAD)g(Group)15378 11722
+y(P)-135 b(.O.)427 b(Box)f(51,)g(72000,)g(Puebla,)g(Pue.,)g(Me)-18
+b(xico)-1453 15280 y Fi(Abstract)s Fh(\227)165 b(Lo)-10
+b(w)386 b(Noise)g(Amplifers)g(\(LN)-20 b(A)-74 b(')-37
+b(s\))386 b(ha)-25 b(v)-10 b(e)386 b(become)h(impor)-37
+b(-)-2560 16387 y(tant)618 b(f)-25 b(or)620 b(wideband-ultrawideband)f
+(radio,)g(micr)-18 b(o)-10 b(wa)-25 b(v)-10 b(e)621 b(and)e(cell-)-2560
+17494 y(phone)236 b(designers.)g(In)f(the)h(design)f(methodology)-55
+b(,)236 b(the)g(LN)-20 b(A)236 b(is)f(composed)-2560
+18601 y(by)400 b(a)g(nullor)g(which)h(r)-18 b(epr)g(esents)400
+b(an)g(ideal)g(acti)-10 b(v)g(e)401 b(gain,)f(i.e.)h(the)f(plant)-2560
+19707 y(to)642 b(be)h(contr)-18 b(olled)644 b(by)e(the)h(feedback)g
+(netw)-10 b(ork)644 b(which)f(is)f(usually)-2560 20814
+y(constituted)373 b(by)g(passi)-10 b(v)g(e)374 b(components.)-2560
+21921 y(The)547 b(paper)h(sho)-10 b(ws)547 b(that)g(the)g(noise)g
+(calculation)h(f)-25 b(or)548 b(these)f(passi)-10 b(v)g(e)-2560
+23028 y(components)342 b(and)g(the)g(synthesis)f(of)h(the)g(\002rst)g
+(stage)g(of)g(the)h(nullor)f(can)-2560 24135 y(be)330
+b(automatically)h(done.)g(The)f(automation)g(is)f(v)-10
+b(eri\002ed)332 b(by)e(means)g(of)g(a)-2560 25242 y(pr)-18
+b(ogram)324 b(that)f(designs)f(the)h(feedback)h(netw)-10
+b(ork)324 b(and)f(selects)g(the)g(right)-2560 26349 y(de)-15
+b(vice)375 b(to)e(accomplish)h(the)f(noise)h(specs)f(pr)-18
+b(o)-10 b(vided)374 b(by)g(the)g(designer)-100 b(.)7069
+28781 y Ff(I)56 b(.)607 b(I)56 b Fg(N)g(T)g(R)19 b(O)56
+b(D)g(U)g(C)e(T)i(I)g(O)g(N)-1453 30710 y Ff(The)431
+b(lo)-28 b(w)430 b(noise)g(ampli\002er)h(is)d(a)i(system)g(where)g(the)
+h(noise)f(le)-28 b(v)-17 b(el)-2560 32038 y(is)517 b(carefully)i
+(handled;)h(it)e(is)f(usually)i(the)f(\002rst)g(block)h(in)f(a)h(radio)
+-2560 33367 y(recei)-28 b(v)-17 b(er)538 b(that)e(ampli\002es)h(the)f
+(signal)g(from)g(the)g(antenna)i(with)e(as)-2560 34695
+y(little)372 b(distortion)h(and)i(additional)g(noise)e(as)h(possible)f
+(to)h(be)g(suitable)-2560 36023 y(for)387 b(being)i(processed)g(by)g
+(the)f(\002rst)f(mix)-17 b(er)388 b([1].)-1453 37394
+y(Structured)471 b(design)f(is)e(based)j(on)f(the)g(concept)i(that)d
+(the)h(design)-2560 38722 y(must)464 b(start)f(from)g(an)i(ideal)f
+(solution)h(\227)f(which)h(ob)-17 b(viously)466 b(ful\002ls)-2560
+40050 y(an)-17 b(y)370 b(set)e(of)h(speci\002cations)i(and)e(it)f(is)g
+(oriented)i(to)f(optimise)f(aspects)-2560 41379 y(such)352
+b(as)g(noise,)g(distortion)f(and)i(bandwidth)h(from)d(a)h(block)h
+(point)f(of)-2560 42707 y(vie)-28 b(w)431 b([2],)d([3)q(],)g([4].)h
+(This)h(w)-11 b(ork)430 b(is)f(focused)i(on)f(the)g(\002rst)f(block)i
+(to)-2560 44035 y(be)388 b(designed)i(which)f(is)e(the)h(noise)g(block)
+h([5].)1554 59382 y @beginspecial 0 @llx 0 @lly 590 @urx
+410 @ury 1770 @rwi @setspecial
+%%BeginDocument: figures/nullor_based.eps
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: /home/rsheissa/papers/icccas/figures/nullor_based.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 4
+%%CreationDate: Tue Apr 12 19:21:42 2005
+%%For: rsheissa@darkcity.inaoep.mx ()
+%%BoundingBox: 0 0 590 410
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 410 moveto 0 0 lineto 590 0 lineto 590 410 lineto closepath clip newpath
+-153.0 436.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 50
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: nullor_grouped.eps
+%%BeginDocument: nullor_grouped.eps
+%
+n gs
+2550 450 tr
+16.666090 -16.667482 sc
+0 -409 tr
+0 0 tr
+sa
+n 0 0 m 578 0 l 578 409 l 0 409 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: nullor_grouped.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Fri Sep  5 16:12:21 2003
+%%For: roberto@wizard (Roberto Castaneda)
+%%BoundingBox: 0 0 578 409
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 409 moveto 0 0 lineto 578 0 lineto 578 409 lineto closepath clip newpath
+-54.0 534.5 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: grupo.eps
+%%BeginDocument: grupo.eps
+%
+n gs
+900 2100 tr
+16.666090 -16.667488 sc
+0 -406 tr
+0 0 tr
+sa
+n 0 0 m 578 0 l 578 406 l 0 406 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: grupo.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Thu Aug 28 23:27:23 2003
+%%For: roberto@wizard (Roberto Castaneda)
+%%BoundingBox: 0 0 578 406
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 406 moveto 0 0 lineto 578 0 lineto 578 406 lineto closepath clip newpath
+-54.0 426.2 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: curr_amp.eps
+%%BeginDocument: curr_amp.eps
+%
+n gs
+900 450 tr
+16.977860 -16.981132 sc
+0 -159 tr
+0 0 tr
+sa
+n 0 0 m 271 0 l 271 159 l 0 159 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: curr_amp.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Tue Jul 15 14:26:25 2003
+%%For: root@cygnus (root)
+%%BoundingBox: 0 0 271 159
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 159 moveto 0 0 lineto 271 0 lineto 271 159 lineto closepath clip newpath
+-134.5 203.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+/Times-Roman-iso ff 300.00 scf sf
+5595 2805 m
+gs 1 -1 sc (Z) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+5745 2880 m
+gs 1 -1 sc (1) col0 sh gr
+7.500 slw
+% Ellipse
+n 2325 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 2325 3300 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 3300 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 2100 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 2400 1500 m
+ 3600 1500 l gs col0 s gr 
+% Polyline
+n 3300 2700 m
+ 3300 3300 l gs col0 s gr 
+% Polyline
+n 5400 1500 m
+ 5700 1500 l gs col0 s gr 
+% Polyline
+n 3300 2700 m 3300 2100 l
+ 3600 2100 l gs col0 s gr 
+% Polyline
+n 2400 3300 m
+ 6600 3300 l gs col0 s gr 
+% Polyline
+n 4200 900 m 3300 900 l
+ 3300 1500 l gs col0 s gr 
+% Polyline
+n 4800 900 m 5700 900 l
+ 5700 1500 l gs col0 s gr 
+% Polyline
+n 5700 1500 m
+ 5700 2400 l gs col0 s gr 
+% Polyline
+n 5700 3000 m
+ 5700 3300 l gs col0 s gr 
+% Polyline
+n 5400 2100 m
+ 6600 2100 l gs col0 s gr 
+% Polyline
+n 5850 3000 m 5550 3000 l 5550 2400 l 5850 2400 l
+ cp gs col0 s gr 
+% Polyline
+n 3600 1200 m 5400 1200 l 5400 2400 l 3600 2400 l
+ cp gs col0 s gr 
+% Polyline
+n 4200 1050 m 4200 750 l 4800 750 l 4800 1050 l
+ cp gs col0 s gr 
+/Times-Roman-iso ff 300.00 scf sf
+3675 2175 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 1575 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 2175 m
+gs 1 -1 sc (-) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+3675 1575 m
+gs 1 -1 sc (-) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+4410 990 m
+gs 1 -1 sc (Z) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+4575 1035 m
+gs 1 -1 sc (2) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: curr_amp.eps
+%%EndDocument
+%
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: volt_curr_amp.eps
+%%BeginDocument: volt_curr_amp.eps
+%
+n gs
+6000 350 tr
+16.667897 -16.666667 sc
+0 -168 tr
+0 0 tr
+sa
+n 0 0 m 271 0 l 271 168 l 0 168 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: volt_curr_amp.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Tue Jul 15 14:14:54 2003
+%%For: root@cygnus (root)
+%%BoundingBox: 0 0 271 168
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 168 moveto 0 0 lineto 271 0 lineto 271 168 lineto closepath clip newpath
+-134.5 239.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+/Times-Roman-iso ff 300.00 scf sf
+4425 3405 m
+gs 1 -1 sc (Z) col0 sh gr
+7.500 slw
+% Ellipse
+n 2325 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 2325 3900 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 3900 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 2400 1500 m
+ 3600 1500 l gs col0 s gr 
+% Polyline
+n 3600 1200 m 5400 1200 l 5400 2400 l 3600 2400 l
+ cp gs col0 s gr 
+% Polyline
+n 3300 2700 m
+ 4500 2700 l gs col0 s gr 
+% Polyline
+n 4500 2700 m 5700 2700 l 5700 2100 l
+ 5400 2100 l gs col0 s gr 
+% Polyline
+n 2400 3900 m
+ 6600 3900 l gs col0 s gr 
+% Polyline
+n 5700 2100 m
+ 5700 2100 l  cp gs col0 s gr 
+% Polyline
+n 4350 3000 m 4650 3000 l 4650 3600 l 4350 3600 l
+ cp gs col0 s gr 
+% Polyline
+n 4500 3600 m
+ 4500 3900 l gs col0 s gr 
+% Polyline
+n 4500 2700 m
+ 4500 3000 l gs col0 s gr 
+% Polyline
+n 5400 1500 m
+ 6600 1500 l gs col0 s gr 
+% Polyline
+n 3300 2700 m 3300 2100 l
+ 3600 2100 l gs col0 s gr 
+/Times-Roman-iso ff 300.00 scf sf
+3675 2175 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 1575 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 2175 m
+gs 1 -1 sc (-) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+3675 1575 m
+gs 1 -1 sc (-) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: volt_curr_amp.eps
+%%EndDocument
+%
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: curr_volt_amp.eps
+%%BeginDocument: curr_volt_amp.eps
+%
+n gs
+900 4100 tr
+16.667897 -16.666667 sc
+0 -159 tr
+0 0 tr
+sa
+n 0 0 m 271 0 l 271 159 l 0 159 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: curr_volt_amp.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Tue Jul 15 14:18:19 2003
+%%For: root@cygnus (root)
+%%BoundingBox: 0 0 271 159
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 159 moveto 0 0 lineto 271 0 lineto 271 159 lineto closepath clip newpath
+-134.5 203.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+/Times-Roman-iso ff 300.00 scf sf
+4425 1005 m
+gs 1 -1 sc (Z) col0 sh gr
+7.500 slw
+% Ellipse
+n 2325 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 2325 3300 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 3300 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 2400 1500 m
+ 3600 1500 l gs col0 s gr 
+% Polyline
+n 3600 1200 m 5400 1200 l 5400 2400 l 3600 2400 l
+ cp gs col0 s gr 
+% Polyline
+n 3300 2700 m
+ 4500 2700 l gs col0 s gr 
+% Polyline
+n 4500 2700 m 5700 2700 l 5700 2100 l
+ 5400 2100 l gs col0 s gr 
+% Polyline
+n 5700 2100 m
+ 5700 2100 l  cp gs col0 s gr 
+% Polyline
+n 4500 2700 m
+ 4500 3000 l gs col0 s gr 
+% Polyline
+n 5400 1500 m
+ 6600 1500 l gs col0 s gr 
+% Polyline
+n 3300 2700 m 3300 2100 l
+ 3600 2100 l gs col0 s gr 
+% Polyline
+n 2400 3300 m
+ 6600 3300 l gs col0 s gr 
+% Polyline
+n 4500 3000 m
+ 4500 3300 l gs col0 s gr 
+% Polyline
+n 4200 1050 m 4200 750 l 4800 750 l 4800 1050 l
+ cp gs col0 s gr 
+% Polyline
+n 4200 900 m 3300 900 l
+ 3300 1500 l gs col0 s gr 
+% Polyline
+n 4800 900 m 5700 900 l
+ 5700 1500 l gs col0 s gr 
+/Times-Roman-iso ff 300.00 scf sf
+3675 2175 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 1575 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 2175 m
+gs 1 -1 sc (-) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+3675 1575 m
+gs 1 -1 sc (-) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: curr_volt_amp.eps
+%%EndDocument
+%
+% Polyline
+%
+% pen to black in case this eps object doesn't set color first
+0 0 0 setrgbcolor
+% Begin Imported EPS File: voltaje_amp.eps
+%%BeginDocument: voltaje_amp.eps
+%
+n gs
+6000 3950 tr
+16.667897 -16.666667 sc
+0 -168 tr
+0 0 tr
+sa
+n 0 0 m 271 0 l 271 168 l 0 168 l cp clip n
+countdictstack
+mark
+/showpage {} def
+% EPS file follows:
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: voltaje_amp.eps
+%%Creator: fig2dev Version 3.2 Patchlevel 3d
+%%CreationDate: Tue Jul 15 14:05:54 2003
+%%For: root@cygnus (root)
+%%BoundingBox: 0 0 271 168
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 168 moveto 0 0 lineto 271 0 lineto 271 168 lineto closepath clip newpath
+-134.5 239.0 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+/Times-Roman-iso ff 300.00 scf sf
+3180 3375 m
+gs 1 -1 sc (Z) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+3330 3450 m
+gs 1 -1 sc (1) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+4380 2775 m
+gs 1 -1 sc (Z) col0 sh gr
+/Times-Roman-iso ff 210.00 scf sf
+4530 2850 m
+gs 1 -1 sc (2) col0 sh gr
+7.500 slw
+% Ellipse
+n 2325 1500 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 2325 3900 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 2100 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6675 3900 75 75 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 2400 1500 m
+ 3600 1500 l gs col0 s gr 
+% Polyline
+n 3600 1200 m 5400 1200 l 5400 2400 l 3600 2400 l
+ cp gs col0 s gr 
+% Polyline
+n 4800 2550 m 4800 2850 l 4200 2850 l 4200 2550 l
+ cp gs col0 s gr 
+% Polyline
+n 3600 2100 m 3300 2100 l
+ 3300 3000 l gs col0 s gr 
+% Polyline
+n 3300 2700 m
+ 4200 2700 l gs col0 s gr 
+% Polyline
+n 4800 2700 m 5700 2700 l 5700 2100 l
+ 5400 2100 l gs col0 s gr 
+% Polyline
+n 2400 3900 m
+ 6600 3900 l gs col0 s gr 
+% Polyline
+n 5400 1500 m 6000 1500 l
+ 6000 3900 l gs col0 s gr 
+% Polyline
+n 5700 2100 m
+ 6600 2100 l gs col0 s gr 
+% Polyline
+n 3300 3600 m
+ 3300 3900 l gs col0 s gr 
+% Polyline
+n 3150 3000 m 3450 3000 l 3450 3600 l 3150 3600 l
+ cp gs col0 s gr 
+/Times-Roman-iso ff 300.00 scf sf
+3675 2175 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5250 2175 m
+gs 1 -1 sc (-) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+5175 1575 m
+gs 1 -1 sc (+) col0 sh gr
+/Times-Roman-iso ff 300.00 scf sf
+3750 1575 m
+gs 1 -1 sc (-) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: voltaje_amp.eps
+%%EndDocument
+%
+/Times-Roman ff 180.00 scf sf
+1800 3450 m
+gs 1 -1 sc (Amplificador de corriente con nullor) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+7050 3450 m
+gs 1 -1 sc (Amplificador de voltaje a corriente) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+1575 7050 m
+gs 1 -1 sc (Amplificador de corriente a voltaje con nullor) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+7050 7050 m
+gs 1 -1 sc (Amplificador de voltaje con nullor) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: grupo.eps
+%%EndDocument
+%
+% Polyline
+7.500 slw
+n 1725 4950 m 4500 4950 l 4500 5325 l 1725 5325 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 6825 4950 m 9675 4950 l 9675 5325 l 6825 5325 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 6580 8550 m 9900 8550 l 9900 8881 l 6580 8881 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 1559 8550 m 4875 8550 l 4875 8896 l 1559 8896 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+/Times-Roman ff 180.00 scf sf
+6975 8700 m
+gs 1 -1 sc (Nullor implemented voltage amplifier) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+1800 5100 m
+gs 1 -1 sc (Nullor implemented current amplifier) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+6450 5100 m
+gs 1 -1 sc (Nullor implemented voltage to current amplifier) col0 sh gr
+/Times-Roman ff 180.00 scf sf
+1350 8700 m
+gs 1 -1 sc (Nullor implemented current to voltage amplifier) col0 sh gr
+$F2psEnd
+rs
+
+cleartomark
+countdictstack exch sub { end } repeat
+restore grestore
+%
+% End Imported PIC File: nullor_grouped.eps
+%%EndDocument
+%
+% here ends figure;
+% 
+% here starts figure with depth 48
+% Polyline
+7.500 slw
+n 2925 6900 m 6600 6900 l 6600 7200 l 2925 7200 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 3375 3300 m 6225 3300 l 6225 3525 l 3375 3525 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 8100 3225 m 11625 3225 l 11625 3525 l 8100 3525 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+% Polyline
+n 8550 6900 m 11475 6900 l 11475 7125 l 8550 7125 l
+ cp gs col7 1.00 shd ef gr gs col7 s gr 
+/Times-Roman-iso ff 180.00 scf sf
+2925 3525 m
+gs 1 -1 sc (NULLOR-BASED CURRENT AMPLIFIER) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+7725 3525 m
+gs 1 -1 sc (NULLOR-BASED VOLTAGE TO CURRENT AMPLIFIER) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+8400 7125 m
+gs 1 -1 sc (NULLOR-BASED VOLTAGE AMPLIFIER) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+2625 7125 m
+gs 1 -1 sc (NULLOR-BASED CURRENT TO VOLTAGE AMPLIFIER) col0 sh gr
+% here ends figure;
+$F2psEnd
+rs
+showpage
+
+%%EndDocument
+ @endspecial 4257 61374 a Fg(Fig.)311 b(1.)930 b(Ne)-13
+b(g)l(ati)-22 b(v)-13 b(e-feedback)309 b(Ampli\002ers.)3757
+65157 y Ff(I)56 b(I)g(.)607 b(N)56 b Fg(U)g(L)g(L)g(O)g(R)e
+Ff(-)i Fg(B)24 b(A)56 b(S)g(E)g(D)322 b(A)56 b(M)g(P)g(L)g(I)g(FI)e(E)i
+(R)e(S)-1453 67085 y Ff(W)-44 b(ithin)378 b(the)g(structured)h(design)g
+(methodology)-72 b(,)382 b(the)c(nullor)h(cons-)-2560
+68414 y(titutes)429 b(the)h(acti)-28 b(v)-17 b(e)432
+b(\(ideal\))e(block)h(of)f(the)g(ampli\002er)-61 b(.)431
+b(The)g(nullor)f(is)-2560 69742 y(a)403 b(tw)-11 b(o-port)404
+b(composed)h(by)f(tw)-11 b(o)403 b(elements)h([6],)f([7]:)f
+Fe(the)325 b(n)-11 b(ullator)-2560 71070 y Ff(connected)352
+b(at)d(the)g(input)h(port)f(and)h Fe(the)287 b(norator)349
+b Ff(connected)j(at)d(the)-2560 72399 y(output)389 b(port.)35945
+28418 y @beginspecial 0 @llx 0 @lly 280 @urx 434 @ury
+840 @rwi @setspecial
+%%BeginDocument: figures/basic_two_loops.eps
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: basic_two_loops.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 4
+%%CreationDate: Mon Jan 17 15:16:30 2005
+%%For: rsheissa@localhost.localdomain ()
+%%BoundingBox: 0 0 280 434
+%%Magnification: 1.0000
+%%EndComments
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+
+end
+save
+newpath 0 434 moveto 0 0 lineto 280 0 lineto 280 434 lineto closepath clip newpath
+-229.0 453.2 translate
+1 -1 scale
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
+ /DrawEllipse {
+	/endangle exch def
+	/startangle exch def
+	/yrad exch def
+	/xrad exch def
+	/y exch def
+	/x exch def
+	/savematrix mtrx currentmatrix def
+	x y tr xrad yrad sc 0 0 1 startangle endangle arc
+	closepath
+	savematrix setmatrix
+	} def
+
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 50
+% Polyline
+n 5550 1575 m 5700 1575 l 5700 1725 l 5550 1725 l
+ cp 
+% Polyline
+n 6600 1125 m 6750 1125 l 6750 1275 l 6600 1275 l
+ cp 
+% Polyline
+n 6600 1575 m 6750 1575 l 6750 1725 l 6600 1725 l
+ cp 
+% Polyline
+n 5550 1125 m 5700 1125 l 5700 1275 l 5550 1275 l
+ cp 
+% Ellipse
+7.500 slw
+n 4950 1650 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 4950 1200 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 7350 1200 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 7350 2175 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 3861 3075 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 3861 1650 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8436 3075 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8436 1200 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 5925 2175 m 4950 2175 l
+ 4950 1650 l gs col0 s gr 
+% Polyline
+n 7350 2175 m 7350 1650 l
+ 6900 1650 l gs col0 s gr 
+% Polyline
+n 7350 2175 m
+ 7350 2400 l gs col0 s gr 
+% Polyline
+n 7350 2850 m
+ 7350 3075 l gs col0 s gr 
+% Polyline
+n 4500 2400 m 4500 1200 l
+ 5400 1200 l gs col0 s gr 
+% Polyline
+n 4500 2850 m
+ 4500 3075 l gs col0 s gr 
+% Polyline
+n 4950 1200 m 4950 675 l
+ 5925 675 l gs col0 s gr 
+% Polyline
+n 6375 675 m 7350 675 l
+ 7350 1200 l gs col0 s gr 
+% Polyline
+n 3900 3075 m
+ 8400 3075 l gs col0 s gr 
+/Times-Roman-iso ff 180.00 scf sf
+4777 3450 m
+gs 1 -1 sc (TWO-LOOP TOPOLOGY \(A\)) col0 sh gr
+% Polyline
+0.000 slw
+n 5549 4950 m 5699 4950 l 5699 5100 l 5549 5100 l
+ cp 
+% Polyline
+n 5549 5400 m 5699 5400 l 5699 5550 l 5549 5550 l
+ cp 
+% Polyline
+n 6599 4950 m 6749 4950 l 6749 5100 l 6599 5100 l
+ cp 
+% Polyline
+n 6599 5400 m 6749 5400 l 6749 5550 l 6599 5550 l
+ cp 
+% Ellipse
+7.500 slw
+n 6149 6000 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 6149 7050 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 6149 7048 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 6149 7048 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 4950 5025 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 7350 5025 36 36 0 360 DrawEllipse gs 0.00 setgray ef gr gs col0 s gr
+
+% Ellipse
+n 3924 5022 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 3931 7046 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8366 5019 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Ellipse
+n 8362 7046 36 36 0 360 DrawEllipse gs col0 s gr
+
+% Polyline
+n 5400 5025 m 4950 5025 l 4950 4500 l
+ 5925 4500 l gs col0 s gr 
+% Polyline
+n 6900 5025 m 7350 5025 l 7350 4500 l
+ 6375 4500 l gs col0 s gr 
+% Polyline
+n 4950 5025 m
+ 3975 5025 l gs col0 s gr 
+% Polyline
+n 7350 5025 m
+ 8325 5025 l gs col0 s gr 
+/Times-Roman-iso ff 150.00 scf sf
+6450 6675 m
+gs 1 -1 sc (2) col0 sh gr
+/Times-Roman-iso ff 150.00 scf sf
+6213 4390 m
+gs 1 -1 sc (1) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+4785 7500 m
+gs 1 -1 sc (TWO-LOOP TOPOLOGY \(B\)) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+5677 1702 m
+gs 1 -1 sc (+) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6727 1252 m
+gs 1 -1 sc (+) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6705 1702 m
+gs 1 -1 sc (-) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+5655 1252 m
+gs 1 -1 sc (-) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+7500 2708 m
+gs 1 -1 sc (R) col0 sh gr
+/Times-Roman-iso ff 120.00 scf sf
+7644 2775 m
+gs 1 -1 sc (4) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6075 2483 m
+gs 1 -1 sc (R) col0 sh gr
+/Times-Roman-iso ff 120.00 scf sf
+6219 2550 m
+gs 1 -1 sc (3) col0 sh gr
+/Times-Roman-iso ff 120.00 scf sf
+6219 525 m
+gs 1 -1 sc (1) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6075 468 m
+gs 1 -1 sc (R) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+4650 2708 m
+gs 1 -1 sc (R) col0 sh gr
+/Times-Roman-iso ff 120.00 scf sf
+4794 2775 m
+gs 1 -1 sc (2) col0 sh gr
+% Polyline
+n 6900 975 m 5400 975 l 5400 1875 l 6900 1875 l
+ cp gs col0 s gr 
+% Polyline
+n 5400 1650 m
+ 3900 1650 l gs col0 s gr 
+% Polyline
+n 6375 2250 m 6375 2100 l 5925 2100 l 5925 2250 l
+ cp gs col0 s gr 
+% Polyline
+n 7350 2175 m
+ 6375 2175 l gs col0 s gr 
+% Polyline
+n 7425 2400 m 7275 2400 l 7275 2850 l 7425 2850 l
+ cp gs col0 s gr 
+% Polyline
+n 4575 2400 m 4425 2400 l 4425 2850 l 4575 2850 l
+ cp gs col0 s gr 
+% Polyline
+n 6375 750 m 6375 600 l 5925 600 l 5925 750 l
+ cp gs col0 s gr 
+% Polyline
+n 8400 1200 m
+ 6900 1200 l gs col0 s gr 
+/Times-Roman-iso ff 180.00 scf sf
+5654 5077 m
+gs 1 -1 sc (-) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+5676 5527 m
+gs 1 -1 sc (+) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6726 5077 m
+gs 1 -1 sc (+) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6704 5527 m
+gs 1 -1 sc (-) dup sw pop neg 0 rm  col0 sh gr
+% Polyline
+n 6899 4800 m 5399 4800 l 5399 5700 l 6899 5700 l
+ cp gs col0 s gr 
+/Times-Roman-iso ff 180.00 scf sf
+6074 4335 m
+gs 1 -1 sc (R) col0 sh gr
+/Times-Roman-iso ff 180.00 scf sf
+6299 6600 m
+gs 1 -1 sc (G) col0 sh gr
+% Polyline
+n 5924 4575 m 5924 4425 l 6374 4425 l 6374 4575 l
+ cp gs col0 s gr 
+% Polyline
+n 5399 5475 m 4949 5475 l 4949 6000 l 7349 6000 l 7349 5475 l
+ 6899 5475 l gs col0 s gr 
+% Polyline
+n 6224 6750 m 6074 6750 l 6074 6300 l 6224 6300 l
+ cp gs col0 s gr 
+% Polyline
+n 6149 6000 m
+ 6149 6300 l gs col0 s gr 
+% Polyline
+n 6149 6750 m
+ 6149 7050 l gs col0 s gr 
+% Polyline
+n 3975 7050 m
+ 8325 7050 l gs col0 s gr 
+% here ends figure;
+$F2psEnd
+rs
+showpage
+
+%%EndDocument
+ @endspecial 35092 30411 a Fg(Fig.)310 b(2.)930 b(T)-71
+b(w)-9 b(o-loop)310 b(Ampli\002ers.)27771 34165 y Ff(The)545
+b(basic)g(one-loop)h(ampli\002ers)f(are)f(sho)-28 b(wn)546
+b(in)e(Figure)i(1.)e(If)26664 35494 y(the)331 b(one-loop)i
+(ampli\002ers)f(are)f(combined)i(then)f(tw)-11 b(o)331
+b(basic)h(tw)-11 b(o-loop)26664 36822 y(types)463 b(of)f(ampli\002ers)h
+(are)f(generated)j(as)d(sho)-28 b(wn)464 b(in)e(Figure)h(2,)g([3],)
+26664 38150 y([4].)27771 39476 y(Noise)386 b(can)i(be)f(re)-17
+b(g)-6 b(arded)390 b(in)c(terms)g(of)g(po)-28 b(wer)388
+b(spectral)f(densities)26664 40805 y(originated)298 b(from)e(the)h
+(passi)-28 b(v)-17 b(e)298 b(netw)-11 b(ork)298 b(and)g(the)f
+(synthesised)h(nullor)26664 42133 y([8],)387 b([9].)34124
+44195 y(I)56 b(I)g(I)g(.)605 b(P)56 b Fg(R)19 b(O)56
+b(G)g(R)e(A)i(M)330 b Ff(S)56 b Fg(T)g(R)19 b(U)56 b(C)e(T)i(U)g(R)e(E)
+27771 45870 y Ff(A)322 b(CAD)i(tool)f(\227)f Fd(NOMAD)338
+b(\(Noise)f(Optimisation)f(in)h(Moder)-17 b(n)26664 47198
+y(Ampli\002er)687 b(Design\))619 b Ff(\227)h(is)e(aimed)i(to)g
+(simplify)e(and)j(automate)26664 48527 y(the)473 b(design)h(process)f
+(of)g(ne)-17 b(g)-6 b(ati)-28 b(v)-17 b(e-feedback)479
+b(ampli\002ers)473 b(based)h(on)26664 49855 y(nullors.)406
+b(The)h(designer)h(pro)-17 b(vides)408 b(a)e(set)g(of)g
+(speci\002cations)j(such)e(as)26664 51183 y(ampli\002er)513
+b(transfer)-44 b(,)511 b(con\002guration,)516 b(g)-6
+b(ain,)513 b(bandwidth)i(and)f(maxi-)26664 52512 y(mum)388
+b(allo)-28 b(wed)389 b(noise)g(le)-28 b(v)-17 b(el)389
+b(among)g(others.)27771 53838 y(The)338 b(tool)f(has)h(been)g(de)-28
+b(v)-17 b(eloped)342 b(in)337 b(C++)g(for)g(the)h(back)-11
+b(end,)339 b(while)26664 55166 y(the)390 b(graphical)i(user)e(interf)
+-11 b(ace)390 b(is)f(programmed)j(in)e(Qt.)g(The)h(tool)f(is)26664
+56495 y(aimed)408 b(to)f(run)g(under)h(Linux/Solaris)g(without)g(an)-17
+b(y)408 b(constraints)f(for)26664 57823 y(special)349
+b(libraries.)e(This)i(wizard)g(resorts)f(to)g(the)h(use)g(of)f(windo)
+-28 b(ws)350 b(as)26664 59151 y(seen)388 b(in)g(Figures)g(3,)g(4,)f(5)h
+(and)h(6.)27771 60477 y(F)-17 b(or)501 b(the)g(noise)h(calculations)g
+(on)f(resistors)e(and)j(acti)-28 b(v)-17 b(e)503 b(de)-28
+b(vices)26664 61806 y(SPICE-lik)-11 b(e)285 b(calculations)h(are)e
+(performed)i([10)q(])d(and)j(v)-28 b(alidations)285 b(are)26664
+63134 y(done)389 b(with)f(simulations)f(on)i(APLA)-44
+b(C)388 b([11)q(].)37279 65196 y(I)56 b(V)-87 b(.)607
+b(E)56 b Fg(X)g(A)g(M)g(P)g(L)g(E)27771 66871 y Ff(A)330
+b(design)h(e)-17 b(xample)332 b(is)e(pro)-17 b(vided)332
+b(in)e(order)h(to)f(sho)-28 b(w)331 b(the)g(function)26664
+68200 y(of)548 b(the)h(tool.)f(The)h(ampli\002er)h(to)e(be)h(designed)h
+(must)e(ful\002l)g(these)26664 69528 y(specs:)27771 71070
+y Fc(\262)663 b Ff(T)-89 b(ype)390 b(=)e(V)-143 b(oltage)389
+b(Ampli\002er)27771 72399 y Fc(\262)663 b Ff(Con\002guration)391
+b(=)d(Single)h(Loop)p eop end
+%%Page: 2 2
+TeXDict begin 2 1 bop 1338 12659 a @beginspecial 0 @llx
+433 @lly 603 @urx 842 @ury 1809 @rwi @setspecial
+%%BeginDocument: figures/descad_1.eps
+%!PS-Adobe-1.0 EPSF-3.0
+%%BoundingBox: 0 433 603 842
+%%Creator: KDE 3.4.3 Level "b"
+%%CreationDate: Tue Nov 8 12:34:53 2005
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts:
+
+%%EndComments
+%%BeginProlog
+% Prolog copyright 1994-2003 Trolltech. You may copy this prolog in any way
+% that is directly related to this document. For other use of this prolog,
+% see your licensing agreement for Qt.
+/d/def load def/D{bind d}bind d/d2{dup dup}D/B{0 d2}D/W{255 d2}D/ED{exch d}D
+/D0{0 ED}D/LT{lineto}D/MT{moveto}D/S{stroke}D/F{setfont}D/SW{setlinewidth}D
+/CP{closepath}D/RL{rlineto}D/NP{newpath}D/CM{currentmatrix}D/SM{setmatrix}D
+/TR{translate}D/SD{setdash}D/SC{aload pop setrgbcolor}D/CR{currentfile read
+pop}D/i{index}D/bs{bitshift}D/scs{setcolorspace}D/DB{dict dup begin}D/DE{end
+d}D/ie{ifelse}D/sp{astore pop}D/BSt 0 d/LWi 1 d/PSt 1 d/Cx 0 d/Cy 0 d/WFi
+false d/OMo false d/BCol[1 1 1]d/PCol[0 0 0]d/BkCol[1 1 1]d/BDArr[0.94 0.88
+0.63 0.50 0.37 0.12 0.06]d/defM matrix d/nS 0 d/GPS{PSt 1 ge PSt 5 le and{{
+LArr PSt 1 sub 2 mul get}{LArr PSt 2 mul 1 sub get}ie}{[]}ie}D/QS{PSt 0 ne{
+gsave LWi SW true GPS 0 SD S OMo PSt 1 ne and{BkCol SC false GPS dup 0 get
+SD S}if grestore}if}D/r28{{CR dup 32 gt{exit}if pop}loop 3{CR}repeat 0 4{7
+bs exch dup 128 gt{84 sub}if 42 sub 127 and add}repeat}D/rA 0 d/rL 0 d/rB{rL
+0 eq{/rA r28 d/rL 28 d}if dup rL gt{rA exch rL sub rL exch/rA 0 d/rL 0 d rB
+exch bs add}{dup rA 16#fffffff 3 -1 roll bs not and exch dup rL exch sub/rL
+ED neg rA exch bs/rA ED}ie}D/uc{/rL 0 d 0{dup 2 i length ge{exit}if 1 rB 1
+eq{3 rB dup 3 ge{1 add dup rB 1 i 5 ge{1 i 6 ge{1 i 7 ge{1 i 8 ge{128 add}if
+64 add}if 32 add}if 16 add}if 3 add exch pop}if 3 add exch 10 rB 1 add{dup 3
+i lt{dup}{2 i}ie 4 i 3 i 3 i sub 2 i getinterval 5 i 4 i 3 -1 roll
+putinterval dup 4 -1 roll add 3 1 roll 4 -1 roll exch sub dup 0 eq{exit}if 3
+1 roll}loop pop pop}{3 rB 1 add{2 copy 8 rB put 1 add}repeat}ie}loop pop}D
+/sl D0/QCIgray D0/QCIcolor D0/QCIindex D0/QCI{/colorimage where{pop false 3
+colorimage}{exec/QCIcolor ED/QCIgray QCIcolor length 3 idiv string d 0 1
+QCIcolor length 3 idiv 1 sub{/QCIindex ED/x QCIindex 3 mul d QCIgray
+QCIindex QCIcolor x get 0.30 mul QCIcolor x 1 add get 0.59 mul QCIcolor x 2
+add get 0.11 mul add add cvi put}for QCIgray image}ie}D/di{gsave TR 1 i 1 eq
+{false eq{pop true 3 1 roll 4 i 4 i false 4 i 4 i imagemask BkCol SC
+imagemask}{pop false 3 1 roll imagemask}ie}{dup false ne{/languagelevel
+where{pop languagelevel 3 ge}{false}ie}{false}ie{/ma ED 8 eq{/dc[0 1]d
+/DeviceGray}{/dc[0 1 0 1 0 1]d/DeviceRGB}ie scs/im ED/mt ED/h ED/w ED/id 7
+DB/ImageType 1 d/Width w d/Height h d/ImageMatrix mt d/DataSource im d
+/BitsPerComponent 8 d/Decode dc d DE/md 7 DB/ImageType 1 d/Width w d/Height
+h d/ImageMatrix mt d/DataSource ma d/BitsPerComponent 1 d/Decode[0 1]d DE 4
+DB/ImageType 3 d/DataDict id d/MaskDict md d/InterleaveType 3 d end image}{
+pop 8 4 1 roll 8 eq{image}{QCI}ie}ie}ie grestore}d/BF{gsave BSt 1 eq{BCol SC
+WFi{fill}{eofill}ie}if BSt 2 ge BSt 8 le and{BDArr BSt 2 sub get/sc ED BCol{
+1. exch sub sc mul 1. exch sub}forall 3 array astore SC WFi{fill}{eofill}ie}
+if BSt 9 ge BSt 14 le and{WFi{clip}{eoclip}ie defM SM pathbbox 3 i 3 i TR 4
+2 roll 3 2 roll exch sub/h ED sub/w ED OMo{NP 0 0 MT 0 h RL w 0 RL 0 h neg
+RL CP BkCol SC fill}if BCol SC 0.3 SW NP BSt 9 eq BSt 11 eq or{0 4 h{dup 0
+exch MT w exch LT}for}if BSt 10 eq BSt 11 eq or{0 4 w{dup 0 MT h LT}for}if
+BSt 12 eq BSt 14 eq or{w h gt{0 6 w h add{dup 0 MT h sub h LT}for}{0 6 w h
+add{dup 0 exch MT w sub w exch LT}for}ie}if BSt 13 eq BSt 14 eq or{w h gt{0
+6 w h add{dup h MT h sub 0 LT}for}{0 6 w h add{dup w exch MT w sub 0 exch LT
+}for}ie}if S}if BSt 24 eq{}if grestore}D/mat matrix d/ang1 D0/ang2 D0/w D0/h
+D0/x D0/y D0/ARC{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED mat CM pop x w 2 div
+add y h 2 div add TR 1 h w div neg scale ang2 0 ge{0 0 w 2 div ang1 ang1
+ang2 add arc}{0 0 w 2 div ang1 ang1 ang2 add arcn}ie mat SM}D/C D0/P{NP MT
+0.5 0.5 rmoveto 0 -1 RL -1 0 RL 0 1 RL CP fill}D/M{/Cy ED/Cx ED}D/L{NP Cx Cy
+MT/Cy ED/Cx ED Cx Cy LT QS}D/DL{NP MT LT QS}D/HL{1 i DL}D/VL{2 i exch DL}D/R
+{/h ED/w ED/y ED/x ED NP x y MT 0 h RL w 0 RL 0 h neg RL CP BF QS}D/ACR{/h
+ED/w ED/y ED/x ED x y MT 0 h RL w 0 RL 0 h neg RL CP}D/xr D0/yr D0/rx D0/ry
+D0/rx2 D0/ry2 D0/RR{/yr ED/xr ED/h ED/w ED/y ED/x ED xr 0 le yr 0 le or{x y
+w h R}{xr 100 ge yr 100 ge or{x y w h E}{/rx xr w mul 200 div d/ry yr h mul
+200 div d/rx2 rx 2 mul d/ry2 ry 2 mul d NP x rx add y MT x y rx2 ry2 180 -90
+x y h add ry2 sub rx2 ry2 270 -90 x w add rx2 sub y h add ry2 sub rx2 ry2 0
+-90 x w add rx2 sub y rx2 ry2 90 -90 ARC ARC ARC ARC CP BF QS}ie}ie}D/E{/h
+ED/w ED/y ED/x ED mat CM pop x w 2 div add y h 2 div add TR 1 h w div scale
+NP 0 0 w 2 div 0 360 arc mat SM BF QS}D/A{16 div exch 16 div exch NP ARC QS}
+D/PIE{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED NP x w 2 div add y h 2 div add MT
+x y w h ang1 16 div ang2 16 div ARC CP BF QS}D/CH{16 div exch 16 div exch NP
+ARC CP BF QS}D/BZ{curveto QS}D/CRGB{255 div 3 1 roll 255 div 3 1 roll 255
+div 3 1 roll}D/BC{CRGB BkCol sp}D/BR{CRGB BCol sp/BSt ED}D/WB{1 W BR}D/NB{0
+B BR}D/PE{setlinejoin setlinecap CRGB PCol sp/LWi ED/PSt ED LWi 0 eq{0.25
+/LWi ED}if PCol SC}D/P1{1 0 5 2 roll 0 0 PE}D/ST{defM SM concat}D/MF{true
+exch true exch{exch pop exch pop dup 0 get dup findfont dup/FontName get 3
+-1 roll eq{exit}if}forall exch dup 1 get/fxscale ED 2 get/fslant ED exch
+/fencoding ED[fxscale 0 fslant 1 0 0]makefont fencoding false eq{}{dup
+maxlength dict begin{1 i/FID ne{def}{pop pop}ifelse}forall/Encoding
+fencoding d currentdict end}ie definefont pop}D/MFEmb{findfont dup length
+dict begin{1 i/FID ne{d}{pop pop}ifelse}forall/Encoding ED currentdict end
+definefont pop}D/DF{findfont/fs 3 -1 roll d[fs 0 0 fs -1 mul 0 0]makefont d}
+D/ty 0 d/Y{/ty ED}D/Tl{gsave SW NP 1 i exch MT 1 i 0 RL S grestore}D/XYT{ty
+MT/xyshow where{pop pop xyshow}{exch pop 1 i dup length 2 div exch
+stringwidth pop 3 -1 roll exch sub exch div exch 0 exch ashow}ie}D/AT{ty MT
+1 i dup length 2 div exch stringwidth pop 3 -1 roll exch sub exch div exch 0
+exch ashow}D/QI{/C save d pageinit/Cx 0 d/Cy 0 d/OMo false d}D/QP{C restore
+showpage}D/SPD{/setpagedevice where{1 DB 3 1 roll d end setpagedevice}{pop
+pop}ie}D/SV{BSt LWi PSt Cx Cy WFi OMo BCol PCol BkCol/nS nS 1 add d gsave}D
+/RS{nS 0 gt{grestore/BkCol ED/PCol ED/BCol ED/OMo ED/WFi ED/Cy ED/Cx ED/PSt
+ED/LWi ED/BSt ED/nS nS 1 sub d}if}D/CLSTART{/clipTmp matrix CM d defM SM NP}
+D/CLEND{clip NP clipTmp SM}D/CLO{grestore gsave defM SM}D
+
+/LArr[ [] [] [ 10.000 3.000 ] [ 3.000 10.000 ] [ 3.000 3.000 ] [ 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 3.000 3.000 ] ] d
+/pageinit {
+% 210*297mm (portrait)
+0 842 translate 1 -1 scale/defM matrix CM d } d
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+QI
+%%EndPageSetup
+[1 0 0 1 0 0]ST
+CLSTART
+0 0 603 409 ACR
+CLEND
+B P1
+NB
+W BC
+/mask 7828 string uc
+,I¾?+*7ö9úÌ@¿*ú1ºSÉ:ı*Xè<ŞÍ³WàĞ>K*úöüAïûIìùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY
+¼ıİúü81%
+d
+/sl 62109 string uc
+îı**:úü+ZËÙRÓ6,J.3Xıü+ZËÙ¶¿ÉÄîñåèİ½*Vñ@âñå±ÉÂîñòíI*Ôø5±ÉÂî±òİH*.öäµ+*¾åë,×¿,
+J9ØN.IIıó+¾¾µ0ı@*N±îCÙJ´Î2*¾Í3<úêúÕ1*×êû³*¾ãCÙJ´Î2*BØ.ãí,*ÄÃÖõäÃÅWîEÅ¾RìüD*¾
+ğÊW:ER.*6W,ğQ+Jİ8âÉñà·µWîGÁ¾JÜüD**ğÊW:ER.*6WÀïÅ*Şİ,ËEõæºûöØË5ëë¶ã,ÍØ,â¯óÕ+*8
+åê,×¿L*Şæ<2½-*ìÑâàÌı,»ÅFìÚöX1/ÅVŞÃ1**J*,?TKâßÃ51î,*úãîŞ7À×Î¾1;@ø*¿1ÅSÅ--NâçX
+5ZS,¾ÆGĞ*ÀİTÁ±+¶-1ï,òùáŞA¹îè3,1ĞÖ¿5ÇJ±+*¶:+=<M7õÉ¾,.BEÉKÚæÈF¼:øÎ0Ş×X¯JLM**äÜ
+İÀâü±DîJ*<IÈWã¾>ÄÜ*¾ÍYãÄ6×Êá9Z¾JYúÂ/8@*>¼ß,,>×5**JYÖŞ¯R:Î1Ë9-2ñ1Y3ßæ<.½,*üìî
+óÛEíë@Ø0µöÌÅ/¶ìÖ*.9öï¶4÷;;*Äãß¯¶**æBD*îX¿Å5¾Ş6K@º*?Ú¿19ÌV*X*18,+âê85*X-Ï*á¶*
+*üT7Ì/Ş;FŞîßÕ.:EĞ:¿**î¿-SêŞÃN:×**FÆ*+*Ş/³Úì.-ìÆÏŞÇ6àÇÔâ¯6:J2O.À,9<J2KR1,ÌAK°
+ı3Á*ÄLSL+ĞRÄÂÔ±MG:ÂÍA*öåRØß»1Ã?ğ1D*2I¯¿Á/*ÂYÖ¾6Áğ,*ŞÖ5@¶64Ò:È¹¯3ÄúG>/93ßæ<*½
++*ÜõWôØ½È±ôÈàAXCß.µÌÒŞ6ŞöÈ-µëP*UŞ¿-J*Æü¼¾,XL¾Ëİ½ÙX<¾9ûûÙå*;ğüÄİÕD2¾Zê*Ô4*K*B
+ï*îùÓDF5*öGî:X:îZD+âÜæÂá/¶î1ç.*ú8Øº:+ñ2îù*O8ËÆà/Ì²OT/¯İ1.ŞDÅ;âöIÇ²Q°é×Ï82ßã5
+*ÚòUØÉéÄ,Oñ-7*ÀÍÖŞß,*ßAV¾Äë>Ú*J´8¹ß,ÅK+ÅÙÁàìöL¾MLBØ.İY*¾9MÌÙà²2ßïÁï¹íGôä34>,
+ö*+àüüëEè*Ê+µí**6óû*/ºÂ*ÄäôôË¶VóêÙµK+àË2öÅIOùôGØÀ*äY¾*±á5XÓßCP*íÅî:¼Y**2QZìP
+N*ØØŞ+*2éÙµÎ±::/¶ÚÄ²:**,Â,Â2Â7ÚR,ÃøPÀ0¾âÄQ¶í,¹FÖÑ;**1P¯ÈJ¼ıXè*RÍ.+5´.à*5ÚTÕH
+öíİE0·ÎPâ*:Ş²*ÄNñ*ÇÍA@ğVUFâD1ÌÎ³åL,¶>LÁ-.æöä+939>ä6ŞÏÄF*ÄÈ¿3Ç×Æ6ıñJSúõí´-WÆ¾
+Pæ±3¶Z/Ù7*3Êú7*BãRàÊ¼:+:öC5FÈ*2úÀ/âÖØ1HJè8¹ß,ÕK+À1UÄVÀîQğ:*Z²3¸İ**1ø¹W¯KµğÏ*
+;ìTğÅÙ=>R.î+,ºëÛEµç*B*ŞÚ+*BÑR*¾ÏèÛEÚ¾K=ÏÆJæ;-²L¾ÎQÒŞ·-6ŞÀ´?+ZÃ.ÚTÁ±Ê:Úß/Ğ7FZ
+ìÚ5+*îPÏ¶,E*QÇç³68*¾ÕÚ¿82Z0±3Z+îL+,.8Ê2ÊNFR,åÇ¾*D´0NRé¹õÄBJ¾AY02**8Êà>+õìW¸¾
+*¾ËÜ3,ô<*1J<,Ú¸Î1¼<**¯ØZ2:Ş²¾´ZñL*0ÒéN*õ±Wï4ğÖ2Ş+ÀG1N*XÑ.DßÉA**Âº°9îóËÄF+ÄÇ¿
+·É¶Â>ıñJSFµØ3,N¯M¾¾ÖÃM3RUÖë*ÆİàÍ*¾÷?.OŞ54*½Y×Ş?.¾İAVJÂË»î+°ÔÖ5@¶844ºG>Rè+½=1
++*MÉ¾ù/*öÖËS°á·615ä-ÊHÓÌÊŞ¿,ö*+Úğä»¹´*.ŞêëÑõKÁÎLº¾6F<¶ç-ÖB¹ù´,+ÖHÏ,İGO¾ZÙï/Î
+¾HíÜûT78¸À6F°0¿VÊãGÒ0ÚÌ=*°ï.Ó/ñ+ÌP¾²ÙµÕ°NòÏ2Ê.Â+Â<¶F+:ìÜW¯*PÌEµ?+¼ëÜËÉ**îJ>P
+3>µì×-.BùR2¶À*ïHñëÕò¿H¶A+ÀïäGU¾*Ñ+ØëôÚ**ÒW=+ÙÍ³ÃÉÙW=**BµY=+âÊ0RYÚ·ñ4ŞãÇ»Ò+Ò±
+.Z2ìÚ-BXÚO?LÄı·Î>¼ÙÍ*Ñ¶ñìA¾ÒÆûT,è4´E*àµö5*Z¿Õîøøâ,¾íM@¶ô*Şõ/52¯±9º¾Ê?ôÀ/ÌÁ,ú
+HØ.İíâK*Şæ<ê¼+*X=YÅØì¯°²Æ×C=äÑ==¶Î*MU¼Ù´æ**îÓ7*+*Tù35¶ë»=ĞĞ:Ş6ëPùÁ*GÍÊ¾±7:JU
+ëÃ1.Jü²éH:¹Ï0=-¾R*ŞÇ<F¾-ÖGÎ4ÚÌ=*Ìï.Ï/J¹B6¸ÓGK*Òó/1üZL:â2ÚÄ0Â<¾.¿×á×¼ùô-+ÌèÔ»
+Ò**îŞ=P3òôëÎ-.ŞùR2¶Ø*+0R×ô¶GÂéÄ:¾çëÙÅ0*+P-ÒSëÖ+*öØÄïXUFTëW+*:WEJ3¾ã²¾HÛ»Eç*2
+T¯Ì6JG-N¶¾éŞàÃÙÒÒâõIQt<¾-ÄÔÓ*ÚÕ<ÎÔZÙ+:º½İ**°Væí=4:İ÷H°¿±1*ºYÖ¾.5ùŞ-NêZAVîD>º
+µ¸RæÏÁÀXõ=·2*BØ.ØY*¾AÉD±>ZòÈ¿¯MÚ2¿òâ.8>Ş*ÊèÌG³*0Õ-ıâåêM,@EéNÃä+úã*2°åä=JÙ×*V
+N2æêÓÈô6**O°12ÜSÁç¿S¿·¾¾Áö*ÆGîZP*ØÌ=¾Òï+BJ*Ó×MÍ1î.+ÆäÌGDô5½:**.5Â.Â0Â<:.+êÊÎ
+0Í2.+L3*ç-Ï¶î2LÙôÏ0¿:ŞÇ:öêTÃWC:Ş0çñ2:¹¶+èÔË²¾*µT¯ÜJ²é¼Ö?:¹æ<èÔGZ*@Ñ+TÒ´ëN-N¶
+î,A0ÎìîÂJXÚOWR¼ı·Ğ8+F´Ò´ëÍÁ@YOJWß´-Jôø¼+*âØKèQ>Jºí»ß,<Dí5**Ïí×¾.-ù¾3.êZAVîB>
+:õ·RäïX.¶N.MÉ:ù/*¶Ã=MğÉòäÉ=ÔÁ0C:ÍÊŞ¿,ö*+ÖäÌÛDÏ*àTôÏãRIÌGEôÛ,,663îê,ö¾7ùâ*:FW
+êÖ±42*±±Õ:¾Å>SĞ63¾,:ÃûT7Ì/ŞŞKúKŞ¿äÌWJ*ÓÖ9F¿áÄ:*OêO+*îV¯Å3Z6´êÁÆ,¸Ö-1JôBßZ¿2À
+-Oî°,ÊÁ7ùâ³@»ôêY,òÀ7¹@+*Ş¿SÊE*êM7*ùÇ:¶ê¾¯û÷4Ùí*<ŞêÇ-Å7P*Z×±Ñ4*,ÚæÄ÷ÀBÅÉW;Ö×Ì
+Q:¾+ÖÊ<æS×±-5*P»ßÇ+ÒE.ZÆê×1B8ÂJWRÄı·Ï8üP*S×±õ5î,Ö¼?+µ@¯Ñ/:··İ**ğ1ÃÚ=4:ÚñÜZ+¿
+0ã/**²õV¾¾³.Ù*JD,¹ß,ÅKß+L;QEµìØã3>*93ßæ<Ş¼,*¼9L»êP/4áÁBÇñÄ.8>*.2Sõ¾Z.¶¯B´ê*.
+*CÁôÌæçéİ,.Æ<Æ=3J*áéÖ¯åğ+6ŞCMJ*OÕëİ*2:Å1æèG,Z¸GJúüÃDF5*¹û5**1îŞ¯áH;¾ÇBÎ-Æ*UM
+/úÊ*BPë**ŞT½7Ñ¾*¯Ø.¾JêÜXFR@2K2Ë2OÎD1.Ö<å¾BWÅû¯¾*XÚJ***FB/+*Ş/³¾éQÀŞYÑÌ<¾-II,
+29ÑQ8ú³È**ÂÏ,K*3îø¿MÊ±Â·Fê4Øøøè÷.øA*ÉS,OJO6**NÔAFC¾¸ÁEŞ¶:,1,:ßıÚR1ÅèJ*>³.6*S
+Xİ¼>+Õ@¯Í1:¶µİ**¸Êêî=4:ÙïÜZ+¿3ê/**Ê3×Ş¯R:Ê*±9-Æê*Y3ßæ<Ú¼-*8ìÚ¯ÇæZ×ñ/Ó×´ë;4.+
+ö***.BŞLÓİäøóé*X*¾Á²ÛØJC62Æ:½¶8:¶é5ãR¶îNHèäøÈ*Ñè-ÊÜ*04İTÁ±+¶-1ï,ü:Ä,G.12J³Ò¾
+Ñûğ¾4Ï**RóÔWÙúğJ,EOÃ³éÃ-ã,;.Şø¿<æË³@>¾,¯â¿Ù´Öá¿C1+*¶Z4=<M7åÀŞ5ÑL¯JÂNºWIÆÁî,¹
+Á¯¾+ADZÌ;ÔîXUàB¾è÷ÂÎãS,êÆå+93á0XêáÏEF*Ä-C¶±D÷ûå¿¸îéÕÙ4ø*¿Ê¸Ñ=3¶´3ùº*¯Eù³**ÙC
+ÙJ´Î2*BØ.Ô9+¾TË·PÉ=30èJËU?æÊ4îÓ5Ì±çØ³Ç+NÄèC¼+/2J³İ,æÇ-ÆØÖY-*ÒË×/°-Ã*¾ÏORÛ×+Ş
+SY5J¾ËF2,ÆZÒ±ú,4:JèüÃ:BùúEßêÊW:ER.*6W,èË7*¼ø±²J6>Ş¿Ê²HGáAÎ*+ÎôY.+×åİ3âäê,×¿L
+*Şæ<Êüó+*.İÔJ;U¶ä@Æ7>,*Ä@¿òµ9*LÖêÙ**Àñ´¿êJKNÉHØ.Ïİ½*V´BÄ@+òõ9*É7ÄÏãõ9*éGÄÏOK
+æûù1¾ÃôàÖğùÕãõYÉíİ@İ½W¼ıØúüQïûéğùÕãõYÉíİ@½ZWèôè±:BÛ»4WJP-º8,¾ëÏA¸*QBŞï9Zëä¼B
+2+RèFü:Ó5¶Ñ+**:¾À@íÅ±*ØÅ¹FË,6î¾ÆµßYW-W9·ùãº.ÔV¿L¼AWØĞ2´ÎÉÄ@û÷éèÙÍ7¾ÒôZ¾ÙHîè×
+ŞKÉD¯²,*åOæĞğ»ÛØW<ÍXé°Úáç>æéÌÇLCÁúÏ3ÆÑ+ÌĞöáÒOÊ²ÅC5å±ÏãŞEéü²¾çõ»¾ê0:º6JîÖÇ´J.
+ÌÍÅÆøŞA2â+âñŞëÉ3K×Qî¹´,ıÒ@Ó³,+ë0Î·ÊäU°·*ÂRÒT6¶=ZÙE7î°4-,âàĞØ:**:*Z²ÅÓñ-àJÆ¾ê
+Á16Ú0;L1HÖß+ŞKYÚ5<¶;0Îû/<¶õìÏÙùß*3ÈìÛùËR4ÒÖóùÏ¾J³:¶öáûÀ.9¾Ïé6J¹ùôŞÍ+Ï0@â3éÛù
+-Y2Ï:ÍÙI:ÂØÀ-SÎìÛ±±àÛù5T*ëåO8ÛßÃ<ºÈØÒú.Æäì-ÌÏEÕ°Ô°H7âæËêûÖÖì²*3@KÑÃ/DÌí/+ÖéB
+-*HØáâÊ²?ûñÂ·Ï,ôäïÚëQ9ÒÖ*;FKÒÚ²÷L6Jù5NîìÛõT¯ò±¿,ºTä-îÃ´ÉMÖM+ßëÇ½ê<+Öàµ²çØá¼ñ
+LÒ¾Qàğ´³Ü·LJ½ï/OÉA.ïN4ä+2ä*äíR¿ß6*öóE6¶ğ3YĞ@»¹ôKô¶õHX*2F<åË´íÌ±*ØìÛáÌ+XE7:¼¾
+ØE-ğÀ@Á+ŞòÆ*ÈËŞêR+ÃRß·Ñ+Ğ@ñÃ0îÖŞÀ***2ó2À5¯2N2E2NJØ3Î6;îûÎÔ7*ğøôÀßîÁ/K±½.¶K¿X
+ß,/+@ÚòìG¯½B¶Ú+÷6ÎøÃA6».KÂ3Æ¼RÍç<;7*¹RKâLR¿C7Z¸ùEµöE³çß0îæÛùà+¼ÃâÇäë-+¾òï×¶N
+JÚö0ºİÑOæD8æAV¾:Ş°Ñ+BÁôÅLßJ-ÚîP.ßÃBÚK,<E*ğ40ÜüS*4Ñ¶PYT2C*5L8îô½IVÖ¹K¿¼@±äÂUÔ
+*ÕÛµÅÜ±ÙR°<.*ÑYºßæ°2àË±6ÁÊ-ÖÇ,Êµ½L/MÉµìîN3üNW<T+2.*Æ*40;Å@Mæè;KğÖ+èC¾ö¹Ø²U-J
+ãº**Ì93>I2½ôè+*àCæ5¯¶Á.îó+WÄMŞá,/;2Ò>ZZ¾ÙıÛ/¿ÉÈåÍ¿ÏµåÆ¾¶ò³´VM7åäFVVYBØ6À¶UÉN
+êÈôµÒZ²÷0-Ì>ßÉÒOé7ß=à+*ÒZ¾ÀA³3R0ö3°Qäõ8ç<Ï@¾¯Ò¾Ú>óÆ@SÖ/ÕÅ+ÂL/K,Aà:Æ:´:Æ¾V5ZC
+LŞ?/M56¸õìCÈ*Úí..;æÂôOBğô536IE*íÆ*ÈA¾ò=Y2D2À2=:ÈÀÛÈ,¹û¿ŞôK/;+K/î²æğËEF÷ÂASÉò
+Z*İ-´@»Å;O9èĞÔR4øß,F9èĞµİ/àäæIGîD?¶¾ÁH¸0;CE±ì2,ö5<¶;0Îû/<¶õìYßÆø·J+¼?î+Ü<AHÂ
+.Z½=:*ø7VÌ³¶ÜÕY±Ìö¿ÓôH×¾¯Ê=ıù:*J¼ğ/Á6A.ïP4ZñÍRæF½N/0´¾ÍÑíÚßéÒOß<å¿-:Á+ÊGÒOÚÆ
+Ã+?IÉèXç<MµåM¿6ïÎIĞOõìØC;2BŞ×·ğîL6Ì:¿¹õüFF7/ÎîòìÛ-Ûà¾ÁOË=æ2µD***+8.çäÉµí¼°2,
+A¾Cá.X´½î/óÕ1.ÏÔÏĞŞ:R¯µº²Ş3?ŞïÃ:J¶û.-ÜPWPÎ*á¸3ÕLğ¯öÛÙîûéğùÕãäÕãõ½-íİ@İ½W¼ıØú
+ü³÷ûéğùå¾Óè<Òøü+Z·Ï¶XÉîıù1¾ãÃà·W¼ı/ÖMVºıØúü³÷ûéğùÕãõYÉíı=Ü½W¼ıØúü³÷ûéğùÕãõ92
+íİ@İ½W¼ıØúü³÷ûéğù9ÁõYÉíİ@İ½W¼ÆØ²è±:BGÃ7ÖôP-º8,ŞëÏA¸*Q¾åÅ½**Ú**3ÎûÀIáÙIAæã+/µ
+¼Hİ¿>Äğì±æøÆÙå²ôø>¼ÛâG96ê¾ÃöÓ5ËMWóG¸Ä@WS.EæOMÉüú³óëå0JTÙÚÔüö1òóéÕ¯0*F4Zá²ğŞã
+R;4ø¯¶,¾İéíÆàRì»ÄG7Z¸ù*ËÓHÃIIÂ,KàĞáX<3îÜD¿¶ÒÓÜMåæ<PØáÊÃñCÎåÇîÑÑ+PQ<.ZøĞIÁ¼/+
+H8àØU±*øï7¾Ñ·6ãğÙÀê¿æÚ@L0ß×ì´ò:WøôÔ3.²E¾äô¿XÜ<É-JÂLÓà¾B+EB*YP¯*âàS+öF.Ş,**:J
+B¾µÕÌ92-K,°9?¾îDÂ2Ûû;Ô×ôèXN9/ZLèC7Îî:@îà4ôãCNú+Á³8XùWòëÓíéß¾>ï¶ÀL¯°·ZÃêôQÄàÕ
+ÙÑï¾7½+PÅ/2õì-Q8V/-½0Â¿/·àÜSÀÉ»ÖC¹;ò;äG¾*ÁëÙ¹õQòÏ>³»ëæMØÒú.Æäì-ÌK@Õ°Ô°H7âæËê
+ûÖÖì²*3@KÑÃ/DÜÎO¹7±*Ş-°ÊÊÇÔĞ½ÌBAT¾ìFÌùà98æ<E8ŞÒ¹õ±/.@Ú¾-æüà4ôãCò´*ÜµìÀÈÏJDÎ+
+<Ä½æB¸7Ù·¯ûÇÏR´=ÄÀPÖŞCWÄÓöôÇÖÚWËµÌ2*»:+ÚHO¶Ø15±AğEJëM6¶L9OSééÄÄÏORó,*Ú¹õêÁêç
+Ü»F3:¶:ÉEóìGå*²ÙµAG-Â¼SÀëÛ¹µ0â/WÌIÄ.Îê.äÄ4RÂ4ÌE7:ó7ï?W¸õìï¶ğìÛÔJÏ+¯7Î»ŞßË?Úè
+ÄÒ9*üIë4ÈD*ñ=õJØ1Æ6İ:å°Â¶RÔìÛá6*ùÃÏÎí1LÄ5¾¯å²CÔÀÖI6FT¾º0RGÆZPñ´9´Ï>Îè3ÑF¸4ÏD
+JF/³Å´K**Ò8ø25Rø2ÈØÊ´êA8ìÆPôØ.ı9*¾¹õ8´*ÅëÙA@+¼/°¿äM¯L¸ù-M-ÂÉà¾õ¹ØNW-R2V°2,V´
+øÆöÌæĞÔº¾Ùö/FM-*ïÀ>îûä4à0XZMè0¶-FµØÀö0ÎùâGRê*ÅURæ´Ñ+èW*ó5MK±-J8A*GÍçğBÍLí×W>
+C3P/È@íôß<ÈğÆS8G/ç7ÎµÊÁçäÊ÷áÆêMø2ÈØÉ´êõ7@LÉQ<¾R/J:*J,RBÂV4¹KÉ:·+72½QÉ´³*ÒÊ1*
+Ş÷ØÀÁØÒâIRF·à÷æ*ÆFP:îîä4<MÈ>XîÈ@YJ¾FİÎ<-ÙáÜ±ôéĞOŞ·²÷àW86/¾»¿Ä1²3ÂÜ:PÄÜäÄ³7åä
+ºMÉµùZ3O·Ò=ÅÌÀÊµöõ*,L@XçáRTËŞ@Ø¯İ¸Ö8WàôÛ;ºLF*¾40RöĞ@?ãôìÛ=¹°6ôÆ@3³+6M/âOSå³3
+Ù9É-2Ø×-JC@:îîä4ÔOÉäûÖ:ŞM?¶ù³/DİH:ğ./ÒBK·PÉ²Ù+Çï,8W¾çW-.ôìG*ºKÉ²´*ÜÏ,@Y*çQ9æ
+ğëHVLS8CãÓÑÎ¶>HÅYJõì?0BGò;à<òÏó³Ç80î¹8ŞĞõBĞòKWè4OKIV¾ñKWøôÙJê6ûÑ-X1JôL:ÌæĞ+P
+Ş*ï×Á5¶*ëYVß¸¾ñR¸ºõ=UÂÈ8ÚV*9Ö»¹W>ÆÄÜR4BºTÉÜû×4OM±²:*Ñ¼Û¾ÒäQ·ÚÎOÍVŞBäÇı»2Ş:Á7
+î±?ßçHVÅSXGÃIÕÂÀIŞÎÙĞL,â2½M91>³?ëæ²Ø>VğÒXÙô0-B¹RÉ¶;5-T¼Ì/FÑOÄìÌÅ,CàK½*°A,;Øî
+J,â5DÓ+/1;+AÔZ¯Øòë½½Eà¾ÀFMM,ò÷¶D8VC×ÀğÌ@»ø·C8ÖSA¾´ë8ñÅ-¿@Ô3Â@öÇK2Ú*äB¿É¶º;.2
+JÄ<FëÁóBã×Ñ¶ôF/ÃRŞLĞÍ´Û¹õ=Yæá+OWOEøÊ@ÑR¾CØÂEàØQÍ;°çğ7¸X4¶ĞÉÌE1;XYÅÚÎÂ4ÔåúAÙ¯
+ÈºÍğåæĞ´ıÛ²B6ãùÁ@×ÕGºK9³KêÌ4<SÑâù>ÍÄ@7µ0HäÄBò0WğíÜT>öÏì÷G?NĞPÇõSü*W´6î²ÒÔºıØ
+Ú¸ÑòÒÑâYDíİ@µVDíİ@µVDíİ@µVDíİ@µVDíİ@µVD5ÏO:Ø³**´åMÉë<>UÔO¯4J*¾=Æ+êõôP-ºÜß¯êÌ
+@ÃæıW-*LÒòV²×IÚ,ÂÜ2ÈGéĞ1Şùø³èX¹VèCØ.
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 0 di
+/mask 7828 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ıİú0Ü.%%%
+d
+/sl 62109 string uc
+Æîñå.Ûİ.*SóıÇ.2Ïıù0*2½ÏÈ9<ãÏÔò2ÕF3ÈÉÉ¸ó>5Á*°DŞñ¯*ğR¾ö53Öç+N1CáÈÇç<öíA*Zûé5ÃE
+9W´ÈÎêÚ@ûO+ŞË0¶Öâ+ıLÕ¹õŞÍ+¯ŞAâ3Ù»ùËR4ö4Ù¼µíXGI:äJÆ¾êÙÃ@+ı8***İ,îD*îûóLïğÌÁ@ù
+ORôWÉÜÛî=½ØE7*ÃÙOÚÄ1õì=¯ïµUñË=,¸ä-FÜæ´·.éÜGC³ĞÓòÍ=äû=Ø.ôùÈ@í.ãP³3TÛ*¾ÎOÔZßÀ-
+/4Ó8ØòSÛ¹ÕC¾´ô1KîŞPõCJóØ+JXíì/9ìHE¿×ëÛEõ2?F½ó0ÇHŞOÚêÆ@¿ü8**ÖÜ,îD*Jûº²3ôYD*Şù
+4¾é*Ö±WÀı1*:²çä°äF¸Ò¯æĞ²ôHFŞSµÅÜ±ÙR°<ö*ÑÕ½4¾à>Ì>»ùÔÑÍ´+À*Éá7XÖKĞ0ÖKWÀúA*¾,C¿
+½6Şîé>¾ø33RÕ+°ÙÅçúÇ0êê+*÷4¾é*ÆÆ@ù/½õTÉA:¾Ê0öú*,À@M,Úç*ÑÏÕ×¯WMIE±¾çìÛI@æ/;2Òû
+è*RC9*Â½P½Ö3»Ş0²3îİ**<DJî¯*¹ÍQÎùQNJÙ0¾ë³*ìQDZ±1*ØU*0**¾=*¶*-°Hø²²·Áæ»¼,Zº/JD
+úë.ØN±-î77î÷,ÆP56øôëGá*ÚS5ŞÖÛ¹ğüĞÒ´ÏO¶ı,*æù3åÄ+êò*LëI;+ëDŞóÔ+´Iç¾ËG*ÊX+¶7*Lü
+÷²²÷NPû»ğé¾B2¯2ê,Z¶ıòWÍÌ*C7*øë;âó+Z¹/Ş³*Æ÷çùÀ@»°+áBQüõK*Å6ö*YÇ59Là×µİ/àäæIG*
+X5¿ÄÑöÖ2WÜ+=ø´LúîAÅÕLúùò+øZJÌÎVJñ+**2î¼¸´KÚ+0¹îÜ½İüHİï*Ì¿+¶İQY-0¯JâKùÇ¹ëÏ.¾ä
+?*Õ+JÜEÍÄ@Í*ÒÍíLåXìÊ×3¾Lë½ı»ü70İLï¹=JO-º¼¹.·»*ÒX+¶7*µöÙ3²çÙÍ6ÀŞ/ZÄ3öÉë¿X¯ŞßĞ
+äÜ»¹òôº>Æ;8Jİ2²FÃÅÃæğ7B÷å+ĞØµÍ¼1·üüû²>Òà0×¾¶²I¾ä¹0¶úÙûOWúøìÁõÂ2íHÚ3H?ôÂ/,ê´9
+ËLCU¹ç3ö<õØM3*ÄU*8***B*¶,-à»÷ò²Çø0ÎFø¿êé¿ñüJôMÉ:¸/ŞËÍFD42½óØÚT-êÎ@¿û=*îó÷ºTİ
+¼V+ĞWûî-XÄ0ö³Dè±7ŞDé*R¹»ø5;Å1öÏ+¶I½Ş°»ùêÜ×*Ø¿=ÆEL¾BXöü09<Å*öÙ,î**ÈëÌŞ¾VIH7W,
+úA*Ş@1RQü¿.öÔ+Zµ7îÑÉ-ÜOXúöéíÙï¾áCB*õÔ+Zİõò-0¯JâKùõå2Æç*Îé+ö»ø*»B¶À°VŞ+.ÊHŞÌU
+6.3×¸îğ*Şğ4¾é*:íË½BØ.óÍ*¾Ñİ÷Ş¶øÒ*Ïµòë0æFDŞÅ0:¼³¾èU-öêóé½A4ì>DXK¾ê·-¶PİHÕADJ´
+×+@.*Î.+LİßÁâ;*ğÔ*F*¾Ğã=B:éÃQMÉîü/*¶ùã,Â2Ó¯²ùüüûÔ+Xµ7ZÄ1ô610øôßËîS¯QV:ŞôÔ+ú³
+ùæÎÊÓÛò.¾AÀ*íİYDŞñ¸*µI7/ÓÖK@îRìİ½++æ¼é*<´0.¾ÇQXïè+¾ï4¾é*:ìÉ½BØ.òÍ*¾ÍİHàáï2ÀÌ
+µñå0ŞFD¾¾02Ü²ç¯Íõì01µ;ïøÌ+ZÑ7¾÷ºøÌÜæ*Öİ0æDø**²½Á1ÇM*ÎW+B*RÖF-¶*-°»ö²²3êİ+*½¹
+ÊÆ*+.ëXí×0ZË³*×ôë¹Í+¼I½ŞĞ»ùÔÜ×*Øá.2¶,·á,2á/íå46ç*ÍéÍ-Îî-XÄ-Î³Dè1.Â8..:Ô+:Ä22
+³K8Ûà7.¾Ş?*1*Î¼ğ.0.¹ğ9Ä@KûM*îçîÆVßG»øÛû¾ÈóéÑ½ä,ûÎOäDJ´ø¶-.89îú,Ş@ì¾Oøó·û³+°é
+@:°Â*ëNÓû?HNW+Î³/J+ŞÃVÜ¾+×ü¹ÀØ6D²Õ5°Æñ¾@G³ùô×0ÖGµ*öFT*Â@Wø×+@ZŞ¾KÀ*:øCWĞÙ+FÅ
+-ÎÏ+Ä1.Â>..:Ô+@Õ2*ñÅ³3öÔ*ÚÔO×¼úÁÏOJı2*V°+YàË-¶X>ÎØüÖJà÷KÉÌ´¾ÏÖG5Z@Ø¹HöK¾äñÓ×
+îSWÁ²:Jô÷ÛBÂÍÔÅ¸î³ü?HNW+î²/Ş+*>ÚG¿+ÎH9WHÇS;Rí>¾ÏåBJ÷RÈ:*Yİüè*×é0æFâÉÄ0ÆGPŞŞ0
+æTø**¶IQZN-¶P½8¾æ0æF8¾À0:H::Ğ::¾Ô0öFL¾Â0ÆüB½ßë4¾Uû»,-°Ûö1MÉZü;*B÷´.¾H1îêçë¶¾
+Ãã÷ñÛè*ÒÏEÈ:ß´µS.+6à>=Îçã¹µQá¿Eö,öíğÙåñÏ¾0¸ĞÛúUºÆØ,Jç4¾5*2µ¹--,Ûõ²²÷.JçÖ/Ú-´
+ëúÄ4ØIÎOQÍüè*ÖÁEZSçÑI½W*ê¯,>Ù*Æ¯+N=?ôÑ/Z²ÚöF*ïHÎ°F*G±¯¼JJòJJ*W7*ñÂ*J·ËİJ´/Ş7
+ûHğY×HúÁÏO*IS*öõY±½19ÜL/Î»>ŞX,*ÈÔ*F+**î20â÷ìçæ<Ò½+*üØÄ;HSÉ83,26ĞFØòóéY7:E»³@
+²èé;7.Î»Ôç»¿*øDS1İæÍ@BĞ+R¼7*îÄçõL+ó³Æ/ÆàøóYJJò¿ØÎèøà,KÍÚàÓ-¾Ô?*/*A°÷,0âøí5ÕO
+Õ8@æÑQËø.5ÒYÊAôTÉî»Ğ*îì»ëçEøR5à°?ÁN°*ÈÔ*Ú0*¯Ì¹¸Øòò·QE<+ÁFJÅ>9çĞÁ½Qá+F÷,.IØâí
+óûRJMÛõA²·°æ-¾Lí»Û71Ö¾É¯,1:Zè*I´¯Z/çTÀÉ-*SU*Xëğ36êÚ@ÛòÊÚéÉı¼Û¸DëĞòÃûLÙæ<-õÓL
+¿9ôÎíÅ@+è4¾é**ãñÏOJI9*¶×ÚçÑIÍÏÀö3?ß×/.ÀÀ÷Cæ*>W+¶+*;ÉµZ*ÒíÙ@ÇòÑ÷U@Ï÷ğá¿ÈÜBZFÂ
+ÄÑöÖ5WDóê×Uİ¼*¾Ó?*µ+ŞÖAåë¸DØ.ññ+*1Ä1îèPY:=IÏ<FÙ*ĞD*ó>Ø*ÈÔ*F+**î20.¸íAÀ°ÛØòè¯
+äYY»V×·×ìİßÅ-ASû¿6¶Ñ+**2¾J0Zğ¹ùÑ±ŞëË0öº»âëá*µµ:;²FÃÅãæ<Ì¼ûØóéÙ1*ÆØ,î@*ÊóçÌAQ
+MÉ*¼H*îß½×RîÁÛòí=TÀ±5JR-ÂÌL5Jç4¾é*:å¹íØ@GVìñÓ9Óıı½üíİZíŞAY»LÉÊõóéÒÛôÖòB7ö÷éè
+Í0BÛ»BJäæ¶49¹ÏOÙW>¯âû,*øöZÏXï@ÍÁ@ßùO-*>W+¶7*àFõWé<,WYüVú;ÉK*Ö·õë;ÙİÎOöF:ŞØ¹>
+Jú÷E:Ñ+PIZÀÄÎOğ¼ØæÔ+*ğ4AñÁŞç+Ø.RU*X-ŞÜ³çÍÈõìôııãôöGãüéÜ»EäîQ²·6ŞY4*ÜÛø»G6Æ<8
+áC÷P>/TêøÛ»æ¾/**J¾Z*÷óNÒ¾IAïY¹óú¾BJK,°Í3DÌàá°²ÇÚUÄÙ³*JBAí9Ø.TU*X-*>ÍÓ@ãYÇÇ,*
+ú»Ü²úÒùó½ııİ=*JıIİ7ÙäèQ²çÙ¹õXöÇIëÙù°>ÆÀÜÖJàôÊ÷*ºÏëğ2´²çZ0*ú¸B¾é7ÎÕ¹õK5ÚôëÇCç
+Tøå3ñL6´XÉâÛ¹ì7-*1ZC-WDóê×Uİ¯**Ó?*µ+ŞÖAåë¸ĞØ><ıQ4*Jğ÷Ğ×ĞéÏ1¼KÉæFôé@GİÎOÕZßÀ-
+/4ÓìX²92³îëÍãæÜ´*ÆéS¹ßÁÅ@Çç*ÑÅ+ºù>äØµÕ>S¹ÍËŞêôìÛMÒ*ÌíÜ@¹æ,ìé<Ì¼ûØóé50*ÆØ,î@*
+ÊóçÌAíØ@Ûåòä5ııİê8İÑê½ìÕU¹êúÀ@ïVäÊMI9¯N¯-F8/îH-êÜüS*4Ñ.åòå²ç3ĞÆ¼Ù+ĞëÙÌÁØ/2,V
+ÌVØ°¿ÊÜÔOÙW>¯âW+*øöZÏXï@½ê>åÌ°SØÂZQ=A¼·÷¾D½ÛØîÊÌYæ<º¼J.Ôûé*ÅM+Få*ÙÛ¹½VÎ:K:æC
+W¸ë1ÈT²;»ùÓ>*Tä-*îº°çÈ/°øØ@ÇùçL¹-*ÆUÚÊYEãÛÑêÇ@Û¸ÆáÃı@Gú¹åÜùóèĞ;ÄWûÂ@Kù-MJÕ1Â
+63îâT²Q56¸õì3á*ÚÁ0Şç5ØòëIÓTáWùôÒÃ*ÄÏÍğĞÒÕLÉâÛ°ÚÛ+*À·÷éP·ö>UĞOõÜBQîİ·íÔë¯İX»ø
+NÂÉÁIÏã=NîØR:7»¯+ÁëGî+Ü<AHÂ.ùÎ+-EŞåç?.Pó,+ÆM?÷@2EMıò¾U´çÈ/°¸Ù@Ç¹õÚù,*Xßğ?ÑF»
+È7çĞ³ÅÙïğÆOµÛØZÂ./ÉìüÂ@9J¾¹íüºF71ÔÊ67ŞJÕBîZSñôK-¶º;.2JÄ:Öôé·ÚCMŞæë÷R:MFòAà:Ë
+²ã,CûWÉWâ>EÒOõ8ûğÊ9YäVSGäºSÖ±òE?ÊN:ñ½éĞ¹Å8DWÎ>M,O²AÉÜŞV¼ıØºğ3Ü»öèÌE¹XGF²İUßN
+,CIÚ@AWBíİ@µVBíİ@µVBíİ@µVBíİ@µVBÙÏãü,¾ıUÉ×¼QERK0÷÷Q³×ïHîûé°1âQééĞU15òçÑP»À/è
+AUBÇJäıÔOAG=õøğİYÕÌPÙ>»ÕÀÇ.°¸Ö@E4*ğÏO÷U°Ğ**½Yìß¿Q:çQñÕVLñãÅ-?»ÁŞø-²CUúíİ4Ğ2Ø
+ûÂÍUÅC½»ó¯ãäã¸ı0I8ÚNó1°¾Ê0öô¾+âòôÇö+Y9·¹¹Ñ+Hå<.õÎï>HøÙ@ÙêSôQÉ4@õ÷èÅè9¾Óü/ù0¼
+÷è=Ø>/,1C4Ñ+ĞÏO¶D¸¾ÌİÔHÉ:ºıØº?º2²»÷±ïÅV0+ÖäÛµÅº*Ãæ²*:°ÔQOÉ3óŞùÕãÉß±Qã¹µùJ@ó½
+ëÙµá6üL7ÇS-/9æĞUå1Â¿:+×µåëÕÙÑï¾7½;,8úC:0@â3ÙG*2*îP-ºüóN¹õìë·3ıØIÇÀ6Îï>H¼¹W<õ
+éıÜÎOº¼E´ËÓYæ<¼HÅKòôMÉÌÊÇÔĞ½ÌBÕGµå´àRæ.5Â2öNVìÔäEQ.ò0±*ŞÕÁ@Ûì*»Û¹9ØŞ³æüN4°¾Ä
+Ñööê³çÈXÅHö/WLñÖYÙòúÂ@Ç÷;ÅÄ@»´,±Û¹í8Ï,¹üù¿Æ¿Ä¸V¾çê908;JH-ÒHö6RîëÑBñìÛĞNëíNK0
+æ¶49ÍÛ@Ëåòä5İÎOâû¸³ÅËÍæĞ³AE*åÎOíD¾À/5@J2ŞAÍ7*·¹õì¹0Q¸òGÙÃ<=K¾çQ²Ç3ĞÆ¼Ù+ĞëíNK
+0æ¶49ÍÛ@;êçâÃYX×ÒäYÕ@FÑñ=ØòìÛñ°ï°¾çUS*ÒÊ1*ê·Ö+81W¸Í+PMY±áØÄ°´äMØâØ9>ÓæLøôµĞ:
+-²FÃÅåXÉXGâïà½É8üÛ±íû¸³ç2áÔ¼NÉÜÙ/:+PÑ@¾Ï¹õÜûOSåµE*<Á@?Ø*Ñå0ŞELŞğ/:ûò/WğôÍTÓï
+Ô»ùESÆ+DÌàá±ÕOõÜBQîİ·íÔë¯İX»øNÂÉÁIĞOí¼=**ÑÙí,ßµÄüç+ÕôëÍ÷4OM±²:*óâXŞBäÇı»2*×¿
+7îñòĞOÔ¸¿*âëÛ¹½</SJáSººôØ²ëï´ÚF°ÇWÕ@6;KßĞ9ŞZçĞ¹õìR¾çëÏÙñH4â21»ùôçûÚ61êÒ5J¹¹I
+C.¿5Ş6=¶3ÅAÀ*+âÏOØÌáËç,¾üL4Ğ¾ÄÑööê³çÛMİFñáÉCUTÅCY4ô6»8VJëÛÜ8²N3?V½WÅSáãÍÕOõ8
+G²ØJSÄ.ÈæX@GÇV¸õë»ëß5øR5JêDÎï>HH¹W¸õëÁÕôÚ×ñè<ºùVÖŞÙıôÓL¿9óÌí-DÌàá±ÕãÓáãùÕãõY
+ÉõÁ´³ïùü³CÁÎWWúÜ½Wä:²U5İõYÉC.ëXàµå*öù³3üYD*Ü¼WôÑ;½ıØúü³÷ûéğùÕãõYÉíİ@İ½W¼ıØúü
+³÷ûéğùÕãõYÉíİ@İ½W¼ıØÚ¯WôS*úËØ.ıE?*ÜPWô¹ôºıØúü³÷ûéğùÕãõYÉíı=Ü½W¼ıØúü³÷ûéğùÕãõ
+92íİ@İ½W¼ıØúü³÷ûéğù9ÁõYÉíİ@İ½W¼ıØúü³÷û5ßùÕãõYÉ9Á@+%%
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 103 di
+/mask 7828 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ıİú0Ü.%%%
+d
+/sl 62109 string uc
+Æîñå.Û½ı*ÖæX6U¼ıØúü³÷ûéğõĞOÕëê1-;*OëHëTÖôP-ºÌZ4Æç*ÑñËÃûV+û6*·P»+ÑYFJE?äë¿¾å·
+6Â³İHğô¸¾Êğ=ë÷VÄ@Û¸@¶æĞP6Ë*Ş÷9é<F»;DûLÉâ´*ßá*,ÅË½VÉQLÑY²ç01*1û/×Róù¸BRàï+à6½
+·Ñ+Ş³2;D¸¹üÁ+<>Û¹ÕÌ9,¯:NJô³/->¯*Ü<É-JÂLÓà¾B+EB*YP¯*âàæ¿=QŞëÑÁ±ïJÎ¾¿°6úC:0@â3
+EÄ¾¯°·ZÃêôë9ÆÀ²íüÀ4´NGÕ³3Òİ2Ë=,;ìÛIKÇìTÊÉ8¶¾?1ôïNÙ8J¯RË/**J¾RÉMØºğAğéÇR+¸Xàİ
+=O×´W°õà,Âî.ÏğÇ*XÄ,Sæ55NVï¸JÉüäïÚë¹ÓBø×5>:³¹°PØÈPIQÊ5¾·Á°XãVãºDÆÏECù¯¯Ûç*<V0
+HÎÄìÛI·,ìXVÃĞÎ9D2>ñÇÖÚWËµÌ2æÛç*¯òD´ñàøÑĞÖNWH3ËE,·Á<ÛÓBõ³÷ŞHÌ²é7WDÊ+*İ¼QÉQüàó
+0æÙ»ùÎ/XİïÙZÂËè<Ò¸+*ß;H@Ö:***LÛGçHJ°²¾FÉïÈ@³èôë³=JCT*ùKËËŞê¶*ÀRß÷U>ñPÛ¹åC*ëô
+ë³å*ÕË0JB²ÁÊ+çüä32õ,>M.òÖ*Ñ×I6FLŞ»0Rë²*ÔëÙ=Ê+Z1SÂ6>SÂ-F:Ã=9Çù+ŞıéÑ·+VÅL=.<Ğ;
+.<R<L:RĞ±4ñZ-ÌÍä/WHÖÅEë¸LÉK*?DQğñäY¶ù>äØµÕ>ç¾Ş¿ĞÒBâ/?Õ,<·WÀı1*îJ-F²¾5ì²9EŞï<
+JÖûÆ@7ñôëãÜZDíD¾À/5@J2*@İLCæºV-NİÖ,JÚö0ºİ·À¾Á2+ÖCÜYÏõê@ÈÊ.±.Î÷V+Î¼:-àÛù±Ğ¶ß;
+·EŞGÁGCË=Ş¸=DÎû3¿Òä¾ô¿<7ÑB×Ëä/WHÖÅEëÈÀ@íÎ.µQÆLøë0ÆHğÙ-ØÊ³J°Õã52:üê?:CÂ+º½WØ.
+FYæ<2GY31*YYBËW7*?ñ+¾ß÷=>¹ŞDAR0<ÅMÎÌ+Âİ·,DEŞï2+1DŞ²ò³´VéRääºï3¯/K4³8õN¯--¶æZ
+A:î.ÖìÂä7¿.ÈÂ2.È²Êàâ´DA²÷.ûYFOóOSëKWÜK3ìXù¿Ğ4WN½âµóGç0â<²ÇÀW¶»6J?T¶üø¾Æ¿<ÀVÃ
+:Y5Ú»¹¾A2ÃV5ZCT*?/MW*á¶*·ST8Ø.>-¹2×=ëíF+ó¼¾¯Â*ZEÌ-ºM.RÜ*ĞÍŞRÆLâJÇLFŞ/SVÍ@íÂP
+2NNM2NÎNÂJÎNá>P´Ñ·SÉAÌ<ÒPÚ¹9T-QYèğÓÔçQÓè¶ñìûËĞÒõNE:ÉÎO9GÁÆÊËCµ.ßû·õX5/ĞÏAø,0
+ÙİXJTñÑ¾á+W¸õìYßÆø·J+¼³ùW:´Äüç+î4;Æ*ãºÃĞÎ9@ŞçÛù=Qîëİ¿æCØá.+úòâ,Ä¯Ìúí-3*÷36¿ô
+AO;EáNWÉ,Ğè**+ÚûÇæÚ;2æü.ODP¯°EËÉØºî>µÒ0ß0ö·¸ùĞã5÷·Ò³Nó,+ßËµúÔÜ=ë¾VÀ@Û¹éäÂJŞ*
+åäJ2»HÌÄ-UP0ÁJÊI8.ØöÂ@ï·¶D4J3êàæë÷R:MFò;,3Î6Xâà¾ÈÍÏ-*ûÃ=îôêûë¶:QŞö+IC.¿5Ş6=¶
+÷0ã8ÆÀ²íüÀ>°±ÊÊ³3*>*2QëíÂ0ÊºK:µRĞ¯4=ÙçÚÒã=Q·K³¶º;.2X9WHÇÍMWMé·ÚCòº,DóGç0â@²·
+K1¶ŞÎÉ9¾.6Ôó4=óçVóSÜ½WìöSÜ½WìöSøÃ@EÇßÜÍçºıØÚû¾ºıØÚï¾ºıØÚï¾ºıØÚï¾ºıØÚï¾ºıØÚï¾
+VÚ@¿æ´**Ö»¿0éÜÑçºØ>Lıµ-*2ÏĞÕåZë¹DËQÉ7ÏZôI½ÏÈAåZë¹DGRÉŞ½9*¾óYY>ì/è°éÌPùç<îİW*
+*ö?*Õ+*íYA4Aõãç°õÌäíÏOZİ¹³·¿Ñç1Ø>+*Ú*¾Â70òí@*Şø4¾é**óARÉG´DğÕâ?,*úÛBWèéÕYá6*
+¶>Jà0-÷Í**¶G@Ó+6òÎÄGüE=Ö;.*ğ?*Õ+ZÁØê¯Ñ;<ıY;*¾âÃç°2¾C7Z¸ùÒ70îI+*íD*¯îŞ¿á@ÈTÎ¸
+ıä.´.+J¹/Ş*ŞRY7Ş+6Æ÷æ=°B2îÂ5¸ó²ØÏ@ÇØ5çM+ÚÆ¸P-ÚÊà*2ÖB@¾Óñ-àJÆ¾êÍÙÑ2»ı.*Ré*ÕÅ+
+Ê»Ç,ĞİC¿7K*ÊX+¶7*Lü÷Â6PYİ¼7±*ŞÏ*3éğËY²Íç²MW¸á+Ê´í¼Ô¾åì²*3@KYVÎÏ¹õÌÊÇÔĞ½Ì*ñìé
+ğÓî-êá*ôÜã*çÕ@úÎ·/Ş³*Æõäñ°Ö-XÌÖ@íúL1ËP9è<µÅáSùôØ,Ã0*ÀÏ+è6Æô×3Ê7?J2?F½ìZ1ÁYëÉ
+ÍÙ-;ùU5¼ZÚ,î***¾+¾=B:ìÉåRÉNëÃòÏ*XNGÑ+XP¯*.V65Şè÷+¯:NJô;+ËµDËRÉØğ+ìàAî67*ÂM-Ú
+å*ÜÙ0ÎZß,Ù*K¾ãå70êI+*åDŞ,06B2:¿¶3Yıä.´.+îµ/Ş+*>ÁG¿+×¼ºÄØòÄ-BëÜûV+ÍÛç*<VÀÜÖJM
+õìGC=WOıF+äÛÕãEöæKÑçÂØÒâIRF·à÷æ*ÆFD¾¹0:¼³*ÒÊ1*Ş÷ñ0-óÍ*¾Y7*Õ²å9CÖ,éíÂŞÌ:*ğÔ*F
+*¾°Ö=B:éÃåRÉÜG8QëÙé4ÒGC7¾Z²¾D-Ğ»´,±M/.L/ûµD»RÉèÛù¯·*KE7*>M->×=ëS5ŞB6PXÈ¸íZ¾ü
+3*öÓ+TÑQ½Üê,ŞçË2ê3,*ë4¾+¾LÖC¾-B:éÁQSÉØğ+ìàAî6Ø.ÂM-Úå*ÜÙ0ÎZß,Ù*K¾ãëµDÛRÉ0B+-Â
+Q-ºÃĞÎ9@ŞçÛ¹Ü/àäæIGîTEÆOöKó¯*=B*OøU5¼æØ,î2öí2İVıGOWTğ9>ÌFïºæ<N87ŞG-2İD*Tä-*õ
+ÛÚÓPÑ5³ÇØ½K=8¾Ë0ÖÆÃ+?IM,B¸¹H4â21»ëJLßÕòçÅÕñKôÓ/IFW+¶**Õ¼ÍæÑÕHOWTõìÅã+.ë²*Î67
+ÎâÌ²QW*á¶8·Sè»W´ÓçòHWHS*ÉHMâôáZî÷·PÜ²BBı.*Æè*ÒÅ+Êºæ4<ÛC¿7K*>W+¶+*ÏZµZJÎùÌÑ@7
+Z,02Í0ö4OKIV¾Ñ¹õº5ÂËÏ½¸ŞóÜÉíúL1ËP9è<üXD6Äğ·è<¾İW*¾Ğ?*Q***FÀ+·Ü¹ÌØNëİÎSÑ¿5×BÎ
+ğ±N*MµåM¿6ïÎİÕãÔDËHÒOáË¿Å×1R@GWÀõÙ/*RØ,îD*Â·ìSDÊ·ÍHMâFÛÚáPÑ÷²Cí/êÕß*è4¾é**ãÑ
+²BúÛ²B6ãùÃ@A±D»WÉPG¹ôèÕ4*Z³/ŞW*Bôã·ÙÌÏß6µ0HäÌ-NRÉ7´D»WÉ¶øóéÔYí>*Jè4¾Ù*ZÔQ¹ÜF
+OÁ³íçò²WØëL3Mì-*ÎÅ15ó4µ÷Ûç°ÉËPQé<·IW²E**·ÃÉ·0.èëÑçèØNì?áë0**ÊY+½D0ÉB-Dê²øØ@Ç
+¹õÚE+*Ì;VH0ÉD-Øé²âYÇU.*öEÃ¾VÛ@ù.9´OÉİà²Ü½Wì¼JÜ½Wì¶JÜ½Wì¶JÜ½Wì¶JÜ½Wì¶JÜ½Wì¶J¸
+Æ@¿æë+*êì30éÜÑçºØ>Lıí8*ÂRçûŞZë¹DWLÉğÕâÒ**üX±ßê½üL?õ,Á³íçò3W,Ç·K3ÆºãZŞıè*ŞøÕA
+4õì6@¯AµÖç²²W,üÉ***İ,îD*îûóLïğÜDÁ³íçºHØ.ô¹Õ@õµD7WÉJı<**ÔÕ*Ú0*Rİ=²×åPÑ;²Çú:ç¼
+@ŞØÍ>Z÷Ç5:Ñ+HÕ3êÅßJüO**:Y+¶7*WKÉ»´D7KÉ²±¾ÚOÉLÅÍEÌÚAW,úÉ**ÎÛ,Z***F+¾-B:ñÏµ.Wô
+×ç².WĞñ=ÄË/:ä+¶XÎ@ßûO**ÊX+¶7*Lü÷ÄÎãHEËÄÎOñ¼ëÂñ+Ç¼8Ãñë¿I-à¾WÆ=´ùÎã:*õìÛç*ÑÙUå
+1¿B2<:ùÉèÚîîÁä?*Õ+JÜEÍÆßÂ9<ó?ÔûN+ÉõåãéIËôÑOÅFŞæôëÕñîäÛ¹ÍÂãëèºñÆ2æÍçĞ=±ĞÓòÍ=ä
+³İüî-á?*1***6*F¿+ïÜºL0ME-âWØ>¸úÚ·É»çğøQÑû²çÙéßÒ»ùÓ,BÙôê9087JH-Ò¼OÉ>E¿×¯,.ÏÀñ
+¹ZBZ½3**½U*8*JCê36Æóá=°B¸¼àÖ×*àF*å/èğøQñâH@4*Z¹,+×,WàÉ1¶µA³¼íÏõê@ÈÊ.+PİĞOíD¾
+À/5@J2*@í¿ßJûO**âW+¶**ãZQZJÔ5ÍÇßæØ3åá±úF4åÙ-½0Â+Ù:QêôÕPáÙUå1Â¿:+×Å:²ÙçFÎÅÚÆ°
+;J:LOİ9Æ?æĞE9¯¯õ-GÙµåæéêÖÔïêÊÅ²ÇÃ0B»³*ÒÊ1*Ş÷GB6Îİ.**Ø?*-*ÃZ±*1ZŞÔ1A4µH0ñÆ-6ë
+Üû¸8ìÚ¹õÇÖÚWËµ83+ûCW¸°PØÈü·àÚô7µD?9EËOùÍİRãå-°-ØÂìÛE¹á¯úÜ³IE*í¾PÈA¾òBBíDJZõì
++0BËR5ŞBPJXÈØ.WìLöKé4¾MŞ½Mú´ûµÏ¶ñ¯BíX1ÑôëÕ4ŞÊØ±½B8áØù6Îø?WĞê.äÄ32Â4¸ì²THLK¾ı
+W,¾óYY>ìñ+×-WDà,Úº5*ñÇ/6áF÷İ1+*ğBB»Û¾ÒäQ·ÂîùW:´Äüç+Õôé9¼¶Ø,î**XûHÏQY»XØÒA9îì
+XÈÍR5ÅÜ±ÙR°<.BûÈ@»é*4@VÖ*K*ÖÚïPÑğ+öí1**ú4¾é*:õÕILÆûæĞ³YM*ñ·*IC.¿5Ş6=¶C0PÙáúï
+JÎÃKÉ6ÛG9/°ÂÁHÆ´-0-ñA+*Î²/Ş/*ÂÀÛ¿+¿ì¹TØòäMVêûJåôëCøDEÔ³FEñ;W°Ï+PY7*?ñ+*¶ÜïP±
+ÛØ.ôÕPÉÇAJÔ0-îA+*Î²/Ş3***ÅZJÌõÌÉßÚ×E8SFíÜûV9¾Õ¹õëñ/:GXçÙ02êÛ¹¾+P=è,BÄ3ÆÉĞ@KÉ
+GZD;9Jı¼**ÔÕ*Ú0*Rİí²3ÜY,*Jç4¾é*:ä·åãZÄÖ*Aí,?»°+áBQüõK*¾F²çYA:Ó÷S8+PùôÙJê6ûÑ-
+XÎ»éËPâ-âİ9**ğ?*Õ+Îå³3ÎÔ*Ú0*RHCÁ×ô³.ZH1î=Á:¶+Ê¯,AÁ@»¹ÊI8.ØBŞ²í8ÛG9/°ÂÁ8ØµÛçÂ
+º*úù+*ÎÛ,Z***F+¾-B:ñÏµEWDóê×Uİ+*¾Ó?*µ+ŞÖAåë¸´0éÜÑ;Líí1*Şò4¾é*:ğÍõ/WÈİ<Ñ,*öù.
+ÁîòéÕWİÜ**¾Ò?*µ+ŞVÍôº·Mæ°9ÊÄ2Ã½I**ËU*X-¾ºµÜA²Cç>ÖëL3MÜD*æáÁÃ¸ÃÙúè²CSAµÀç2Ïõõ
+-*Ş¶/Ş+***-*QZJÚAí³ØNìQ5ÛG*:Õ¶CåJâ7»DLÒûû**úW+¶**OÉQZJÔ9í´ØNì?áÛG**äÕ¾I-ÁWñ+
+ØŞ²Âæøù+*ÆÙ,î**È@ÍŞ¾WAX>ìXÑOğìGõÛ+ŞCÀOßZ5»¾0B7;Èü¼**æÔ*6*>VÌ+F¾+×HºåçğT½¯ûØê
+*Ñ;Léí1*Jé4¾,¾5×º+-°ûõõYÉ1²3æí1*Şç4¾-*R×º,-JûùÕã5Ø.ñõ-*Î²/Ş/*ÂVÜ¿+¿ìùùÕã-Ø.î
+õ-*Î²/Ş3***ÅZJÌõüü³÷¾@ßùû**>W+¶7*àFõõYÉéĞO¾Ø,îD*J÷ûé<2Û¸*¾ëE¯Öê8ÎõP-ÃTåÌÛøã*
+*VW+¶5*Ä»·ìÔµYÉLòıÓ-¾2?»;0éÜÑÏLQİ¼ëøóÛ**NW+¶5*èø²åÉÃàÛ¸WX¼ßê½üL?YÒ@¹í²ê´ÏÂ;í
+<*òïßLÛàWü¸JÔTÉŞıÜ+ŞøÕA4õ°³×óPMP5ÛR*:Õ¶CI9Æ»è<îİ¸*ŞùéÃàã»ÏØê¼Ñ;ÈïX>*.ñğå-Ğ¯³
+3êõXWìå²*õ³,Ş7VH6Æ»è<æİ¸*¾øÉÓãìGËWKßÌ³3ğİ/*±DJ²úÅUîR,Æé*Ûá16¼Õ+æGè¾-+Jô¯D9@*
+×Á*ÌÃŞOIêÔ@9ÍOYÌPùç<Ş½5*â²*æÅSîR,êûÔ+¶Í-æÔ+4RÄ9ıÇ0Ò6:Õ+¶Å8Jêî¿Ñ½ıR.Ìü¿ÊÅ¼ÕØº
+Ê@»·DëQÉîüW*ÖĞ+HÙ½Ú,Å<¾Ø0ÖG¼Jëµ7:.7øQDîR0Ré*ÕYóß×8ÚZ*;ıúX³÷öVøğ²ØÍ@95üËî¹ø*»
+B¶À<¼úü¼¸´K6ZÖ-µòFÔ¹++ÏÁQÀÍØDÖ¶Îã·İQIZ2-L8¸ùõ-**:Jé**¹2*İATO+5İĞÕ2Úæü=/:íËíÓ
+@¹õ²ÔYÉ%
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 206 di
+/mask 7600 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ãÅ-*A³3î1
+d
+/sl 60300 string uc
+Æîñå.Ûİ.*Sóıç2âï+LòûÙ*ZO-º´½8ŞëQMK?´Æ/FøùõA³ïÙùîGHLºùãVZÃË;C2Z¹ú*ÙíDŞ³º7°1-ö
+ëôÏKCU¹ç38ÍûÌ+8ıìD*Ú8,ŞÑ1îÉÛµ1°?,A»+ÛAA4Aõ.·ğê¯¼Àçê44ğUÅ¯ãÓæ<Ö½5*¾²BV*¾Ó9¼Şã
+R*İPM»ø5;ÕµÍë97¾E÷,CM.æ×*Øå1Fé*ÔÙAÇÒHU6JE¶,·á12á/íá,à-¾ó:*ÜEJã÷ó=UHG¶è5°ûöÛè
+°õÌPùç<Ò½5*Ä²*åòå+Æë*Ëá+úæ*àç½A4ì>NMK¾êµU02æ*×M+FûÓ+TÑ½EJRÛDJ´×+@.*Î.+LÅ/65.
++Z÷Ï,ÎR?>úæ¾×À¹+:éÃíÓ@¹õ²ØÍ@+ûÙ**MÁ>-*êú×+BÅ,¶Î+À¹µÁÁÙÆ2µå*ÖíÔ2:Ğ+ZÍ9Âµ÷÷ñ»Û
+ÎC*ôÕ>Jéæ-*Öûè*ÖåIZBH½HñÀÂ2647RU¶´*°»öÛè°õÌPùç°<ßQÛ1Ò61ÎåVÎÅEJî2»ãA*´ğ1LÄ2¾µ
+µÀíéÕQüLÆ*×³5+;á1êPTë×Ü3¼Õ¹ê¹øòM0B¼Lî²ößõÛè°õÌPùçğ÷î5ÈX-*ºï÷ÚRJ³û¯+Í¶Ü±+äL¹H
+æI.æº¼F2KW5Ç48/İÏQı±¾R»í/àQéMGöDíæ0B4ù+Á÷à-¾·ÔÚR3÷=,Ï.å,*ÒYÔ@¹õ²ØÍ@ßúÙ*JL-*2
+*î+JÇåÌìÄ-VÚO÷ñåÙ>À*0APC+Ëğá-â+9æKBŞóB+=Y³*èÑ/üR¾éğÙåñÏ¾éJÕÛºòÄ<NJ=-Î8CîğÅ°¯
+ŞKÑæğQ.ŞôÁÜ:æ»íÓ@¹õ²ØÍ@+úÓ-¾Fí»ÕØêÛÑç¼Ø.íÕ8*àFõÛè°õÌä½ÏORÜ¹³·×Ñç¼Ø²è×±Õ¼é*Zê
+Éñ´»ÕØêÛÑç¼ØÂÑYİ´ûøĞ+ŞVÍôº÷X³×¹QÑù²ç´5O6÷Ü+J99@è?ìğù²ÖôGËìÑOğ¼ØæÓ-*·ÃÉ·ô.ø4P
+Ñù²ÇÚUÄ¹ó**Ê±.üOBVùÌPõç<·õÌùà+:OÀëÁßØõ²¸Í@ù25DÁß´¸D7**íÛ@ßı8*¾íXÉÛ>+íİ@İ½Wä¼
+Díİ@µºDíİ@µºDíİ@µºDíİ@µºDëQÉW4*å²×O+Î;³3üõS*²òçòHW¼ı9öü³÷ûéğùÕãõYÉíİ@İ½*ºıØú
+ü³÷ûéğùÕãõ95íİ@İ½W¼ıØúü³÷ûéğùÍÂõYÉíİ@İ½W¼ıØúü³÷ûéßùÕãõYÉíİ@İ½W¼êØ.ÓÜ½*VX>Ìé<
+úıü+Z·Ï¶XÉí½+ô25íİ@İ½W¼ıØúü³÷ûéğùıÂõYÉ7LÉJòT**´µöEÇĞ?A0*ŞñïEëÃàĞ±×»;áßıÛÒO;ø
+ıT*JÂÈìì×N¶ÍUİB*Æñ³ÍÜç°>@EÉW6C8LáKWìPD2½ÏÈE¹@SSñçÕ0*àºçÁµØCøOŞ°ÉÉãUı¹VÉŞıH*Ş
+øÕA4µ±éĞÓÊHGøÃ+*GIÜğßEWÄàÌWJ0@ÙB°ÚúİÉØ.úÕ,*öü¸Ï¶·µ´W,ñU-*Lì¹ãÁµØ6ÃGÙ¾6V´¯â¶÷
+½UÑOZı-ç<6İRWäŞ°ÉÑãUæ¶SÉZıT**èµ¶WÀğU-*;ÜùSWìÃàÌWJ0@ÙB°ÚúİÉØ.øÕ,*ÍÈ@õL¯å@:/Wì
+5CXüíOWÀúÅ+ŞÛ0Æ7½üúöÛÈ*ÛÍÂJV*â¼7/Ã*ÀÜøõJÉ°Ùï**ÈVØöáCZâµE0HKWHÍBJõ¾+ìNêË-:ùBË
+1ĞO<*CÖê÷õ·úï;À¿ZK8Ñç¶àÓ7Pğ½A³3îI0*èD*ô-0*ÚÍÇ*Ú½G/±*°HøüÔOJH;*:ëÄã1ÏÇåÓíé¾Úµ
+üØ/N¶ìQ³÷ºàZ+ãöïİ½@¯A6Jì¹»º,õB:-ÉÛP0½IG7@S±½PQ.:Ê1>8ÖáÃ7Pî½A³3ìI0*íDŞ³ùõíÙíT
+,ê¼<,¯+îø³>>,2÷åİ+WØï×E9½ïÅ6Û·ñÙ9ÍAü´2À0Ş÷DÀÁ-:ŞµIÓãñ3MKæÎI0¶=¯Õ²*´1Ğ/Ë;GOåå
+è°åİÅÂ3Ç¼ÜÅÚC¾GÃïÛÙßNüõĞ@YéòÃÊÌ?±ø+ÁB:ğÎûßTìDJå?0ÀÂºÙ/ğÛ÷IJÉººöèÈ;İÄ½ìÖüæÅå´
+FI÷ïàQ¹ãÄ;µÜ»úöïÆ¸°áÉ¯9WDñÛ=É¼¸ÌğÙôÑØºH¯ÒÓ¿Ãñ·Àùû=3ñV-ÒÂ9ıH/É¯***,ÚIM¾ìJòJæº
+OŞÛ+âŞ°ÕÇ¿ÔIŞÖúŞÇı?9½¸´K6:0¹îÄ¶ŞÍX8²ÇEîRõ+¯ŞÂäùµúïà0=öİÉØÊJPQ¯åÃGD>±³AG+ÍûŞT
+íD¾ÂËÖK@B÷²5ÂùğY¾@ÛµçÅCùÌİıú×¾ÎOµ¼º¶äÈıAIìI±ÄÜ¼ºèÇÑ¹ïĞ;9QÍÚïîK-2F°èúéÍ¾äMÉõ=
+Äî³ÆGøO´İ½<¯ì¼C1Øù<ZçÜó6îöõ-NÎêU¸ÏZVñÑ¸Æ¿ãX=-÷7Zö3/¶ùÉØöë»öÌ2H¼é*±,¹Ä-ÁÑµ9ÊÃ
+ÒÕ94*ZÍKZ<æ¶SÉŞü¯*BÔ+@Z2*î3,æ0ÌJXùô»»Ä5Ü±7ŞDU3*¯V*S5Ğüã@2ôâùÙ@ßöá*ÎÄ?IõYİù-5
+îØ7MÄúÖ¯âãûüïàU±ÕIG·åëÖûíÅÃíİìËíìüÙ¯ôÆU=üñÃİê-îûÔ@ÍQÊØìÜNĞøVUà,ÜLàº»ôQ.û¶Ó¼û
+B¿MQJ·¿.¶T1CÖê³°ÎÕ+NICGL½;ğBHID*µÔ+âÔYY»0öWF¿Ê¯-<ÎéEü2;ÇâıĞÑOÇU¸*¾Ï6JùêLPÈ:J
+òĞOÖF¸¿Ä0Zü°5âøïY¾@;óãÊ¯-½;ÄXÙ¯öóéÍÅ¼×á8XºöîÔK±äÅ7áíë¶ûôÏ-úûµáÆ7AAı²@ÑÒOU9µ¾
+ÎßÆµ<PëÙµº*1óM-Jù/2èøá3,·KíSGâŞ°ÕÇ¿.1*úÂ,º»öLßÏLMK*ÑË³*èM6´Eì*Íé/ÌKZ<ı¹SÉÎü¯
+*ÎÓ+TIZ*É7´¾ÔÁÊXØùÓ+TY7î×ÔYÍÜæ*çY´¿VAÜİ³3Âİ0*óüFòáÏµA/öêÄíQYÜÚ÷ëüÖ¹îÊ?İüGGEµ
+6ı´áóÉ97RêÄÃ1Å6ûWHÆì×ÍèğûÂKøò½ÛÖ÷TàF»ø>5:ÖÉHûæ×-MÎÂ»O*=ÑùÙ¸Æ¿ãX=Á³İ*;û·*õË1ì
+õµ¶¶5çğø6:¹ºY3-Ï7Ş·ëŞC.Pğ½A³3æI0¾î-IÍHû÷U-ŞÌW.¾63JDS¯YØ.Bá,âC>QÙJÔ1ı-²ÇÃ5åÌG
+ôáäYæĞ=AXºöèÅ÷íôÄÙíAİû³áõG¶áçË19ü×òÎ+ğÜ÷òæ¿Á+¶VÉõ=0çÑIü,ÆÈÖ:×ÆBIı÷,¾Ô¼>IÍÖ0¾
+GF@P¾2ºÈùøî*û6VôúùR×:äåùÒÙ,Ğí02F<¾ö/¶ûÀ@7ôë,°Ä62PáìöMÃN4ı¹SÉÅ5¹Ôú¾+ºôøÜJ*»ËÒ
+-ö³ÄáÕ0ZKÓóÃ/ÀÔàHUUöû5æĞ4AüÚùıßÉ@ÛºïÜ¹ÙÄÊø½íëÖµïÚSM´êé=9ËC¶íÓ75òãMG7õáŞ¿IÓO¶
+ûÒ@íQV¶5,7:J´øQ<äİÉ¯=Üö5ÕæÙØ+ÆäX4-ÔÍÀVH@¹Ë6ÌH·>VÌà¼6Ë1RÖü±+äN½´-I.îúÀ@»´øØ°¶
+WÛÎ**ùÄIXêZ,æ¶SÉÕ5EúZ4Eæèå¹ÍõM+7òÚÁ÷OÉæ¯5-UÄ@?IE*Îü;æ<39Üú>¾â´F*Ş9UÌWıúî×Gùá
+ÇQI½F»÷í¼EñáÉ¿ùõëÖÜYHº³âåQJY3*î¼UÉõ=´6*9/¾ËÜù53ñï<¶H½¼è*E¯øM3<î¼É¯Å<:-ÉGıHIİ
+ºF<0>æ·D<ŞY4K*ÁÖã.²ÜÎOÅ»H¹·E4N+4æİïÅ5;ÇŞıXè<ÊÍ;*ÊºÓ+RİÅ+Çì¹½é<.Í3*Nøı+*ìıüöß
+¿-å¼İıå½¼÷ıé¿1õî÷ùÕ½Göòı?÷îßáùYü:6*õÙØÊĞàğM,ÆH+ÉW6CXLáOWÀöµ+**F,¾±@ZS-Æ0ıB5V
+úöå¹İIÊÌÕOZú0*ĞDæ=1:ÙWIÓã²>ôºÜğC¿6V@çõO·+ÕÎïĞ@+ú6+ŞÜM7:ø»6º2Ø>ßıİ+¾Gæ°È4É93Ğ
+Îã»;áãıÛÒOö¼?*:ä·õµW,îU-*ÏÛøSWìÃàÌWJ0@ÙB°ÚúİÓç<>íîØ.İÕ0*:ùL³C-ÉWÌ@YKáOWDóê×U
+İ/*Bôã·ÙìíØ²Ú¹õä»U*ZÛ±Õ0ûÒ@µL¯÷×êØÆï@DXè<Ì¼ûØóéÉ**±»ØñãëWÉè=òçÏOÍÜ>*JçÎCMô÷Ğ
+@µL¯÷×êØÆï@D8èĞë@ÈBğ»*¾HHVÒUÚãùØ@ëô×À7í5*RïŞHYÜçX>ôê,ĞZ×»;áçıGÒOğ¼ØæÓ**·ÃÉ·Y
+å<¸õ¼¸çÈ5-¾ÆãÉµØ6Ããä°5MÄÁı¹SÉâÛ°ÚU+*Şú¸ÅEµ.@ñNQIîôË@P6CÖê@9ñÒ@Ç¹õÚA,*û7ÉÙ·ĞÑ
+9¶üPEóÃËHä¯W¼ı3ÖITºıØúü³÷ûéğùÕãõYÉíı=°Îãõ9*UûÃ-Øúü-ZÙàJ.3<ûüëµÙàJN3ü9Ûúü-ZÕŞ
+:Íı-
+d
+603 100[1 0 0 1 0 0]sl 8 mask 0 309 di
+
+QP
+%%Trailer
+%%Pages: 1
+%%DocumentFonts:
+%%EOF
+
+%%EndDocument
+ @endspecial 3422 14652 a Fg(Fig.)310 b(3.)930 b(Initial)311
+b(screen)f(for)g(NOMAD)i(wizard.)1338 31525 y @beginspecial
+0 @llx 433 @lly 603 @urx 842 @ury 1809 @rwi @setspecial
+%%BeginDocument: figures/descad_2.eps
+%!PS-Adobe-1.0 EPSF-3.0
+%%BoundingBox: 0 433 603 842
+%%Creator: KDE 3.4.3 Level "b"
+%%CreationDate: Tue Nov 8 12:35:48 2005
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts:
+
+%%EndComments
+%%BeginProlog
+% Prolog copyright 1994-2003 Trolltech. You may copy this prolog in any way
+% that is directly related to this document. For other use of this prolog,
+% see your licensing agreement for Qt.
+/d/def load def/D{bind d}bind d/d2{dup dup}D/B{0 d2}D/W{255 d2}D/ED{exch d}D
+/D0{0 ED}D/LT{lineto}D/MT{moveto}D/S{stroke}D/F{setfont}D/SW{setlinewidth}D
+/CP{closepath}D/RL{rlineto}D/NP{newpath}D/CM{currentmatrix}D/SM{setmatrix}D
+/TR{translate}D/SD{setdash}D/SC{aload pop setrgbcolor}D/CR{currentfile read
+pop}D/i{index}D/bs{bitshift}D/scs{setcolorspace}D/DB{dict dup begin}D/DE{end
+d}D/ie{ifelse}D/sp{astore pop}D/BSt 0 d/LWi 1 d/PSt 1 d/Cx 0 d/Cy 0 d/WFi
+false d/OMo false d/BCol[1 1 1]d/PCol[0 0 0]d/BkCol[1 1 1]d/BDArr[0.94 0.88
+0.63 0.50 0.37 0.12 0.06]d/defM matrix d/nS 0 d/GPS{PSt 1 ge PSt 5 le and{{
+LArr PSt 1 sub 2 mul get}{LArr PSt 2 mul 1 sub get}ie}{[]}ie}D/QS{PSt 0 ne{
+gsave LWi SW true GPS 0 SD S OMo PSt 1 ne and{BkCol SC false GPS dup 0 get
+SD S}if grestore}if}D/r28{{CR dup 32 gt{exit}if pop}loop 3{CR}repeat 0 4{7
+bs exch dup 128 gt{84 sub}if 42 sub 127 and add}repeat}D/rA 0 d/rL 0 d/rB{rL
+0 eq{/rA r28 d/rL 28 d}if dup rL gt{rA exch rL sub rL exch/rA 0 d/rL 0 d rB
+exch bs add}{dup rA 16#fffffff 3 -1 roll bs not and exch dup rL exch sub/rL
+ED neg rA exch bs/rA ED}ie}D/uc{/rL 0 d 0{dup 2 i length ge{exit}if 1 rB 1
+eq{3 rB dup 3 ge{1 add dup rB 1 i 5 ge{1 i 6 ge{1 i 7 ge{1 i 8 ge{128 add}if
+64 add}if 32 add}if 16 add}if 3 add exch pop}if 3 add exch 10 rB 1 add{dup 3
+i lt{dup}{2 i}ie 4 i 3 i 3 i sub 2 i getinterval 5 i 4 i 3 -1 roll
+putinterval dup 4 -1 roll add 3 1 roll 4 -1 roll exch sub dup 0 eq{exit}if 3
+1 roll}loop pop pop}{3 rB 1 add{2 copy 8 rB put 1 add}repeat}ie}loop pop}D
+/sl D0/QCIgray D0/QCIcolor D0/QCIindex D0/QCI{/colorimage where{pop false 3
+colorimage}{exec/QCIcolor ED/QCIgray QCIcolor length 3 idiv string d 0 1
+QCIcolor length 3 idiv 1 sub{/QCIindex ED/x QCIindex 3 mul d QCIgray
+QCIindex QCIcolor x get 0.30 mul QCIcolor x 1 add get 0.59 mul QCIcolor x 2
+add get 0.11 mul add add cvi put}for QCIgray image}ie}D/di{gsave TR 1 i 1 eq
+{false eq{pop true 3 1 roll 4 i 4 i false 4 i 4 i imagemask BkCol SC
+imagemask}{pop false 3 1 roll imagemask}ie}{dup false ne{/languagelevel
+where{pop languagelevel 3 ge}{false}ie}{false}ie{/ma ED 8 eq{/dc[0 1]d
+/DeviceGray}{/dc[0 1 0 1 0 1]d/DeviceRGB}ie scs/im ED/mt ED/h ED/w ED/id 7
+DB/ImageType 1 d/Width w d/Height h d/ImageMatrix mt d/DataSource im d
+/BitsPerComponent 8 d/Decode dc d DE/md 7 DB/ImageType 1 d/Width w d/Height
+h d/ImageMatrix mt d/DataSource ma d/BitsPerComponent 1 d/Decode[0 1]d DE 4
+DB/ImageType 3 d/DataDict id d/MaskDict md d/InterleaveType 3 d end image}{
+pop 8 4 1 roll 8 eq{image}{QCI}ie}ie}ie grestore}d/BF{gsave BSt 1 eq{BCol SC
+WFi{fill}{eofill}ie}if BSt 2 ge BSt 8 le and{BDArr BSt 2 sub get/sc ED BCol{
+1. exch sub sc mul 1. exch sub}forall 3 array astore SC WFi{fill}{eofill}ie}
+if BSt 9 ge BSt 14 le and{WFi{clip}{eoclip}ie defM SM pathbbox 3 i 3 i TR 4
+2 roll 3 2 roll exch sub/h ED sub/w ED OMo{NP 0 0 MT 0 h RL w 0 RL 0 h neg
+RL CP BkCol SC fill}if BCol SC 0.3 SW NP BSt 9 eq BSt 11 eq or{0 4 h{dup 0
+exch MT w exch LT}for}if BSt 10 eq BSt 11 eq or{0 4 w{dup 0 MT h LT}for}if
+BSt 12 eq BSt 14 eq or{w h gt{0 6 w h add{dup 0 MT h sub h LT}for}{0 6 w h
+add{dup 0 exch MT w sub w exch LT}for}ie}if BSt 13 eq BSt 14 eq or{w h gt{0
+6 w h add{dup h MT h sub 0 LT}for}{0 6 w h add{dup w exch MT w sub 0 exch LT
+}for}ie}if S}if BSt 24 eq{}if grestore}D/mat matrix d/ang1 D0/ang2 D0/w D0/h
+D0/x D0/y D0/ARC{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED mat CM pop x w 2 div
+add y h 2 div add TR 1 h w div neg scale ang2 0 ge{0 0 w 2 div ang1 ang1
+ang2 add arc}{0 0 w 2 div ang1 ang1 ang2 add arcn}ie mat SM}D/C D0/P{NP MT
+0.5 0.5 rmoveto 0 -1 RL -1 0 RL 0 1 RL CP fill}D/M{/Cy ED/Cx ED}D/L{NP Cx Cy
+MT/Cy ED/Cx ED Cx Cy LT QS}D/DL{NP MT LT QS}D/HL{1 i DL}D/VL{2 i exch DL}D/R
+{/h ED/w ED/y ED/x ED NP x y MT 0 h RL w 0 RL 0 h neg RL CP BF QS}D/ACR{/h
+ED/w ED/y ED/x ED x y MT 0 h RL w 0 RL 0 h neg RL CP}D/xr D0/yr D0/rx D0/ry
+D0/rx2 D0/ry2 D0/RR{/yr ED/xr ED/h ED/w ED/y ED/x ED xr 0 le yr 0 le or{x y
+w h R}{xr 100 ge yr 100 ge or{x y w h E}{/rx xr w mul 200 div d/ry yr h mul
+200 div d/rx2 rx 2 mul d/ry2 ry 2 mul d NP x rx add y MT x y rx2 ry2 180 -90
+x y h add ry2 sub rx2 ry2 270 -90 x w add rx2 sub y h add ry2 sub rx2 ry2 0
+-90 x w add rx2 sub y rx2 ry2 90 -90 ARC ARC ARC ARC CP BF QS}ie}ie}D/E{/h
+ED/w ED/y ED/x ED mat CM pop x w 2 div add y h 2 div add TR 1 h w div scale
+NP 0 0 w 2 div 0 360 arc mat SM BF QS}D/A{16 div exch 16 div exch NP ARC QS}
+D/PIE{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED NP x w 2 div add y h 2 div add MT
+x y w h ang1 16 div ang2 16 div ARC CP BF QS}D/CH{16 div exch 16 div exch NP
+ARC CP BF QS}D/BZ{curveto QS}D/CRGB{255 div 3 1 roll 255 div 3 1 roll 255
+div 3 1 roll}D/BC{CRGB BkCol sp}D/BR{CRGB BCol sp/BSt ED}D/WB{1 W BR}D/NB{0
+B BR}D/PE{setlinejoin setlinecap CRGB PCol sp/LWi ED/PSt ED LWi 0 eq{0.25
+/LWi ED}if PCol SC}D/P1{1 0 5 2 roll 0 0 PE}D/ST{defM SM concat}D/MF{true
+exch true exch{exch pop exch pop dup 0 get dup findfont dup/FontName get 3
+-1 roll eq{exit}if}forall exch dup 1 get/fxscale ED 2 get/fslant ED exch
+/fencoding ED[fxscale 0 fslant 1 0 0]makefont fencoding false eq{}{dup
+maxlength dict begin{1 i/FID ne{def}{pop pop}ifelse}forall/Encoding
+fencoding d currentdict end}ie definefont pop}D/MFEmb{findfont dup length
+dict begin{1 i/FID ne{d}{pop pop}ifelse}forall/Encoding ED currentdict end
+definefont pop}D/DF{findfont/fs 3 -1 roll d[fs 0 0 fs -1 mul 0 0]makefont d}
+D/ty 0 d/Y{/ty ED}D/Tl{gsave SW NP 1 i exch MT 1 i 0 RL S grestore}D/XYT{ty
+MT/xyshow where{pop pop xyshow}{exch pop 1 i dup length 2 div exch
+stringwidth pop 3 -1 roll exch sub exch div exch 0 exch ashow}ie}D/AT{ty MT
+1 i dup length 2 div exch stringwidth pop 3 -1 roll exch sub exch div exch 0
+exch ashow}D/QI{/C save d pageinit/Cx 0 d/Cy 0 d/OMo false d}D/QP{C restore
+showpage}D/SPD{/setpagedevice where{1 DB 3 1 roll d end setpagedevice}{pop
+pop}ie}D/SV{BSt LWi PSt Cx Cy WFi OMo BCol PCol BkCol/nS nS 1 add d gsave}D
+/RS{nS 0 gt{grestore/BkCol ED/PCol ED/BCol ED/OMo ED/WFi ED/Cy ED/Cx ED/PSt
+ED/LWi ED/BSt ED/nS nS 1 sub d}if}D/CLSTART{/clipTmp matrix CM d defM SM NP}
+D/CLEND{clip NP clipTmp SM}D/CLO{grestore gsave defM SM}D
+
+/LArr[ [] [] [ 10.000 3.000 ] [ 3.000 10.000 ] [ 3.000 3.000 ] [ 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 3.000 3.000 ] ] d
+/pageinit {
+% 210*297mm (portrait)
+0 842 translate 1 -1 scale/defM matrix CM d } d
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+QI
+%%EndPageSetup
+[1 0 0 1 0 0]ST
+CLSTART
+0 0 603 409 ACR
+CLEND
+B P1
+NB
+W BC
+/mask 7828 string uc
+,I¾?+*7ö9úÌ@¿*ú1ºSÉ:ı*Xè<ŞÍ³WàĞ>K*úöüAïûIìùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY
+¼ıİúü81%
+d
+/sl 62109 string uc
+îı**:úü+ZËÙRÓ6,J.3Xıü+ZËÙ¶¿ÉÄîñåèİ½*Vñ@âñå±ÉÂîñòíI*Ôø5±ÉÂî±òİH*.öäµ+*¾åë,×¿,
+J9ØN.IIıó+¾¾µ0ı@*N±îCÙJ´Î2*¾Í3<úêúÕ1*×êû³*¾ãCÙJ´Î2*BØ.ãí,*ÄÃÖõäÃÅWîEÅ¾RìüD*¾
+ğÊW:ER.*6W,ğQ+Jİ8âÉñà·µWîGÁ¾JÜüD**ğÊW:ER.*6WÀïÅ*Şİ,ËEõæºûöØË5ëë¶ã,ÍØ,â¯óÕ+*8
+åê,×¿L*Şæ<2½-*ìÑâàÌı,»ÅFìÚöX1/ÅVŞÃ1**J*,?TKâßÃ51î,*úãîŞ7À×Î¾1;@ø*¿1ÅSÅ--NâçX
+5ZS,¾ÆGĞ*ÀİTÁ±+¶-1ï,òùáŞA¹îè3,1ĞÖ¿5ÇJ±+*¶:+=<M7õÉ¾,.BEÉKÚæÈF¼:øÎ0Ş×X¯JLM**äÜ
+İÀâü±DîJ*<F49ÜEF9.Vú°GÏ*ãÛ-ĞBø,*¼¼?E°â°8½¾+,»ï=@¶Ö*Îö/52ÎâX***»ß,ÅK¿¾H²¼6JÊI
+ºO.MÉ:ú3*ö¹ÁÕõìºµÙæDÚß¹H@Ş·á,Hº¶**î>ğMÀ1¾¯C¶î+,Î+Ä0*ÚUîï,:BMÆ/9J/õîß¿=5¾5Ş¿Á
+J*CÙá,¾é2?ŞöZ7XSL2Ş7FJîŞÕ.:ùî0ÌWJîŞãFFë*<EJ¾4ÀRÇ5è¶Ü.âÆÏŞ·F,*½Ñ?S6¾+*J@ö3.6<
+J2KR-,ìAL´ı3±4O3/¶½;,*¾±éïŞÕ09¼U¾0¼>Â*¿¾-ıDÏ+OÚ-Àö÷,*ı6OEÚõÎÖLüJ-*ï=@¶Ö*¾ö/5
+Æ¯RX**6¹ß,ÅK¿4L·A@ßÆİÁĞî;;6W,îA*ŞùÜãXùQ·äXSúà?=ÊîäÇ4Ê+¾*¿º8Ú³E+V+18*+Jøù+4¶3
++´üüë¸Ç*¼òõíH-ÂÆùEüÜèJ*À¯-ÖT*.+ŞÂ-¾íÕèîV*Şõ¾Á¶¿¾Áç.:ùL=8AŞ¿IN=*ôÙV**8NŞF,úHJ
+ÇM=Ğ¶¿=WÇTKêõ++Öä¯.CüQ<ë·´GüE²½P,ú´ë¾1BùùW**4ı´+Ğ2>Góèâ+-L¶÷,*AûÈôğØÏJçúJ-¾î
+=@¶Ö*Jö/5Î¯E/A*ÆËáXÖŞ¯RŞïôÎÖEÜ2îÆ2Ä@ßõ5*îáÆñÔB7L¶úZúì¹ÅÛ·À,Ã*8*¾ÖÜ½ıÄD¾¯Şë¹¾
+Ïâ3*õGL*M±¹ùPÊá¸üûÙÎ*ïà1ÚõÅIOıüGØ,6Ş9**±á-8ÓßGP¾íµîJº-2**+L+ÊÙ33¾Ì@ÂXöÖİ½-G-
+¿,FâÓõ*Ñ-1LZ´îJ3:èE3D*4Äòİ½5êïŞÌÄ+J¾2ÄÆÅT,îÛ¾,ÎÜ2,õWÖ;2-VîTûJ9ÚõÄK8Ò33*¾ç*6Ç
+ä+<Ié7âõíåØàKÔ·î.W¹@<¾M;D6*¾Äµ8öÆöL¯à*ì².ö¼*6?-=<Ñ23üå¿ĞÂ=RÙ¿@NJ=òÂßË.FÖÀ3*Õ
+T4À*+ÈöXëY0êë¹ò*+ò°íR**ÎÎÈé5GÖÈ,ÆŞâí*¾SÄ<äò-3*¿Í×ŞÏ.¾ŞAVJÄÓ»î+ĞôÖ5@¶74:ºÖ°â<
+.½<1+*MÉÎù/*¶Îİé45¸=9/2ïÔ<½ÚGK¿L*9:ŞéìÛ·É0¾+*ä7*¾CÃ,*6ÓìÛßÃ´C3Ã.À8CJ=,.»L/ÌE
+Ş*@²U3*UNŞÓDFá.ß7XºğŞ+ñäÛ2**µ4Ã=Ö+¶ÈÊXáî**ºã7ò¾*±BÉ*5*A4:JîŞÂŞNà¿<¶Ì..Î¯±JÀØ
+Ü¹µÂ+,º÷°¾**îŞ>P3¶õìĞ-.*êòË:ZA+¶*<;ŞÓ-»î=+*2Ñ/Á*+P-²-EA,ZJÛP,¶Ié4Õ:ÅÃ*8:ê·J,
+îDOJ3Üº3/»°9îóËÄF+ÄÇ¿·É¶Â>ıñJSFµØ3,N¯M¾¾ÖÃM3RU2EŞúÈ.2*-××A@ßí/RKEµì²Çß5**N+ö
+XâÔ¾+ğÕö=*Z¼/K3öÀ,ŞíU@¶/+îõ/52¯±9º¾Ê?ôÀ/ÌÁÀ,Y1/È¸ŞíâK*Şæ<î¼+*H´±Èê¶8áßÀ÷*ÑQÓ
+==¶Î*8**ÕÙ·ñÌG*/B¹¹óG+*ÎLº¾6F°<¾WÊãËE¿*Vá-8.*Q3:ê´º+>ÂT2**ÌÒßßPÎë-ÅÂLö*@äìÜG
+J*Õñ.¾VFß²ßº¾íP=JDìÚUC<LµI3¿-Eî**:Ù»EÌ*2Gµì4-ZØ»Ù48î5µìÚ,.Rõ¶Î.¶¹´**äH4,Ì:JÚ
+åºù?»Î1ìO¾ZÙµå,*Ş²*´ÙGµ¾*KÁ=*åØàãëÔCJ*ÊÙÕÇ*°P-ÒÕëÙ·/îğâH86ŞFM*ÁêÜG¾ïâWP*<úÍ-
+OïÚ·ù3ZèôëûV¾4×µIÈ¾-UB±JE¶ä¼¯3¶EO,+4Ô/ÖêEµ.2?ÜË*2İßY*¾/ÜÀéé=5*¼9×Ş×-*İAVJÂË»
+î+°ÔÖ5@¶84îùæ<ú¼=1+*MÉZù/*¶ËºGè¸ÅÇÏKääÊBÍÌÊŞ¿,Êö÷ëØK-*¾Õ´*.*RëQVŞ³õËÆÈÀ*±²Eë
+9,òº°,Ì³¾*W³AH:*÷ÑWùFïÃDÊ6*L+*Qtî*8Şô3Ó·,ŞCÌ:Ø*²Å7LÕØ=.¾ØÜîŞ9P.Lå¾éæ¾R,ÆÎ°é-
+ÖÖ»ù¿*Q³EëM+*¶î3Ñ.¸ù´æ+,î»>.FW¾*-ÒV¹Ú8à³M2ŞòôëM-¾*Ñ+èÒ´ê**ºWá¶Õ?8ÓôÔ**ÆÔ7Î.Ş
+°DJÍìÜË²*.ÓBQ0ÎÌ+<FÖ³ZïàWTTğùÍ=O3Ş+MéT*ìU3RU2EÎµ**ö:Uè-ı¯51.ŞÓ<JÓì,;J¾E1O´-7
+:º½İ**°Væí=4:İ÷H°¿±1*ºYÖ¾.5ùŞ-NêZAVîD>ºµ¸RæÏÁÀXõ=·2*BØ.ØY*¾AÉD±>ZòÈ¿¯MÚ2¿òâ.
+8>¾-*Î³´ëØÑ0:6XÅğ¿Í1P¾ÖPT>PJ°İFüLº,²E5¾Ã.+ËÛè¿ºÇ*OÌÓßº+â8ñ-+P3,8ä-,8Jôæ.æ¸Ì*
+ĞÄ5J**Òä8GHŞ±Q2¾Ò´ëÏ¯IöÁ2ÀZ¿Ç*1*Jèê×;.Z±À4:Ë.Â<2Ğ+P>ä@ä;JôÏ0¿:ŞÃ:¶ëØÓ4Ù°J¾7J
+¸â+²GX¾×±=/*ŞËTÂAÂBÚê4æDH¿°16:²ç+*:D¹´Ğ+<F¶¿=-Bµ¶L:Qì°,:ÛıFS4Î»JS±åü6**ÚKGQ<
+îŞ4à2BìZ:***àWN¾OF:*×S/ô0N¾*:¾ß»B°Uæ*×éù/*:é0SIÏ*ï»õ/5ÆæºY**Â¼å,<6ê-P:ZÁÛZ¿á
+Î¾ÚåKCÅ¹;Ş;;6WÀêA*Ş?Ì6ÇYĞEYÌÖ8Dâ¾º°,14Ş-.ŞD¹ôèÂ,2U×á¾âQêM,2ùX++0Ä.¶´+ºŞÄ»°*2
+Ì@´êC/.¾××U2ŞMÈ>SÄ.J+Æà¼Ó0å,Zî:ü:îJ±å@:¾Tê1ÌŞ¯M2¾<ôĞ**¶ÔÖá.B0EôKN+Gê¿-MÆß,;.
+1ÈŞã.B1EôÇéVøê×İ.æ/EôV,*¾-ÑBµ*ÖÅD*ô=KîÖ+áøñ?´İ+N¾×=18EÊ*Ş°åP?*.¶Ï7ñ/¯8AÙLZ±G
+ÍJ*-ZCOÎÑ°å0@*ÊøÀ=-Rµ2Ş:×±9ZF2¿ØÎ6ıñLGúË*Ğ°åìAŞ/ZûT,ìV,äÌGØLDñ>Ôñ¾*êTØ:**°:Ä
+X3ÖË+ÆÚÚY**÷ÁLì3/2ì·YÖ¾JÁğ,**Ø¹@JŞDÀW*:7¿ÛZ¿áÎî*ÏÆÑËEµëğ.4¾ÅÂZ²3ZI+*İ1ÏH´Ñ,Ã
+ïKÊâ·M,14Ş+*ZÁ2:6+XæßÕY12JäÎÛ=¸øøA**Ğ.ğN,2Ş2Eôé×º*-¶ä22Jç³ùA*,âï+Ú¸Å*ÊX-*îN7
+8´,û4:Ş+FöéÕQ.Z<0²*,Şè2,I=*ÄSE,.ÖèYá>:JÊ@+:2ÙÕ51È/P2ä*ú³Ë-,VÇ±J*IöøóÅ**¶ïÀ:.
+2Î´;TğÂDì.¿ÑÌ<¾-II,ö*ÑU8Fã*+àR¿**¾×Ê¶Â¶Ä·ÁÁWKUYY7Í2À3Øò**:Î<P¾*<9ºßË½ÂEF+Ä-C
+¶:Dî¸¼ı·Ğ88Ó¿*Rè2B*ğ×.FØÂC*PééóæB,6Bå°¸Yí4ùğÍÔÏ+,õô5*JÅÇ7¼L+°Eì5@:B¿Û**¾C;5F
+0/À3Zô¯*Ç7î?;6WÀéµ*ŞßËE@37@¹ÜÎDéÔGL¿:*9**¾*-VÒøUVİ8Y¸:*8Ğóè,ãZJJÀúß·¾ŞWY>Mß¿
+=÷REéU,ÊT9Zø,BRúT7Ì/Ş7FÂ5öÁB4ò:FJ*ÓÏ,ÌôÉ-TÂ,*JÓÙ´ëğÉ-3ê>?ÔWA8>5Â:*é1ÈJµÔ×Î*4
+Â;1ìØß81äF.*Ş¿SÊÆ6³F5,YÊ4Ã+;<ï³ûJ8À5ê7Ä+0Úæ¾·ÄÖÀ¹W3á*Tå=À@Q3ZMH1ºN6E¶¯9Åìî*B
+8âŞËçâõI1è¿YİìTæ-.°èËÌNŞ×OFR*RCøZ,îJ6ô²*à´ôé**´±´¿êJ;*Z²3VI,*ÓDñÊ@Q<6ç¾DÕTÎE
+?Ş5Ì±×¸³Ç+°N÷/¯¸Î¸á0æ¿,ÆØÖY-*ÒË×/°-Ã*¾ÏORÛ×+ŞSY5J¾ËF2,ÆZÒ±ú,4:JèüÃ:BùúEßêÊW:
+ER.*6W,èÛ7*üCD:04îJÔ·ÈYZ**JGÛ»9.âHıP:E±5â04+*MÉZøÕ1*:úØ,ÃVßCÙJ´Î2*BØ.Ğİ»*2ß°
+í,*2ÌÙ/°-/;Wøæ<Âüü+Z×ßBØ.Îİ½*V´BÄ@İ½*VõBÄ@/KõíI*@Ø5áÈíİ@İ½W¼ıØúü³÷ûéğùIÃõYÉí
+İ@İ½W¼ıØú¿³SÙUÍ¿ŞòôS²+C7î·2*´ÅÜæ+Fß*Å½¾³EùßJ.JSñöÁÒXŞË0**¾*4ØºIÌ+æHìï²4Z¾-LÜ
+/½³7²»âëAñ¯Öğ²8HKWØĞ2´ÎÉÄ@û÷éèÙÍ7¾ÒôZ¾ÙHîè×ŞKÉD¯²,*åOæĞğ»ÛØW<ÍXé°Úáç>æéÌÇLCÁ
+úÏ3ÆÑ+ÌĞöáÒOÊ²ÅC5å±ÏãŞEéü²¾çõ»¾ê0:º6JîÖÇ´J.ÌÍÅÆøŞA2â+âñŞëÉ3K×Qî¹´,ıÒ@Ó³,+ë0Î
+·RäU°·*ÂRÒT62=Z-åîã>0¾VVT5,**,*0ëÖ¸¼J6.3Æ»ö¾¿é:LòŞ-EF*FòÃ¹K,Aà*ØİJ,õìG¸¹I6:K
+çÛ¹İ3O¿4Ù¼I42Ò0,1½ÚYÆî+B¸Ë+²µí8úC:èŞÀF¯Û¹½î/-ÂÎû+KÒ?FÆ,óìGE=ìÛİÎ,æ¼Xğæ7üPWT¼
+,N±õ+åÎÊUCUCÍ0°òPô¼VVµD¾.ÉÎçà,7QçÀ*ê³Ê+*9Ø¯°PØÈü·àÚR+¹ñ¶ìôÑ1TV¾2Ì:TXØº;0Îû/<
+¶õì¹ÓBø×J+H?ñ+öLÙã;êÏ¾îôâI´Ç*VïM4NÖíÚ2?îÇÖÚWËµÌ2æYºKçğ/KFÇÀ·*ÀC¾÷ETZB-*¼û0-Ü
+PWøôêÁêïì»Ú*:¶ºÊEëÜGå*²Û¹ÅG-Ú´DJú*³µ0â/W0-¾ç;+>E¿×Ï,4ÏÀñP-NWä57Ş¯¿/+**:è;.Aà
+:Æ:´:Æ¾²=JCLŞùKWE*âóë/Áß15Àäü2îÀ,ÛÀ/4,V¶çÛ¹àüZî¶-ğCJó5YBø2À2=:ûÎHÑOLD*ôÎÀÆÃÎ
+,±DŞòôµìîµèĞÁ7ŞÏ¹õÃ-ú49-Ë1ã¾òï×¶NJÚö0ºİÑOæD8æAV¾:Ş°Ñ+BÁôÅLßJ-ÚîP.ßÃBÚK,<E*ğ4
+0ÜüS*4Ñ¶PYT2C*5L8îô½IVÖ¹K¿¼@±äÂUÔ*ÕÛµÅÜ±ÙR°<.*ÑYºß*¯2àË±6ÁÊ-ÖÇ,Êµ½L/MÉµìîµè<
+Ï4¾J*¾.ÎZ2·R@ÀÔ83<Å7ÎÌ+ÂİÑOÙD*Tä-*îúÆJ÷¿ö±Õ8*:Ì¿Ü2ÁEN*Y9æ°F,H@R2¿JO+--ÚûíW2Ú
+Òºü66»¹Ä.ÂMY±áDè¶´äßàøÀ+à:ÂÙØNàÔ²½M/MÉµBî³èĞóÄî3ï**TBJßÉØ.>-ú.×=Ñ²Å²ÇR5ŞBTJX
+È¸NÉ>êÀéá*LÏÀ:¿5¯2N2E2NJÔ/Ö6;îÈÀÏ/0Û¹õ6O*ìµ,À2²Lù<6·ùÃ.ÄÍ7¾µN*ã5JøÇA.7.KÂ32O
+ßXO¿ÛüJZùÎÀÆ¾Î,¶D²÷ä7ÜPWĞÁ+ú8Ö×òGÄ>»RÉØLSæ15îºRÉÜû@2EMıò¾éÒŞ+8øæCÂâêÊ·M2ŞYÆŞ
+ÃB¾ôAÆŞÛ¹½/Mèå+/öÓ¾1öÈÚö:<¾ûË¾*æµZ·Ôß÷Ü¼Ë·à1ÔØùâ,Ä¯ÌúíÁ**÷ÇA6°Ú:ÂES¾Ë½LKñú;?
+BÖ+¼Ì¼ñ0YÑ@/ÉF18¾60ZôÎ@ïL@0ÒúVT¹OÉ6ÛG9/°ÂÁüÆ@Û¹éäÂJŞ*åäÇÁ5¯¶À.ìÛùñî²>¾ÀÑ¹õ8ò
+4-8@³ÌJMÚç***.¶:NEYÜ»ùÇK2Ú*ä6=¶×û¿AÒİH:ÂØÄÈ,ÁJÃÛïÏ+QÒ*ÅAÀ*ßó=6öD³C¿,NÌ±½ÎñÜ½
+W¼ıØú2³÷ûíŞùÕãõYÉíİ@İ½W¼ıØúüCZÓØ.ÓÜ½*VX>Ìé<úıü+Z·Ï¶XÉí½+ô25íİ@İ½W¼ıØúü³÷ûéğù
+ıÂõYÉíİ@İ½W¼ıØúü³÷û-àùÕãõYÉíİ@İ½W¼ıØúüáîûéğùÕãõYÉíİ@İ½W¼ıLöü³÷ûéğùÕãõYÉíİ@İı
+3ºıØúü³÷ûéğùÕãõYÉíI+Ü½W¼ıØúü³÷ûéğùåÃõYÉíİ@İ½W¼ıØúü³÷ûµàùÕãõYÉÛWÉ
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 0 di
+/mask 7828 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ıİú0Ü.%%%
+d
+/sl 62109 string uc
+Æîñå.Û½ı*ÖæX6U¼ıØúü³÷ûéğùÕãõYÉíı>Ü½W¼ıØúü³÷ûéğùÕãõÍ2íİ@İ½W¼ıØúü³÷ûéğùYÁõYÉíİ
+@İ½W¼ıØúü³÷ûEßùÕãõYÉíİ@İ½W¼ıØúüYîûé°ÑèĞE7îW¹õìÙE?+PI3¿Ö*öF¿Möôå/¸·JßËÍÇNÁ³İH
+ğôÉ;¶Ó3¿-¯757*µD***+82÷PÀµÍRHP.,2ì½.û6*·PQ·O5¹+Éö4=¾À@í·ÂMæêÓ7FCÉ3Ù²0ÑI²S4.¼
+*?Å*SXUÍŞ;F¶CTÂÀ¼6Ì*îA1äÆôQ9GàïP.8â;1ÉĞOåùø³åNÏÊKHÏºÊ2.:ÚıÆÃé<1Şù¸³ÙNHãRÉQä°
+à0ÌÄ6ò=W<:°ÔÍîÁçÇG,û4,ºBÄ³Õä*òF²CÍMFNĞ?èğRÉ³Í»,İNº@¿2FÈ¾Ëé°RÀ³1·*÷Âé²Ğ³°îŞ¹¸
+Æ@ÇS-/É@»¹óù¸BRàÏùè4İ3O¿4Ù¼µíÌÓñ-àJÆ¾êQ4V¹ï16Ô-:ëµÏİÖÀ·-ÄÇã¿?°Û¹½+0H***+Ê0*Õ
+¿Å27úC:0@â+¯å¼X:¿²1:*îN@@TÉäÛ¹´PÌGPãáÏ×ÂÍÊ2Ê?ÚJÍ¶Á-M·PÉĞÛø-ûKë½G39JåOú¹àKM5Ù
+,ÉÆ0ÒC¾´õì9Çç¿Ãöôçß×¶:RŞ*¼D6YëÙA8Ş8¸õ8Ó+Ê¯@QVîŞZîß<1Üæë,ÜÊÆ@ëñ·6LAWğ°>ÆÀÜÖJà
+·=åº*Üæ´·.éìÙ=±ĞÓòÍ=äË>Öôµ-î»Ğ0ÕÔJáæ³êäÃóQŞŞ¯0*úØç*µ8ùÚë=¯·ÙDíF<,øĞã-NBF¶,/U
+ÓOÀC¾÷UÅC@·óEï=1Î,HİÃÊ¹ØºÏIÜÛì*»Û¹9Ø*Ú¼àK¹ÑOÀûäÃ2ÅM°¸Z;ÜÛÖ4OKI²:¾ÍÌÅMùô-/Ş¯ì
+Û5=²ä,ÂÛZ¿-Á¿Rê<XáMÕæ<Ò¸+*=EâúÆMMÉXù*ÇëÛ¹½@áÚÇÕ7*ğøôÀ1µQ×3Ê7=J2?F9/ZëÑ0ŞúÂ9X
+W+ZGÄ-ÖÍ¾ß2ÓE7:Ó¹õê908KJH-ÒXØ>VÙÅì+êÁ-QÎîèJôï*îıïåÊW2õNÅEìFäÖâÓ×ÂÍF¾4öFR:°ñ*
+°èRÌçğÏüæ>äÚ¹Õ>ç¶R²K¾Jâß0*ñàUÌ¿ÃUÖJK¾/AÙµ9°4ÛR°¸Z;Â¹+Èï9¼V¾çÁ->ìXÆ¸°Jºù76áVÀ
+/à3À/XZ5´íX±*ëUøÒúØ?;WÀı1*Î>Äâ0ŞCĞÃà0¶ÚB2´ÅÜöóÍ,ÎBÃ±øôÎ³Ú1XÖ*K¾ãMÉÂµ*ÛQúîè4J
+ñ¯DJû.68²Q2>µÅÜ±ÙR°<Êı.WÈäëM/*óß¿=R2Â¶K:ùZ¾=ê·õC-,²Ğ*ñÕ8±VğèVàQXæ°ÎJ·ìJP7ãCW
+Hè9OÆLøë0ÆHğÎ-ØÚÃÕF-5IÉC±à?U¾ñ8ÚI<Ñ-5+°É¶ßäÆ49LZ·.¼?J/V.Ú8±3@2±3@¶ZBµì°GÍÈ¯Y
+<Ğã52B4áë·×¶CŞòÕOY¾±çĞ¹õüÖJK.,³µU-Jãº**Ì9WÈñ5T:V¹ê¹äHÚÀ;8æü*6XÂË¹õ8»Ë7éDÌ/CY
+æ°6MâŞîŞÇVFGÈ7ºŞ;WÜøÊ·*;´ã¿ÁF°Çá±3J2>2Ï·¾,³>±1Q²÷R½Òô-O?ØÆüÆÁ8æğ@Üğ8VÄ+2M,àÍ
+ÇSW.ÊW¯+JMTÚDJVY²YN7H¶±ä<V:ä<VîàZìÚãX1:¹Wøì@¾.Bûø¾ÆÖÛ¹õâTÊÔ¶ØŞÎµíÌ¯*ìÂØ*Ä¯,ğ
+ĞÒÏOòìûÖ:ŞÅBçØ,ËÍWKCW¾Kö2/Şûò¿ôJõìå0ŞEÀ¾ğ/:ûÈ@11ÌâàL³çØİüJî×áÊºFFÉ5R3>2W¶¾,³
+>±2Q²÷R½¶ùQÓè¶éÜ»¾J²K¾J3àDÜğ8VÄ+æL,áÁÊLA8ÆSWÂò¼Zü+ÖÃÒö×1Æ×èÌî4BÃDß,ï.ß,A0ñäW
+¸Å@Ë¹õE-ÂĞZW>ÆÄÜÖ¾ßç41º¾ÕâÃ1;ßìÙí,¯±òÍ8¶GÖ,íûâ4ÏĞ-A5¾,´íüè4È@Í¾+¿7îñÎÙ¹õH×¾¯
+Ê=ıM9,J¼OÉÁ-QÎZÇØòºYİìú=4DåÍGäâá×í2õìYJãCâÒÏÊKÖÍ+JT7**¾9óÅ³Õ¸¿¾ïä5:¶J2éöÈÉZ¿
+Ê=¼ZÓûCCÓÃîôíJò6ë¯À¾*Õ¼à+Éë35:*DÕÑF¯¿=Á·ğ@ûMÉĞÛÏö5¼HÌÄ-UP¸Y»ïJÕBîZSñôëC¸¹H4â
+21û¿?öôİİ7¯JKÌÏ;+1ÔZRñ¾@Í¾+8Y.+,ÆñXÜûâ:.X*±Ê*ÚºOÉÁ-îø/>VĞ@C**+:R¯µºëâCÉ¾éõäğ
+,TÌÎQGæ6ã+W,*+*<¾ÑMû¯ëÕñ¶±°îÀÁ82àDÜğ4VäDò¿:ëÈ¹õüÈÊ8æĞ°õµá¿F+-,ºùV+T¹õ8MÉ-Q·à
+,Q0ñâW¸Ä@¹Ğ+ìè°Å»OÍ¿O,»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á»÷ü³·á
+»÷ü³·á»÷ü³·á»÷ü³·á»×*W<Ñ+ÜGZ*CÛû;3¾åµ@îê+Jù¾¿-I¶°/=,²»âëõÙîûéğSWÈ,¿Á0Íç<G½W»
+ÈØ6T*QYãK1æĞ.*î,*ôú:S½ãOÖ²·W<:°ÔIÒã>8îÖ@9µŞü³SYİ¼7±*ŞÏ*¹¼ÆÒİğ<VØÚ@ÇS-/9¶ÏTİÕ
+Á¿<8å,úñôEÏ>R¯éµõìÛ¸¼J6.32ÖAHÜĞO´D*P@1ÔÆG;**,*Jù-XROÖ»WXG¶=ıÈáZçíØ²Íå¯2GÄæQµ
+YÄ,Sæ55¾ÂñÃÌ÷*ºÏëğ2äÛ¹QäNUçIQÊ¹VÉDÄXá´XV9TZB-*¼ûÀ5øÀ@ÇØ5çM+ÚÆ¸P-ÚÊà*2ÖB@îÊÄ½
+FWÀTA*Z²ÇÊ9·²²Ç²9:CúRÌãB¿ò³-¾ÚÜÛîßëS´,±á.2L/åå600ìæĞ°óìGä*ÖÁ40óÌ¶ß?VVç+8àã31
+âJÉê¶*ÑëÙÍ?:PLNÖ6OP7Û¹½PáYÌ@ßı-*BØ²ëã0ŞC¾Æà0¶FúÆº0ÖGÜæÕ½4¾à>ÌçÙùÔ+>VÖZ+À*Z÷Ê
+¿²Åø¾@³ç*ÔË0æºF1RİÎã=X2F¶ï4U°¾²²÷ÄÅíæ<µÅáSùôØ,Ã+-ÀÏ+à6Æ¹DÜDøPÅà9¾@í¶½¶;ñ°ï°¾
+çY-6W4Ì+Ä@»ùôÅ/4L:R¹ÙD*Tä-*M±æ»¹Ú+.Í-ÎÈ,ÈÕD.åÛÎOïìû+Aê³µÌ¶ŞÃÙÛîï°ÊĞOW÷*µï5¶0
+W,àÏ+â±*íå²º±òËè1¼.Wøì@¾.Bûø¾Æ¿±ÀVÃ¾CıÊ@BòìÛ±6Ş¶Ñ@¾¯Ê¾Ú>ó¾@3¶-5å+ÂA>M.Q²3Ì0è
+/AÆôëÁ5ÔXÉÅZîÀ@?÷14QÌ¶Hº,<Å0ÎÌ+ÂİÑïëİê±ÎOí¼=**ÑÙéL+ÇÄÜÖ¾ß·M1º¾ÕâÃ1;ßìÙí,¯±òÍ
+8¶¿ô1ÖŞÉ»Bç×ğ¾0°8;FÏO-EŞåçQÚÎ?²SÛ¹I@1:²Ñ+¾°²*;¹ĞûG7ı½ØNìÛE4DÑåáç¶Zãâ<+í8ò4-8
+@³ôìÛMµåM¿6ïÎÁô1ÖŞÓõUà*ÀCJÙIÑOGÜ2,.Õ¿@AÚRÀ´ÎO-Ê¾+àÑ+ÜLSæ15îòìûK7½ºØê¶ÛÇÉ@SùA
+²à+Öç*5×BÎğ±NŞK7½ıØÚ5WH·*ÈHMâĞOöºùÊúå³3½A70M÷õYÉÉÓOáË¿Å×ñ*íİ@µTÉ»=Aíİ@İ½W¼ıØ
+úü³÷ûéğÔ/±3Øòèß,»øÒSÍZ¿øõYÉç3ä8²çOåâÛÜúõéÓÑç@O½ıØÊËZÔJÉNøçú?Éæº÷ïJO½ıØÊÊZ´JÉ
+XGäúóÓÅ?EAéûEú¶î<ÓIÎ+µDŞÙôìÛµµT,Ê¼À/¯+î·,úJI-*R**°ñ2ÀõYÉÑ*8@õ÷èÅèııIıõYÖµîÉÕ
+HÏOS:¶ê<C7Z¸>Ş¿*ÎñÕÓİ×¾±1¾ë½0Rùø**FÍL2ÔUÉXGVÎQÍDó3@RİH¾ºKØÂJéÉI5½â°2¾³ì»¹â-F
+òP-*;±»ùôPO¾çÇï-û6*÷üLCWW¸çC·ÕAıû¸ó²ØOçùÒÆÅMÉüÒºõ´ııY´ÅíSôİôëÙ¯0½KÉâÒ¿Àá*¼¸¹
+óù¸BRàïV¾½ì¼=È,?´ûôìÛUå1Â¿:++ù4OæH²÷Ş=P2ú¸¹D8ÖïAŞò×¾ÇS³D*Ú0;LIùÀóç<Ç¼D½ã<DY¼
+FRç5JÄıOÉèûøİııí3*ÎıÍíÄW±ó=ONñBÂHEòëÉÏJ4øà,3á,ú±ä-îÃ´ÉMBíÜGC=WOıF+äGZÂÎã-áFÌ
+ÒêP6/ËZ¿ĞãSÂ¶*¹ñ¶ìôõÜZ·Øòè¯äYY»V×·×ìİßÅ-ASû+9öôØËûZ:,ÎÒçPÁ³İHğôMP¼Ø-³DûQÉLõé
+Ú+*êH=Ê7æĞ?Û8»î5ØÂä¯İ´ç÷ÇV;ñM87W<ë-N0·Ç±C08»ë*:ÕµAº¶¹ÈËŞêB+ÀRß÷Ï,êü±*/5,*Şà3
+,øûJâ2+BÔ²3Ø9IBÑ+Ğ´½ö/ÙÑO1ÉùºóMóııÍıùAêEöãU9ö¾Uå,1WèÂÏ3*FÑÓ0¶D@ÛRMÌİ¼;ÒÕì×1³
+S>í8EÈ×*â´áÕ.±-ØòHÑEYúıı°¹úÌ°ı·İXë¯ñE²Q°-î6Eò¯-FììÛ¹Í+Şô¾?İüS*4Ñ¶Pí8Ø@P<.+@A
+Á×Í+Ö°8**İÅÜæê*Æá.JåĞãSÂ¶*àêÛùEYÖKWLÎóãÍÃıJÂVñìÙMÔÈBõ´-282JëïÖ·Ş+÷;ŞZ¶<G2İç-
+Ø>½Oä6*îõÏG2ÛÊ=ÍOùıI±ÛÅ.±-ØÂZQ=A¼·¯ÀD½ÛØîÊÌÍæĞ¹õÌÉÃÉ+P½?+81·+ÌOÉÜ»ùá,/;2ÒGW7
+*óZĞZ¼¼ÒŞØı6*÷¿QÂ:*ÖÓ/Ş±ç<³íXòÃ-ÚùÀëçĞG?íÛë5GÄØµíÄCº÷¾78*8øTOéXëÃòÏ*XNGÑ+T°·
+*Â4ÃTÃ+=Z-;9¯¾¹õXGI:0À.NêÙ-2*ÎP-¾é:ààö5Åìì1-NR´íÌ¿I-àŞÀF¯ÅÌù¾@¿âÒ±2NHØ-÷È½ô*
+JõÕ½»ÌY÷èĞU1·ÚöíĞÁ½õê¹İXWDàÖÓÍ>ÏµíÜÙ/:+Pİä-L´õìG×4-UÌ@BòëÙ±6¾EÏ@¾¯Ê*Û>óºçWæğ
++ßÃ:Îë0NÄ/¶²+Pµ7:Ö¹õ*ZçĞ¶õüä5ÔRÉèûøİııí3*¾ıÍíÄWñ+ßîôà,Âî.Ïğ¾1µF¾çôëå4öêË0Î°Ô
+°H7âJÛÇûÖÖü8-º¹°PØÈü·àFí8±*ŞÕË0¶M8åG*ğÛT6ûVÎ¾Òë»<@µUñË=,øØÊµMÉì»¯ÌŞ½ñÜWEá¼Ûø
+òÇ2AI:ıT>í¼=**ÑÙéL+ÇÄÜÖ¾ß¿M1º¾ÕâÃ1;ßìÙí,¯±òÍ8¶¿ôM/Î»æğ¿Q6Å÷±?ÈÄäæJ*èø¸+SËÍğR
+Ø6O¶ô/ÙÑOU¸GøŞA²3Ëá¼ëĞñ-Iîëá,5,**JÒÛ¹õ¶F·õXUÎ26µèÛ¹Ì+æ´íX¸02¾6í66:ìÛ10Îê.äÄA
+RÂ4ÌE7Z¸B¿Në¼ØÁ²=JCŞ,ùKãüZî¶*ğCJó¼ÕOZ½GØ²ëï´ÚF°ÇWÕ@6;KßĞ9öí¿2øôÄ,ÊìüºF7òŞÈÇÃ
+WÜGæ?0FVèÚÛµÅìÌÅ,CàK½Ş2KÉ1Ä·ÀŞÑÍÉï¾Ë¸+²éôB½F2²¯ç°â*J½ô/ÉÑOõCÛ÷àııAÙáõ>ùÍùóè8
+EİÏ,í8DŞ/µØµY39î@¼+åöÇÎ5°D¾òïË¾ÇZ,°D¾ò3+IÛ³*/5@V¾J,V¼JÉ¾·+2Æ»Lä4»å´ÏâN¶¯CëQÉ
+J½ô**óÕMÉìGøãCIÜÊ×<¸Ê÷ĞZåUîİ=1:XY1æÏÂ4ÔíÂ;<ÔO.¹D·ïÉ5ÒÒ÷éÓ/åòÚºJú×Uîó2-öìÌú-Ã
+=ãÂñMİÓÈÓÇñŞñ*?,´³*ÒÊ1*Ş÷-ØVC:ÍİÜ:±ÄÜäÄ³7åäêÃØ.÷9*¾¹7:Eüú÷ï¹?+¸İ*¿²6ZKØòìÏÁP
+5>ãÆJ3ëãĞÕ<ÉÜÛÕGºK9³KêP6ïDæĞÏOÕ8ğ¶ïİO1ıì×õ¼ÛØ²Â¯UA9ÎZ5XÅ6øô4?FõìûÖF,2ØCâUËºõ
+ÊÂØ*Ä¯/ôĞÒñQ9æ°W+×@Ş°ú+T4´´*Üï*>Y*ç/-ùÏOïÁâ¿-ÎÇ,@Å¹>FãÂ5ùÎO¾ı**ºé*ÖíáÅı¼U3¾ù
+/2Ú³**î.*:¼úñÏ½»ÌYSéĞ¹íHº³åËGÕ0ßYFå@4¾½ùTÏŞÅ¸åA-3çèĞ¹YÊ=öíÚµéôÖYÕH»<àãßÉ1ºò6
+L°´äÚ;.îAºá*=Z¾ö6ğÓPÜ¹Pí¼5ÂËÏ½¸ŞãØÁ7îñÇ6öåëYßÆø·J+¼³°+áBQüõ¿.¾ÚüZIØNE-âWK<¸ú
+F3¿»è<Ú½**Ü³¾éôíİµİÓ.Öû,.Ğ¯*;ıúÀ²×Ï8:CWØô¶EX8×âÔU5ÄÆÎZç1XéÙÙ´P.,0¶´Ô/ÆA²,/ì³
+ğÛ±øôæë÷R:MFòØûöL2:¾º:-ü·ùñî²>¾ÀÑ¹õ¼°2,A¾C@.X@CêÅ@ç÷3áàMR¹ä+LA´UÉ*ı+*æÔ+ZİÅ9
+½.Ñî0Î**.Ú¶¿ù0:íË½2ØòìÏYÌ÷ïãÊ?ÓáÊA/¹Äü@:VùòCL´ÀÚÚÔOé¼ëÂñÏ*¼8Ãñë¿I-à*WÆ=ôæğ3û
+øôè÷+¯:NJô¹ĞO¶ı**ºé*Õëİ½í¼U4Zùõ**,¸Jß5A¶ä*³Ì-+à»÷9KÉìG¸æ²¿Ğ63>ÏÛVøïVèíOÁßRÜ»
+İæĞM8ZÒ¹õé·¶ñëÙQàğ´³Ü·N.òå²ÇÇCçTøå3ñôNÉŞü+*BÔ+@Z2*î3,æ´í¼»ä9*Ú5@¶å*OÉ-+°ûöAK
+Éì»ùîÓGµôÚD.½VÆÖGµ0HäH´¿´ÎOõìÛ8PìÛY?*CµåüZîÎ3ğCJóUØ>×36Õ:Â4ÌíË@OXç+*¾ğæĞïì¯5
+ûAMÉË>Aõ³SYHŞÛÛ>IïÜ8»å´ÏâN2Zø?WøÔ+>VÖZ+À*Z÷È²3èI**İDJ³øóéÑİÈ-âP9û5Nîá,Ì0Jßğ6
+¾ÓY½ÛöAVÉìºÂÃÛ9òòìGMY±áØÄ±±HĞO@DŞòÓ+Î°H**åÕNÉ¾ü+*.Wø÷òçÍİD*ôõÂæ7óARîÎ+Xâ°N¾V
+9ü/é<´µôÄM4¯Å¼´*ÜëÛ¹ÍA*Æ8ÕòW-.ìÜGŞ*Ñ3³+6á.âOS¹ĞORı**À@3ûøóMB¯ôYMFõ8*¶ï,å6Î°·
+:JÔıüÁ³ç25îğW*ĞQ@Z6ñâıH.*ÆÁ@ûó,ĞDIã;Ş²í¼5ÂËÏ½¸ŞóV<ôKÉ¾ü+*.Wğ÷òçÍİD*ô,N+:ŞÃ5Ú
+±¾¶¿¸*Îü1é<¸õÜÄ*äKÉÜûâ:.X*±Ê*Ú6Øòë¯ü¶:æà*Ñ»¹òôº>Æ;8øGç<ÊÍ@**¾-0:æ»½àØÊö,ôKÉ*
+¼ô*:å¹½ıØÊÙ@ßùê+JÊñÜ9W¸óZ¿H»èÒQÖJ»A+ëéÑOR¼IØòĞ±ğXYüùóèç²ÉĞE3æ°Ğã0èïOçĞú?C±*¾
+İÅô¾ëX¼ûØ³éÕ±/*³ëø²åÄëH<Ê?æ<Ç¼D½ã<DY¼FRçû<±Çè<ÆìJGÜ>WìM8RïÕÆÑ0*·Fö¿VHèÉê³çÓá
+ÊİÜøÖ°ñ°Û½Á91XĞø-Dîë³EùßJ.JSÑ+5ÙHğôô1M¾Ê0öFL¾ØE/:*Ş82÷@º<¹ZëË0öúö9Ğ+ØáÅ·ó´Lø
+ç0èï8ÏOğXõéÚ+îL@9óãGW,%%
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 103 di
+/mask 7828 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ıİú0Ü.%%%
+d
+/sl 62109 string uc
+Æîñå.ÛI,*Sóı?0F,+1ÉùºóMóııÍıùAêEöãU9æ¾Uå,1WèÂÏ3*FYÈß?/ÖôQ-Ê¼C,â²¾åñ*ì²*ÜÕY¹P
+4ÃÊKHÇHÎñÕÓİûÁ>Dî<XÌ¶JGJ;¾UÅC½»ó¯ãäã¸ı0I8ÚNó1ºŞÊ0öÔ»ËN0ãŞØËûZ:,ÎÒ¯.Ç0*W9·¹»K
+ÒLOå÷üÚÓÈE¼·5Zëã+Åç°VCKWLÎóãÍÃI°C.ŞDõÜGğ+³;Ù+.ÍÉ3F´°ÇA°DŞòÉG2Ú¸Î·³V>ù.¼÷ÚëïI
+V¿@íõÖC7ÎJîöÃáO·Çå×ìĞ³½DŞòEC¼ù0ÏIIÁ@ëS÷ìëHÆOûYùôëBÁA7Öß+ŞK½ğñö°4-J@Ä.¶óú¾B2<
+:¹õìG¸¹I6:K×Û1**J*Ñ+Ş³î;L-½0Â¿/·Jê=Ñº:ÊäÛ¹´PLî8ÎKæ¾áâğŞ4×ëÙíÂR4ÒÖóùRßú+S¹;»â
+À2Sµ;Øºİáè²*:°Ôµ9æ¶Ï¿15*Ø1HÍ-2F´Ğ»Ô²DúN½Ü/W<õéıÜÎOº¼E´ËÓ9FÇ45:À=ÂÈUûÛ.ÉÎA@ææ
+Û¹QäNUçIQÊéìÙõT¯ò±¿,Ğ¸Ê+*İ´DŞËáHµùNVìÔäEÅÂ¾üŞ>Í65´ÅC¾÷ôQæŞË02MÕ¯EAÔ±ä-îÃ´ÉMÖ
+·BÅC*îéÄ-BëÌØÍ?îôâ<ÔãùGÄP-B³ÎîB¾ÍìXûÜ80È¶F5¶îÙQöúŞ;ÀµM.ÚÆ¸P-Òâğ*2?4Ó4-PŞÄÍÚà
+¾=Ó¼ÒçZ¯Nå¿Z5õìYàøÕÎOU¸GøŞAX0Ëá¼ëĞñ5-å¯¿/+**:è+P¯2ÜÛC:ë±=BÙG¹õ8ÏÀñØ3ÂQÏôûÎ8ß
+¹Ñ+Ğ¸õÌûßŞ;-â±¾èA¶óJBÏ¹õN-Ş8²2U2²ZP-ZëHÔç¯Õ7*ğøôÀ1ÍÁ/ø·õìï¶ğìÛÔJ÷ôä³WHíï20DÅ
+Kò¾0FÛ»C4NMÅKàEİWG·¾åÏ=ßÙàÛùîWµD¾È×È÷²:-óPôáàø¹6¶-âµD»ÂñLÖÍßøåÎOñCÛ÷àAX0·İXë
+¯ñEH¾ëK-ÚîP¶Ê:ì¼ìæ»µ7JßÀ/5:Ş*Éã0¾Ú´ô¾@+ñÖ*ÅÜ±ÙR°<.BûŞ>Å7é9æN+äíÎ¿B7:ZßË0J»ûÑ
+*>P3ÌçYæĞµíÜğ+ìàAîVÍÖ.WÜíïR2°¼âÏÏOĞ»¾âæ2·@MVŞ¿íHöÁŞ±3:JîCµÅáSùôØ,Ã8¶ÑëÙñ6¾Ô¹
+õĞ±¾*N°èÛùŞ*çÜ»ZŞËTİçòŞÃ=ß8Ö81¶.éİÀ@;êçâÃY¼Ş°ô¸³ßC9ÚÊö±ÕØQ;0îë²¾â;QÚ±*ïU-Jãº
+*ŞÌ½7*·ãï¿±/Q¯ò³´Vé¶´äĞã5ÒU»JàÔ²½Á0±,=0èÛùá,/;BÅEØòìÛ=ıJïâ3åñëËáØºİá=8N´*Ì¯8
+>´¾áÓáZùÇíÄôÀ/?>ÁåàÛù5Ü»ÏİJ¸GORßF*ÆX¿¼/â1D»úğNÖKùUÖüC²çÓÁFXúµçßİ¹ôÛYÕ@7¯êèO-
+>êÀéïPĞÛà¿¸JC<JÇGçÌØ*Ä;,øĞÒñÔ/Ö6;JÈÀG»JÉÖ»ù×+öÄ6Îº+NÍ0Ò·Ô¯×é9.´9²2;2²R=2Cñ²¿
+KõìGá*Úá2ä9Ò¹õáğ*À@ïìFÔãùGXïîÚVÚ6Zøé*ÅMO*åÏã-İGê?üêÓ50HÁô1ºùŞ°ÀRèSÌºOÃŞ?:İæò
+J¾=ß0æYàøÕÎOõÜBQîİ·íÔë¯İX»øNÂÉÁÕ3öæCÂâêÊ·M2ŞYNÈÕR4øß,FÙµõÙJê6ûÑ-XìÛùUBĞ¼8RŞT
+,EŞå-ÌğÇ/6áF÷İ1+*ğ5ÚğP-î»û¸ñÍR6ËñìÛİJÁEµñ¾1öÈÚö:<êÁ4ä9¶ùô¾3BJÚûP²÷¼ÅUFºµ5J,Ê
+¼»Jâç¯R¯2ğŞ5M.-ÍQ3,ÍOùôáÙÑ=ÕD÷âUT.ìÒDF»Ğç¿*QÀGZG8î*Ôİ0WØô¶EX8×âÔU5ÄÆÎZç1ÊåÙÙ
+´P.,0¶´ÌVßÃV6R÷CVŞÏÙñÏJÄ¶æÙùôåßçR*/åô¶º;.2JÄ±·õìQ0Kî,BáÀŞãSÕÖ-¯4J*¾KÎàìöC»Zõ
+*7ìÚË,Ûà¾ÁOËå-ä9îóôëİÎÇS@=ÑãùGXïîëµ,*Z¸¹W>:çæ55BºñÙ1÷VÚ¹IÜ»¯ÏK>ó>õÌ÷NÓKùEËHU
+¶;êQ¯ûWæĞ¹Å¼·äÅA±ÔÒ8±Ü>êCøÉM¶ZÀÉ6*éH»ÄÆCõä³WHíï5å/ÄL0ó÷¶D8VC·Èöà5å1¾ó-ºX5:Yæ
+FÇÌ=ËºõÊµ¾úNÑ5Sß÷-ß@ëQHÀóİKÉìG¸æ²¿Ğ63>ÏÛVøçVH3Ø?0*üXD6ÄğSûL°ØÊQÅ=ñ¾îëÒ0°5Aù1
+²çÛµ9ÜØñäÌUÁîÅ¿óŞğÕB*ÖGµ0HääÓ¸×çĞ¶ÅHÉ8å²:ãÙCÑßÑÏã¼éËùØÊOÅÑ,¿ïë³äãYÔãPÈÉõYÉíİ
+@İ½W¼ıØúü³·éÀ÷ü³·áÀ÷ü³·áÀÇÚ@Ù6*HYWÀı»0*½Õ@¹Î-8è°M+ŞEÔOöİÑ*îèUìŞOı³Uñé°Õ»OÍ¿O
+,»÷ü³·á»÷ü³·á»÷R³×ı*îİè<úí¾*öX³×M7îûéğùÕã0¹ÈõYÉíİ@=üÈµNÉJòH+*´½ıØº<ÉîıH+JÂÈü
+Õ³SüÈÊ9*ŞíëäĞûåYÒğµWÉJ°Àó-<Íæ<öİN*ÖüóÃàûü³×²3öY1**ú4¾é*¾õÕ5ÃÉùùÕããè<Öıü³÷Â@¿
+üó**VY+¶7*ÎüùÕã=Ø.÷Õ-*¾º/Ş³*ºÓØ>¼ÆFÎ*ESŞğô1<ŞØE7î÷Ä²3îY1*¾ô4¾+**î.*8Ş¾ÊÅüÏè<
+ë6:µÇĞæïñ./´OÉîü¸**PÕ*Ú0*;ıúMÓO¸¼àÖÎOéÌ·*ÌQRZUØ.öÕ-*Î·/Ş³*ÆõäITWØôéPF9ÌòñRFí
+8úC:0æÀF¯Å@Á*Jù¶*IÛÛ¸¼J6.32Öí¾@ßûó**BX+¶***Ş*Ş362õã½TW¸â+Ä¸õ¼G1µÜ»ùNVìÔäEÅÂ¾
+üÊ@CC=WOıF¯ì0²3êY1*Şí4¾-*RØº,-°ûöÅTÉìÛ¹GÊÚ¹İT¾±ìÌûßŞëÛ¹QH-Ò¼OÉ>E¿×¯,.ÏÀñ5ÎOR
+½G**·U*8*Jçğ36ÆóàİTWøÉ1¶µAãÅ¹õÜGøÌëLÇÇ:*Ê¼OÉÜ³*/5@V¾:*VÜ*W,øé+*JÙ,Z*ÎZ·0î*0â
+øîYÓ@Û÷25¹IæçÛ¹ÄÜäÄ³7åäºNÉV²¾çU-Jãº**ÌY¾@Kûó**²W+R*¶;ÉAZJÔıÌÃ@ãYÇ5**ö¹Û4éğØÂ
+ëËÛïÆLêÏÍ7¾µ¹õìñ/*Ğá?»é*¿Ùµ1BŞ²LW*áB+·Sè0²3æY1*Şç4¾-*R×º,-J»DØÊïS<¾ÉIOÉÄÖ*Aí
+,:»°+áBQüõK*¾F²çYA:Ó÷S8+PùôÙJê6ûÑ-XÅâ:YWÀ÷é+*RØ,î,*L@íŞ¾Jõ»KØÂôëõİÍ¼Æ¿K1üÙõ-
+¶÷Ğ²3Û¹YM*ñÎOí¼°2,A¾CP*X0WøôB½F2²¯¾çÜG¸¹H4â21û0²3ŞY1*Jç4¾=***8ß¾Fí»KØòàÇ½ııİ
+½ıøWúíÛ·I¾ÉQOÉç<JÜØ.íÕ-*Î²/Ş³*2ñÚANÉÄù´îúå+Ê»ëØµ½úØ.RU*X-*>İ;W4ëÑá5J¾B*°WØôÉ
+ØòE»BBÑµùôÔO-âQLŞÙIAæã+/µ¼LõìË0öF.î¶Æ,/JùåPÉPG¹ôèõ,*Z³/ŞW*Bôã·ÙÌÈ@Óá91ÜÂóIÓÓ
+ÆéÊM@·¾*ìÛÅäúøKW¸è0è³0Oáøô°êÔEVòŞãR;4ø¯¶,ÂİôKÆòú³óÅÁ>RîÙç<Ì¼ûØóéU+*ÆØ,î@*Êóç
+ÌAåNÉÚ°,ĞÜ1@RFÓWÈçÅQ@³¾*ìEIHûÎ@ûè*ÉÙ-7:¹±ß:ø7@ĞYK¾Å/Öôè6¾8ØÊÈ:ICWØëL3MÜN*æáÁ
+Ã¸ÃÙº@ØNû·Æ5Ó>ÊDO³?<DïÈO6:¾°àÏ9èĞÁHŞ9õW?ÒÙ,äìÂ*3½ŞîB¾³Õû@øÎã<*¼CÃ+:5Ùµ½++àÛù
+¸+ÅÇã¿?°Û¹İÌëç¶ŞÄİ*ÑY<è-ÏO÷U°¼**½55â²Ïù.*ğ4AñÁT¹RÉH¹*Ùııùí¶+òÍÈ@¿î5±:Æ/İÒOõì
+ïÂ*Lä<ì*Zİ++¸E*í=4¶LÉTÀOæ55²6Øº-+¿,HÄXá´XVíÌ7ÌB4Dß,IÄ@=ì,Ï6õH+JBAÍÄ@Gí*Óûıı9
+³*ÖH=W<æÀçI**¸VBòÉØòë×9íÜÛ<·²S67È8öÎN7îL±9çĞ<êìÛ¹±JL>MÔJùÀ¾J+åèÛ¹Ê+Zı¼*LÄ3¾¯
+ıÉ@Ç¹õÚµ3*AZC/WøØ+¶ııíIê*¾ºTØ.¿YæĞB8úÒ@å*Úì2ÒQ*ÒÜèËà*àE¾ìÑØ.ÂÁ@Çå*Ü-,À;5,,/J
+ñ÷+M»´*â¯,Ğ±¾1PÉù/Ä.²çı0RëıııR-¾ôCçĞº0úÀ@S¯ŞÍYéĞùçA´¾äë¿0*İ1-â÷/óQÔGôG±Íæ<N8
+ØNG-292RÄ62BABØ²Ñß0¶FP*º¼ìØòİ-æûıİıÄ8àAñ3*4W¶¾-*JÅ/Å¼UÉÜÛU5âã0ÎÚGë6Î¹»*75,ºR
+Ğ³İÔJñ=Ø.>á-2×=ë-,à/4,ìæĞê´:F¿ØM5îµé<÷9,YÒĞVø>ÑVØıÒ;ÑY×²ò?MPûÖ@û6ÂëÁ¹JP×92ñŞ
+-ºõ=UÂÈ8ÚV*2öÀ:Ûç*?ÈÀ¼Ö*åî¾E2¶MÉÜû×4OM±²:*ÎÌßUüZWøıA=*ûËZ¿àïÉ÷.*ÛìÊüê<ĞQí·ñé
+µ³çÃø¶Ü»ùÔO62HË9º¾µıûë2-4ğ6G¸ºJÉ¸;5-T¼´9ÏV2¶ğ,1²çÑÍÉï¾Ë¸+²åî?ÍÖ@ó½ÅJ4Z÷DÓVØı
+ÔSÑ9Ù6-:ÔUIÔãÒF:43ØÍ-.W0QH7*ïø¸â*OÒZ»0Y÷Ã³Cß+¶éÕ¯ù88FöñôÛ¶ì×µPÉêé8ÜÎÅØ:ÔÀîøU
+ü¸WøéÕ¯õôÛ¹µğÔ»ºóçµPÉúÙÕ4/¼Ò¹ÜÀîøUü¸WÜá¾Ò³·9Y÷¾³SüÈÚ**¾İéüÈ1VÉûó?íİ@µú?ëVÉW4
+*ÍÑ@ßıH/¾İSÉWU+íİ@İ½W¼ıØúü³÷ûéğùÕãõYÉíİ@ã±À7ÙDíİ@İ½W´êèºıØúü³×¯UñûéğùÕãÄWËÁØ
+ê°*öº³3üõC*úÛØú,³ñûéğùÕãõYÉíİ@İ½W¼ıÍöü³÷ûéğùÕãõYÉíİ@İ½JºıØúü³×ó³3%%%
+d
+603 103[1 0 0 1 0 0]sl 8 mask 0 206 di
+/mask 7600 string uc
+*ŞĞ**¼ºıÉöü9õûığùıãõıÉíıAİıY¼ıİúü½÷ûığùıãõıÉíıAİıY¼ãÅ-*A³3î1
+d
+/sl 60300 string uc
+Æîñå.Û½ı*ÖæX6U¼ıØúü³÷ûéğùÕãõYÉíı>Ü½W¼ıØúü³÷ûéğùÕãõÍ2íİ@İ½W¼ıØúü³÷ûéğùYÁõYÉíİ
+@İ½W¼ıØúü³÷ûEßùÕãõYÉíİ@İ½W¼ıØúüYîûéğùÕãõYÉíİ@İ½W¼ı2öü³÷ûéğùÕãõYÉíİ@İ½W¼ıØúü³
+÷ûéğùÕãõI4íİ@İ½W¼ıØúü³÷ûéğùAÂõYÉíİ@İ½W¼ıØúü³÷ûÍßùÕãÔĞORóû-ŞğLïÚ@ßıõ9*É5ÃñØúü
+5ZÅÖöü³÷ûéğùÕãõYÉíİ@İıQºıØê:Ø.LÕ,*Z¹ÁİçXÌ>×EëÒAôøBA³SÂüİ4*2ÏĞù¹@õğN·ÛçàÂ;-ÉW
+ñ¯8èğ´Ğ¿ö5ÓúûâğëEëÊB<Z×»Hä¯W,ıù**éİÜRÚ7XÉ5·ĞÚì²¯àÆ¿ãô÷BA³3öY/*îûóLïğìêØÚÉ=ãó
+P5=Ä6V´ÍÅ×DW,ùIÆ@íÜçàÂ;-Éëñ¯Xè<êİ4*¾ø7XÉ¹·ĞÑ9¶ùP5=Ä6V´ÍÅ·SÉJıT*Îá³·AQ¸ø+Å³·Ï
+ÜÖëáÚÒOÆıB*Úé*×ïåÍ9İU3ÎùÇ2Â/¾êÕÏÎ2JæUííØÊÀ½ìÊÇ,*JJ/Yæ9åJ4¹¸ùPÕÃ¿Ú0Jõ¾+ìNêË-:
+ùBË1ĞO<*CÖê÷á¶úï;À¿ZK8Ñç¶àÓ7PğBA³3îI0*èD*ô-0*ÚÍÇ*Ú½G/±*°HøüÔã6øñæÊ>¯îÜûD;ó¸Ç
+ÀÑÌíçëEÛ@0ìDJ+ãöïİ½@¯A6Jì¹»º,ç×ê³°öùççZÇDù±¸L*ßºJï¾GXêZ,Å·SÉîü¯*öÔ+XÙ½ıÜûÔ<Ş
+ô=;25*ÕYMK;¾Æ½Üİ³CÃü2Ğ¸àÈÌÊ3×F¾»³Ş×+N¯QµíòØBZé*KæÎI0¶=¯Õ²*´A³Bù¸ÈÌÍÍA<·6<PNø
+÷Hğä*ôñÆ¶¹ÁÇFäOWÜ9öÈç×°PIZ2-L8ØIVãW-òÚàJÆÆµÙJÜEííØº½öæFß8:ÚGD=½I²¾ïöïQå0ÁBŞZ
+1ìJAÚ1Â+=DåÌîûâ=¶ÏÍèËX5-´7ÎÓ¿Ãñ·Âù»øA<ä×0R3Iü»4@á***.¶½Ä*Û¿æ¿Î÷È¾òVôDCæø-6É9
+2÷İğíê/µ7îÑÉ-WğÜCÊEü¶¯Á3FäOWP:ÑÑÖñà67È×ØÉÌ¾µğëÙ0:¯=´Æ/PHë,ïÜº½éğó=Säà>¶SÇûÏC
+CùŞñŞ2µğÉØöë»öÌ2ïÛ»Z@ĞÜ¼R*êÎ+¹VL×øQù*ÚI»Ñéà2¸JöDâ8û<ÙíIÇBµİÊ-ë»3Ö²í¸0¶úù+<Rô
+?ÛRBÔ·XÜÆ-CÆí*ÁÍRŞËÛöÔ+ä.ô610øQ0ñ6,=¿ÄÉØ.ô9-¾¯7Z+Á**Í:¾´î.ğØµíé±ÚîGé*Ô×È*2á,
+ÆØ:óY´¿ZQÜİ³÷øÇN*:ÏMÕäâA.Ş¾±»ùòA,âïN¸²*ìà3â6Uà+Û°7îÒÂµQéNêÙ½ùPÕÃ;êOÙAÇÒHé*=¯
+K2;¯ÜHù=À¼ÚTİ¼ÊŞÏ=ÎÚJ,âã5·:-»7JøÇÌÚ×5åD¾êøó»0öûâZìöMÂN<ÅÇÌ@OXç+*Ä°*ë±5CSÀ*ÏÉ
+@ßğæ/DD¾÷ÉW:éÅ½+ØÂøX*K¶úÃÈ3Ô+àÊú°Ë@äÓY9ÜR1Å47/+²á7*HÍ6.,Ğ.,DHìÁÙµÈ¾@W»Ú+À0MÜ
+ÇB³íÜï+FÒ97*ëAòKé9Q2â/»Qó:-ÉÛP0<F*î=4*óÍê/¯7¾ø2-ëÄEŞ¿ßFÁŞN8ñĞ@Kûá*JU-Ò¼Ş*@Eê
+*W1CÛ²õU-ÒÜDŞ±WİH»Ï+Ğİê,×Xº½éğó=ïøë±ÀÇîUï±±ğ;3Nıü01µ;»XÍ+°Ñ7ŞCû-Å°üêW:û@9ìÜç
+³¯.¹Køò½ÛÖ÷TàF»ø>5:ÖÉHûæ×-MÎÂ»O*=ÑùÙ¸Æ¿ãX=-³İ*¯G/÷ä-õËÛ.å>¯FCÊ±2Êâ¯Xè<Î½6*ß1
+¼H»øñÕ0¾GÙ2*C<¾²ĞàÜ²3ZÄ/Æ±RÌ´¿V9Üİ³÷øÇä*2ìQ.LÃìÊÇ¼N:ûë*¿M,>İ*Õµ5ÆCLJB75DZêÑŞ
+3ı²8ìÜç³¯Òî×ïA¾.B35Ü23ññIY*æèÅğñ3é*Ö5Hêº,ÍğHÅÇ6Vôú¯R×:äåXÆÙ,Ğíêã/W,êQ0ñÄITNĞ
+¶ÊÉØºËïA°¸XÊ»¿*øDS1İä¶úè*@ÒØÜÖJRJı²WßõüÔãéQT.:òWİB=9Ú¹µç7IŞTíI5ZPøñ¿9,¶åò³ãî
+Ø¸K+*ô²6ûGZZXµ¸W6M1Ú¼»Î+,âPıNàú¹C´à5½ï4»UE*çêO4ŞøSVâŞ5·:ÁÑQ8/ÉÑÖ9M=+4HØÉ5Ø>×
+çİBÊEü¶¯Á3JáOWÜXê5+9²óñÛåùÏ¾0¸ìßúĞOòÖÃ¿?MÉÈÍ7*RíîØºûN1åâ+*2î¾2¶èåù÷AÃ:¾Kê°,X
+ñºôğ´>Æ,òê3ĞQı7,ãSÛç³¯>GZøò9/¾ËÜù53ñï<¶H½¼è*E¯øM3<î¼É¯·×ê÷áö÷ãá;¯J¿ÌÑ;+QôğÀ@
+/ô÷10-æİïÅ5;ÇŞ¯Xè<ÊÍ;*ÊºÓ+RİÅ+Çì¹½é°ÈQtñ3ìÜçàÂ;-Éëñ¯Xè<Â½5**Ş;*F±+ÉD¾²öÅ×ŞàÅ
+½Üùûß²WWHÕÍù²È34ìJŞëEãM¯SÔLT@Éòù°½ÊÉØ.î±.*ù8³¾æõ¯Îá³Cã=ã÷.Å³·ÏÜÖëáÚÒOö¼?*:ä·
+õµWìãÇÌ¼ŞëEWÊB°Z×»Häè²3ÈıJØºùP5=Ä6V´ÍÅ·SÉPG¹ôèµ+*Ä»·ìÔùÙ@µğN×ÛçØÂ;1Éëñ¯Xè<Ì¼
+ûØóéÉ**±»ØñãûWÉE·Ğêì²WàÆÁãô÷B1³ç´5O6÷H*J99@è?ìğ»WÉ¹·ĞÑ9¶úPù<Ä>V´ÍÅ·RÉâû²ÏU+*
+ğ4AñÜÌOïìû°Ìòò-ìÜçàÂ;-ÉWñ¯Xè<·Õ6õT**Bİìïä7¿ãFçç1Ú»ÑÃ3M0@ÙãáFÓOğìGõÃ*J½áğ´Ìòò
+-ÌİçP»¯ÑÅ·VÉí½,ôÅ4íİ@İ½W¼ıØúü³÷ûéğùıÂ6²÷û-ŞT½ï¾@İı*êÔB2KÀNİ½ùëÔB2SÀıMAİı*ê?B
+âñı%
+d
+603 100[1 0 0 1 0 0]sl 8 mask 0 309 di
+
+QP
+%%Trailer
+%%Pages: 1
+%%DocumentFonts:
+%%EOF
+
+%%EndDocument
+ @endspecial 2891 33517 a(Fig.)f(4.)930 b(Second)310
+b(windo)-22 b(w)310 b(for)f(NOMAD)j(wizard.)1471 50423
+y @beginspecial 0 @llx 432 @lly 595 @urx 842 @ury 1785
+@rwi @setspecial
+%%BeginDocument: figures/descad_3.eps
+%!PS-Adobe-1.0 EPSF-3.0
+%%BoundingBox: 0 432 595 842
+%%Creator: KDE 3.3.2-1.4.3.kde
+%%CreationDate: Thu Jan 20 14:05:59 2005
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts:
+
+%%EndComments
+%%BeginProlog
+% Prolog copyright 1994-2003 Trolltech. You may copy this prolog in any way
+% that is directly related to this document. For other use of this prolog,
+% see your licensing agreement for Qt.
+/d/def load def/D{bind d}bind d/d2{dup dup}D/B{0 d2}D/W{255 d2}D/ED{exch d}D
+/D0{0 ED}D/LT{lineto}D/MT{moveto}D/S{stroke}D/F{setfont}D/SW{setlinewidth}D
+/CP{closepath}D/RL{rlineto}D/NP{newpath}D/CM{currentmatrix}D/SM{setmatrix}D
+/TR{translate}D/SD{setdash}D/SC{aload pop setrgbcolor}D/CR{currentfile read
+pop}D/i{index}D/bs{bitshift}D/scs{setcolorspace}D/DB{dict dup begin}D/DE{end
+d}D/ie{ifelse}D/sp{astore pop}D/BSt 0 d/LWi 1 d/PSt 1 d/Cx 0 d/Cy 0 d/WFi
+false d/OMo false d/BCol[1 1 1]d/PCol[0 0 0]d/BkCol[1 1 1]d/BDArr[0.94 0.88
+0.63 0.50 0.37 0.12 0.06]d/defM matrix d/nS 0 d/GPS{PSt 1 ge PSt 5 le and{{
+LArr PSt 1 sub 2 mul get}{LArr PSt 2 mul 1 sub get}ie}{[]}ie}D/QS{PSt 0 ne{
+gsave LWi SW true GPS 0 SD S OMo PSt 1 ne and{BkCol SC false GPS dup 0 get
+SD S}if grestore}if}D/r28{{CR dup 32 gt{exit}if pop}loop 3{CR}repeat 0 4{7
+bs exch dup 128 gt{84 sub}if 42 sub 127 and add}repeat}D/rA 0 d/rL 0 d/rB{rL
+0 eq{/rA r28 d/rL 28 d}if dup rL gt{rA exch rL sub rL exch/rA 0 d/rL 0 d rB
+exch bs add}{dup rA 16#fffffff 3 -1 roll bs not and exch dup rL exch sub/rL
+ED neg rA exch bs/rA ED}ie}D/uc{/rL 0 d 0{dup 2 i length ge{exit}if 1 rB 1
+eq{3 rB dup 3 ge{1 add dup rB 1 i 5 ge{1 i 6 ge{1 i 7 ge{1 i 8 ge{128 add}if
+64 add}if 32 add}if 16 add}if 3 add exch pop}if 3 add exch 10 rB 1 add{dup 3
+i lt{dup}{2 i}ie 4 i 3 i 3 i sub 2 i getinterval 5 i 4 i 3 -1 roll
+putinterval dup 4 -1 roll add 3 1 roll 4 -1 roll exch sub dup 0 eq{exit}if 3
+1 roll}loop pop pop}{3 rB 1 add{2 copy 8 rB put 1 add}repeat}ie}loop pop}D
+/sl D0/QCIgray D0/QCIcolor D0/QCIindex D0/QCI{/colorimage where{pop false 3
+colorimage}{exec/QCIcolor ED/QCIgray QCIcolor length 3 idiv string d 0 1
+QCIcolor length 3 idiv 1 sub{/QCIindex ED/x QCIindex 3 mul d QCIgray
+QCIindex QCIcolor x get 0.30 mul QCIcolor x 1 add get 0.59 mul QCIcolor x 2
+add get 0.11 mul add add cvi put}for QCIgray image}ie}D/di{gsave TR 1 i 1 eq
+{false eq{pop true 3 1 roll 4 i 4 i false 4 i 4 i imagemask BkCol SC
+imagemask}{pop false 3 1 roll imagemask}ie}{dup false ne{/languagelevel
+where{pop languagelevel 3 ge}{false}ie}{false}ie{/ma ED 8 eq{/dc[0 1]d
+/DeviceGray}{/dc[0 1 0 1 0 1]d/DeviceRGB}ie scs/im ED/mt ED/h ED/w ED/id 7
+DB/ImageType 1 d/Width w d/Height h d/ImageMatrix mt d/DataSource im d
+/BitsPerComponent 8 d/Decode dc d DE/md 7 DB/ImageType 1 d/Width w d/Height
+h d/ImageMatrix mt d/DataSource ma d/BitsPerComponent 1 d/Decode[0 1]d DE 4
+DB/ImageType 3 d/DataDict id d/MaskDict md d/InterleaveType 3 d end image}{
+pop 8 4 1 roll 8 eq{image}{QCI}ie}ie}ie grestore}d/BF{gsave BSt 1 eq{BCol SC
+WFi{fill}{eofill}ie}if BSt 2 ge BSt 8 le and{BDArr BSt 2 sub get/sc ED BCol{
+1. exch sub sc mul 1. exch sub}forall 3 array astore SC WFi{fill}{eofill}ie}
+if BSt 9 ge BSt 14 le and{WFi{clip}{eoclip}ie defM SM pathbbox 3 i 3 i TR 4
+2 roll 3 2 roll exch sub/h ED sub/w ED OMo{NP 0 0 MT 0 h RL w 0 RL 0 h neg
+RL CP BkCol SC fill}if BCol SC 0.3 SW NP BSt 9 eq BSt 11 eq or{0 4 h{dup 0
+exch MT w exch LT}for}if BSt 10 eq BSt 11 eq or{0 4 w{dup 0 MT h LT}for}if
+BSt 12 eq BSt 14 eq or{w h gt{0 6 w h add{dup 0 MT h sub h LT}for}{0 6 w h
+add{dup 0 exch MT w sub w exch LT}for}ie}if BSt 13 eq BSt 14 eq or{w h gt{0
+6 w h add{dup h MT h sub 0 LT}for}{0 6 w h add{dup w exch MT w sub 0 exch LT
+}for}ie}if S}if BSt 24 eq{}if grestore}D/mat matrix d/ang1 D0/ang2 D0/w D0/h
+D0/x D0/y D0/ARC{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED mat CM pop x w 2 div
+add y h 2 div add TR 1 h w div neg scale ang2 0 ge{0 0 w 2 div ang1 ang1
+ang2 add arc}{0 0 w 2 div ang1 ang1 ang2 add arcn}ie mat SM}D/C D0/P{NP MT
+0.5 0.5 rmoveto 0 -1 RL -1 0 RL 0 1 RL CP fill}D/M{/Cy ED/Cx ED}D/L{NP Cx Cy
+MT/Cy ED/Cx ED Cx Cy LT QS}D/DL{NP MT LT QS}D/HL{1 i DL}D/VL{2 i exch DL}D/R
+{/h ED/w ED/y ED/x ED NP x y MT 0 h RL w 0 RL 0 h neg RL CP BF QS}D/ACR{/h
+ED/w ED/y ED/x ED x y MT 0 h RL w 0 RL 0 h neg RL CP}D/xr D0/yr D0/rx D0/ry
+D0/rx2 D0/ry2 D0/RR{/yr ED/xr ED/h ED/w ED/y ED/x ED xr 0 le yr 0 le or{x y
+w h R}{xr 100 ge yr 100 ge or{x y w h E}{/rx xr w mul 200 div d/ry yr h mul
+200 div d/rx2 rx 2 mul d/ry2 ry 2 mul d NP x rx add y MT x y rx2 ry2 180 -90
+x y h add ry2 sub rx2 ry2 270 -90 x w add rx2 sub y h add ry2 sub rx2 ry2 0
+-90 x w add rx2 sub y rx2 ry2 90 -90 ARC ARC ARC ARC CP BF QS}ie}ie}D/E{/h
+ED/w ED/y ED/x ED mat CM pop x w 2 div add y h 2 div add TR 1 h w div scale
+NP 0 0 w 2 div 0 360 arc mat SM BF QS}D/A{16 div exch 16 div exch NP ARC QS}
+D/PIE{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED NP x w 2 div add y h 2 div add MT
+x y w h ang1 16 div ang2 16 div ARC CP BF QS}D/CH{16 div exch 16 div exch NP
+ARC CP BF QS}D/BZ{curveto QS}D/CRGB{255 div 3 1 roll 255 div 3 1 roll 255
+div 3 1 roll}D/BC{CRGB BkCol sp}D/BR{CRGB BCol sp/BSt ED}D/WB{1 W BR}D/NB{0
+B BR}D/PE{setlinejoin setlinecap CRGB PCol sp/LWi ED/PSt ED LWi 0 eq{0.25
+/LWi ED}if PCol SC}D/P1{1 0 5 2 roll 0 0 PE}D/ST{defM SM concat}D/MF{true
+exch true exch{exch pop exch pop dup 0 get dup findfont dup/FontName get 3
+-1 roll eq{exit}if}forall exch dup 1 get/fxscale ED 2 get/fslant ED exch
+/fencoding ED[fxscale 0 fslant 1 0 0]makefont fencoding false eq{}{dup
+maxlength dict begin{1 i/FID ne{def}{pop pop}ifelse}forall/Encoding
+fencoding d currentdict end}ie definefont pop}D/MFEmb{findfont dup length
+dict begin{1 i/FID ne{d}{pop pop}ifelse}forall/Encoding ED currentdict end
+definefont pop}D/DF{findfont/fs 3 -1 roll d[fs 0 0 fs -1 mul 0 0]makefont d}
+D/ty 0 d/Y{/ty ED}D/Tl{gsave SW NP 1 i exch MT 1 i 0 RL S grestore}D/XYT{ty
+MT/xyshow where{pop pop xyshow}{exch pop 1 i dup length 2 div exch
+stringwidth pop 3 -1 roll exch sub exch div exch 0 exch ashow}ie}D/AT{ty MT
+1 i dup length 2 div exch stringwidth pop 3 -1 roll exch sub exch div exch 0
+exch ashow}D/QI{/C save d pageinit/Cx 0 d/Cy 0 d/OMo false d}D/QP{C restore
+showpage}D/SPD{/setpagedevice where{1 DB 3 1 roll d end setpagedevice}{pop
+pop}ie}D/SV{BSt LWi PSt Cx Cy WFi OMo BCol PCol BkCol/nS nS 1 add d gsave}D
+/RS{nS 0 gt{grestore/BkCol ED/PCol ED/BCol ED/OMo ED/WFi ED/Cy ED/Cx ED/PSt
+ED/LWi ED/BSt ED/nS nS 1 sub d}if}D/CLSTART{/clipTmp matrix CM d defM SM NP}
+D/CLEND{clip NP clipTmp SM}D/CLO{grestore gsave defM SM}D
+
+/LArr[ [] [] [ 10.000 3.000 ] [ 3.000 10.000 ] [ 3.000 3.000 ] [ 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 3.000 3.000 ] ] d
+/pageinit {
+% 210*297mm (portrait)
+0 842 translate 1 -1 scale/defM matrix CM d } d
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+QI
+%%EndPageSetup
+[1 0 0 1 0 0]ST
+CLSTART
+0 0 595 410 ACR
+CLEND
+B P1
+NB
+W BC
+/mask 7725 string uc
+*ŞÌ**üVÈ<ŞÅõY3í½îÜıU¼ı6úüY÷ûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈÙĞ.%%%
+d
+/sl 61285 string uc
+*Şù1¾»ğ,û1Şíù1¾³ìÀ+*Ş9Ó>**TO+*ŞT0**ÕĞ**¾?/*¾VC**æÈ+*ŞÔÑ**Úì-*òÈ-*¾ÕN**¼ã+**ê
+¯*¾Zµ+*ÂG0*B@-**°S**>É-*¾×F**ÌÛ1*¾@/*¾²C**R¹9*ÂëD³M0LëØE*JëÖWUX:éÖG+*ğÔ7ÙÏ,Ù
+ÄWÙ´ó+KÈ·å¯8¸Ê·8=-áFä¶1¶ÊÎ69Á¯,±ÊR8ñÎáâïB¿EäHÅCæ;R¹ÃÄå<ŞÓO¹ôÊ×°äÌ+³µ*CÄ3Ì/Æ2
+²èL:9.J6=J54¯çÔ³ñÔ*:NCõFHÕáâÜB-CP/ÅÇÚ¯,¶ºàÂ<7Ø52JäîC¹UÄ·Ö¯D¸VO>êÔODÅ·æ¯ì·ÊÁ8
+ñÌá.òö06ÍFŞ7@ø·=¿è²Ö8C±=ÆßÃÖ7E³òRÄ2B¹ãÊS¹;ÆÜëØ¸?¿ìºö8D¹´ËÙµ-*KÈÕ¿B-=PáÃ÷ÆïW>
+4ÛY=,á¹O>¹ßÜ/áE1¶İÃßÃ8ÊıôŞ¾ë756-±CİıßºãäóÃQâöH+X?ÏöíHÃ@äDÂS*¯<KÊÂ2=BàáNºÆÃÅ5
+îŞ19@¾µÙÄò²â¶ÓèÂ3;ìEPW»Ï¹áÔ>óâ·Óèâ4=ìM´ëE¶+*ğWÙ3+ÖDLJö?¹:,KÈµĞÆûÑ½@U@ÚüM,úFá
+îù¹9êË@ÑóııéKÃÂÖ½îßÃRÉTıè·Ã-îùüıı1íÖÛ¹QNÙìù½L+åÁÆûÑİÔUAÛü9?Ïöíü87YR¯ãÀFÌõ>6Q
+19¯ï×*BÕüÕ9Éß4Ãıô10JÓñYÕËıôÕÍæëó»Xİı÷ÛûS°âÜøİìV>¯óÁNìÕØ2ZÅ/ÖııûÁ¼¹ÄàİùFñ¶W¶Ê
+Ş7=ÆáòØ¶ºBÁ+Ê4HB*ıÄWVõİK1HéÇÔNÇ°J°êÜß¶ïŞ³=ùR.R×´îL.¾Ù5;J@UÔ6;ZïâÇ=AN3´G+*ııI
+îWÙğøİãµß±½IêÆ³û¹öî¶÷õİ½DX06»ıŞá4ÏÕóõû±61îõû¹Â××ıùùìÏÏÚõI2îÎ3YS*ııIöÕY¹ûIØàU
+ZºÓ*üÜ½ÆEGù½ííCFHÓà±5¾âÖáõ9ğó@À¯+Âà½ùJ¾:*ïíû¿-ÚR¾EJòüæùÕê±ãĞÄ3ß°åL;úN±äÈÛõÍĞ
+Q-ëı»¿ÑÂ8;OÈüóÑN÷îCA@14ıì±?àÒ¿ö¼2=ZàNØBÑCH4áÁ3*ï8-¾½áQÛ¸WÒ:?ğÈXûğ·±B²íÆF·îL.
+ŞÔ=;ÎàĞ¿EµXÚ3+1»÷±âZ½ûâSÃS5Å8G¸KÈÏÂ1.:°ì-ğĞéIAXÎûÁĞß+XÔıßÛúYõ9=ôÈöÛıî+Äæ¯üÆü
+EÕH0<<àüEİMáJ¿°LµDûüòP¿ûğèûıùÓÖ½¿İ<ÁÜMÃîUâÀ<.´Õ½ZßÈ1,4ÛıôßÀWúWI½å8°Ö¿Ùóµí÷¾2
+ã»ı¿*ÜÖ½åà0ğÔİÛ÷>PVá2,íHğBıëÅ75R±íııİı¯¯+Äğ¸úPYŞ;ÈÒíĞıåãÅì±úøFÁÈYIñV¾-WİÚÜ°ã
+úµY-*ÓM7úEıìËC±ÆÙ¼õ8²×°ìû¹Ã¼äæÊËôíôÃALÈøYø1G8Jîù9.JÅûÁ¼+ÃàIüS*ÓTû¼óTÑG¶*ÛTWØ
+²üÛQDÅ·æ¯ì·ÊÁ8ñÌáñ¸NïàÇ¹4*ZX**É-å?·ïÓI9*öØQÍ¼>Ô7Û·DìéğàQ?D*ÎÕÌH/·ÊÙ=;2LîÃZKÃ
+4<CµóNÛ¸KÈµVæûUX9FBÛü»×Zùû¹58îùúÁıãİYüÇïÕÛ»û19WòÌ+ıøÛIÚYİú»ıİ¼+5æ½ûßàE-:õû1,
+öZŞÊøíº:±ıü²BÂüË0éìİC?@¼ãöá2NÜÚ¼¶°ºû55Hî.EùÅTÊBıëÛB¯îé±6öğIüÔHùÁÌùİUM.õá6ûÖ¿
+üéÁUÍGLõÚIH°îëµ>RX,6OòâÚÇ9½ÍØôüM6Óüğ·ûÍYô**>²ßãÀõµAòæõıüéıûí¼ûùïäÊ÷İİD²ıÎ·FJ
+B°6¾éñI¼J²üÛIññè±Õ2¸½»åÊ¹ıãñ8?D³ùûá¹¯ÅBøZ²ßù10¶úüÏOÉôÎıøAÎRúá9.ŞUûÁÌö×½ÔQ8ŞÒ
+Sñí»¼²ºıÄÇK¯8KÊÂ2±Jà.Ğö46Í8*Î¹5*¸8ÚáÚ³ETĞòÃVØºöäÍLÃêÎØÏII8+äÚRÏåÃ47¼;,ÎRÆ°²ï
+++¶ı¹ÉøI¸ÕıY¼ëııß¼+-äËùí9Ê½ØÔíAñëEø986Ö·ûGIZDû½7@ê»îIÆæà÷íYV*¾Ïóí½ø·*4ôÜı¯*A
+0Ûı¹àè÷ÍìÃKÙİ·Üúë=Ñ½üÛÓ?¸ı»ÍøYØÕ½°6Û½ºâê÷ÕH°æÙ=M@Ü½ÚûÆ·°Nûí/QÒ½ÏOÂğÜıJ*Då½ıB
++9µÒıÏãàùÍUüCUCâIû1´äê¸ı¯+êÜF±îûE¹@*ŞËßéIîCÍüåè±åúÙı0W6¾QñíGD²üéµMõúÑ91B5R-2
+GòìÑCóİAÛĞü¯ç²ìûİUZ²ñüıåôJ/ûÜü.Ó+óÍÔDĞ0İıæ*Àå½ı5<>üï1,öòüûWáåıø³HÛı½éø÷İÌ7¯ñ
+í»´TÊ+6µ+ÅçĞ¯´W>òèO,*Şì3*î¸ïNİ¼ÚRÏ÷MYNÕìØ×ÊÛ±åâÇ¼ëø¾JÆ*èÓéÔÔ±1LZ¾:TJôì7;Jöîß
+5Ğ6JºJ*ìıì¯áéUô9Ê7Ùí½Úî*õåIúZüçLóíÙØYä½¶¯àà4ıı-*R¹°àT9SJıêå4WÚ¼ûò?DÈùüÉ+Æ¼ıã
+à5G½°â´É9è¸°ÙHÓ¶°/*ì½í±âéYôİ6éõıV×°ü÷Å+öôãÈ3Fëİıë°:ëS/ï½´â;C±0½Ê;DMæIùØAP*0Ì
+:öÀåú¹½@Ô½Ùôê×óüM9M3Ç¹ıæ4**ë43ïXëCG8I<³ü÷İ×¾¶*ÏPW6*ÖWUJ³Ó·Iµ6,:êô1@@*¾Ø14ßØW
+Áí½²*Kòİû/>4ıö-+Æ¼ıëL,*ı¶*õÄWEıúÙ³ñ9ÚQæÄ÷áïïFä0ÄåáBAFÜ·áá2*õÌ*¾Ø5QBïçË-5»ÏLÉ
+/5@5UCÄõÌFßÒQMTĞÒÇ09@EÉ×-;¶¯.¼öî××ÌãÉAYÆ°Wî6¾÷åUVàö?F´Ê²ıTÁ-ºWıÃÅ÷YUÍ½ÍI÷Bıà
+ÇCùìáTÒRï¯ı=ÇÇùü-37Zı¼ÉG-*·í½C¾MõIÍ×ºüÓEñäêø9¼´Tıİ¿ìĞL²äİY±6M@î×òüõG5HBC.å,*
+ZHİüÑA7ìº:Â.7Dú±ÃHÖıİOûùÃ@W+¾ëñéİøÇK¼è½ğ²ñêù½:ÂAVæ×»YùïáÅÈûÁÉMÄßÄ°ëØ5-Jöú±½±
++ï*¯ÀæGEÒüı@>4õüYÂ;ËôÍ¶ÏÎÁùì´âÆ;AùµCÙßõIF¾0ùAúÀ.Ã½ú¿*HÛı¾ì*øİìËRõİ8ŞÜ»ñí»ÄGº
+êÁ×F¯8YÊÌ3±éßÙ2*ö<+¾Jß-,ÎöæCFWøñŞLYòCñãÉÇğÈÄóãUõò²çÓÈ>ÓÓãÉÉğĞÔL¾PÙT>JŞ4×àÊ·Â
+*ëÙµYÆ°*ï++Rı»Ç;Áê½¾Ï-ºÍ½ëÊ¹ûÉõöÈ÷µÙÊ·ıC·CıàÉ×ÒíWÆ;CòI¸òÏ¼Ò·×½ôñ8²ïÃ,:úüµ0*ö
+ÅSû½¼æ×ıÓüêCÇüûµÂæİöI·ğB,çûLÁ@×½ıæĞ¸ıÎ;¸ôÍ?D²ìİ¹²æôÌNÖÑù1¼Xúû¯U4/@5:G¼ı;·°ôÍ
+ûÛB+AÙğæÉèôÔVÆºø1¼àRıóÕ9Õ¶ûKÇÑÂâÛı³-*NÑ¼¸Ï*ÂÏıçåòÆ×÷IıZYı¸É;9º*·íÔW6¾İ5½IëÉO
+±´-ìá716»ÙÀòûíôÈÒUñêöü¹ß+ìÏ½èìîùY÷Ñ·ôİûÜ5W>üï1,îÔüMµ.ëIê¶*;ë¯F¾¿-åıù6íöD8=-á
+áYÊê7ñÅáEµº6+Jí7*öKøHÑPGØñLì·²èÒIı<ôËíÙõìHæÒ¿ÓğÆ4KT/6³æŞúB¶úôßÙ1¸³9@ØñåÌM1U7
+JÍ22¼úÀ>M492*ùíÙVC¸õûÅ.¶½Êçù1İ¶H±ìÊ½ÙäB<ëä6øAì6óåOÅXÛ½ºöûùõÍÛöOõ*5Í>¾ŞıI*Şûõ
+ÄÄó¸üé×ø²æÎÃé½İE´PI½¶æ4*ÚıİçĞß¹í½DÍÄ?¹üéÙTÉäÑ÷õHWDêòûùøÎıS-ö×»ıÒ»R³-*?5ôAH³è
+è.Ææ³×Q2*Ş4M³È¼ºÍëóIÆMğìIÙ+*SG¸:*´é´Û½½Aê¶ò2ØÃÀZúÆã·ñäİùÁ-:-K1SJĞìÚùõôÀ6ûİßé
+÷õ1I¸¹2ÛD¾Ôù1¶ø¿Ø1äõN5Ã½úÑ*8´¹üêáÈ5A8ÃëÜ½G¾öıHQBÜ@áÒğBûEä8ÅÅèöR,ŞÜÙ*¾ÃğËMÈù3
+*¶Ò×ÒÓáÅÍH¸Ğ²õ=*îR³W±ÕYİ»ò¾çE;ŞS³W¹ÕYİ¼KÈ1µöÈ,8¶îó,¾²C*JÛî·,¾³S*Jëî³,¾´Õ+*ëï
+İÜËÙÑ*¶ïÁÅ6Jú¹9.¶àÀÅ9î*.íAŞï<äÙÃ×0ïÔ¸B-:PßÂ14*öÛ0¾ÖŞÁ,îÃøóÉ1XTíã1*úµÔÖÊËÑåÍI
+ğQYÚM;îåæëùõíİ»ğÆTíä1*òµÔ×ÌÓáAL:NCõFäKÅCåïWDÜ/áE±â7UYW¸ÙıÚ1-÷ü6Ãıõ÷Ş¯À°º6Ä3Ê
+¯L·ÊÁ8±ÅáÒíöº7=Îá502YºQ*ÎR6¾õÁ18Û×ÒËÑä³Çï¸PÌH½ßÃèYÜ¶óæĞ8;îã¶GEµíI¾*7Ş½øâG3+À
+Ä8İ3¿:ã>¾¶EMÊä4Y¿ïï,FÃL0ÖD»ıëïÈÉ/5ÍöÎ:ûC=Aä*Ä×Æ¯<±Ê-7Ñ·á²ïBÛ?P¿ÂÅËöR,L1Ñ:¾Jß
+:*RÒ4ŞıëUÕË×ZİÀç±ìêïùAî*¾,âåÌÙ±ßL.îÙ¹û*46*B;îíÌ3-P6D¶öÂİ¾=,KÈCİ¯,¸Ê95ÍLïÏ.â;
+ÃµÒöø+Xµï÷APûÂ·9¯ĞKÊ-4ñöàÊêB÷CH2áá/RZºÁ*ÎæÃ-¶¾üòÓ-å7Ú¸°íİèà;NıµÍÛ¶ìà×ÙÅü3Fö*
+*ÚJ¾úìÃù@ìGá1ÎJÀ-*.*¾LíI*Ô·5.**ñíI*Ô·5íİ>İ½S¼ıĞúüO÷ûÉğùAãõí,íİ>¹Ğ>S·ë¸Á*ĞÛ.ï
+»úù9âºNS,îT/*ÃYÆĞZ7:.îò5º÷Ô·B2ö:ÄçñÉ:+ÖHH¿á¿¶R0ÀU÷B/3Î¶>Ş.JPW¶ß*A.ğà6ì@¾GËäÃ
+è>´îõÇĞ2JE>@;Søæ3ìÏìëÖâÔQYJ¶¼8·¶WÈàDèÂNS.Î»PÈC³ß¿,F;2UÜFåååóæVï5*óÍ>ODĞÃöÒNÇ
+Ğ0æûÜéÄ=ÍÉ°P;*+ÀFJ÷MĞÊY+ÀJX.Ã.Şøü7N÷*ÍĞ>ÇR--Å>S÷*VÁ÷*é5ĞòÂ+¯R;7öğ+Rİ4Rá2êñ-Ó
+DÍ?öğ¿Æ?Y¼º1ÖÜº¾Ê¾2><X1/¾¾ê//öğ±áÖŞß¯·ğRì//:BÌÉHÆ¾EãJFÅ»¼.¼:JÆMÇğ¿°Úç,SÜº?à3
+=¾ğ¿0µä*H1¿ÒJ>¸Ú¶,6îÎÆ1:YÚàÙ>OUúWÁåñ¹ÕNçÉ11à5¶ãJŞßğ+ÎÒËGÄŞÉ1WKJ7½ÑÉùğ;W2YHó2
+ğÚº¾:Kİ0ZEÚ:üÎ>ŞWÁ:×ºX,Àùà*¾Éå0»,ïJ,ì>-ä@åàCæQâõÂFX>áË@¾ğA4ïÂ>57Ì.,.W,C¸.VÍF
++A9JÂé³2TıÌĞNÚ»Æ¸TÈÜ³¾ääËåÙÏÚ.Æ÷ÀçÚõËÏ@²BØº´Â:³÷S÷à3Zâğá-J»JÈO+¼<ÀÔYİä¶¶×<Zä
+A·ñäM:XNŞÏ*ÖèíVV5;ºP8AÈïR5X>àËC¾ğÕæ*Èİ:Æ·È5QŞã-ÒV8¸¾ÏİÑ>W·Î+ÒÜ>O´C¾¶ñäI<B=¶ğ
+.ÜúóIFÊEåN5ßäŞ·×8>½LÈ±*0?Ş.Í,*ÖåğTı:¶,´.ÀBµÜ<ÎğŞ4XÖŞQú¿3P²áâÁğ¶Ï6µØ*ÈİRÂ=²2ù
+¶Â0±*K:³9QØ;>¾Â1Z÷¹ÈĞCµü2Ç;OØØºğ=ĞâW-²´ìúÛ7åNçËEİö¾·ñFI2¿ÂÄíÌÈ<óV:ùÃ>:êÚZ>S4
+ñäM,ìê¿@QÊ41ÁİíÆÁ>Y¼âïLCì²+>½Ò214ÎæîT.R÷Ã1È>ÍFKR*³8îóı>O¿FK>Í³ÎõôÌ=ĞâßÁ*5X×Å
+µQNçÛü°Tøµà³@Sñä»¹ŞZñ;S<0AÇIZOÅèù1RĞÇ±¼6AYû»FÜ;ORüJ,ì>ÁCÓKÎõUğ:ãÉ9·¾î1ÈïP5N·
+í14ï.:17ÌBï3¿¾ğÁ8AØ¿É1J¸ÚØ8ßıQSÈğõL÷êG-OèÜ:OµìúZH5RF-üÂ>Û¯TQ<2Z+VôÆ,ÈO,öMĞNô
+<¾64BĞòã;Mà:ßÆÎÁ;605Ş¶GĞº:+µÈKHõ¼ã9KÈàÚ÷;1BÚÈïP5,DU;ÌÆĞºìû23Í2Â>Y¼æïŞ3²·**>Â
+ÏùŞ2ÒÆ/+8VZúKÈ°à3JãK?¹âº»++á×I°*@KÈÒC¿Ûíİ>ÕSÈ<ÔÛ´·6×ö·Ù²â1<ãõı0íİ>İ½S¼ıĞúüO÷
+ëÈ<ºúü+ZSÇ¶XÈJıù1¾OOà·S¼ı2ÖÜSºıĞúüO÷ûÉğùAãõYÈíİ>İ½5ºıĞúüO÷ûÉğùAãõYÈíı5´XÈÒÚõ
+ïK*ÕY¾òèXHóO2ÛØÑÆ+ÏWõñ@O3*J*¾.ÖöØ8O*ÔK*3ÚŞ7H*XÓ*Î¶Xâ¶ñ2ğéÊD.C>îÃK2Ô+¼µSÈÇà-*
+Şö7ÆĞ2JE@*,Ú;Oß÷·0â¶ñ2>´*à;0²ø¿åíÚ>¿ãEJÊÛ>çÆ@àM+ìÆğ÷AF>OL8NÚæ-¿ÖåÇ1úğĞòãåÄ¯¿
+ÁMñäÉ+²÷ğ¹óZ×¯NçCT¿Jêöğ-ÁÆ.@à0²îJ3:2THNÇÂÕ;ö,9ÆR--M+Jï-»îãó.¾¾VÈÂã»ô,ïÈ9Q+B¯
+1ÂKÃ²ŞÉ1æÅTJ7ZâîŞCÚF9áËEÍÑÏ·¯¼îÎ,>IĞFî6ê¶Z2ÈÚÚ54JZúÌOÇWÁ:×ºX,ÀYB*ë´ïîæÏA9Şáç
+Ğ-°@õRK=ÍAL÷ìEÊ;æß/Í52»¸À/59Vïµ7HÅ,ÚZÁ;-1ÄT÷Ê5è>Åéµ*1à5¶ãJŞßğ+ÎÒËÛâî¾>»ï*WÉ±
+ÄîØ·Zü*?8ÇğÃKæÜ+*AÍ7øõ?Oöö,*àğ*¾**ÕÑúN.Wİ¼Ë+8ÜZ*ØÇŞõ-Ğò<ËEY-É·ñãCµÌ+È57îöæ¿@
+9ZZÂáã9B,0RÊÙ1SÏ*AêZâŞWôRÌèG,×ñ÷WW-²XÜºÜ7Òº¾Êï.K0Qò+çæTìYĞø-ŞGRïÆ>Y6,XPŞÊYğõ
+Ä<ñ-*ûYÎ>¿ü-*2É-@Éõ2Ş.Í,*¾å=0*=Ä8Á>-ùúĞNãCÈCóR*U¼¯*ï1NÇĞÚCüÄ>³·Î+Ò0RúL9Ä6ºñ*
+ÆUÒHLò8Õç°*ïãÉ½NÎ0+,.CFÏ1²ÖKõACá98Îà;SHC.Òø1¿=Z14X2Oä0ö/O÷N,XÆ<óV:¹F*>90B7¾7
+7.Y¼ø/SàFßú0¶FòåÈ97Zö+SĞËEîÛ;O³ìú;<+4IæÁ-FòI¼çSH6Õ.Ô·é*ËÉA½µá+S0CF+1PÛJG0ÚÉA
+½¿4OÈ¶³÷â+ÖHC.²ìF´XB@+IÍĞ>×õ9ÎN=åúö/-Jâ.FàHÒNçÉ-¼J´é*WEùY+2ùìßå¯éL³÷J+øèJèMĞ
+²Æ=.RúÀ7º·0AÇAYÃ*JYÜ=+DãÁ1+äÀUôïë+S8CÚ*MU83+TÏ*AR¯NSEæ¹¹Q*ÔA0+AYû»FÜıVÈÚF°N6
+<63øÂ+ÊL2AZ8S¸5¯ÔÎVXFÓ,XNQCEÈ1ÜÑ¾ZR²NçÈİM¿·ÓßÆĞ?½AJï=»¾ô<¾VÌ¯¶¾áPZX÷ğÁ÷VJ>Ì+
+½KÈM01ŞßÈí6¾²>Ş/T6SØ¹0ÈÒ7K¶Z2¸B605Ş¶ûÅO×³9îûÉğùAãõYÈíİ>İ½S¼ıĞúüO÷ûÉğùAãIMÈîï
+-+¾ÂòòÑÆ<æıH*î=Ç<úİ;*îüûûùõÍİı?·LèYÎúñíõí½ı7¯àÁ>Oİ½ı½Æ²äÆCÑ-*Şçºò½ı¼ıûûY2?IN
+SøüöõÙ-ãĞäÊG**úèFüøùùõıYÉ<øÍ½İÛÁÓ¸ùA*>ç8ıûüQI¼³S°üûûÕáÖIı/ÇXğ¯Î?ñóõİIıJãYWÈê
+ııûğ@ğå½MËÆF+ãÙûïÇJıÄDñKÈĞıÕ9ıÚÃü÷õİ<Qâê/ºğÛü÷õùİ½MĞû:Oçûõõİ8Lüüù-ıEøÂÊÛŞKÌù
+İIıüü÷-üGQtî¯Ô**á=³Ã7PáàOçùùíİìLııùÉüüõ9*ôÏFıüÅ>KıÔ=ãVU°=ĞÚË²êÚ>·ıüóBøíÍ½ö8î
+9ÙÙR*ÆüùMCà*Â½ıQĞßHÈéÍ½¶@òÍ6TÂ½ı¿?9Ë>µÒºßÆÖÌàüùó1Ö+ûOÈ¯µ/¼×PP¼N2Ãòû÷åııI½úú¿
+ı¶ê=.Nğöí9ë2HÆ3M-Tà8°DãÍNÈEÈHêİı¼·5Á=KüèDïY½ºÍïİıHı7óàÓRLüöıõİ½ÎTì½9ÜºÁ¾Pìıü
+ø±é0°½ııŞ-ŞI=ò¼ÆĞ6QÁ÷HøåÍ½N*÷ÅI½ÇËçíıIıÒö@µ±ÂQÆüøá<¯ıúQ¿ë90¶ï,,<ÚÖêçÅâò¹2:=<
+VÈ>»***,B¾áÕ·²ü²DATÍYßÜN÷LE¶÷ëĞTNÖ-·UÈĞıı½ıFÄúùí1úáêFıüúóñõíı¼éÍ½½ı¹ğÃ=1îúíõ
+åY½ıüù¯üÒÜøù½ñ56ĞFıùõıİIXC;*¾úÏÌKÛK*E@OISúµİZØBµìVï5*ó÷?VÊ>9²-AY»:´ìÀøòOSàüú
+ëWâIÄAPçùıÕ½½½ıú÷Éüø-?Õò5QÊKôé9¯7ÊâúÍäØıİ½ıAV¾JÈùIìKôñ½ğ+·¾>ö98/ø9SòXOSW@µìÚ
+L,O+Ù?ãMëJãIDæÉĞ²øóááBFçûõÍI½ııùó¸È?YØNS<OëÎıÈ¼ïJ+¾ıRá¶áBKñİ>ÔûÅ²ÆJÈñIL3òIï¾
+NüJûáåİıüûCGßäNSìëR4Ö¯SHæ0TüÌÃH:O¶ºM*ÎÂ3ñà¶ıü2IµIİ½ıı/Ü¯M+ï¿ñÄËİ×LP¸M:ûó1Gøü
+ı×=´6×JN.×ïëQXŞMì¸ê¶ïàÁ7-âC?/>H+*í-»ÕVÈ¸°¶êGMJÚ°SHè0ÀW-İH:ORZK*î0H¶:Z¯ıúúó¼ü
+ıûéåIVLõÙİıı½ûCëWôGîúííµıIê,2öÀ+,6>BäıÃ4ZÆ-4RÎJßÀêÌL7²J¾µıûQìZÕĞ.*,*âßğU@ã=ë
+Zã½-°óĞ5´WÈUĞHÕYİÛÁùıñíYüå9È>úùÅØÏüûùQ>µ÷Å<ØõíııüïÔÆİSWü÷ILJ@õıüûøññ½>,Sú¿÷í
+íÅîÒX°UĞÂ@É59ÁQ37.ÖWSHç0<¼ÇÔÑWæ»ĞÂüûÕÑÖ½¶YJJ6Ş>ŞğH×ÊÏ4*ıñÍıÒÔ-5¶¾¾JìæJ´ÁÃüùù
+õM¶TOÖASØğ¿;òU4ÖYSÀğÓ7ôë6ïãEÑ>ëııó@ÜDÜËL¾ùİ½ISWûõñ1ùÍ:ZÆğÇµP³ĞàÅîÒÄ:?S,%
+d
+595 103[1 0 0 1 0 0]sl 8 mask 0 0 di
+/mask 7725 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıU¼ıÕêJ?+%%%
+d
+/sl 61285 string uc
+,¾÷²*JHè½²+H¾ãğäË1V:µ>¾.¾øú4ŞıN+*ÄåÑ8åØK/9ŞÆC±äÉÉÄ±×ÇÃ½°ËÄÊºŞèWòíıĞD;Ï8¶ıúùQ
+üÇıüü¾ıÃ1ÆÅğP+Ğù1ñíİ9ßS7KP¸,*°@OIXQ3ìL@.¶J@B¼º/É=OFXQÇÆ*,*J¾ÍMÈøİıüüûñ½,È¿¾G
+NÈ·ûéÜNCÍÈú@Ğ²ùıåQıäEŞáõYÈE5Oåí½ııüıé½ı.+İ½SìV0BıûüûíÕİı3¶¾Åíİ>µ@-Üıüıûóõíİı
+3,¼ıĞÚ×6Rıûıùåí½YÈ<6Í@*<³Ã7PMMÉĞúõI¶2øİ÷0öÖ-O×ïĞÎÑO÷<+İ½S¼ıĞÚ5.ºıĞºíIÉ°ÛõYÈõ
+û±SÔùüO÷Ü½@ã¸íİ>íùåĞVõûÉğ»ıVÈóÜ½SÜõÍO×ìùAãùü×>é»ıĞºíIÉ°ÛõYÈõû±SÔùüO÷Ü½@ã¸íİ>
+íùåĞVõûÉğ»ıVÈóÜ½SÜõÍO×ìùAãùü×>é»ıĞºíIÉ°ÛõMÈî¯Ô**á=³Ã7PáÁ?ãNÓ*ÊíÂ>±ÛÀõYÈíİ>Õ7
+»íİ>Ñ÷ÕNÓîûÉ°Üö¸ğYÇTßùAãñöğ+**2Ş*8İäÓ÷F7>¶÷øø4´-»ÕÙKËEµC¾íğIÚ>ûNïİûÀçàÚ·ò×E¶
+ZHXYß´Îõ¸ER÷äFH·S,É+¹L;¿Ï*TÌ>ÀéUÖ7òÛì0MHRà*ıÚ>ãÛ7M+òù<¯ÕÕZEæ¹Û7.ï9ğÍÚ>ûâîÖ¹Ä
+¾æÚ·EFQÂ°ÕÑ´±ĞºÎ7ØÚ¯6ÈÉ1öáO3*.*¾Á¿¹æEîÅ9òÛÜÀëJíë´Bï³D@ıãO3W@AH0Í<DTH9ÂéUÖ7òÛ
+ë0îÙ²S,*úáOçÈ1ÄÎíR*?íBßó?ê0øì´Á2ÕG*¾,Ò/üÅÉĞEµHZ¿ÚãÁüPÓëV¸»/Ù¿Üéë¾äËA9Şµ>Ş9AO
+IXQ3ìUB²æ.RİÜÀëJíó´ºñĞÊéİ<ÓÀêNCÍÈºıĞúüO÷ûÉğùAãİKÈZºØ*ÆÒ?´B7ËJÈäİıûûÉ,*ı-0ÖI+
+Jıû÷ùõI.:>:<*FôJS´Ú>²*SàûúûõÍIĞÅùùıÍ½üûüÁ+ÔBÈì½ıûöùùíıİôÍYİ½ı7½·S,üßÆLIıÎHâí
+I½ûù-,@ó5AOSùõÍY½½üß*Z½º-¶úãO3ú9QDıúOAIË>÷ñY¯>áC6½ûöı1S°üıûíÅİıáYXÈÜıüüùñõåí
+5.7çMûííİÒXÚò*é½ı½üK7¯Æ³ÉîïAAOøIıüÇGø/>ı÷NÖ½äµÃÒ>÷ó1³Îü÷ïÅT4û7İ·SÄ+¶ıûíõDTIı
+ü°½ıòÄµ+ÍòúõİõíİıüúG½ûûõñõíıáYXÈàİı2Hé½İAÏ+»BIııùùYèAìß:ò9åJı÷é9èÎüõéıÍIá½XÈ
+ÌIëÀ.5ÈSÃÎ<VË½½üøµRÈüİııÒ1@NÆÎAV¶ÎëüúùíıÆOÇÉá»ù@ìÚµY,*áÃù@ÓÃüùÍSøÆÅ:KØß/<N0ö
+ııùÕBÈß68B<NÈBKÈ.3ÉúıI½ü9O?¿¾ÙK*µYğ,+8¶*Ü³ùÔ5ÄÅËîV6JıÕQtÜıæ/>TŞÆÏàO*¶5AVRÖöı
+üûôı¼üûá;ãÕÎUÚâ.TJKTRÏà/6¿:QYÀ=¶RÏ,/6AìBO*+K2ÏàË1Ú¼*À+İıÍQtøIçXøûé½é0ì½½üö<è
+ıYİíõ½½ııùõ1-MAXÈF<Ûıùóùí½DùZ*BCÎüıñİíı7Ñ.+ÖIÀıñ½-,µ9±2ZáĞ²èãÙÅİQ*¾êÉÕÜ-Nçúñ
+IØUöÏîåı>0F½üô:ìõíı¼åí½½úùùù4DñUêÂ5âM·;È1Höì*¶ıZJ÷õõíı;KLüüõõ;úÆBíH*ğíııûü5@
+OÕìÛú÷üéµYXÂùì4*:Ú³Å*:íèÓõ*SØüP¿ë9ô9Q¹A*Ö½ıúòBÌ³¸ııùñİIı°ïCİàPÚJSÜáÍ½½üÏ=AW,
+û=5Øıü±>ŞúûùA>¶ııQËîÈ,R¼üüõUÈÌÚµíÛÉÑõ9IËQ½¼U*¾¹AÜØ²éÔWñ0áõYÈò½ıÏKÈ+ÅQO3ûíQÕ;
+ıæÙöEéÍİ¼ü59Oú½<Güû-**ıÑĞ²ıÇ/óIRğPUJıÖ*4ÒµıFN3õııY½ü/ÉĞáPûD³éîõõQ÷ñİí4*îóß-1
+ë÷²éÒ3³îãõYÈ,ÒÕÆáBãÉ*îüûÕáBİüıü3ıüı1õ´XÈ,ĞÚ:O÷½½ÂîãÔÆ¯KåTà@Y>ÃüõİİÎÛøíôãÇ-.Ş
+ÎıòùíÕ>ûğèÒGÁôHI½ç½½Y*¾ñÍíûóâÊUÕPÇK5İ¼S<ıM·ÃáÉüúÍÜ¾ñíí8Müøùñ9Ø5¾Éáê´ö,ºĞÛü÷õ
+õİı´¸ûü²Móõõıİü=à7C¯÷AGÌIÉöDûıñıİYS¸ßÒIEìF»ûúû+*XÜµâÄIÑ86BêÜ½SàÎÜüéµ½îıX*Fıü
+üé?Òı½ıKG¹í¼ıû×Îëø°¾HÈùI.ÀüíÕıĞOîıZCõñ9=·ğ+±ÉàÅîRÊ6*:>;L²İĞòµUU@F×÷öóßûä*O½İ
+HºíÄ-UXËìÜ»Û+N3µëõÍIıÑ@îûûùÅÕ;ıüû-ãÀîŞûÚW¯=Y::ãÃè,ü/Ø1Ù,ÁûúíIüMW3OZü+3üıô3ìB
+P2,òİZS¸ÕÏ9ù»ºFúöĞÜû>*JÒI¼ö+ÒÜøáÇZßDZŞéÅ1í¹ïÜÅM=Õ²Uíİ>ãæXßÅµO0ûõõıÌàîÖ¾¿Ş¿¯¾
+»1¾¼>Õ½¼ûûÉI8ØÂ.ù÷°M²½ı½0ıíIÅì.Ü*ı5@OIø÷ZÛÂµ±íXàÁ½.*üó:1,NÖ;ùû¿0Æ×+XçJ2*»IEŞ
+Ã6FW*øH*¾**3:ğF*?JĞîÃ<Æ*ŞT+Jñ5MÆM9Fúöë×éHVõZøºÒê8:Oî?æóÖ6SıûóXÆğø-JMÄÉ½İ¼ü-À
+AÙLÂ+»S,äİ½IÀñ,èóÈĞáò6öWßÖÑYAíÛI+*íÜĞ¾¶ÍÉMäRà´½î+L´¾ED¶î-L´¾5CZìÛ5³ûX0R*Êç-*
+Şø¶*ÂXùÜ*º9Ò*/:Jµº¿.Şúà2NµÕµøîğ+úùóç¯5¼5Ö±¾×¯NSûéQÕ;½üG:ÈüİN¶öıñİİıëæ,ıËNÈì¯
+±İ³+Ù´8GR½-*äù-°ç9³¾SÕü³¾±7¾èÓQıDŞË9Æ*Yíã¾.Æ×°*ĞÅ-Öòà-Òº¯.ÂÂÉğÏ**÷ßLFí*ÅìÚ³Ş
+³û´ôÖ±NS÷ÑÙÆ½¼üS¹àÄÜ*KÀáí½ıJOîı²ODÇ>»Kä¼çøWWº·¶ü0*Êæ*»ËIÆ*QBN,59Ë±7ŞÍIAFR,.Á
+Ê=ñ+ÖÌ+BÔ+ÊE½J-¼Q*.âÊÑ?áÀîöÖà¾Ê1¶÷ä+Ê÷â+âHR.5JÒ+ÀÏ*ìÖ÷à¾BÒÎ@ºò¿AIõÀ,27ÍI½>11
+0¾È5YGBLBAêAĞâûóñ½Q;½ıµYZá9Z:åóåIØRöñ½Ø?ËNÈÎíÆĞËì7ÚöE*Z--æ8üJ,ºçäŞíÃ2H³*9HÙÄ
+LÊ¹ı7ÌÀ1Æ¸0:J*ÀA72ïà-.Ö²29ÁÙOîõº+/9Z°ã+19ZĞµŞ¾RÛB/9:¶Ù0ÉÁ12Ê¹-çÃù¯:ìL9¶ì*»ÁÙ
+ìFúÓFFB*,Üùò;OæÕYNCÒPé·ÖßÁÅ77**ö¿ÚıûùÅ¿F»ÇX<ORµNçNíäëù7*Ö½+Tõ¼°+Ìøã*ÛË0æËÑ.*
+ºD¾¹1ZØ¹õ*P-.à,À0Âµí+,ê;ÀÑSÑà:öŞ1*¾**¾=Ä*SòîJãê5Ãî+úĞìïSõ*¼÷ç*Ä¹õXQMò¿<PZ6Xì
+ÛÍãß¿+:ìÙO9SÀ¸7MÈHİüè°ßÀ?E´1*¾ĞÔ9İıüúÙË>»Eä»åô7WÙ´Öû0*Rä*XY²¾A.ñ3Ï*ØÅ0ZØ50¶»
+H¾³1BTÙô*M-.ÂôÀM-°ùô*+ĞAßĞ**¶÷Ş1ŞáÈÁ·*ÉË³Å·14ß-êÓ7±*Ï+ôğÅ+ZéÔ7;¿ç-?È1¿<R³İÈÁ
+--JØ³Å86;ÊÙó5Søü÷óùõÍ½½üÏ¸7:*¶½üûúùµESÀ°KÈÈAòéÖ±á¼,*Ä÷,QÔå+öó×+òÜ8DŞ2*ã6î´Ã¾
+0*ø¸í*K-.8æ¾áÄGJæé>5V¼<1ô¸¾ÄÕ9G¾ÒÉîJ/º¾ÚÖ¯9<<JX@D*îéÕßã2»2KZÉWÛ¶ûT84+Z´êÕKñ7
+Ğ.ãDÄ>+ıöNéıı¼üS½àÀÜŞûõõÍ½üûüùÁüQYÎÇN3º?SØèÔYÙ¼,*ÜDŞ*ÏÖ<0ùËµ6DJæİ×,ÖóJ-ÒôºÁÌ
+ÚÅÛåèÓCÆÙøP**DJîÀ0ºó/6S¹ìK3¯LëµìÈ-4¾¯ó-1Î3M±HUåÅ-Íî+ìØ´WAÀ*µ·ò9×Lñã+Wò+õû÷÷²
+¶ATİÈÁD*½ë¸³æºçôã6ºó5Sàıú÷ıíIT*úµ+*ÎüüûÅèÀüËPÈüTñİ²õ¼PÛøC*öÇ²<.RKçVçÜS+:<İâö
+C¾ÕX»ôË,5*ÏôÒÛC:ğ²¾ÍIO*èA²ŞSµÁÎ:³ÛÁ@:.JTÌE:è+@@N¶è+**2ŞJ4Ñ1D;ğçUÑü@¾Wè³ïB/<¾
+»8»î³×VÎ¾OæèÓ9ãßÃ+ZèÍ÷ÔûÙ÷ÓÄ;ã0,+îİÇNSK¿@ú´YåõL×5BJIõ»UB²RI×>G<çÅ÷øóÚØóô*OµÛ
+D²Ş»9ÉÄò=ÉĞ=,Ë÷íİÌSÙPÔUÑì4*2ĞÒÏ31äFøÎÍVÈü3¯æÄ-±@ë¸µ*¾İÌGE³âÆKA0Å¼°Sø´PM½¼FC²
+èğøóÜ:OÍÛÙõéÌIÉÄTTÏûÆOçåP¸FDòäÌK=èÕ³µ/*öêÛÓ5Õ7E±ONÎëéıÖ>Û÷ÁÁÂD@»Ø²;»¸Y*¾ÙäËE
+õåS37MR+ñüÆO3ËÁûÓPÈH+*Hñ3ŞÒ¶K5ıÇOÇÉ-97Öë×°¹.*òVÙ¾M-YÜùNçøıíí½îKX½*ûQ2*ıîÀÃ**
+öíPĞÒäÉ5åû¸óH+*¸ËÙöÂL×ÃNÇöíõ½*:Ó=JüüóõıİÓO×óÌÎ¿NSıáåí½ıü1VC7,Öıûãå9êÖ-±FçÈíX
+ÈÌİııõùıåı¼T¾îù÷ııİI½øûÕî6QØğÙÉ<éõİİ½ıùûåó1äıúıû±±ÀÚ6ïÙÉĞõõÍİ½úûıÕAúûQ.*Ìıüü
+üùáõÍı4ÌïNU¼¹SøıüùñÍíıüùÎ½PĞ>ûı1S4ûøİ½SPÌºğIıJOæIÕ=Â·0¼Pô.C³á¹Aã2.ûıH½ïŞÁQ.*
+6Fõîà½-õIµÍFÛÄíXÈÜİııûùııİ.*Æ3*²*-+:*B°/ã¶Ò?İÓ>»ıûN¹ëıÍıüÊëî8?ó¼ıüÉVÜH;*ZóéÕ
+±íºÂıWFá¿,ÆZJ-¯ßüJêWÉ°=-ŞüNçûùQtU¼üüû1.âI*MÈ2İ¼ıR¸åó6äİ½íMÔÎ6ÅÚ¿À+ãIØ,öÅ¹Ú¿Ã
+ÓÈ<æíã*ÖHSèıüÁøàİ½ŞVèµ¶.2Öı¼üúÍNOÈ+7PIõ;öAß614J÷95Ø½½ü5AãÍ¾-·ÉĞùİ9òÕüûùùAûûí
+**ú½ıúûùåí.õòNSÈÖİÀ°F·*Ú½VRıı-FX×,öıGOS·ïÕIı½ıïÈç5*ê9¶¾ú÷ıÅĞ¹TåÎüùùí»ãı7>á7.
+:ıßºÄQ¼ÒĞòıı9óó½½üûßüÚíîJ+º½ıõùååı½3ŞGÑ=¾û+6äùÆüòµŞ6µ:JÁ+û9ıüøÕÈñ¹ÈĞáÍÇßÂ3=T
+Ò2.ÆÜ*ÚÂ3JVÆB¯à+æGÏ°2ıø-?Ëô+>´ê¾CìJ¾X:È½ııüÍã,öıEOç÷5»âÔXÛ·ï,ÛE**½é´XÛ¸éìŞG=
+±îüü÷ñõÛMìÎÄÃ.*íWXIıùõùıÑĞâüÃøàíİıüÕÆ@í.öüùñùåıI½<ÇÇĞøõİ¹3ıùµŞ6ÅÜKùñåIİ¼ı5=O
+d
+595 103[1 0 0 1 0 0]sl 8 mask 0 103 di
+/mask 7725 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıU¼ıÕêJ?+%%%
+d
+/sl 61285 string uc
+,¾÷Y,*òÏüıC-¾÷9èÉı*¾Òëîâ+º½üüıñıİ½3ŞGÓ=æüıùõX°ı8Ìïè;LFÌû/÷õM¶T²:9óåÁP*Şé<OEè
+é½ı;*éBOùÍİ3ìñĞ×6JB¿çå7ÃûÛÆğïİúëĞ²ûûıíI,JÈîÌSCFûıüñùHà½ü?FáİAOõÍııûúËîôI=*Jü
+÷ıõH°/ãöõOçúíõí½2*?Ï±RL*îÄ0;L²QtıúÕî6WRÈÔÚ´ÛãA×57VÈÌI½ıúñõÕC¯P*î2=PºBÏPüûÕî6
+ûKÈ<*ÕîKTHJï5N>V-F@,TüéÊè+C>îÃ12Ô+ü8SèıúûõÅİ½X½Zú÷éåI2Z/äæ;Ğ>,æH=O¯7ó¯;Öğ¯-:
+8/JÑ9º¼ï+ÍÅ>ûııûıéõı½ıÚÊKîå9û-ıµï6ëKÈ´N5ïã9Çğ÷,Öğâ¿Â5/:2ùÚB,RüùÆĞòİIĞBßûÇúôñ
+ÈåÌ<O<èŞŞ<OO62Á4ç¾Å@¸ğğXR*¿¯÷ğ¶´65FFHJ,Aåáöğãñ²VXÉ96<¿/ÅMÈÒº*Ô³*Ã.Îú+Cú<Ğ.ùå
+8â¼ı·W¯*+ò9S*úÕî67LÈÔöÙ0ÍÁ>·¶:Ü¾U0,X²Ïõ7*¶÷êÎÉÙä:N@ÍÉ¾îğÁ.Ü¶¾ÔãCM¶ÛÚ@Å4D÷º;X
+Çğ/<F:ÁYLÈ/11ı*ê90:ııï9L0,Ú·À-@æºĞ.9Y*ŞÆ<ïôKTÆ<µ7Î×·ñ÷´Â@øã.Ê÷OìÚ÷Ç4KéÕY±FVĞ
+ÒãçæTìYĞÈ*àË±¾UĞº¿.O0?/QZÏ38:Ï5GR*÷R½ì<Ù2SHû*ÚIııúüá=ºıüùıåõ9ıü?ÛLEÆ<æ½**ìÚ÷
+*ÃÉ-7J?0Rê°*ïß,Ì*é*äËUûÁ¾H+ÙFŞ.Í,*¾å-ĞÂ0Eòü<±F*°>±èÏ*ÕN÷.3È6P4XÚL=BJÁÇ<çÅİ½º
+ĞùõíIııûïí1õõò4ûJÈQ<:NçÉIL<JïÔ+DEñäíëBĞòäËáä/M÷Ì/Jôğâ<OQÛJG0ÚËEõU,FHÍVĞÂUÉQ8
+¾³:ßÃ:.Câ´·É?À0=OôııüüıùõI2¾öıÙıÍıÈXÏQNç;Q2Î¶ö:ŞÀ=ãHÜÃ@øãU½9Å1M·íú->çâCIXü¾3
+2<,ÒL,¶é*WEı4¾öÆĞ´ÎõôÌ*VY:ß+CúDĞ.öÅ<ç½ûüá<Kû?ËLÙÆ<CµüX>¾8ä±+Ã±ŞM5ûZB6@¾ïØº·Ã
+63Á.MÀÜ:OØC*çÆ*@ÌT+;GãêBĞÒõ6>SE*é5N¶J0İÄ>óıùüıÙıI4,î1.*û+ÊëTÈWù*7PÈÜı¼üüùM°.
+29,âåıøùùYÇ?Ü½SH4Ü:OåÎŞKÃ-*ÎÉYöıÍÙM°1ÅÕXÈÜııüúù±2îÜíİ?¾¾ıúıáİĞUúÕĞòüıÍÍ7¹ôêÖ
+ÇàQÖ5*Jøû.9íõıı»ı7*.OØ+,úéYSÛ?Ö¼ÒĞòúñııDJ*++*¾5*î,Ú÷ííİıüüÕLºH½ııõY*¾íİùÍJJü
+ıõııåüıíõ9ı½üU¯ÃíTÈ;ÈÊİTSîáÉIı**ÊºÅäğÍÍëäöÚ»ı66¶J¿+*èü½ıî*ÒIı½ııñÂìµVÈì½½ıúÑ
+ĞèÍı72JÉçöõí½CĞòôûıííüÁ,*Ú**½ûáÅı½½åíİ½ûù÷ùí½?ÕöXOÇ÷ñõİóÒúúM;U*ú¼Çéöéíİ½ıÓ.9
+â9ØîøG2ÆÖï¾¶ûOüû;ÕÚİıûûùíõ½?ÕöYOSõñ1¹T¼ıQNSóÉÚPİ¼ı;ÊE3HŞ½0¿C:Zı½¿*ùá,àCÎ½ııù
+áİÇTúÕĞÒııí½íÓÒîÜ=*JC×ç9Ü>ú÷íNöºüûöùíí:¿ºõ½Ã¾èüùİıI¾C,*ğYOTıUSTıøõ½OÓıËJøû;Ó
+ûå½ııüÎıTÂåùıõÍı,*öõÑı,4FÖ2ĞİıüŞÄÓÖàµ?OõÍııûPO÷õYöù½+*à°ØÎ*ÇIıTÀåóıõııı/*B¶û
+üç5îî½½ûÜı½õ=¶úõ9ıTXïÛÈĞõõÍ½UUüûõ½,,êĞØüüùíåIJ¶;ßñóûıÕÍÖZŞüïıüÀ-ı9ÌÎúó1ÄÙ3üE
+äÖÙ-2ıüİNS0ÃÏüYU/-F÷*¸·Ëı*¾ö*çİ½êŞ<ÂåğııÍ½×àVL6¾ôıÍ½¹4øñ²ÇµVÈ¯¯àóÒU8BĞV2:û÷1
+WÀüÙJãÉãBĞ.üİ½SÀıµN3ûñåıııC¾/Ã9üıI½ğGUèÂùÄ÷UOSøñ9+:ûùIîãã:Jº.¸AßİûüEğÂñÄçïĞ.
+9A.*ZúìOçûõİYı½ıø÷YSúà<3½ù÷Õ.Òõ7ÑãO·KYØºSğıúõéÕı½ıO7:ğAÍå9O=Éíİ>É>÷Y¶ìŞ·ñäôÌ
+.ÆûõÅIğáÊúõò3Õ7ñÓÈĞ±FŞOBC+L»H5ÖÎößüüõùå½OÌ¶86GMÈâùöğK*ÅYJòèÌÕ;DÓ>ÛL*ööÕÂK¾Ş/
+ûO>-üÕíııüÉ6ãZÊûÉ<*R**5Yé;/ŞØº2Ş÷5FĞ*Ş?¼¾È1RúL3.é*ûVÈ¼¯¾ºıı-6ZîÀüàııåıııúıõQ
+Ø<WPÈ>ŞNï+*Zú0NS.Î»PÈàDè¼@Oå¶JHüù-,2ÆûíİíİıüûAâBéV.ïí½-Æ<ÖÊÀ5Ğ=OGĞÃöğã-F;ã.5
+*HXæÉ@YÈX¯*8·òöBPÚõííııûùıé1úA.C»VÈº´65FF@YÜ6JËEİU1É7MÈÌÏ4.àÄAIBÂNZ;´*-1È*¿Î
+;O<ÜÄŞ5ºJL76VĞòÂ+¯R;7¶Ô+º·ğğXR*¿¯·Rüà;ìEN9È<-:¾¾¾NÃõ10RüùùåÅİıÀ:ÑÁOçÉÙ0K°÷Ú.
+.İZ*ØëàßÏMYH¾ÅÑO1âVìÏÀPHYÂğÛµBMÎÁ5HA:øòÚöF6ÎöÙ0ÍÁ>·¶:Ü¾U0,XÆĞô7*¶÷êÎÍ¶L,0çÂĞ
+ÂYÄÇ÷²·Æ<øİÍ½ıùÇ¸LåÉ<*2*î+ò>I3KéÕYOÄÁA6¾´<öû¾>ÛâğãéŞTìÚ·äË±¾ğL-F832AJ-MF¼ğÏÔ
+Bµ9ĞÀ>·é*ËËEÍµMÆ<YPŞÊYğäËİ¶Â.6Ğ1Oç-âéYZ*¾üùÅSĞıùó93ú9Ğ>+VÌ,Öğ*=º4**HÍB*Ê2ºFĞ
+òVÉAİ>S·Ä°öÒM+ÈY6Jú+SÈ>µÌ¶Ì1RÚFæ*T->P@-29Üî.Ö0ZìÚèI.â3ÖQF;+ÁòKS¸+úú=N*Zıü¿Èö
+IıùöùY2°ØÖ>Så,×å+À+À7³÷Ä0ÀAIûÀ>»ÌZ¼-FXÌ³*U¼²¾ß1NÇ´ì¾õÆ>»÷MN,>ìDJ±±ìúÛ7MÈæÚ·ê
+ÚZ6QÒ?ÚµÆ/»çôOç+âñı¼Ü-1ıEııëİİ:à²±S°íIJÇPÌ÷ï50¾Æ3¶Â»æ+S¸Ş1â´7Î³ñYH*¯íGúF´W³Â
+¿¯ûèJèMĞòÆ=.RFº2ZßÇ°9íàGóğÓİÅáÁïÂ=<ZÆ@>OİR*ÅÊü¹95à·ôıÍIııûùYæ¯ØÖ>Û·ñÆ;¯ÆZNRR
+üÀ+ÊL2AZ8S¸5¯ÔÎVXFÓ,XNQCEÈ1ÜÑ¾ZR²NçÈİM¿÷3S<ñäíÃ,æßº@Î¶0ºÆĞ80Áß,BX-Dé;<ZÆ@>Oí
+ºğNáüùEPS>õ98JüÓøÛÎá²XSXÜ.Şá/»çğOçùõíÍİııúù=ıùùÅ/Æµ;AòBíİ>ãııAN÷Â*º½ûúûíå98â
+±=öüO·UĞNııñ9ÒNòDäİ:âºıĞ.ıYÈĞî½½<KŞÃÚÎáºıĞ>ııİ>OõİİııøõÕ-3ôY2°¼=SÀïE,¾H:Oíİı
+½ıùõÅ-3øıÇĞÚGSVÛ>·ıüü9=ÈÓøùAãÉüÇóàĞ;Oıíı¼üûEÄ÷,Ì¼ıĞºçI×XVHĞòù÷ùõİİ½üûİ½SÜòÍV
+A@7S,ıA,ÎÕ*Júùı<OÇûõıí½éSûÅ5Rıüü-*ÂO³K,ĞIıäDâYTÈÌ½¼ÕÑúííí½/¾ıõíĞØüúûùAúù½ıĞÊ
+Ç½°?Oø¸4ıBâ;Oòİİ¼Éëà=Çıüûİ½SäâI·ÈĞüııó>úüYÊĞíµíğEııùñAüû½ıĞÊÇ½<ãBí½?ÓûõûõÕíû
+ùÅ9ııı@Ñ/°ôÜ*2ıüıNSàüúù¹G?J´>ŞùıİYİO³ıóÑúöí½ıĞÚ=SøûüÛÄJÑä7D+*ìP7D²À¶éÍI÷õİıù
+Aã7ÇĞùíİı½íB±àòA±4É-±ãÉC»PËÂõíİıHıõYÈU<OîITçûùİ½½ıÏÜø5ûúá,V½üùñ½ıĞÚ=S0+öüúıõ
+İíI½ÏŞéV¾òíIV×÷J÷±Èğ/Ç×ÏÜüù9+æÀ*öüO÷ûÉğùAãõYÈíİ>Aı½5,*BüûÉ°4ØÙÎA»ıĞúüO÷ûÉğùA
+ãì>OíD1-+9àBWHİ0È*Úà3R÷*ÃY²¿Z7:İDF³Æ/»ç9?O9GßGèÛ7ÉêDMS4+²ÍÇĞÖÄDİDF³Æ/»ç9?OÈD
+JõVE2-6çLº÷MĞÚ¾,¾Å5øĞITÈô÷¿TË52»·à¾BÒÆ0º·3¾³âÏ±WHJİ4R-1ğ3:2°ìúêB@.1Å12ç,2³ZZ
+Çğ+@¶Ô+È=AõÀ,2Â¯÷ğÃ.íİ>YÑ¾1WKJ7½ÑËEåß¿ö,XC2¶µNçÏÒ7»Á;æß/ùğÔKÆVHA+ß1Nç4½éî·Æğ
+/@.SèÜ+*AÍ7øG<ºıĞºÕ*ÜÚõËÏ@²BØFµ7Î·÷ğ÷´Ú;OË×Úæ*ÅÉÅ9îÇ2Ø¼ûDáß5ĞNÚ»Æ4Ğ6VZäËåÙ;N
+ÇA=ZäA·ñäÍ;ßùAãÙ/îÕıîRì°*ïãS÷Å.ìÆĞ±W¼¯*ïãËEµã+Pö>**ºÜ:OW8²*Ó+41@.Q¶,V-BµXó9,
+ò.êğåÆîûÉğë,öğ59>íDJñğÜúÛ7ã-VWH÷+SØÏ+0A9EJG5â¼-/KÈÖú;<+41@BñäíëBĞÒäËáä/M÷JÀÖ
+À.-*HXæÉüRS¸ÕİÊÈüË¶ËOÜºö:ŞÀUôï7@íJíëG1Nç»õîñÖ³Óã»é9ÎN=åúö7SLâ3,>8ü*5Fé*ãAYû»
+FH¾ï83DÇ>KüÒ+J¼ìÈÙ6Ø/66üú»úä-.JıøNç7Ñ¸<¿*5Ş°ùğã1ñ×¾àCîÖúG-OèH:OYHöÌ,64CµX;Mà
+:ßÆÎQNÇÊE½A4î*5À>óZB6@¾ïDÎ÷23DÇ>+¾Õ+*²Ş»ıÉ=ãëÅJ=Æ<ÆüB**MÉ@ÛııÍNÈ5ÀÅHW.êíııúü
+½<S,ıı,*îıüüõéıÈN3ø½6*Zııáåı?ÇğÀîÏO5+îÅ+Æ÷úùÑ>ßö7+ŞU<OûıİüıöıõQSìÌ>°>OîıY**ü
+ıíı¼ıYÇ>Aûıë?7æİıüûûıöĞ.ûM*8ÛÍöõ½Áä2Ğ6ÙöíOSûñíÍı½ı1B3ú10FøãóKŞ½AOüİıûüıùñ9ÔÒ
+úùùõ½IüÃ°á½AOõÍııüõıùÕYëİåıI½úá+íİ>APÈXııüûùñõíIö9.ZûûõİıûÉğäF;HçùåõÍIûùü÷5û
+üÁ@İ½Sìë>CıûøûåYı¼âĞîå½ÏÏÊÉ>+%%%
+d
+595 103[1 0 0 1 0 0]sl 8 mask 0 206 di
+/mask 7575 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıUü×¿-*õN3î1
+d
+/sl 60095 string uc
+,¾÷²*JHèÍÅ1¸;1ğÉ7øRıı8-*õíıüüùñùåYñõåÍı½ı5ÛÄÊò.*úæĞ6Òòûíé9Íü¼úıµ4ÈYÜ>»½ıü÷õı
+İA*µòİıüûıùõıëÉĞñõQO4>VûıõõĞZ¿U½½üüÁ*î½ûäÒF80:ıû9,ÖüüıñIRJõûı9F.ùM6T*ê½?ıï95
+ÆûûÅ-L7M0T8»½êRN÷õI¸4õÓIıâÓº°ÆàÎFùí½:¿ûí½İıZäL.ïí½ºŞ9AOõİI°L,*òúíıAÔMËµüûù1+
+¶ıüõñûğA½ûºİııøûıİIŞB,ÆöùİI,Z´æóùíí½üüû¹Ç+ıá?×üûûûİõ9½ŞJæ=æ9KîúıõõÜÎÊıü»¯.ºú
+ùıUR·Mø8¾O+ÇÆİüıúñÍTÀû¿.Z½6áAAOíí½½ÒX.öâ9ûùİÓ>ıŞ¾:OÎIZç5ûë9óöüı÷ÅJ0QÀü;,¿ÃKÈ
+K+Z½*±ÚÎT:*ğ½úı-F·½úúñõı½ı+¸Ä=öúıGÉï½½õ¹8°¼ı¼/óõíØÅÙçI½üùóõ9û.øå@O½üKÈ5MÊÌ:O
+ï»ú÷4:ë¸É1+êÂ@øÍ>GıûöÍ;æSI½YëWYıúûÅüÉü,´H²æ/ïûÚÄOİìû¹ã½ıÌõıIıâìAîİ¼íıYúA+´Íı
+ŞÑıí½½ÁI/úÑõüùí1êAîÜÅÛûŞ¿7éõıü¯XıAîâöù½8Ğòï+±¼HÖáC¾G²ó¾QıíıÚY1º¸¼ıãõ0ü5X1Ç0Ê
+,ıëNÈ*J**C¾áõ»1ĞğV-Ú»+3¾ó+-*X;-Òº¾àA¼:Îîø4¸Ù>ûıûúı±ÙŞ<¼İİÉSûûıİíâ;ÂZŞ?üúû/·İ
+Ç0NæJöºHÌKÀæùûÕıĞ¿5*¾K¶øMB.îŞûáııİûıô»ú1û/¾ıYI¼19*+0:ZêìŞCæJ½İµ;ÍK¶/RäİıVä½ı
+¼·,GÆWJJ*ÀÅÈE+ÑıùÓÀî2N×íÍò+27ÚØıûùíÍÍıü´<O8ZĞöí¼ß²Ç¾>Ã³Ò·ÆĞ2JùKÆĞùÍ½ı¼¯.ÀüõÚ
+ÄøÕ½İÒ+°G½O5êôıISZİIÆïúûïVüíáºô½IÈéıÉ¶+ØõíRüı/*Üû½ıøıáıí¾í½9*+üûıÑõ2Hòí8JÄûä
+Û¾8ü³9R<ı³I¾ãıåZòùÕí7İKÍ½WKüõùı´A÷õø3½ÓBŞÓûL»ÓÜBüù÷ñİÖßVË>¿ãÎKÏÆJÌ8ºLÈ²N5ïí¿
+>G½üù÷ùI@*RıÍUçıüõÕ°çİñI8æëıû/·İüı6ìıIõø8I7çúûM¿7İõôÏÙÏ,SÎ6¾.Òıíí½ÂÏIÖíI¾/öı
+İõòCæÜÍ½Z6û»»ßGòõìKÙ½µİ@5ıÈáöåíù1ÔÑİ½İÆø-ıKÈüÕÆ1R¸2ŞÓİ9óÓ½ıüøùıAûñíV¯ÔQtüìÄğ
+ãåÄ¯¿Á¹²ìúZI6,.:VÉ1+Îğ+Ö0=àğ+øÓ¾øà0îXGV´.¶KÈNÒ¿¿OÈ:JºJKßV¿<0ÂKÃ²ŞÉ6°ĞÛ/+*6ÍP
+´<îÍËÇ°:ÍõõI÷9FÙ6ô8ÜòÔÔìõí½ÑÚù»ıL½ıõïÙı½åYí@4ÎûñÅàC;İİâµ<+P¸ÑPÇàıíİıûü½Õ+Ö°O
+¶¾İåİÍ¼-ûüû=õDòñIÜM½íLÚ¼üüUµ¿íC7åíIıà¹üõıé3ßíİıVR¯3¶EMÉDOÚ½RYúİıüúùñåI2ÎÍNçQ
+0ÅÛ±.ÂãW¹2<ÉåOJÖ¶;.V¶ì1OÇÎÒÓúŞ0æ´51á5XÆĞ?üÔßñÑĞâß¿ö,XC2¶M0:¹PØÙÎ/³0S,ı¿ºêİıZ
++.*ËIÎQRW76îÊğğİİæYü»úíüüÃà±åà±íİ½L3ö<àéXÁ*:ìı½ü;0ì½ıû3àËEõÌ5öRİ½ø7ôıõøÍáÖıİ
+¶9ü»µ=úùùQÛO¼õÊÄ¼ıú9ñßíùù7²½ıû±I;Ö-L/6ÖüúÁôDêJúóñ9ÄëPĞ.*,*J¾ÎLI3KéÕY±F.U,VHL
+ºPÈ<±÷5EJE3úHE¶KÈÂÙ1SQOÇÙ0æÚº÷ºEÀ6ğĞÛ/WR±Æ<ûı½½>ÏMÊ+ÃXúùûñõÏ0PíIøËÙüÛüJ½õõSê
+I½YÁ×½BÏ÷ùÍêU+,ÒúıT2ÖĞùü3ÅºØıüûL21ï÷+Nîíıº1ı»½úèWöõıÙ2íÍ¹ÈıüçM7ÄúY@=ÂŞ5õÏíİY
+Kıùùû´??8Ñ1óı@G³üLÁ>SııúM>ã½ıëNÈH¾ãğàáîCÜF+ÊîS*¾÷²C¾öÑĞ>VÉİÖ+,¶L÷×¿5Ğ²ã¿0ÎøĞ
+>-9V÷ğ93Ò3ò·S¸üûûõõı5Rı¼½ıı÷±C¶4ÜIĞJµ½ø¼úøõºòÄYíPZ÷WÚïöúÏ²8ı»ºíÍ½Å*Ùß-ïìùáı½
+ı.*÷ıùıû+ºîüIú1Hü¹ıÚU¾íIØIßí¹ÇöíCUïı÷=@ñİ½ûµÛÍüøçüSİı¼å¸çıÖ-F¿ATÁëõSUºù¹ñÉûÇ
+ĞEµHBÀ¼ã¹@*×-6³÷Ï+HAíºNÇÔ@ÍúÄ>Yê¾´²:º÷ç+ìÆ<?½ÂâÆğ3>.+îÔ+DAYüìÄ¼AOåİ½ıùùíùDèı
+ıõíı½ıÎ*¶*0èøıÍ2+ŞìÜÌ,,:Õ+J¾1¶JJ³>**Fî+¾õİKÀ**éû»ıùııÍ*J¼õY½ü**>æQí+*RÏ»¾-DÈ
+¹*Gîù0JŞÀ+Xã½æ*âöÕY×EÆM½Z*+4óõ°-ºø9@***öÓûõÇ0*:êèú°ÃĞòã-@Æéù1RĞG·äÅYUJ´ÕÌRNé
+JíëGµN÷à0B°,8¯94¾ó7S4â3L+ìJK2*19,V¶ãHÜ³¹Søüûıùíí½½òHÜııöíõİÍÚÕÄGùúüúÃİôğù5YË
+Ø»ïØ»²êÑWáõğÔ29**ÆğÜMåÔëñùÍí½»üÙ³ùúûùùÕ7ø´ı¼İôêÒ÷áÔ7ÙÙÕ»Ù½íH°ÙôÕ¿ıÅIÙµûü»ûëà
+ûÙÍ7ù¶íí»´ïúçéÔë±=ííİ¹èØÏõCSøï¸ÈîÄ63Á.ºNæğAQÊîC4çìCRĞô7SÀğA´J?À¶+±*ÔQNÇÊE½A4
+*ìG¿À×,GÊå,4å¾µ¹S<ıùùÅ,öúøññõÍI½ıàİıÆàC*ííI½ûùùíõíùíÅY½ı·Fİù×QÍĞ*üıüüK.Üİıûü
+ıáíÍIèÅíı¼úÏ+üıüûüûñíİİÛıíùÆï*ç½½ï¿ÒõIÖÈúõÕIâÈúõåIT:Æ:ÈÎÛN÷Ú-<=ßÓú*ºêÑĞ.úÁ2S
+½ûù-:Ãıı±*âİüü+ÅÑÀJıâÎñÍíıı?òDT²5GÔéHĞCŞçıñı½ı½ûúùáûòûıÕIÚ2ıååıİüR+ÉíIõ<ï0N½
+½üß2Nİ¼ù;Æ´ı½üö1<¿ü*/ÎIò:üîÙÉ°JÍîÅIVSúí9.*öÁıÎ½ú÷ûí91:úûÅ=ÈúûM>ÛıZ¿<7,ÒR÷ÎQè
+ııüÆ,èIııBO÷í¼*=ú9Pòôıù½Íİıûı¯ûÎHø<8ZŞùñíıİıüıÏÆH½ıüùûéÍIIŞ9Ë6å6WÖİRXÕ>ãàå×;
+ßÁ:OõíİüûııåİíöùÍ½½.;ßÕÍ½Ş<ú9º66FI2ÕÒûññıİIüZàî+ïıüVJÖ+üIıııùK1ÂııùÏ.À½ûJ*.8
+J¾+PÀ4Ê»ıùûÅ´ÄI¾ü;/K2K/±Í¾½VL9Èğ°Ã*HXæÀ<Aã1,*íÆ>¿ü9,*İÆ>ı9;VÈ>W·íáÉåC/·ÔàµAO
+ìD1-+9àB»ËÅÒº*ÔµU¾È±7:¿>Ò-Æ*ÚT+Jï²Ôî×ÉĞÅÌî8óìÄO´»Ç½ÔFååãíÉĞÖÄD7S4+²M1J¾=Ğº½/
+ÍÛ>Sè*ÛÍEß¶ğ·SPî+µNÇÄ²;H4îÀ>ñ¯ÆYXÈô÷¿TË58»:°äË9í+´·9:=:,ÃÂé3J::¹K+ÜúêB@¶¶VÌÚ
+É¹K+.Äã×0îã³XÖZ+¿/ä¿÷-A¾ãõèß°á3S<Ï00Ä,öàã3-àÎLDî¯/1èJÊE½Z/9Ü>Û÷Î?.ÒïµØ·µHĞ/ï
+ãÑ8KìÉ12<òé*´ÉÑ*VÉİÎ*µ7Àâğ·32ì5-*XHEò;O´ìº·ä>Ø?½ï,²ÙÃÁ;/ANç5½éî·÷*ÃÁU:Ü¾U0,X
+VßÃDÚÖÀ9YÈÜÚõËÏ@²BØÚäÄ:³÷S÷À/¯âğá-J»JÈO+¼<ÀÔYİä¶¶C<ZäA÷ğ1N3¿Ñ×Mº÷5AJE3ú¼OÈÂÙ
+1SKÈÚ³¾äãÉåÙ;ÔîL7XVßÅAãC*½û1ÅğãCçÀWB¶8@6GºLÈ±*0?Ş.Í,*ÖåğTı:¶,ô+SL°AJAYüà/.Ş3
+ßĞÁ0OÈÜFæ*T->´C*4YÜúM,¯/Aèîà:8Ã-6İ;*N?E½Î>»÷Ã1ÈAå÷¿JKÒú³SĞÌ/°İR,ÀË5Ä;OUü<¿ÕÏ
++AX*ED2ÜúòKÁ<Oµìú;<+4µ7*EAYüìÄğQR¼èîä:´×*½Ğ>ÛéYPOıPÚä<XÜÚµ16´@½MÈÂßOğANç»ı*O
+D·äÅAÙÓİÅáUĞN¾A*FTºï,2C+ÅÖ17DÚ:OÅFK¾àßÁ*5Ì>ùö@ÔîL7XVßÁAOµÊèÇ.,V*ÉGÆÆ°Ç*üÆ>ÇÛ
+.:YÆĞAÅ63Á.MÀ8ÄZBV*áóÆĞ±5JßÀ/5ºA½î,ÖÚL2AZ8DÚ:OYüX¾àã1ñ×¾RF-HÔîJ7,Dé4HºSÜĞ*+Ó
+VIàåñ>OUÜC¿Ûíİ>ÕSÈ>ÔÛğíİ>µSÈ»ç,íİ>İ½S¼ıĞúüO÷ûÉğùAãİPÈË6*YÎ>¿üX0¾9RÈíI1Ü½S¼ıĞ
+úüO÷ûÉğùAãõİ0íİ>İ½S¼ıĞúüO÷ïÈ<ºúü+ZSÇ¶XÈJıù1¾OOà·S¼ı2ÖÜSºıĞúüO÷ûÉğùAãõYÈIPGÎ¯
+ÍòBç×1*BPòºDüüOCÃ5*É5ïâ=1*@ıWSDóğëáİ8*:ùğÓIä/*µKÏN¸ò¾ÙPÜFÓÉÍNÈXÛ¹÷ñûÕíÜÚ2õ»5
+*:Ú³Å*:íèÓIã/*CBÆÊ»O»;îMÒİD5Ä*:µÆAåóğ;ÇĞ=õë¹õğòûáQñçÍİ/*¶õàUÉ´ëØ³ìZúKX¾ßK¿Z°
+Çó8àõ*úŞâ¾.*º¿º+ìYéãM<OÅËø³èÔßííÍğå½½5*îóß-1ë÷²éÒ3³îãÍïÀÓêÑQØ-óÙÁöÛ*IÙÔQÍÈ5â
+Éñ¸÷ÆNçAÕPëC²õ÷÷ÉüùÕ+*Ì½¼õÕ=±XÛDO0WúCX¶µÁ0OOûøòè,üüGÆĞÅ9H¸±çÔSYOÁ0·ÙJÜFÕÉÅNÈ
+HBóåÄEQYIıT*ŞãùÄêö±è¿ıÀëå¶ßIOÈ²¶óçÊIÉôöõ**Hı¹êÇAÑX»BOÈòç4÷ğÖXH<S¸ÙÓ=5Ìêºúøî¼
+Ü/±ö=±Åıê-úûøî»E0F·³°éôó¹ĞòÍH÷OÛ·¯äæ/»ûU**ÅIÜõáÂEÑôE>¯Oº¯÷ñ±ÍF;ÛºNĞòVKEìéÖ¶ö
+îKû6*J+*2Î*3ÂQUŞæ1¶ÉüG2¶öî»AäéB²Ô°´ó±ÚîÕXÛ<¹D°ŞÆ/÷öÅ.Q,6U/*Ó±êIBIŞåúLHW´RLÄº
+ß±3·:J,8ÙS¾äòÃÚ7:;ÛºNĞòJI5Ì¹¶ôóê/úõ3**1ÆCÛô»+øÜV+ñH¾VõåHŞß±İHùîÚÀI5Î°íÇĞ--0Ê
+çåÂõ<PÛÙİ½-*@¾¾ŞôM+ŞòM;B-JôÏø8?¶G*ì»ùëÂó<üê²RLÀºï?/Æ-ëºğÄ¯±öÊL*;EJL¸÷ÆNçS¸üé
+´îéæÕ-õC**1ÖçÛ¹ñ+ZÜV+éH¾êôõJŞÕM½GÖëİÌSH>OÅ07DÊÌ+İ?ÊZQ9ı0*V¾<YÖÅ,*åÅLZ0ŞŞ1J5ü
+ß2ÚZ*İHG´ßµ+¹ÄC>;IÜ:ï9ÈGÊÇé6Jëã0ÆÆXH<S¸ÃÊûÔûé¸÷ñ*ûG*ÖñäÍ<¸:+HŞOòæ?1B5ÛIQRN,5
+9ÏMõÁ-O¾Zæ÷ñ+VUğ³0H--XìøíØ¼CUºRÈXÌF·7EùW5ÖÖ´üèRçç-2M+Fñô·åÖæ¯°¹İ2LóôMÑJåÁ,J¶
+´¸¾ÂD±ûZ.G¸ñÔ+ÕóÙ·áÎÂúöÀÄ0æùLNX¾/1Î3R+MâÍÕÙ¶òæçÈ¯¿ááñĞ³¾Âòğ;ÇĞ1âêõVİÒ¿=½´,ØF
+·Ó³Ş>»Z+H¾OïÂ-ÓLìÚAÅ4D÷º;ÈõôE6¿8X¶÷ğ+6U»¸Äİ<-Q8F³İ±û°8öÎ>ëÜ»ù.ÔYÆîçí*¾1¶FÌÁæ
+æ-Fô×KÊÂ¼µ¿àä¯ÌMŞ½¶7÷=XÏÍ8ŞëòVNEÛ<îà*.÷î/5JZRL¼º¯/-öXüJ,8¾/A9:NæÕ+êÜ¶5µ7Àâğ·
+32ä4,NNA9Ç>ÛHä¼çø?»Eµîû4*òçES°ğìûŞ,²*4GFRC¹<Ş¹Ñ¼CJµÌ+*Õ/Ö*ıJ*¼;.Ã*Ìù´ç¼çøãVí
+KS<À.3ÜöÃM=î+4ñôKT÷*ÃûN.Wİ¼ËïZ·O6+ÌRäËÅÏÜÆJVûËÃ³Ñ9·ß3V.OâÅAòY¾èQ>*¸1Ö.ŞJÄÛµ1
+:Dì<Úà¹¹Âî²èÒB.,Ñï,çæãM<O1Å·í×»MíÜ7¸I,*òÚTÀ»ÒÍZ¾1*Çù´ÕGæóôÚ9À÷ÂR*ì0O¾êÑ,È¹*>
+³²ñ¼³0¼ùôæ»åôã6ìKSØÄ7E¼¹î5Å,å-öëW±*Ğ+ú<¼3B/*æÊÛ·Ù3¾ô6?B»;ÒÖùXKDFHğÀ5Ö*íÀ<ğá5
+ØCŞé5A·*@Â¹¾Ğ¯*:òÃÙ¾»Ã8.±ç*3çãM<O¾@TäöÀÄGùC*Rê¸KãæAø¿/ö*8±åÄëXÀêÌ´¾ÛÖÃ0¾GÑ.¾
+ÙÀŞ,ÊÊKìGD:êÎ÷ÄÉ+²1OçZàÂçVûÀÚäû0*º*ÜÚ·=<<*Y±×Şñëñ+üĞÈAÇ¶ñÜG*:W7ÎÙõÄØ+ZóMWJÚ¯
+İXÖ*äÀ<ğá5éº¿Ñé/,1Ş<*-ÂÄ+¾Íï@Ï,0Eã,Êå0ä/ĞÏÉÅNÈ*VÓÊÓ´7Ùó±*ZÓé°°ğJ,º¾ÂÏCÍÓñÁ³9
+DJæİ×,ÖóêµæÇùÖåèÓ-BÎM7òºò/.Ùóèó°*êKSØĞOÉô¸î5*ù7*ö*·¯áä5K¾Ú8ØÅOÃW-Ôù×ñR¸Ô¿ÆÕY
+Y:8WÍ8BÌBò¿¼²/K*-5Ä´YäÛÀ<ğá5Y7Z¾RV3Áû0DÜ*ÉÆÈæ4Ş÷àWÚñ8È2ÑôEAR2:;ÛºNĞò×DùG¹õ±è
+ÓÍ,¾ÎÌùŞ+*¾**µ:ÃçèĞE?*àO¼Ç¿øêE/@¶JÒS1öÇØE3Îõ×AæåºéøëFéÓÉ/+ö×±åÔğúAWÜğCóMÀ=+ì
+Äù÷µ+ìÔÔ¹æ,.HÂO²ÌTÕ0µ,@Xë7,ÁÑ-,Öñ¹Ø7TBÖJ½GÕ4ÈÆ:YFóÇ²<.RKçê=Z;+¼8SH¶5SÛøÎÁ+S÷
+±¾¹¯¶UA9Ç>³Òå¿ëôóú´>=1+ûÚÕëŞÍMG>OıùõYPÏ3åó¹5İîÔUÁôEAïæÊÀ<ôÆAµóL**öÄNç<Ç´ÊµÆ9
+ÖÌKÙ*¾=*ÆVüîYÜÄOQ¸RÈX×°ãÃLUôùÕ¶PGµRF<O7WöYãĞ5/OâÅASıLÏóSÛ2**Ü;SØKÏCı7ğ±ÔWÕP»
+5*B÷ÁÂ-±@»æKSğèÑQ±¸ú·ï¾¿GâÀáÄ»øïáÍ;±<ÑQİÉÃOïã·ÛºNĞ²Í2Á´FJ/VY.*úóê×SMÄ6¸¯¶òÎ>
+G·ïàÙO7ë×¯Ç6ø8°ß¹õ¼Û×±çUÙ;ïàÇY:YÌéãM<Oíä²òåÅ=ÁPWXİÜÄÉ÷êÛ»İôú×²ÒĞ4ë¹ĞòëçÑÕEçï
+æÎS±åØÕ**ÜÙ¸ïØ¯±ÔNAÏQİû,÷ğÚXH<SÀ×1âAP·1ó5,:×¹IÆI<æôó±Úîêııı9ğ:ÏÄÃòç¹**äûúùåS
+3¿6Æ*êAÆAåóğ;ÇĞB½Öâ1NíLûÀ*Ê³ìÚ·Åú×¯R+ñ¼Å5Z¼RÎ÷ë´Qt»**ëçäµB,ÊİKÜFÕÉÍNÈäFêY³@L
+¼A6¾åº,B?Xæà9ğ,Ú96Ú9+¾ùéâÉÑ¸÷ÈNÇÉ-97Öë×°A-*¸ÔWŞÏ¿A½×5JüÀL3âY>YXèãU<O³ÜÚ¶ìÕUY
+1*æ³ìàÍÄĞDµ¼»úùûAàÇÔıûöéÕÈA1óL**öÇN÷·ÂæùAãõYÈíİ>İ½S¼ıĞúåO÷û1ŞP»ïéü½Á?ãùAãÓÈĞ
+ú1îû-ŞDµ+ü-%
+d
+595 101[1 0 0 1 0 0]sl 8 mask 0 309 di
+
+QP
+%%Trailer
+%%Pages: 1
+%%DocumentFonts:
+%%EOF
+
+%%EndDocument
+ @endspecial 4739 52416 a(Fig.)f(5.)930 b(Feedback)310
+b(noise)h(calculation.)1471 69189 y @beginspecial 0 @llx
+436 @lly 595 @urx 842 @ury 1785 @rwi @setspecial
+%%BeginDocument: figures/descad_4.eps
+%!PS-Adobe-1.0 EPSF-3.0
+%%BoundingBox: 0 436 595 842
+%%Creator: KDE 3.3.2-1.7.3.kde
+%%CreationDate: Tue Mar 29 13:21:22 2005
+%%Orientation: Portrait
+%%Pages: 1
+%%DocumentFonts:
+
+%%EndComments
+%%BeginProlog
+% Prolog copyright 1994-2003 Trolltech. You may copy this prolog in any way
+% that is directly related to this document. For other use of this prolog,
+% see your licensing agreement for Qt.
+/d/def load def/D{bind d}bind d/d2{dup dup}D/B{0 d2}D/W{255 d2}D/ED{exch d}D
+/D0{0 ED}D/LT{lineto}D/MT{moveto}D/S{stroke}D/F{setfont}D/SW{setlinewidth}D
+/CP{closepath}D/RL{rlineto}D/NP{newpath}D/CM{currentmatrix}D/SM{setmatrix}D
+/TR{translate}D/SD{setdash}D/SC{aload pop setrgbcolor}D/CR{currentfile read
+pop}D/i{index}D/bs{bitshift}D/scs{setcolorspace}D/DB{dict dup begin}D/DE{end
+d}D/ie{ifelse}D/sp{astore pop}D/BSt 0 d/LWi 1 d/PSt 1 d/Cx 0 d/Cy 0 d/WFi
+false d/OMo false d/BCol[1 1 1]d/PCol[0 0 0]d/BkCol[1 1 1]d/BDArr[0.94 0.88
+0.63 0.50 0.37 0.12 0.06]d/defM matrix d/nS 0 d/GPS{PSt 1 ge PSt 5 le and{{
+LArr PSt 1 sub 2 mul get}{LArr PSt 2 mul 1 sub get}ie}{[]}ie}D/QS{PSt 0 ne{
+gsave LWi SW true GPS 0 SD S OMo PSt 1 ne and{BkCol SC false GPS dup 0 get
+SD S}if grestore}if}D/r28{{CR dup 32 gt{exit}if pop}loop 3{CR}repeat 0 4{7
+bs exch dup 128 gt{84 sub}if 42 sub 127 and add}repeat}D/rA 0 d/rL 0 d/rB{rL
+0 eq{/rA r28 d/rL 28 d}if dup rL gt{rA exch rL sub rL exch/rA 0 d/rL 0 d rB
+exch bs add}{dup rA 16#fffffff 3 -1 roll bs not and exch dup rL exch sub/rL
+ED neg rA exch bs/rA ED}ie}D/uc{/rL 0 d 0{dup 2 i length ge{exit}if 1 rB 1
+eq{3 rB dup 3 ge{1 add dup rB 1 i 5 ge{1 i 6 ge{1 i 7 ge{1 i 8 ge{128 add}if
+64 add}if 32 add}if 16 add}if 3 add exch pop}if 3 add exch 10 rB 1 add{dup 3
+i lt{dup}{2 i}ie 4 i 3 i 3 i sub 2 i getinterval 5 i 4 i 3 -1 roll
+putinterval dup 4 -1 roll add 3 1 roll 4 -1 roll exch sub dup 0 eq{exit}if 3
+1 roll}loop pop pop}{3 rB 1 add{2 copy 8 rB put 1 add}repeat}ie}loop pop}D
+/sl D0/QCIgray D0/QCIcolor D0/QCIindex D0/QCI{/colorimage where{pop false 3
+colorimage}{exec/QCIcolor ED/QCIgray QCIcolor length 3 idiv string d 0 1
+QCIcolor length 3 idiv 1 sub{/QCIindex ED/x QCIindex 3 mul d QCIgray
+QCIindex QCIcolor x get 0.30 mul QCIcolor x 1 add get 0.59 mul QCIcolor x 2
+add get 0.11 mul add add cvi put}for QCIgray image}ie}D/di{gsave TR 1 i 1 eq
+{false eq{pop true 3 1 roll 4 i 4 i false 4 i 4 i imagemask BkCol SC
+imagemask}{pop false 3 1 roll imagemask}ie}{dup false ne{/languagelevel
+where{pop languagelevel 3 ge}{false}ie}{false}ie{/ma ED 8 eq{/dc[0 1]d
+/DeviceGray}{/dc[0 1 0 1 0 1]d/DeviceRGB}ie scs/im ED/mt ED/h ED/w ED/id 7
+DB/ImageType 1 d/Width w d/Height h d/ImageMatrix mt d/DataSource im d
+/BitsPerComponent 8 d/Decode dc d DE/md 7 DB/ImageType 1 d/Width w d/Height
+h d/ImageMatrix mt d/DataSource ma d/BitsPerComponent 1 d/Decode[0 1]d DE 4
+DB/ImageType 3 d/DataDict id d/MaskDict md d/InterleaveType 3 d end image}{
+pop 8 4 1 roll 8 eq{image}{QCI}ie}ie}ie grestore}d/BF{gsave BSt 1 eq{BCol SC
+WFi{fill}{eofill}ie}if BSt 2 ge BSt 8 le and{BDArr BSt 2 sub get/sc ED BCol{
+1. exch sub sc mul 1. exch sub}forall 3 array astore SC WFi{fill}{eofill}ie}
+if BSt 9 ge BSt 14 le and{WFi{clip}{eoclip}ie defM SM pathbbox 3 i 3 i TR 4
+2 roll 3 2 roll exch sub/h ED sub/w ED OMo{NP 0 0 MT 0 h RL w 0 RL 0 h neg
+RL CP BkCol SC fill}if BCol SC 0.3 SW NP BSt 9 eq BSt 11 eq or{0 4 h{dup 0
+exch MT w exch LT}for}if BSt 10 eq BSt 11 eq or{0 4 w{dup 0 MT h LT}for}if
+BSt 12 eq BSt 14 eq or{w h gt{0 6 w h add{dup 0 MT h sub h LT}for}{0 6 w h
+add{dup 0 exch MT w sub w exch LT}for}ie}if BSt 13 eq BSt 14 eq or{w h gt{0
+6 w h add{dup h MT h sub 0 LT}for}{0 6 w h add{dup w exch MT w sub 0 exch LT
+}for}ie}if S}if BSt 24 eq{}if grestore}D/mat matrix d/ang1 D0/ang2 D0/w D0/h
+D0/x D0/y D0/ARC{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED mat CM pop x w 2 div
+add y h 2 div add TR 1 h w div neg scale ang2 0 ge{0 0 w 2 div ang1 ang1
+ang2 add arc}{0 0 w 2 div ang1 ang1 ang2 add arcn}ie mat SM}D/C D0/P{NP MT
+0.5 0.5 rmoveto 0 -1 RL -1 0 RL 0 1 RL CP fill}D/M{/Cy ED/Cx ED}D/L{NP Cx Cy
+MT/Cy ED/Cx ED Cx Cy LT QS}D/DL{NP MT LT QS}D/HL{1 i DL}D/VL{2 i exch DL}D/R
+{/h ED/w ED/y ED/x ED NP x y MT 0 h RL w 0 RL 0 h neg RL CP BF QS}D/ACR{/h
+ED/w ED/y ED/x ED x y MT 0 h RL w 0 RL 0 h neg RL CP}D/xr D0/yr D0/rx D0/ry
+D0/rx2 D0/ry2 D0/RR{/yr ED/xr ED/h ED/w ED/y ED/x ED xr 0 le yr 0 le or{x y
+w h R}{xr 100 ge yr 100 ge or{x y w h E}{/rx xr w mul 200 div d/ry yr h mul
+200 div d/rx2 rx 2 mul d/ry2 ry 2 mul d NP x rx add y MT x y rx2 ry2 180 -90
+x y h add ry2 sub rx2 ry2 270 -90 x w add rx2 sub y h add ry2 sub rx2 ry2 0
+-90 x w add rx2 sub y rx2 ry2 90 -90 ARC ARC ARC ARC CP BF QS}ie}ie}D/E{/h
+ED/w ED/y ED/x ED mat CM pop x w 2 div add y h 2 div add TR 1 h w div scale
+NP 0 0 w 2 div 0 360 arc mat SM BF QS}D/A{16 div exch 16 div exch NP ARC QS}
+D/PIE{/ang2 ED/ang1 ED/h ED/w ED/y ED/x ED NP x w 2 div add y h 2 div add MT
+x y w h ang1 16 div ang2 16 div ARC CP BF QS}D/CH{16 div exch 16 div exch NP
+ARC CP BF QS}D/BZ{curveto QS}D/CRGB{255 div 3 1 roll 255 div 3 1 roll 255
+div 3 1 roll}D/BC{CRGB BkCol sp}D/BR{CRGB BCol sp/BSt ED}D/WB{1 W BR}D/NB{0
+B BR}D/PE{setlinejoin setlinecap CRGB PCol sp/LWi ED/PSt ED LWi 0 eq{0.25
+/LWi ED}if PCol SC}D/P1{1 0 5 2 roll 0 0 PE}D/ST{defM SM concat}D/MF{true
+exch true exch{exch pop exch pop dup 0 get dup findfont dup/FontName get 3
+-1 roll eq{exit}if}forall exch dup 1 get/fxscale ED 2 get/fslant ED exch
+/fencoding ED[fxscale 0 fslant 1 0 0]makefont fencoding false eq{}{dup
+maxlength dict begin{1 i/FID ne{def}{pop pop}ifelse}forall/Encoding
+fencoding d currentdict end}ie definefont pop}D/MFEmb{findfont dup length
+dict begin{1 i/FID ne{d}{pop pop}ifelse}forall/Encoding ED currentdict end
+definefont pop}D/DF{findfont/fs 3 -1 roll d[fs 0 0 fs -1 mul 0 0]makefont d}
+D/ty 0 d/Y{/ty ED}D/Tl{gsave SW NP 1 i exch MT 1 i 0 RL S grestore}D/XYT{ty
+MT/xyshow where{pop pop xyshow}{exch pop 1 i dup length 2 div exch
+stringwidth pop 3 -1 roll exch sub exch div exch 0 exch ashow}ie}D/AT{ty MT
+1 i dup length 2 div exch stringwidth pop 3 -1 roll exch sub exch div exch 0
+exch ashow}D/QI{/C save d pageinit/Cx 0 d/Cy 0 d/OMo false d}D/QP{C restore
+showpage}D/SPD{/setpagedevice where{1 DB 3 1 roll d end setpagedevice}{pop
+pop}ie}D/SV{BSt LWi PSt Cx Cy WFi OMo BCol PCol BkCol/nS nS 1 add d gsave}D
+/RS{nS 0 gt{grestore/BkCol ED/PCol ED/BCol ED/OMo ED/WFi ED/Cy ED/Cx ED/PSt
+ED/LWi ED/BSt ED/nS nS 1 sub d}if}D/CLSTART{/clipTmp matrix CM d defM SM NP}
+D/CLEND{clip NP clipTmp SM}D/CLO{grestore gsave defM SM}D
+
+/LArr[ [] [] [ 10.000 3.000 ] [ 3.000 10.000 ] [ 3.000 3.000 ] [ 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 ] [ 5.000 3.000 3.000 3.000 3.000 ] [ 3.000 5.000 3.000 3.000 3.000 3.000 ] ] d
+/pageinit {
+% 210*297mm (portrait)
+0 842 translate 1 -1 scale/defM matrix CM d } d
+%%EndProlog
+%%BeginSetup
+%%EndSetup
+%%Page: 1 1
+%%BeginPageSetup
+QI
+%%EndPageSetup
+[1 0 0 1 0 0]ST
+CLSTART
+0 0 595 406 ACR
+CLEND
+B P1
+NB
+W BC
+/mask 7650 string uc
+,H¾7+*/ö9öÈ>¿*ú-¶Qt*½´O3¹È.+îáùÕÂõI¶íı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıU¼ıÕúüCöûİğõÖ
+<%%%
+d
+/sl 60690 string uc
+î½***öü+Z¿ÓBÌ>ııI·¾E/:µÄ¼ı*¶ç+îäO40+*Z×ÇJ¯Ğ-ö6¸òçÒWİôÖ³íìëùõîà7÷ğµú»ı*¶ç+ğäı
+ÙA.Ş°=¿öâ:*1GØ²èÓYáÌëµñôûE¶ïáÉ=ñµ*¼2**Gİ¿+ÆEıíÜ:*ÉÌ.À>G¾ıÏOÍXëD´ÍWEõìİ¿1IìÆE
+½üäÁ¶¸Î÷96*Ú·úÀ*V¸<Îıı-*îıòSPÎ»È3À9ºDòçíêù8**X¼.-*µ8İ:*U<*µX*ŞG3Ê<ÆEµÄ.È>?óè
+ÔíÚ×»îçÃİ·áú÷òèí¾ºù0*+Èµ8D:SUäø2àCé÷,M¸¼ü½÷ØK,ÇR**>½¿+¾EñÀ,¹ô-A>áÇÍ5,Z1ÒöN*ì
+Ç*ò8ÏºÎÅMÈŞ¸ß=÷üGºÂĞİ·=û¸ôµê×ÑüııÍ½¹ã¸*ıı½¸¼ÅßõİíÛA³QÏñöüóùò=ë×-¶½¼¼ŞìÏ<Ú3¾=
+R:ı0ÜL¿=1¶Í,K*òÖ½Xá*òı½ı1C¯¾KüT¹ú/AöïÔ*Æ½Ûßà5ÊùêÓ8G³ÁNì,øÍí2ıL9QàB*Âú00Şíúµû
+D´ëÙ¹Í5¸ğãËMÍ¼G¹ZM,ÅNC-36SÜB+*ÜLçíRåÜûË·ñúéàØ,´ÕYZF¾İ¸ó4?ÒüGüğÜò·UÕü¹ÅİúÖÂåÎ
+Ë-5İ½ç2ìÏ<Ú+*Şù*4ÊBıÂÛGL¿=1¶Í,K*âÖıKã-QC¯0J0×¸ú/AöïöAÚVUñ0×ğİÔ=÷PìKE*ÀÇÚÃ5ÂÓ
+ÖıUÕ>7¹F3²ìÚÅıŞ*ŞË¶KÍ»Eµíİ¿5IìÈE½H»Ú:*E<¶òÅµN*´I3¿TÀ;OÀGÙôMQîèÕµõüPÚ¶ü×YRèNø
+95WF¾YÙ´ËZı1ÉSñçÂçóI9<ZèFØYæŞCIDü²ğ/8Ú=O:îàÛ**Kê½K¿İûıI¯¶üSµõ3û=0ÅÖ½¶ïÖVôûí½
+ãé½²J¿JöÀÑìX¯Yø÷=ÉáïèÈııİıK±1Aâ+ĞÓ5æ¾×ñõõÌî¶+¼/ÍGı÷Ï-´·òû½9FMïMÂ*½0üÜQëùûÄ.B
+åÛéá67ï°U÷QúÖ½ıµÁ7¾ÚTÂD25AÌYıÇÚÃYÙêıÎ³éÚÛÓğñÁÜ1XÚ-0BÇJïàW6èö/0Jìú9AòÚ¹ı0Hú¶ğ
+äã·òñÀ*VSï33>?@32ìÛYÂ°?ßÆ<æ85»=ÈÌ»ùõîí¶ñäİù7ã7GıÌSû9*îüO,âëIûá9ÓEêü=/ñ´*JAìµ
+/Õ½²ÅÈÎRZ0î,4úEı±3Ãğ½ÜPYãİVTÁû9DÈûí7´V×Xü1/4.¾ÙÖ+åç½á³ü=øò9ÁTÀéıÎ×Á5ğ:?ûÍ5öÚ
+üßWL@4DıXÔIıJ930í2¹ñí¼äê÷WË=*ÄQöKßÙò½¼åé¿,êIºÆñ³1ñ@Ö¿úÉ³?ò;6îJ;JÙC2Z@ÏÙ¾äß;ì
+ËRıGÇÛIVë/-ÊNÒA*ÂİŞ*ŞË¸KıGÚöïãËMÍÜX2¾73¾EQN*ìÚ;+ïûù+HÀòÓ.MÈZùVòÃRÄ°LöïíVÙ@8í
+ÕÇñY·=ıÂS·TÒ6+±ä8êõêIëéüAOÙ´*¾/Á@?Ğ½Ñâì>¿XÙÔöıı<Q08J¿YñYÔ>³üç@ğØúÉGOÖıKÈÓıPÑ
+È;MÔRÎJŞÕ÷QÙæXıïåUıK1ùÕ>é¾J*Ş/·ÆØüå/²áúéí0N@NçÙøıOÉñöÄÔSı³3ïóÍæG¼2ØÄÀB0/Òı×Ä
+Léİ>æ+P?+.»2×¶U;¾ÕC2¿´W@µKéÔ¯Hû*ÈÁKRóøÎXBŞNàæ*Bú00*ìÒ5HZK·ñPÛ:*E<îµ¾5IÌÚ÷ñçÃ
+øEµNîZ3Ä>Kõ×RJÜNZÈçãÍ½=WDı¼I÷²@û1ëâİYQÌ6C°åĞKù/59ÅYÔı¾åĞ/*¶µôûııíIùU*ëÇ<î²çÒ
+ÏT²ÆÕ×+¾´Î*S÷AUTØ5-ŞÂû9ÈêI>±K-ÅJZ6Şéø1ÔRÏKÃû=Oä01269FŞ.¿èıÚ¾Øà0±¶ıFÁ5¶VıàÄ¿8
+íRN¾Â4ÚÌ¾Ú×ıI*JÖİDÈ2,B>ÎüãÄLÛHÏ5:¶Î6J³ó,ÖD6ZçĞëóIÅÙÎ²ç@ÍTîâü?C¹ÛHÏ50RSKçĞ7ú1
+0*ìÊ5H×L·ñäÚ:*U<îàÇAµ8»øóêßËM<¶Õ.MÈàùõ¾QWìúËEè×Í°ø÷òíB±äıï³Ü±ºöÒP÷ÅVËùñåYåÊ*
+õËòò»íD½HæÀ0»SÃG×EDNÆNğİY×5O:ÒÊ/*æ°ãÈC±´±J¿ÉNíEÏúÀ¯C5æñäòÕÄ3İıKDÓıÜöğ+²´Rî*.
+ä0ºJüÂë/ºÆÓ½ÂTò»ıÁ0:XZ,ÆUAî2-HUåıUVüÛêÄüé<ÛIÜÏ3-*FîJËCéÇÛ;K1öKâÄ4,B>ÎüëüDICÏ
+;À-,23*íT;èJÆC±÷Ğ·5ÎºT¿·ø9Ç9üŞÂXBŞ+E*¾¿-İŞ*ŞË·ßMVFA.ŞÈ.À4ã÷òKÃîä;3.*ÆñçÍ>ßÆĞ
+ı0Hú¶ğäÍMõèÕµõü»º÷òWûEâÆÃäéøÆ½?,ô½+¾ñÛÌ½ıõÄ½Oğö,ÅõíHô¹ÓGTMáÄ³¹½¶Ô=O*âX*¾6-ù,
+4úVû½Ã÷A5èBİ¹ı¯ßü17=4ÍùQI³ÕK¿5:*üá0Fâíûåù>ä÷¼¿º¶.Kê+÷ıı½¯LÛ¾ıòìİûãÓJ÷õ°O?Ô½Ö
+ñóÃP6Şí¾-LÄêó=ú2Á2,B>2·Jİ»¯DL¶J*=+Ó2¾UJŞÚNDµ+ÇM?úB°UßåİºÈ=BôÀ+XÖ¿:éõ56*ÚSAº<
+ÈóÀ*V<<*åM9Y>ßÆĞ.AHî3Î9ºÀõÑÊìüûEßÀ/=NÆ7LÒ3Õ·¾3*ıâÆÎKÃDï,äµ¯T²2ÏNØ>·SŞÀ/ùÃ2=Z
+QtîN*.BSAÎŞM;è.êÎQŞ¾÷QÁB³D.6ÖSææ:LĞ¾74Ú*¿×+½/çÎLÒ¼WDÂ@³DÒô¾03<>Bïà/*Ó¾0åâ5ÖK
+âò»øÃØ½´Òà*HÓ=2OĞà40IL.4/>Bı°/3À>4ğ*.âÎQ?+Ó2ñ+±0çÚ/Z4ÓŞŞ¾ÃT²2=YA6ZüZ°*ò»--*µ
+8İ:*ÉÍ.Ä>ÛöïâËIÍXû¸èìGúSP¹9ı7YË,*Fï»ıüÇAÑ>Í;:ı°EWÍH*Ü½Z*îäï5,Z÷ÇŞÆ<:Iã>é×1º,
+÷ÑÊ@İüEÙ¸/*òÓXÖ0G¸?9;:ZÄBë8HJÛÅZ*îäï5,Z÷ÇŞÆ<>Iö.êQCßú¿QÑ½ıËVë,*0É?UÖĞ<ÀÒ¾Z-H
+*ğ¼¿+¾EÅY2¾ãQ,KÈ*êù1¾³ìÀ-*îIZŞ¾¿Cıü+Z·Ï*Ş,=9Æğùíİ7ØÀ*0úûÉğùAãõYÈíİ>İ½S¼ıĞúüO
+îûÉ°UÈ<?ÕWµ2JØÌ:ÜÅ½ıÂÊÅ>O*XÓ*Îö/S4Ô+À*ÌÈ¿AíD1-+9àB»ì3<*éá=¶F21ãJ¶?9Ñ:+4Å,Ê*â
+Ò/A6îÀJXÊßç,æëĞTNÖ-·¸ÅöìNS.Î7PÉÆ>»ò.õRõ´V°éÑA:FIÅFÚ@O¯7³LĞ>,æH=ãÊØîJ+Ì2Â?YÌñ
+ñéÔÒÓ1àäWRÍê8ïİÇ<7çLºTĞNS-ò¼ë¶Ï0ßÇåOCÑ2¾*K8Îú;SäÕ*K:AÀL,ZËß7âM-·Qâ1=O<èŞŞ;ãÏ
+ØîØ5ĞòÂ+¯R;7öğ+Rİ4Rá2êñ-ÓDÍ?öğ¿Æ?Y¼º1ÖÜº¾Ê¾2><X1/¾¾ê//öğ±áÖŞß¯·ğRì//:BÌÉHÆ¾E
+òJFÅ»¼.¿:JÆMÇğ¿°Úç,SÜº?à3=¾ğ¿0µä*H1¿ÒJ>¸Ú¶,6îÎÆ1:íÚÀÚ±ïOÈĞ?üÔßñ÷ÛUĞòãÁ-ï/Ú°:
+îZ÷*Rèä8MîãÁÔ:ÎÄİçã»÷Æ@ÂAÍ¸.·XHJÆÎY-Ö7X2½R4îÔKÆVHA+ß»¯*Şã±ÁH¿¶:+µæ+±É±ï6ò=ú¹
+L8AÈïP5J÷5Ã¶LÈÃ0Q,+À@¿ÂÃÂÑÚ¶,XH¾2Õé:Ò¼Ï/.Ù0¼½Ğ>3µ9ĞÌÈĞµ7Î×·ñ÷´>A+°ÜZJõ»±Ò/7Ä
+@Í7;NW¼TÜ¶,6×úö*R9Æ°S¾ÍÂÎóéÕC8XÔ.Ê÷OìÚ÷2Â53¶>*ÔøE5éL.ÍÇáÃ°FèÀ5Ã¶±0Îú?D¾ğA.°Ì
+ğà3¶÷*?ÉÁ8Zò¿9Öí¾V7ı=OçÈ-7JóOS°É+ÂEµü;¿C¿=´îãYıßßÚ·PØ2´0ÌÉóJ÷=ĞF-ZR+Pö>*¾»@Õ
+ø1¿=ZM:Â·ñ?+?1ÔîÀ/¼à9ÊZLEPH>Å5ã¶Ñ/ÎúÃLFKÁÖÅM²B-2,Sù¶Ğ7K+Nº*ÉÓ=Pú<WáíVãY>O±ìú
+;<MÈ²³÷âQNÇÙ0æêÚ÷¹EÌÇĞEµ¼ï+ñä·¼:,3/ŞÛ?Oè×Jô5SJÖ·ßRĞ>äËÅ.Ú×-WÌB?80½İ;1SÜúÆáÃ°
+Úç,RüR;8>JÏßÓ2Îğ59>SH·ÀÎ*èFŞéÈ+÷´PöòÕ>O¿FK>Í³ÎõôÌ=ĞâßÁ*5X×ÅµQNçÛü°Tøµà³@Sñä»
+¹ŞZñ;S<0AÇIZOÅèù1RĞÇ±¼6AYû»FÜ;ORüJ,ìÎÁCÓKÎõE6BĞFğ*ß9>áË@ÆğÜ9>à3J8DF+ã=,+ã1GX
+²-A9¾ò¶³GÀ99Rß-B°äÊ÷Õ>OSüX>ÍÛ±ÎNë5ĞòäË9ä±+Ã±ŞÍÆĞEPóN,+@¾ã8SJ×N*½NÈâX,ÆK+MÈÜF
+°N6<63¸BÀßZ+6ÕMÈ1<î0GâñìÕ,<NSÊEIğ*ÁUCì²KJ±?à3SÈåÛÍ¾ĞBµüÂJN÷ğÁ81ÌJÉ-*JK6Û³.N±
+**+*IĞ>=´*T8T×Mäé52BÌû8-J*-Ü/SĞä.ô¼ıĞÚPSÈÖôØÃ°âàåëĞ;IÆ>İ½DºıĞúüO÷ûÉğùAãµUÈJè
+ù1¾OOà·SÀıíI*@?3åO÷ûAŞìJK*-üüO÷ûÉğùAãõYÈíİ>İ½S¼ı<öüO÷ûÉğùAãõYÈíİ>İı?ºıĞúüO÷û
+ÉğùAãõYÈíI;´RÈLÙì³ÉÃöHüŞ+J÷ÃÙáM=OYÜ³80,HÂ¯øâ-.é*3F+÷7*J+¾ºUHÃNN;114¾,:RGğ¾Æ5
+3îì9N*ÔA4<;HºÚĞòÏ=ÚMÛÙ¯ÇW=¿Kß÷÷>¾<AXÚö*=-+ğ:O¯7ó7Ñ4ÌÍí@++*J¯Ê¾Ò7îÙÉ<O7ÎùGğGÜ
+Û=ô5*.@=F/TH*éÙĞN+äê3=:âæúôĞ²Í9ÒèúJ,îêB@¶¶VÙ¹:+ÜºîJ3:2TXÅ/¾¾V÷-K¶JÈHJİ4R10ÇŞ
+L.¿1Æ32¿LàÇÉ±A>¾ŞBT2ÈİÆ¾<-P62Á4ç¾AIWR³î,/¶XXºÃÀ+J÷=CZ¹óZ×;ô÷ÆGÜ²SøğKU2RáíòğÜ
+Ú³2<ÉåOJ¶ŞîÃ.æìE6¿8X¶Z:Z»°/ANçÏÒË7?²ğ÷L.Sø:Kİ0ZÙµ*ŞÒº´æMÈA<*ÈÅ>øîJº+Õ6.ÚğÑ/Ó
+0øµÂ¾ãÇ°3N¶;-²ÙÃÁ±5µêïAÉ<Æ¸+*K+ìùäR5D6W¼ĞLæøóé61áúXN¾37î¶÷ÏÀÙĞ.CQ+2µÌ+À8»âğá
+-JÛÊ¾CñÉÚ·ñ;1A<ZNçÙ0æÚº÷ºEÈÁ*Ó/Ï0Ø¶ACãSó5N¶;-²=¿í±5µêïVOğº*öıWÈ<ú½**Ã+ÜúóIFÈ
+-ÊîS**ö6ñ¹;+´¯*ïãQ1ìÈ°º¾¯>±èÏ;OŞD0ŞÏ@Õø1¿=ZÉÍ4HÆ¾·+´C¾öğãI<24¶¯1Øöè*¼E²8Ü¶;-
+,îÂæ/3¾ó7¹6<ÚJÇF7î±ÈğG1æÃ1ÈõV:ùNJÊíÃ.ÎÏ+0åJÈÔÚí*ÅM:íÆ<Dµ8EA6OÈàÚ÷Ç¾·+ìDJñğãí
+ë¶OÈPúÃ@ºP7Xâ*µ²:º÷ç+Ö0´ÂIÚŞÁÒ1î¿ÈĞ¹ûãÒòíÂéVğã»ı*OD·äÅáúXN¾ùìßå¯éTËEQ6X<YØ6@
+ºLÈÚ³¾ÔË½/JúÀ>ïğÓİÅáEĞ.ãYN*>9°ŞßÁ*5X×ÅµÕNçÈE5Şï:+.½:-6C+ÅÖ1/ŞøÄGH³S¸áÒÌN:Ş,Ö
+êìÚ·âÆBNB<òêì¿.öğ¿õ>ŞÎÆ·ñâX,ÆQOÇÃÑTJNQCEXÆĞ80Áß,BXQ5YN*>I°ÎÁ÷VJï6ö±ĞNÉWäHN*ã
+Yâ¾S.ï,ä*ÂMôöĞO×97îûÉ°íÇĞ1***+;*ÉAQV->½Ê-Îºò¾/Z*ÅíÓÏáQAOICÚò¹+è@µ7ÎÜAOGSúµİZ
+ØV7G¼¸STÉãÉù8J°,FJã-Ö6æ>43V7GH¹S¸â+à@åDJ÷ğ¼ZÆ.@F@QX8ÜÎ*,áğÁ-1NçìëZìú+7öğ+°,L
+ÎÆöğÌÕ8>@,:W¼ÔÃ¯¿ÁáÓ¿â¹@O?Ì¶ÎTâÉ9S¸ÒÎÇå5Ïºí*2¶÷êÎÉ98öğ+P0ÅÛ±.ÂàÚ÷-Dîã-.3ø³*Ù
+ÙÛÃ¿äËIJèD.>×ºX,ÀÕ@<IÖ>¿Ò5*2Ğâ?¼¶Ş<µ÷ğKÈìÚ÷ğÚ·0R¼×;ZäA÷-PJã-*2**1ÉAÅ0º÷*;É99
+*ÓQCÎùÆ<ÍÂÎóéÕC8ÜğÂ@¸¾Néò5Ç<ú½**KÈê°·ğ³½ŞUHNçÉ±>±èÏ*äËMÓ½2F+Ù6çÉ1Z×ÚöBºÄ5ñäÉ
+0À>+éB*Àø:Áæ+º¾>Ş.Í,*¾å¶À5ËæL0öïN÷N,,7Ë·ñû>6S<İ+8ÅV84:êÚZÚ;OVHBÀ¼ã9æŞ3S¸Ê+ZA
+½V*çÌĞJôTÀ´W=+6¶¹ÇĞSAíHüÊ+¾êÉÕ¼AFÈĞ>óâîÙ+ù3°ŞæÙ0æØ÷Õ*ÂAÙÓİÅá¹NÈæÚ÷¾/ğÜÎ¿5ĞòÏ
+9ZáÙä¾ĞÜó1RĞÇ±¼Ú/Xó3ÆĞUõXüºıóÙAAà»Q2*ÀÙô2*ğWÛøÓîRÈĞÒ**.Z¾/ë;OAÌT+;GãêBVßZÖ*Ä
+éğÁ-Ğº¾;OEXQÇê1²îÀ>»·Æ6BŞVÎ³·Ã63Á.MÀô¾UãİGûSÈÌÚµíÛÉÑõ9IËQ½¼À*îìÃÕ@ëØ³éÚßöËîæ
+DENÉ5AX¸¾à7*TÍ¿>G´èÕSÙ0½½½ÈIıûù*:ìçÍ,*ù16Z0ŞéÁ18ØñçÔS=èŞÉõ:Søğ»İøHË44ğ7*TÍ¿>
+ûğèÒGÁôHI½ç½ı;*Bûú,¶¼°+<ŞìS*Îı¾+ä*FıúìYQäÚ¸³È6Øö»îæ<EÂÉµÓ°ßÁLÅYÅõQ:OÑXÜ»úE-*
+°YÜøÙõîÅUÉÜúC¹úù/½ûÅ*Şî5;ŞìÇ/Æ*¹Q+Jü-0B-îùñ½ÍG×ğçÓÇ¯ãŞ±UÊã<UµLßÄOçÓ¹A½ÜıøëÉ5
+ïÜA.*ÀÙô2*ğWÛøÑõî¿S½´Ú·øø÷Í+¾0ô*ë1ùö9V¾.Î¹4*îIZ¾--îğ»M´úCóŞ½ßôâ4±Ùâø±NçÇùôÛ¹
+·øüïÑ÷òåY2*Ú¹ïÓOÙ´ëDµBüğG¶ìèÉ1U¼XüÇJ@,Ş²Ü>1öEJ¾?ù+ÑM*Ûö9BŞ38¶úôáù¼Vöğè>µXê·?
+ä¸ÇóåÆĞáPûD³éîõõQ÷ñİİ:*öøî¿ÁôºØ³èÂDöğõÎßéÔÌV¶°ñïéÁùµJçïÍQ+A¼Aæî¹úë¯ÆÊI½*Ûß*,
+IüMĞ6ÇîÜ7-ÌÚ¸WÙÕñTÊó<éÍ;OİÚD³åÎÛı1@û*ÎûùÉÕ*Ú-*åIİùéÇCÕXË<Á@ü8DFUæÄùD@8HºRı0*
+FûÔEàÑµÆà¹Qí²¿ôóé1¶E6ŞæÑ9îôË9¶öî»AäéB²Ô°´óÚ4±Ûâø±Nç-Ñüê¶ñòı¿ã8*ô½üúãU*X,¾Éõ7
+×ïåÒ-ı/ÙíKÁI/ËöìàÜÛ¹1ñí**ÇY/J*¾1æTHL4ğåÍµ+èLN;PJ,Ò»ñ-ìÛ¹ìÂõ<0ûòé?O³Ù¸°ßÇËQIÈ
+26Öú÷½Õ*Ú-*½İHºíÄ+QXËêØ»û8DFæåÀñ8Ì»G¹+ıû3*öï46¹ıüÛÍUìûâ-çÛí8Jô/-Fï+1ÍûøêÁñ4ü
+V¾Èû·OÇ×À´ÚÕ¯ïıÑ9Oùİ¼»ê?*1+ŞßÁõÛBYáÎ×À×1=æY¸0ú´îéçÕ-õµ*Ş¯@ßÜÛ¹õ5A¶ğÍ3ÊúëR*×A
+6îä1úøòÕ-İ/ê÷ãÕUÈ4ò±ß·1å8JÒä6ÁÅíDÛ=XºÏ+QRŞ@ØûG¯Ò*ØÑGI´·ÅPÇÜ½õÚ,Z***F+*1ÍûøêÁ
+ñ4ü6¾ÜÊJIç÷YÙ¿YMİ8Øİ+*KNì>¾Õ@¾=ùÅ;Zî>+àÜZ¾EIîéÏİ8êôYå=YLLèFÈ´Áü=S,È?»üIBZéÆP
+±@DÎ¼ĞÃADî./êîÒü?Ä4ŞëTÉK¼ûP>ë½õì9Õ*F.¾53.>YPÎUâêµëİÔÉI1æñ.*½ÜÚóİ³û°Ôö1È<
+d
+595 102[1 0 0 1 0 0]sl 8 mask 0 0 di
+/mask 7650 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıU¼ıÕÚ?O*%%%
+d
+/sl 60690 string uc
+2Ş½Ş¾Ëå0*Lèı¹8Ş4CùWùÕ³Z1*J´è½++åDî¾+Ú½ÃŞ¾Çñ½7BĞå½ÛEJJæÏ1X+¶2*üº·é½éøãVÏÆWû8D
+ÚKä¼çüW»Ú·¶HQ*¶ñáUıOéA±ÁA;ïº¯ô¾+U¸Â0UÂVÙá*-00Ş0NÇ-°ô¹ÔYèı96ÏZûHô2SÈÜı×Ö=7¶¿,
+1NÇ1øA0êBı>ÍÂ°J,êW+¶***Ş*JF¾=1ÌØí×¼C1ºC¿1ÎK¾=Í>¾°¾ÂñÃ×X°ûCĞÒøBùOéÕò-MNçØQ7¹Â
+æI@ò9îÇ0ÚJ¿Z¿:OÜåıEZîúıºLÈ0Êµí³U*8*JÇ°F¾ñÜWØYØ¼Cé¹C¿ZYK-ïìû¹Ì*:Û·AN¾»YÕ>CFä»
+åô7ûı.Ï;=»¶ÖÖMĞ3VÖ÷á-7¶¿,1NÇÃ³IéÊXıEÍÂĞûíÛùé4¾-*RĞ61JÙµÅ8Ğ:ÊßÛÊJ¾ÕNS´ñ¼+Î×CŞ
+ÃË,ºYÕ>+Ø:Oß5ø.;3Ù6öîÏö½ÖüöL-XBŞ+SLZ/ÁIÕ·¼îL*RôêSU*0*4>å*ZôêÖKñ7Ğ.æXPî¿ÛÈëÙY
+*²´0ÆßPÑäÏ²EòIÇ<*UĞ.ı-2Çêëàè89ÆğÃ0ÚZ¾5Ğ6,J+íE¹<Èôİ³éMU*4*XÂĞ×Äë¸ó<O*ô°,+ÙÀ0È
+WùôF*¾²ÍÄûL1.òÖó+:¹K,Zù¸OS±³ô¹ôìå+Â4YıÌïàÃ5ÌVĞºÏ+QRîÀ>;I°êZÉ»<È26ÖèÓ»Ô*F*¾4ã
+¿*PûCíØ¼Eå¸C¿*WÇĞŞÌÛ*Ş-:ÆF¹´êÕ¿¾*1FîJ+2ô*LYö*2»î,*¹Ç<JéKĞ>ÜÅIY+ĞWµ÷:¾/ïN1ÈĞÅ
+øFÖëÜÌı-MŞRü9**üÍÆğÃ02Èüå+FBZåíùÍı¼G/@A¼øµÅÛ3Oùİ¸³Ì?*ÅP÷*,òñÜ´-½8ó°,KÖ<OUëD´
+é+*HJ¾¾ÔWÕÄ4**B6¶°*Ô¸*ÎÓ9N¾*7:2¾ZÙXÛN3ÀëÖ>QÂÇ+F¼í¹:?åDŞë5Æ*V9B*î4CJã->¼ï-+/Õ
+ÕÎíOS=Ç´ÊÕYåµÊBY.Ú>ORûJ>M,ïYÜÄOQ¸C¿Şé/SÀéOÈ,äË:Nç/äæ¯4Ğ.ÕYÆ<öØ¯Sğ*=Ãıô5PÉ.NS
+VMËÁ>Ã*ØIÁ>÷ÎæÊıüóú½øÏ²ıSÑä×,î8*À>³²à¿CÉHò°,·Ôä¼åìûÊø+¼ø*÷.úOGøÂ»HJóè³õVB;Ê½
+PÛ³Ë>C,úòÒË¸KKáJèIá/L*BóåºéøëFéONFYÊó:É.ZC²R><ÆÑ-ÍÆĞ7çLº÷½KÈø3¯æÄ-±Ì¼>;BZÔWı
+V+¶1*ü¸ôêÒ;M0ÛBF¸C¿ÈÈ±Ş³÷¸¼:ÈÜ¸¾Ö:îÏÄCÃı6¾D²9ÕHíóHÎWXÏ9³è+úQá98ĞÜÈ*Wö÷¾>·óå»
+ë,ôÊèONNËMS´RÇĞİÙÏº÷×¯Vîî8ËEIê1Á*+.éğK*Òº*ÔßÂÖº¾¼?ÎÜÖ+ÚU1É7+XÆ<3³ZZÇ<.29RRBU
+ÎÂ+¯R;7ö<Áú6°K**å=Üİ7ÈĞµ±DøñáÇı-É¼*Æ³éKU*ì+¾åìëù³åÍOM?ÓæHÊJ6ó·ZÙ»íÆĞÙ³ó/óPò¼
+0îÒ¿0îÙ¸³¶C2N,ÌÅ>Gà-KÃ4»ÏíåMĞN¿IÅØ°SøÇß¯õ6+¯·é8Àâğ·32@X.+5ÌùKS<>³?IÖ+ØëàßöÀ5
+Ğ²Ãİ³öúÒ>·¶:Ü¾U0,ìÆ+âÌÎKô-*7LÈ¼´ĞáÏKµô6DÏ¼W¹ô**IU*ì+¾åìWÛ¶ëÖCUL,ëÜ¼17HÇ²áºû¸
+Xëø/S¸Í+Ş°îù±*è¼¯*çÓU=Nî8ÃRÛ¸Æ<ÛÁ:S*¾Æú×NçWÕ0ûAYáĞ=ëÖ>+¾**2:ÒæQLæøóé61ßĞ*ÉË1
+;H=OÇ×úÃ7ÎË.¼Í7>EŞ*Ã·ù:óÒ>·é*ËÉAÍµMÆKÈ0×9*²2S¸ñ113³Vø²çLøò7+¾ÙäËEõåS37MR+ñ¼õ
+6ôÆ²â»YÇĞÉ´K/8èI-ÎôJ-öWÛøÙ6-Û+æÒ31öS°+ÆººîÄ>;îÜÆOIØ¯Sø*@É59Áåöğ.ZÀQ+*äÑã*àÍÈ
+ĞZWüà02Ş3ãå0XÆĞ?1D¾èÉĞ6ºZãÉ½NÎP:KÈ³USLñZ½ÓÇ°±*Î±H+Ê4Aò:×U+îÁL±üùÕ±èÔÛóèÒSÑ8Î
+ô²õ?ŞŞçH-Êüê½âøVõÄ±·1ö¿Åû.î×·1OTÖ²Üµ»02M2ĞÒÏ31äVøÎGÉĞEµHBÀ¼ã¹@*×-6³÷Ï+HAíºNÇ
+Ô@ÍúÄ>Yê*´²:º÷çÅNÇÈIL°N÷.4À*¶é*ËÉA½µá5:OX8º²Ş´åÈÛA*Ş×´+Å0HöóT*úĞâÍ3-ìºØóBOYÛ
+¸*ÙÒ÷XÊêSı6Î¸óØ¶>¶3ŞHÑ0ö¿ÃÄHŞQè¸1W¾*.ÒFAîÓWáÄ»ø¯áÍÃ°MÙ@OYHZ¿ÚÜ½¾<ëÇ±¼úØ,°¹óÂ
+LØ0øìì·MÈA´*;=î2ùÎUĞ>Æ=Â,Ú¿À:*8H.ÖîÈ»ºù,N3ËAAÌùó:Ú»3*ÛäWúßR¸ñÍ2Á´FB±çKÈC4¾İÌ
+GE³âÆKA0ÅÔWÈ¼ÚÌ<Ú;Mà:+93Øúã3=ºÄLØ¹0ÈÒ»MÈÎúÃ7BÃ:XŞºNÈâÚ÷¹Ï*îì3>Ê?æßº@Î¶0ú9:ã/
+½¾µ±DøñáÇKÑ@ÕYåRÈH¹µíÕG½@7ÓÒL¹ßĞº8+SÈî°°¹I*æ÷Ğò±=G87¸±åÎ3óéØ=.*ÍÛÙ¸ïØ¯±ÔÂ.Ø»
+»9FØÄ0»ÒĞòä98<èÖòçĞÃòçC,¾ÙäËEõåS37MR+ñÜ18WMÁâàåıÒ>Ï·ÖİèNÇC*öÊQ*Ñà/WúH¶ÒÁDòIÇ
+<A1HDZÙ±ãä5*¸ÔWŞÏ¿AıüOCáSDïÚYÕÌC*æ³ìàYÅ°ØFèL7øÍN·Y-ÙóMÎğÜÅIµë.Ğ:K>ºöĞâWñZ:îK
+6ÑÕ÷ÆÈ1Şø´/R·Ô+<ÆÀ¸*3¾U?*>Ìä4H¹Søæ3ìÏìëÖâÔA÷åÈñúÚú»S4éRÑ;O;¾´ò*.¶LÈõÕî×É<O7Î
+ù·:6QHAã.HîÄ>çÆ@àM+XÆ°¸Ì×9*úÊĞ²Í9ÒèÚîæ-;±ìúö8ZÉù*C+;RNÚÌ*,+×54îãåÄ¯¿ÁáğâÛÚ54
+JZVÌ³*YXñÀ/52VZ8ÊI¶+V¼Õ8@EÌÆ<3³ZZ>¾AXÌB:0?Ğ+9U¶Î0àÚ÷-UöîOçË1WKJ7½ÑË¹ñ;W2YHó2
+ğÜº¾:Kİ0ZÙF/ŞØú//¶é:N@ÍÉ¾îÜB*îğ×K9S°ñäÉ±PÏW÷5AJÙWF6S¶KÈÜöÙ0ÍÉ1RFÚ,ï/Ú°:îà4XÒ
+ßÃ?úöĞòã»í6³KÁÏã³´.SÉÍÈAV2M@IH*è-ĞV4î=;²ûø³ÄÁÉ;+±¼ÇA½JÈ2FËGàÉİ¶+ØÇŞõUĞNÚ»Æ4Ğ
+âW-²XÜºÜ7¯/Aèîà4¼ºSÌ+öé½¶>YÌÇ@êÀ¿ñZßæß=ĞF-ZR+Pö>*¾»@Õø1¿=Z9Æ<<¹+¸÷ğAXJ*Ì2@»M
+ÈÜFæ*T->´C*4YÜúM,¯/Aèîà:ÌD.Fİ;*NÚG¹<ã0/¾/ÈĞAİöJ÷ğFI2>ÂÈİ@Oè×Jô5OJÖ·ßBĞ²ãY<öD
+Dîà/ZM-ßÉÍ¼MÈìÚ÷MN,>ìD*´XÜúÛ7ãÍÎúÒßËKê½+´RÈî½Å,ŞèÆãÛü°Tøµà³@ïğã»¹ŞZ±÷EĞN6X<½
+KÈìù1RĞÇ±¼º×Wû»FÜ<O,º+ŞÏà5A¾Æ3¶Â»æ?S¸â3,>8H.ÖîN×Åµ¯/Aèîà4@ÂAÙæÌ»ÇğáBÀMâğÄSGÇ
+J¾/Z×-3S@3Ş9Ç<×É*ğ/SøğÆ;¯ÆZNæß20Á/ZÚ8S¸´+>VÖZ¿õğ1X*ÉU.ï,äUĞòãí/RÚúZH52Ã±Şá48
+ÒKJ±WKY²å½=ãU1:ÎÈ³ùôú´Ğ²ãE=ÖÙçÙñßÇ<Ã³ÕºÑµå½=ãÄ1òõYÈíİ>İ½S¼ıĞúüO÷ûÉ<*üüO÷ûÉğù
+AãõYÈíİ>İ½S¼ıĞúüO÷ûÉğùAãıSÈàA¾,*3îW4JZã×0RH7JZÒ¾D22¿äèÉMJ7KNÇç7Ğ¸ÃQVÈÈÚ¶ïà-Ê
+6.ÆÁüÂ³ÒµòQ¶¼¼Ù-6Ğ*µÆ¹1ÄöÒ>SÃÄÛYÛßï-2ÌÍÍÛàá@ã¯K3Ş°ÄÚ=+ÖH7+Ğë¿Öù¹:+ÌPG3İÙ>»÷*
+ûTJGBN,¯ß¯¾Íå.ÂJ;ïâãÛŞ4JZVÌ³¾ğA<Şó.¾¾V·à¾BÎ4ç¾Õ@ÂD:Ï+öÜ:ã=AR¸ZI,F¶AìŞÉñÓ-ÃÃ*
+NÉ9JÈ*Vé6TBT<ä1ìÏKä´ç+âøµNçÏÒË7?²ğ÷L.ı÷:Kİ0ZÙµ*ŞÒº´æMÈ1<ÎVÆÁ-ï/Ú°:îT5L7Rß*ÜM
++L9ìÚJç+?9*óÚ¿ì´¯Z÷ğ18ÇğÓZ*Ôñ-1ç:±Ùò*°»<Ğ.ĞX*Ş?SÀÊÑ*ÂEå*+¼H°÷ï+ÎXPŞ6÷OÜúæî¿.
+>.ğÔ+DEµHíÄ-W¾äË=6Îù+SÜ·¿ĞÁ5ĞNH1ò¼QtÕÀÏNCæJÈA½Á0ÕT<å-êÆ,Õò29¿>ßı-*¶OÈÊ³÷ğ6ãÊ
+¸ÒŞA0¾Ï@Õø1¿=ZÅüJ÷È¾ÀJ´C¾¶ñäI<BWBÄJK-Ö»JÈÕXZH÷¾>ãK0;-ÕNC´îPBä1,7N÷ğÃ0ñ7ß2AR<
+Q-úÊĞºM+ÅNÇú0¶FĞõÂ>á.2´XBÄü8NJK:µ7Î×·ñõ´F;OÉËß>ğ³2ÕXîÆ>?ä*ÖÉI@:NÇÔ@Íú¾>9/áúJ
+Î¿>YÜæîŞEÔÇMS´æå<OìDJéäİ,:84BàÁÉÕüH8YÇğ¿.¶ñäCÚNHº2Z@Ú°9íÌÆĞAÍBŞÓÚÑùÜ=BÁI¸¿MĞ
+òÏ9ZáÙä¾ĞãW-»µõF:ã=ß2Ç2I¶Â3ñ75ãÏ>Eò±Ç<5QÓ¾ÆÌ°´Ú:HG60Á/ZÚ87HÆ*µìÚÛ.:É9äá@Î¶0ú
+3S¸ñä½äÏ:¾/R<¶÷MA¶NÈÜFN06Z@æØÚÛ±ÎNë-Ğº<6;3ñ-µæZÜ¯ÏFÈ°Áü=SX=,Î¶ïĞ->¼¿Í7¿MëÏKİ
+Ç>·íÕÜQÑÀÀúùAã?T¾´Ó°ßÁLÅE.ÅDMÁü=S´58óô0ûèĞ²èãÙÅİ+*¾êÉÕü½ÉĞUõXüºıóÙAAà»íE*.µë
+;*âÙ¸óİÙ>G·íÜ¹AQíI¼DÍüú»-¾¹AÜØ²éÔWñ0áIµS¸êÒYÑ´7üüü>½üùù0*Y9H¶æÌQÙPËR-Yü³ÉĞYX
+ËØ±æìññAûõYF*FıúìYQäÚ¸³È6ØöÕWÈXB³æÅEUYIığ+ŞãõÄúB²èÀ--ìYÙ>»ìèÈ1U¼XÜ»¶½ñÎòõëÁõ
+ë¶ZãÓSXÚÖİ´S¸ÖĞ9ı»ºFº÷Ş¼Ø*ZóÓIXıZ.Âøá÷,L2¾É1í¹ïÜÅOÁ?²W½ëĞòPI=ÜÉ¶õôì¿úÊ*Şá8ğJ
+¾ÂE²áIæ*SEŞß8Îö³-ÚÆ¿F5ŞÛµİËÖXàÍË4×Óİ´SøËÍ-á?6Ù¸ôî»L*î?/Æ-ëºğÄ¯9²¾·AE¾ùÁI:°-F
+Ç*ğXòóÉEÆJ-F¹óÖ/á7ú÷äåWÈH°ñİ´+İ¼XGZÍ1*6ö1âÔIù*+EŞß9ÎóZ-Ú÷+3*´LÉ¶ß*Xû÷é¾ëüëFğ
+ñ@OÅÆ×íØ½W=µ8Îå-*²²¾Ü1:ŞÍ=><¿ÃÅåÙø*åÍ98>+ÀK0Gø*Wå*Vé*æÏIÎ+İ=*À°åçÈ¯K¶ºÊÆ>Ú·ğ
+ÔıÔóÉCàåWÈH:±İ±ûĞ0ÌºLOZ/-öXüJ,FTæâñÃRÌ³*YÜù0MÎÁ5XÌÈ1Ş¸0:J*ÈA72ñä-.Ö³2<ÉåOJ¶H
+Ğîâ¿Ñô¹ÔYä+IµS¸»ÊûĞóUø´ìŞ¹H*Jı,Ò¼L+ÜEóÉ+¸E7ÎÙï6*¶õ÷*3Şò6¾B7Z@Z²Ş¹1ZØÙM.QÑĞÒB
+.äM4Ìù´ç¼çøãVYÑÉĞÆ<³Ã×:ØóäÌM¹ê:9Å·í×»MíÜ7¸å-*´±¾ÕÚ9N¾I.ñ3Ï*ÚÉ0ZÚ70Æ»H¾·1RÈEõ
+*O-.*õĞ¿:OVÈùÜ.Ê,**äºNßµí8ÛõêÜÊá³CSøğR+³::,ËÓÉ²D1*J*,Hº³Xì×0ZìºM2SÈÍ+Nñ/ñ.1,
+îR,ØÁ>KØ:Oâ5¸ôêØñ+*ñº¿=êO.Ø´*Ü×Å0B,JD-âW;Î+ÂäüEŞæ*¿5DŞ×-6ËÛ°¿äC¿ÀèÔG¹´æºÁ>KØ
+@=O0S¾EâÛ-MÚOSø*=¿ÑX4Ã/äìDTñäU²êÛú6J4UZã·¼X¼ÌÎ»N3Â?SDéÕ¯İÌ0*Ú³¾+L³W6@FõB²*Ï½
+±/¶é¿0Zû÷0G¸;ùÍÔW±:µóË**²¾Ş/7¶é5DÔüÚáĞàÒøYÛçÂ,ß¼ë¸Ç<2é¯ĞNØG2ÙTÑÇ*@Á43²1Úè,Şç
+--ÆÁ>O*ÔÕÚ×¯Nç·³ô¹ôìåÒU5éÓñ+*Q»<Ë.+TRDéOµT*ÂâAC¼ø*ÒSÍ»ÑŞ,JÜ¸³µ0ÂF7î±¾Ş/7¶èë:
+>NWõÎ/.+ÆÈç¾ÀÙXËø±Ü²û´0Ú¸Ê>Çæ*ºYZÌ=0ÂKÃ²ŞÉ1î9ÇVÆæÒÂ2HK÷M4:äËIß+Ê32¿Là=8Ä<Oµì
+FÔ7V->ı¿,F¶µ0JÉÍ7á,1Å;6ÒY/ÒO+Ï.O5PQ*.â0<óŞ:3V¶VÜ¯N3U·üÉ@í:ãã-JÆĞÓûé·Óä;O×üûC
+*¾ó1R¾40îû*,º¶:Ü¾U0,X·9*PY·4POP/è.öÛÏ¾EF¾KÀ¼7Ş´àß¶KÈLí¾+L3*ó6¾Aµ7Àâğ·32Äã-JS
+U÷3/>WÎğ+Ö@NLÒÎÇå5Ï<î²¯D¿>Ó=æÁïôóºùÏòÓU½ô5õZæÌDÅ>Çóüı9+¾êµû*/2ß*Û9J¾µ7Î·÷ğ÷´
+>õ+¸@½DŞóğ1+È:ãE42F:äË98ÎÆãÅÍ4PE6ANSìO¶OÈ¼<ÀÔYİä¶ÖF/Æ×ú7/>WF;O²ìFµÌ+XNŞß¯²,S
+¸NĞ9õóé·³é¹1OµÛD²Ş»9ÉÄÒ·Nç0åı½ö3*Öıü1ıX>JK-Ö»Î-ê°*ïãÉ½NZP1Ï0RÜFà;ãÏ*¯ìºRJî¾B
+µü*1J÷VN30I9Ä5Ğ>ÓÜÚ<O,BßÑ**î·HïÆ,T0XÆĞ¯>±èÏÔ;OQòC±Ş½GÑ´ËVÕP»í*2ĞÒÏ35ä6øÎä;OF
+UııVÛX*¾ûõ½ôñL+ÊËß>ğã1,¶é*ËÉA½µM,Ğ6F:äËIŞ¿²N÷¼BÈ>W÷æ8öÛ<Oè×JôÇ¿÷ÂÎ¾øÅ±Ğ²ãû0¶
+FH×±NçI;0ë¶ZäĞWYG*úóê×SMÄ6¸¯¶Ò·NÇÁìıYV¾*İ-*²¾*ıû1»úJ/ºà*ÕğÌìù8P8H.ÖîÈ»ºÉ¾>Kö
+MFÆÄ>Kæ2Ä÷ÃC*öıPBº¾Çà±IÓLÄõUĞâÜ½¾<ËFñáñ3Å>Î°¾BÚNH@ÇÙ0æØ÷Õ*ÂQ6Ì@P=ÆĞµ±DøñáÇKÑ
+@ÕYYÚ>»ôìÜY¹üVDTSÃ´íÆĞ¹ÚııÙ*+,ú1ı1+N½ÅAŞåÉıÊMK*5Î,ñğÁ÷VJï6öùĞ>äËIà¿²N3FÄZ¾ıQ
+*îPBF**+223Å¹÷MĞòäËMÄÂKÀ;Ké=ìRJÇ<×É*°Æ<5QÓ¾ÆÌ°´ÊBFWÊP:OIEçïæÎE¹0ËRİÔ»í*î×¹UA
+XE´äÈÆJÙÕÙÄ>+Ş+İîâ°O×9î/öWÉçTBÌ*ŞÔÀïV¯Ô²?×I¾IFNÒ¯çÑOÉ0ÑA8*ìDµìÚIQO²6K/Ê¹éÆĞÎ
+ÉIN×PCŞQğÑÙGSH2Ä5+ÖÓZFUÊ?WOø1ZZ½ÓÇĞ+*¾åº,B?XæàÙÄ>/ØøÕNSîMÙGS,²?6A,ZUß¶ÔBUØÈò
+9¾É-97Öë×°Õ9*¸ÔWŞÏ¿Aİâô2Ş¾ÑAOçÃ¼¾íÂğÊĞ¾í³¹Ğ.ÛPBÌ*ŞÔÀïV¯Ô²?5BO=Ìùóè7**òDµïSÅğ
+°OçNËııW·ğ:¾BA³¹Ğ.ĞLBìÆĞBAÓ·O×ñöZÕĞ²ÅÚı1¶L·PÇüé¼²¹Ğ.ÅLBìÆğÔÀïV¯Ô²?ıÇ>ÛÍïåÏÅÍ
+ìF¸ÔXG¸ïÙ³ù×GS,IE6Ä±Ã×ĞÓúQĞò´VéÔÛÙöğáë¶ñèÓÅ0Ú*I*Î*JÔ>½>0ÒFé*ÕD:WÚN:6ÜFTJ7.ÂJ
+±Ó>9ZĞK,VÇô@8AäÌÇóÛÆĞâñğ6*JÓ5îM+P4I*¶PÈèDèğã·¼X-ÖÌZZÆ,ÚKìGBà:ã-èÆì><SÊG=é¹;O
+±ü÷QÂÅ*J¼¼¼KÈŞğ÷DŞğ+Ö@YH0ZEßJØG2¹°4Ş°¼ÍÆS¯ÔÊVıÃ>çõåÅ9+¾ºüûÎ>»÷*9ÇVÆæÒ.9ß±·Ô+
+Èé3J::E-ÎãåÄ¯¿ÁáR,èÕ,è7.-37¾õÅ?O
+d
+595 102[1 0 0 1 0 0]sl 8 mask 0 102 di
+/mask 7650 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıU¼ıÕÚ?O*%%%
+d
+/sl 60690 string uc
+2Ş½Ş¾Ëå0*LèıÂ¼J,Öºî*Üº*B»ãSB?×ÑTÑFé*ãÉ1*Vé*Ú³2<ÉåOJ¶·5*OëêE20TB¾õ=ß:@ÉQA@çAP
+ÈGÖĞM²ÖLâØG0BZZ*ÔNÈ*J+*æ7¾òGÉI7î¸÷ÁRÌÇĞÍÂÎóéÕC8@A+°ìKB2ß*ÛÍÆğNÁ.Î¹ÑFØÅ0ûQĞ>+
+VH¶¾KNÂD¾·ñ2íÇ<+ÊîS**ö68Ö-ÚÎÎ+êH30¯×ú´·²97øëNç¸@ÆÛº?ß<Nç°±BÃº7àÑAOCSú**:I¾ºO
+ÈÂßOğ±*êù1RĞÇ±¼F¶Z3¶ï3-ÚÈ¹¸í¹BO÷*AÒ;;AâİBÙMÔQNÈ*J+¾.*ûĞ>ÇÛ.:é*>°N6<63¸9Ğòã½ä
+Ï:¾/R¿O÷*1Ô+JQâ/÷AäôÆó3ÇğÜï°ÛFè5U÷üO÷ûÉğùAã?Şã¸·ÒAÔğûÉğùAãõYÈU¾ÉóğRYVãùAãõYÈ
+íİ>Õ*AéãÏÜÖÈõYÈíİ>İ½SX+XÔÉM»¯?íİ>İ½S¼ıĞÚ,ÚVAÅøàTÜ½S¼ıĞúüO·/¶×X8W÷TÂ´Û¹ĞÂYXÈH
+***.Â*VÜF¯7Îú¯8ÆY±P+R÷K+Yê¾Z7ZK<÷çOçQ0AûX¾ØãW-ÒÕOÇà0JFT¾PIöúà0Ü½SäXÈè°÷ğÜ-ÆÊ
+*12·:ï,=/àHQHî+ÉĞæÔ¹÷ĞòÆ-ÂWÌ³¾ğãûŞ:3V¶VÌÚFºK+.Äã11º··HÄEµHQM¯ìú+76SÈ*Vå*²÷×¯
+Vîî¶KJçÌĞòãÏ,èJJ.DUA3A6*¾*.ºöèÚ0äDÀÆĞú6JDY¶âıÅ<ZãĞÂà31TÃºÇĞM/ËºÜ2ãù0¾¾Éå0Ûúî
+¾AYFJéğÊ;Ú@äËIÎ¿MĞâÔKÆVHA+ß54Èì>O0S¾EâÛ-MÚOSø*=¿ÑX4Ã/äìDTñäU²êÛú6J4UZã·¼X¼ÌZ
+ëĞ.ĞX*JNÃÔöß+ÉÚãÅ>ÁLFµÌ+ÈYPŞÊYJü.4:7WãûOT¸CD¶NÈº<ÀÔYİä¶öÈ<Ôı*å±±ıĞNØG2ÙHÑGÚı
+öC,ë+ÕØ*¶øŞ*ğ:O3¾ó?µìÖ>ßı-*2CÏ@É=Yù-Ü;OVÌÏÊSÅÀIÎèI.Ì¾»K<æZÁìY°Ä/>7Ú<O,BßÑ**î
+CÀîL<Ôí*ËLÈN²*ÜABå3-àÎLDîã-öÅN@N²TL.ÍÎú;/2ñäÍî*ä.ÂJ;ï31MJë>¾ŞØ;Îä¼.¶îì6¾@IEÄ
+/88MBRİ4RÉ,L3È@ÊÌ*2ÆËÓß¿K<ÖîÖè@ß¯VÂ>9O/@µìºI/MÈâµ¾áAú¿ZñÀïÀ>Có,óBîXÜú+7F:OİØ
+ºğ*V¹@ÆûL2¸K+ôYÈ°ûù±**é9Î*?6Şù+.öîJº+Õ6.ÚğH*ÊÜğ>ÊÈÊ4Ò3î¹M+µ¶*Á.ûD¾ëÂÁïÀ>ÃÜ+³
+Z*ó6¾Aµ7Àâğ·32Äã-JSU÷3/>WÎğ+ÖÔÓKÒÎÇå5Ï<î²¯Ô3YFŞâîÙ+ù3°ŞæÙ0æØ÷Õ*ÂAÙÓİÅá¹LÈÔF<
+,ÒL+XæŞîÂµÎõôÌ*V»ı¾ÎN=åúöÀÀ°¿××KS<éûıI,*×íø+4:À+¸I¾*íDJñğãñëRì-òVü²¾éã9,>KÈµ
+>:¶JÊEIFJ;É9I?Ê´BXÆĞÚÉîÈ>ûN.Wİ¼ËïZ·4:±÷E4RØ¶LÈæÚ·ìF-ÚÆ¾ÁáÖQST**,BŞÀôÆĞ5QÓ¾ÆÌ
+°´6ÔZBV*á³÷5ĞNE-:7/¶K-Á=ôÌ¿<³MV>°N6<63¸KK×ŞêêÎ>ëîúı1I+*ùíıîíÃ,>²*Ù1¸¾W0:Üº÷Å
+.äò:è*ãÉMFĞF4:äË1/.82ñä9î*>ÍÃ>ßîñß¶KÈĞèÉUĞN*=º4**Hå=8SJãŞ/SDÄ°PGØºS´á-êİ>ïVû
+ı±ó¸+*ôİı×Í5/V´0ÑÆAÀñÔ+DAYüìÄ.NC¶:NÜ¶:7SÜ9Ä<OUHØ-¼ÕNÇ¸@ÆÛêIH;>ÎüïÊ>W·İ+8ÅQ¼Ô
+ĞÂKõıAôù/*ÖıüÁH¼Î,H¯¾U·Qõ»1=19,V¶ãHÜOJÈ:ú;8NMÈ:òûZö*=Ãå¼TÃ6íÕNÇ»ı*OD·äÅå=8SJ
+ã*¯¶ÇºV<µ7Î³ñY+2ÍBFWÊ¼¾ÕÕKÈæïüıíüI+*çíï/ö÷ğIñR2Ş,ÒŞÚúZH5RF-üÜ>Ã·ñÅ¶:7S,ÅõÁß+
+*2¾¾Æ¶ÚÉI<OµìF°N6<63ØHïÄ,È>ÇÛ.:Á>×¶T/Âò>±áÂßçàò-º»7Ğ.*Í¿Íê1ö,úÔÃCU6Ä±Ã×ĞÓVì@
+¸İ>/ÛúÕNSğÑÙGSX¯BÌ?äÈÔ°·ÙæûĞ>æèİ<O¿9ëôN3ÎëZBÌ?äÈÔ°·ÙæûĞ>Ûæİ<O+İéôN3¸ëZBÌ?äÈÔ
+°·ÙæûĞ>Ğäİ<O¯XèôN3NëZBÌ7áÈÔ°·ÙæûĞ²ÅÚı1ö0úÂôMÙ=O¶²Áß¶ÔBUØÈãëLõÉĞùCüFøöçËMåèÓM
+A¼Ù´IÙ=Oî±Áß¶ÔBUØÈãëLõÉĞÙ¯WÙôìàÉ9µáËUÕHDî,ú>**+22+¶KÊÇJBº·Ò¾D22¿äTUH***K7ÎúL
+ÄÏ9îó³ÆĞâñğ6*JÓ5îá+P0AûX¾Ø÷MíSÚN:66Ğ*µÆ¹1ÄBN÷¾D@°6û*YYÁ>Ë÷åI;H,*÷÷÷/STÉäËù8J
+ğ¼N÷¼BÆ´1à8î*@9Ş°÷ğK7ECÄ´¾ÕÓCî<**Ìµ2SĞíÍ9I,*÷úù;S¸â+à@Y¼ZÆ.ìÀáğâãÛÎ*À±VÜúêB@
+¶¶ÊÙçÌ1-37¾õ+8>S0³VÇ,¹Ñ>ßıG*JÅÆğ».ö*@Ã=8Ò4÷ğÜFTæâñÃRÜÕ1*Úº´æãWÁ¾<ÉåOJ¶ÄBÈÅ1R
+ß*ÜíÆ°SM¼ÒÆ·¯<OÚOìàÑ:OVïÁ-@·Q,º·ìF->İÊ¾CîEæÅQLæøóé61±ÂÏºº¾20æûÂ>ÉDJ÷úR;ñàNÈ¶
+ÉÚÃQKÈì°·ğ³½ŞUÜÚ±>±èÏ*äËUó½2F+ÙFŞ.Í,*¾å6¯>99ÎÎ+êH;ã-èÆ9?°XÊN3µÇÙZäÉùHüº/Æ´Ûã
+ÙÜ>M»ºI/ãû0¶ÚFé:OµìF´XBÈõV*°QïJSáÃãäZ4÷ØÂ;O±ìºI/SÜLØÃ×CSèÑ·:JÎ=óG64Ô+X¿RNç³9
+Ïğ+Ö8-ÆY±è0âÎ¾çVKIÉĞÍ6¼EZIKÈµó+Ø´ü?*ïãUûõïöZ>õû->=ËFñá¹ZØ±5î3-ÚÈ¹¸í¹BO÷*1Ò;I
+TâÚBù<OY8=¿»ĞOíM*²ÜÏJâ÷··éRÍÇğÛ0Ú>O4E*ï2,DûŞñAJÈ*J*¾EŞÀ´·ïÒ42ïGãêB60Á/ZÚéğã;
+Mà:ß22¸1P¹AWü±8/+V¾4ÚÚ/**J¾ÎÄúR;ñàêÉ>Ëõ3æÈ1ÙÎ±?¼İ·õØàÒ0îÀ>3·:ïL9.àHA:×÷O·¿PÙ
+Ø2êÙ>Sç*»Å>Gí*RÉ1¶Râ-/×ÚÌ*2Æ/6øğ+H<×:ÏS3<Àå¯LÕ·ßÀ/.@BµìåÄ¯¿Ááğãõ<GV´ÚÆQAåáöğ
+ãñ²VXÉ96<¿/Å±/¿Ë³*1ÔîùÉ<?6îùÆĞù8îZ÷*LÚX=2TÍ2@6¸B»ãSB?CÓDáÂ;.ÌCÃ´ãWÁ:×ÚäOJö´5
+117é9ºï*WÉ±Äî¸·W8?²ğ÷LÚ<ã5UöüO÷¾>Kõ;OV×Fò*MíÆĞõVü²¾éã9L·JÈ8FËGàÉÍÂÎ?½ûDáßË.¼
+İ;OWÌÄÔğü<Ó.:ìF-Ú<ã5UöûOÇÈ0æ¹NÇô0¶¸>ÆÂ1Z÷Ä>CéğR-Bµ8ï/S¸°AJAY8ZÀQ+*â=Ş3;0QN37
+´æûOä¶*áRäÒMåN3*HÖÀíYÈâù.²MÈâê.íM¿Ò·¾ÕõOçÈİNî³>+óV:ùÊ+´²:º÷çQNçSARÅ+µñäûÈ*Å1
+4T8îèğÇ-Z»¯/İİ>»·É.üÏ@»9+¶C>æÇ8ÕÔMöğ6X,ğµOç*Y*ÖºV¿ùü+È²ğÊ9M´.FàHòÀ>Ï·ñÆ2Î4EŞ
+W-²ëúU*à=1Ø¿ÜÙ¹,Z»¯/İİ>Û·ñNçB¾*åç*M9:¾ÀB¸ËEµQ<¾ºUÈÌW*/5@VîÛÚMÄÂKÀ;KÉUN:XŞºMÈ
+²±*ĞKÈVFÓ,L¸È×¯ğŞìCRĞ´òß¿?ºıĞº-+ÁÆ5ÀÅ6D°1*öüO÷ûÉ°¼Ğ>5I½ıĞÚPSì³³ô**íİ>İ½Sìë@<
+9-¶¼5*öüO·ñÒöüO÷ûÉğùAãä¾ÕõYÈEÃÕõYÈEÃÕõYÈEÃÕõYÈEÃÕõYÈEÃÕåVÈLÙìıUÈÜFTJ7.ÂJ±óàB
+ñê,F**+2öîÓ··åD¾·ñ7KNS¼0:ËAÊ=F2¾M3öµOÇK4î0·õŞ2µSÈHŞNîÒÉL¯¿×ÙÄèÚ÷47¹AI-Æà4V·Ì
+ÍÉÍ=ºáĞNØG2ÙHäÚ=OZCÒÆJ¹ŞÓ@*ÌHB¾FNS,Z»ãËE@ã0/¾H;O<D*í5ÊñÂ+¯R;7öğ+úM<5<D?;ÀQRü
+Æ,Â·ñQ¶*±,LÎÆöÂÁKÊ12ĞòäËáØ¿³¾ğIR¾-õä*²÷×¯VîîBÀ¿øÓ¾Ø>:ÈÎ²ßò.¾¾êJĞ86<¿/ÅãAVÈî½
+Å,JìùÙ6SÈóíÍ+*V½¾,ÒZ*í1:ŞÁ-ï/Ú°:îÈù*ZøÈÑZT°TÎP¾í7/Úß+6<òé*´=8Ä5Ğ>ø06:È*Rå*º·
+é:N@ÍÉ¾ZVH*ÈØÈÍRJç,?9¾³K<L/ËºÜ2?+Q5±·Ğêâ;ÖUS4éûYÇÔêµû*/2ß*Û9J¾µ7Î·÷ğ÷´>õ+¸@½
+DŞóğ1+È:ãE42F:äË98ÎÆãÅÍ4PE6ANSìO¶OÈ¼<ÀÔYİä¶ÖF/Æ×ú7/>WF;O²ìFµÌ+XNŞß¯êC×Ü5SØß÷
+ı9¼,*ôİıßİ5/Ræ*´9ò*Ù6Jº÷ğ93ÊçKÒ+ÈAÅ¶N·>JÊE942F:äËIŞ+RH5SÀßåÁïÀ>OÓAÕNÇ*Pö>**º
+ÌQFĞ¾È¿5Ğ²6ãÊ¸òÙÈ<ÌÓı½ÔXA*ŞüùIù·Ï*ääZ4÷ğ-+Ú³¾äãÉİÙ;+S082ñä9îJDĞºI6OÈÔº²1úXÇ<
+óV:ùâŞºLRJûáCSØğ¼-F8ÍúVO3ÁìıYêõ5*Zıû1»úJ/ºà*ÕğÌìù8P8H.ÖîÈ»ºÉ¾>KöMFÆÄ>Kæùßî+P
+4ÍûÒ4CÜYÇ<ùü+È²ğÊ9ÍQFĞ¾È+àî<÷ÖNìDJéäİ,:H¯¶ØB¹PÔõLÈæïüıíüI+*çíï/ö÷ğIñR2Ş,ÒŞÚú
+ZH5RF-üÜ>Ã·ñÅ¶:7S,ÅõÁß+*2¾¾Æ¶ÚÉI<OµìF°N6<63ØHïÄ,È>ÇÛ.:Á>×¶T/Âò>±áÂßçàêC×Ü5S,
+¾åŞQô-º+¼éÀÉ?0á×àVçTü=S4¸÷YÇĞâQµ¹ĞÚàZFUÊ?Wã½<O¿Ôü?S4úæ´Qt*ë0ÁïV¯Ô²?ıÇ>OAøÕNS
+ŞõØGSÀXE6Ä±Ã×ĞÓúQĞ>Ğäİ<O¯XèôN3NëZBÌ7áÈÔğIÇĞGğüIŞEî=Ø9ëÌ>ßÏ70á×àVçTü=S¸IáÍM9I
+Û·òVÛ¸òàµéôñHúR·ë¸Á*Ô*AŞQ´ßÖU8ã¶?ıÇ>Û7éØ³õ@Üú¶EìÚ¸óÏ+AŞåÉM/Ò¿¾2²ÔÜæ*ßDJ2Ş4î<
+ÓZÚÑÄ?ğRÄU÷ÍNSğ··0*Îè/ö¯Æ,ÚKìGBàºNS¶¼ÜÌZ¾ğ1Ó¯ÃFÈ¯Áü=SDñÍ½Lº.*ğññD+Ğë¿Ö±WÆ¾>O
+*Ôé3Ä¾*R¼ÙFÈ°Áü=SĞíÍ9I,*÷ú¹Ë*37¾õ/PTà¾BÒÆ0ú/Sø×¯VîîÖº÷ŞHR,.ÀÈé3*¿:Uü¾1Z÷*ûTJ
+Û¿Z..úëĞº8+ÒZ*í1:¾Á-ï/Ú°:îÈ>»·é:N@ÍÉ¾Zí»Á;æß/EµÌ,ZWüÀ1Z÷*RèäÜ¿Z..úõĞN.-ò¼*+Ú
+³¾äãÉåÙï¾>ûN.Wİ¼ËïÎR4î¶÷×¿:ãî+´ìºÜ7ã-âºéÀS0MJŞM?O%%%
+d
+595 102[1 0 0 1 0 0]sl 8 mask 0 204 di
+/mask 7500 string uc
+*ŞÌ**¼ºıÈöü-õûİğùåŞõıÈíı?İ½0¼ıÕúüY÷û±îù½ãõıÈíI-İıUPÜ<*îÌ>+üêÈ<*îGSÀú-¼Qt:ıïY
+S<â¾ı%%%
+d
+/sl 59500 string uc
+2Ş½Ş¾Ëå0*Lèıºº¾À0Zù*,Úã*àÉAıÆ*U3Îº2*+ÊîS*¾öÚBPZ´¾,ZWHº¾ËEıÆJ÷*VU.Ğ9Ä¾¾Ù¹Æğ-°
+DÄF·ZOÅæZÃÆ³¹6ZŞŞ*êÆ>W´0ÑÆAòïÔ+DAYüìÄ-ĞNG5âH=JM-6¼LÈß-äÚ÷¹E°AãEßB2ÆQ4@ÏBéMÔI
+NÈìºà*ÕğÌìùÌá6H.ÖîÈ»º¹JÈìù1RĞÇ±¼êÙõîñÖ³ÓäË±:AÇİî¿êO÷PBJ÷=2ÖR8ëMÁü=SøğIñR2Ş,Ò
+ŞÚúZH5RF-ÜNçËEÅ63Á.MÀøğ¿õ>ŞÎÆ·ñäX,Æã9öJøĞº<6àÚ÷E2ÖP8ëMÁü=SìEXÔÉM»¯?íİ>IUSô68
+óô0»ıĞúõO×ï+îÛÇ<úí÷*öëN÷Å>À*0úûÉğùAãõYÈíİ>İ½S¼ıĞúüO÷ûÉğùAãõYÈíİ>İ½S¼ıĞúüO÷ûÉ
+ğ-;ã0/¾µSÈî½Å,ŞÕ>ãõ½.íİ>İ½S¼ıĞúüO÷ûÉğùåÁõYÈíİ>İ½S¼ıĞúüO÷ûÕàùAãõYÈíİ>İ½S¼ıĞúü
+O÷û½ŞùAãõYÈíİ>İ½S¼ıĞúüÏîûÉğùAãQJÈJèù1¾OOà·SÀıíI*@?3åO÷ûAŞìJK*-üüO÷ûÉğùAãõYÈí
+İ>İÊ¶JáHç¯Ğ±9*ZÊæ÷²úûÉ°4A*@AàÇQ8*VüÙĞ²èãÙÅ½G*JôãU½Ê5*ìÀLÇòæ+µËº·QA,BîÕNÈXÛ¹÷
+ñûÕíÜÚ2õ»5*:Ú³Å*:íèÓIã/*CBÆÊ»O»;îMÒİD5Ä*:µÆAµóğAÇĞ=õë¹õğòûáQñçÍİ/*¶õàUÉ´ëØ³ì
+ZúKX¾ßK¿Z°Çó8àõ*úŞâ¾ÂéáÙ8Ü*õQóğAÇĞáPûD³éîõõQ÷ñİİ/*öøî¿ÁôºØ³èÂDöğå¶ßTôç=ë¿øëK
+úX¾ÍWéÑQã/ğãWÛ2Ş¾½<SøãÓS¹0ë»¼üĞıü³*¾ñÍíûóâÊUÕPÇK5½Ä5ìëÎKSSİHÛØ¾İ½1ĞòïÁÅìVØ³è
+UçÎKì@ÆAµóğAÇĞ1Pû×ïäçéåİ4*¶÷Ü;EüÊ¸îİZùCXöQÇ<7X»DñåĞGüG*¾åı8¹ğãÒU9PÇ<»ØLÜÚÒ5+
+6öQ<OµÙ¸°ßÇËÅY9ìåÙZ0½°ôöÍ»¾İY9Üµá¾=ÕP´ëÜ¼Qtüç=İÒEAä6ÛÎÕ½/*îöáù¼Ê¶±è¼Á<ÔÂA@½¼
+ôÇ±Ï5+6öQ<Oå4ØïÜÄÃÁ19èå**4*¾*/ÆJºØ,Ä¼¾Ùòí¿¾Á1í¹¯ÜÄK±?±UIá/½óè?×Ñ;-ÄVÆÅ½N¶<ŞÖ
+T*RGáü¿÷+¼äAğç°Á<°â5HÉÆ-+<îÖË,²PYâë*×æÃ*0ú=ÇĞ-ûV¶ìß×Õ±AîİQ**FJäòØõ/æù°/Êù*°Û
+Iù*1ÍûøêÁñ4üV¾È»Qt86BZPI=ÜÉBóìüü7*Ö*,,Ù9/*Ñ9ÃŞ6*×Åè¹ÒŞó*¶õëµ=ÔÉö±ÑK33ğÃÕ>J8²
+ñÇEÄËß±4+Âê*×æãY<OQç÷YÙ¿YMİ8Úå**FŞPõìË1¾÷°/Vù*°Ùİ-+İ8ûóŞ´ı¸P÷Î>GD²æZ¸0úÔZÀG»
+úE*Z+ÈºßH4*FI4¿C*-I*Wö1MîÀ+úøòÖ/İ/êCäÎÂúöÀÂ½RôZPX±*³AEJ@¸÷ÉNç?°ôÙôYéãÍ-òõ*ŞÌ
+E½Èæ¿.ö*AÏMÕFŞVòüFK;3VºÂ8Û98>+ÀKåÍ1ZWÇÕCö66¶·é½éøãVïKS¸·ğâ³êêµWŞàØ÷UMOQ9J6/î
+ÊÙåGáLÅÇëûL2ÓÙ9Ë,G94*ß×ç+<èÊóÁ;òæËÙ0ÚÔíä7Á<ğá5DDJí5;·+@F¾PJ/6;½ÜìàÏMQUÄ/89ÍÉ
+Ô+°ÏÉİNÈH:±İ±ûĞ0Ìú×3æğâÓÔ+Ñò¿/ö*@Ã=8Ò4·ñÜFTæâñÃRÜÙíZ.¸¶ßãÉ1ZVóçCüÈ6F·îÒûÌóÉ·
+ŞÁĞ²ùôë=Ö¼KÀQ½-*HŞï¶8LM9îÖå0¯<øÛ/4EÅ·8+ıß³âÍ¶Ã¼¸*µÑ±;ëòÈ¾5-:âÁAV*¿K3÷ïÃ?6Ş¹÷
+-3¶*@Úº¾:Kİ0ZùàWÚ³2<ÉåOJBU2:5Û2Ş¾½<S¸»ÊûĞóUø´ìŞù?*æÑµĞââÛù¿/æ*>¸¶Î°ôN¾õPû°¾ì
+F-*X5Z+ü¿*úL24+FõëĞûĞóÉ×ÜÁĞN.3<ºï5ÅPŞ->äëÁÒğ+4ùÇ2Ø¼ûDáßğÈB,FÏÊE9M»;¿ÖøE5éPIğ
+À=Ö2ÈÆ9Yæİ*ÓÍR*ò8Z3¾¿6¹í8J²ÚO¶Ãõô2ßçÒS¯2.Pá/ğÎÉİNÈ88ñÜ±ùÄÜ»Eò¼.*æ·Ó.ùRIß*9*<
+õëX¹Îéë·I.ñ3Ï*Ú7È*×Q/>õ*Rèæäûè6úôëÏùÌëÉCÚÁĞ²7E´úôŞA8/Ì1îÙÙä*N-öOú<Z4*ÎC¹ñ´=*
+ëCTZøLR¯õÛÀ²¶ºâ/AZ+Ü/OâÅA²±¾ÕAXğ*V2õ*Oá*Jæ5µ+ù4G2äĞ+°Ï5+6öQ<O¾@TäöÀÄGùC*Rê¸K
+ãæAø¿/ö*8±åÄëXÀêÌ´¾ÛÖÃ0¾GÑ.¾ÙÀŞ,ÊÊKìGD:êÎ÷ÄÉ+²1OçZàÂçVûÀÚäû0*º*ÜÚ·=<<*Y±×Şñë
+ñ+üĞÈAÇ¶ñÜG*:W7ÎÙõÄØ+ZóMWJÚ¯İXÖ*äÀ<ğá5éº¿Ñé/,1Ş<*-ÂÄ+¾Íï@Ï,0Eã,Êå0ä/ğÎÉİNÈ*V
+ÓÊÓ´7Ùó±*ZÓé°°ğJ,º¾ÂÏCÍÓñÁ³9DJæİ×,ÖóêµæÇùÖåèÓ-BÎM7òºò/.Ùóèó°*êKSØĞOÉô¸î5*ù7*
+ö*·¯áä5K¾Ú8ØÅOÃW-Ôù×ñR¸Ô¿ÆÕYY:8WÍ8BÌBò¿¼²/K*-5Ä´YäÛÀ<ğá5Y7Z¾RV3Áû0DÜ*ÉÆÈæ4Ş÷
+àWÚñ8È2ÑôEAR2:5ÛúOĞò×DùG¹õ±èÓÍ,¾ÎÌùŞ+*¾**µ:ÃçèĞE?*àO¼Ç¿øêE/@¶JÒS1öÇØE3Îõ×Aæå
+ºéøëFéÇÉGR*I¹ôêTÌıĞãUHÑ¼N¶<Şë¶Iı@Şëè¸1W¾ŞÁÖÂäSóèîPŞàÓÛKZ¶¸J*¹¼QÙK/-5òÕñTK33ğ
+ÃÑHÇPÀ*?>Ë»,@<Şå;ã-µ;ÓU9¸B:?½0¶A01óğAÇĞÄøFÖëÜÌíÄ°ğ:ÎÍùØ7ú·ÒÁĞò½ıüã>DïÚ¼µï5ì¸
+³æ¼ñ<8ËSRà8÷ğÎX.ZŞIÇ>W<çÄ÷0÷+éC²5*¶,*Çã9üãéÖòN1Oç?UÔÚR²ã¼ı4åÒñ0ÃMĞÒÏ/ıÓV¸ÏÎÂ
+úö<óY>ØÜÑ5+6¶Æ<ÃÁ/é9<OE>DñİK¼äØóèÒµ+*=½Æ¶ZäĞ1G>OX»ø²PÅIA8BÖÁV¶êÖQI¼úC°P°øò¹×
+Ö>ÜÚÓ5¿/U¾>Gºöî9<OùÂB²á+TŞøL*ŞYåÌËD°âÎ5ÁM1OçÇ5AÜWèæÌ7ÉâÎõ:5Ü¹õéËGÉÜØ73AÌú,÷ğ
+ÔXRÚ¶ÖÀ>OÚ¶½Æ>»EÑÏIIÌ6D³·ûøDXä±õôûØñåĞÏÈT²íÇĞµQÍÜìNÅMÁPËGéÜ,*öìèÃéÄË×<ÛÂHûô5
+âÉÙ¸KïàßøÆN3äH:İBãGÒY2¾âìûJüÆJÙÕÍïÀ±ııı½ÆÁÂD@ĞQí+*BõñíIQO.°J,ZİJÜÚÓ54A8ÔÅNÈà
+úß<I:»5ó5,ZÔ·ñäGğåÄK/ÊùGX¾÷K¿äµÙGSô+*²QEİß2Zü0÷ğÔXRÚ¶Ö¼<SDñZ½Ó×2÷ÛZ*Hñ3ŞÒ¶K5
+½Æ5î¼Zî¼.*ìY=Yìç/Ã51éU<OX8º²Ş´åÈÛ6*æ×´+Å0ÜúãX*÷54O:½Ïº·PA>XFVYÇ>Ó÷ğà·İX»G*JÕ
+·5½DÈèÚ÷óïíõİ2QØüõáYİTÜÚĞ56A8@**¼<Sü68LïàßøüO÷ûÉğùAãõYÈíİ>İ¸SÈ¶ÖÜıüëÌ>*ÔŞâõY
+ÈÙÒ/¾óÆ>OFVA+*¾»ı*Æº6ÌÜïV<ß,îı¿SÀÁõ*Jàûıü+:÷BFVMºöZÚ¶ïL>YÆğß+2V¾İ½*NH0åóBNçü
+-¾/éë5ºıIÊÛ6ìÈ<ŞTÏ6Ñ6ÒºC**êù1¾âá:.÷Z**¾-ÏVÒúü-Z¹ĞRË.
+d
+595 100[1 0 0 1 0 0]sl 8 mask 0 306 di
+
+QP
+%%Trailer
+%%Pages: 1
+%%DocumentFonts:
+%%EOF
+
+%%EndDocument
+ @endspecial 3974 71181 a(Fig.)f(6.)930 b(Acti)-22 b(v)-13
+b(e)311 b(de)-22 b(vice)310 b(noise)g(calculation.)27771
+-672 y Fc(\262)663 b Ff(Gain)389 b(=)e(17)i(dB)27771
+657 y Fc(\262)663 b Ff(Noise)388 b(Figure)h(=)f(2)g(dB)27771
+1985 y Fc(\262)663 b Ff(BW)388 b(=)g(441)h(\226)f(451)h(MHz)27771
+3313 y Fc(\262)663 b Ff(Source)390 b(Impedance=)h(100)e
+Fb(\255)27771 4863 y Ff(The)365 b(calculated)i(v)-28
+b(alues)366 b(for)e(the)h(feedback)i(netw)-11 b(ork)365
+b(are)g(\(Figure)26664 6192 y(5\):)27771 7741 y Fc(\262)663
+b Ff(R1)389 b(=)e(25)i Fb(\255)27771 9070 y Fc(\262)663
+b Ff(R2)389 b(=)e(150)i Fb(\255)27771 10619 y Ff(Noise)467
+b(\002gure)i(for)e(the)h(feedback)i(netw)-11 b(ork)469
+b(and)g(source)f(is)f(0.84)26664 11948 y(dB.)370 b(Ne)-17
+b(xt)371 b(step)f(is)f(to)h(select)g(the)g(acti)-28 b(v)-17
+b(e)372 b(de)-28 b(vice,)372 b(con\002guration)h(and)26664
+13276 y(then)291 b(calculate)g(the)g(appropriate)h(bias)e(current.)g
+(The)h(selected)h(de)-28 b(vice)26664 14604 y(is)386
+b(a)i(BJT)g(BFR520)i([12)q(])d(in)g(common)j(emitter)e
+(con\002guration.)36640 16680 y(V)-87 b(.)608 b(C)56
+b Fg(O)g(N)g(C)e(L)i(U)g(S)g(I)g(O)g(N)27771 18357 y
+Ff(It)346 b(has)i(been)i(sho)-28 b(wn)349 b(that)f(it)e(is)h(possible)h
+(to)g(de)-28 b(v)-17 b(elop)351 b(a)d(CAD)g(tool)26664
+19685 y(oriented)364 b(to)f(automate)i(the)f(design)g(of)f(lo)-28
+b(w)363 b(noise)h(ampli\002ers)g(based)26664 21014 y(on)i(a)g(set)f(of)
+h(speci\002cations)h(pro)-17 b(vided)368 b(by)f(the)f(designer)-61
+b(.)367 b(By)f(means)26664 22342 y(of)385 b(a)h(wizard)h(approach)i
+(the)d(tool)g(guides)h(the)f(designer)h(in)f(entering)26664
+23670 y(the)466 b(ampli\002er)i(specs)e(in)h(a)f(step-by-step)h
+(procedure.)h(In)f(case)g(that)26664 24999 y(the)c(specs)f(can)i(not)f
+(be)g(ful\002lled,)g(the)g(design)g(process)g(is)e(stopped)26664
+26327 y(and)g(tak)-11 b(en)461 b(to)f(a)h(pre)-28 b(vious)461
+b(step)f(to)g(modify)h(one)g(or)f(more)h(v)-28 b(alues.)26664
+27655 y(The)482 b(de)-28 b(v)-17 b(elopment)485 b(of)c(the)h(tool)f(is)
+f(based)j(entirely)f(on)f(structured)26664 28984 y(design,)367
+b(this)f(sho)-28 b(ws)368 b(that)e(this)h(design)g(approach)j(can)e
+(speed)g(up)f(the)26664 30312 y(design)388 b(process)h(obtaining)g
+(accurate)h(results.)35784 32388 y(A)16 b Fg(C)54 b(K)i(N)g(O)26
+b(W)56 b(L)g(E)g(D)g(G)g(M)g(E)g(N)g(T)27771 34065 y
+Ff(Roberto)398 b(Casta)34285 34059 y(\230)34193 34065
+y(neda)i(Sheissa)e(is)f(holder)h(of)f(a)h(scholarship)g(from)26664
+35393 y(CON)-39 b(A)-44 b(CyT)327 b(M)33055 35387 y(\264)32994
+35393 y(exico)f(under)g(contract)g(118652/120341.)k(This)325
+b(w)-11 b(ork)26664 36721 y(has)400 b(been)j(supported)f(by)f(a)f(CON)
+-39 b(A)-44 b(CyT)403 b(M)44661 36715 y(\264)44600 36721
+y(exico)f(research)f(project)26664 38050 y(under)389
+b(grant)f(42588-Y)-143 b(.)37512 40125 y(R)56 b Fg(E)g(F)g(E)g(R)e(E)i
+(N)g(C)e(E)i(S)27106 41769 y([1])554 b(F)-71 b(.)354
+b(Sv)-13 b(elto,)354 b(E.)g(Sacchi,)g(F)-71 b(.)355 b(Gatta,)f(D.)h
+(Manstretta,)g(and)e(R.)g(Castello,)548 b(\223Cmos)28693
+42765 y(lo)-22 b(w-noise)250 b(ampli\002er)h(design,)-62
+b(\224)313 b(in)250 b Fa(Low-power)g(Design)h(T)-81 b(ec)-13
+b(hniques)250 b(and)f(CAD)28693 43762 y(T)-81 b(ools)468
+b(for)i(Analo)-9 b(g)468 b(and)g(RF)h(Inte)-35 b(gr)-13
+b(ated)468 b(Cir)-33 b(cuits)p Fg(,)471 b(pp.)e(251\226265.)e(Kluwer)
+28693 44758 y(Academic)311 b(Publishers,)g(2001.)27106
+45754 y([2])554 b(C.J.M.)227 b(V)-98 b(erhoe)-22 b(v)-13
+b(en,)226 b(A.v)-22 b(an)227 b(Sta)-18 b(v)-13 b(eren,)227
+b(G.L.E.)h(Monna,)f(and)f(M.H.L.)i(K)-31 b(ouwen-)28693
+46751 y(ho)-13 b(v)g(en,)1196 b Fa(Strutur)-33 b(ed)558
+b(Electr)-40 b(onic)558 b(Design,)g(Ne)-35 b(gative-feedbac)-18
+b(k)557 b(Ampli\002er)-9 b(s)p Fg(,)28693 47747 y(Delftese)311
+b(Uitge)-22 b(v)-13 b(ers)311 b(Maatschappij,)g(2001.)27106
+48743 y([3])554 b(E.H.)331 b(Nordholt,)472 b Fa(Design)331
+b(of)f(High)h(P)-71 b(erformance)331 b(Ne)-35 b(gative-feedbac)-18
+b(k)331 b(ampli-)28693 49739 y(\002er)-9 b(s)p Fg(,)408
+b(Else)-22 b(vier)311 b(Scienti\002c,)h(1983.)27106 50736
+y([4])554 b(J.)284 b(Stof)-22 b(fels,)368 b Fa(A)-18
+b(utomation)284 b(in)g(High-performance)h(Ne)-35 b(gative)284
+b(F)-66 b(eedbac)-18 b(k)284 b(Ampli-)28693 51732 y(\002er)310
+b(Design)p Fg(,)408 b(Ph.D.)312 b(thesis,)f(Delft)g(Uni)-22
+b(v)-13 b(ersity)310 b(of)g(T)-62 b(echnology)k(,)310
+b(1988.)27106 52728 y([5])554 b(Charles)310 b(A.)h(V)-98
+b(er)-16 b(gers,)408 b Fa(Handbook)309 b(of)h(Electrical)i(Noise)p
+Fg(,)408 b(T)-82 b(AB)309 b(Books,)h(1979.)27106 53724
+y([6])554 b(H.J.)310 b(Carlin,)406 b(\223Singular)309
+b(netw)-9 b(ork)309 b(elements,)-62 b(\224)408 b Fa(IEEE)309
+b(T)-49 b(r)-13 b(ans.)310 b(Cir)-33 b(cuit)310 b(Theory)p
+Fg(,)28693 54721 y(v)-18 b(ol.)310 b(11,)g(pp.)g(67\22672,)f(March)h
+(1964.)27106 55717 y([7])554 b(G.S.)490 b(Mosch)l(ytz,)982
+b(\223Linear)489 b(inte)-13 b(grated)489 b(netw)-9 b(orks:)490
+b(Fundamentals,)-62 b(\224)982 b Fa(Bell)28693 56713
+y(Labor)-13 b(atory)310 b(Series)p Fg(,)h(1974.)27106
+57709 y([8])554 b(Henry)339 b(W)-81 b(.)339 b(Ott,)504
+b Fa(Noise)339 b(Reduction)h(T)-81 b(ec)-13 b(hniques)339
+b(in)h(Electr)-40 b(on)340 b(Systems)p Fg(,)504 b(John)28693
+58706 y(W)-35 b(ile)-13 b(y)309 b(&)h(Sons,)h(1976.)27106
+59702 y([9])554 b(Arturo)410 b(Sarmiento,)h(Roberto)e(Casta)41040
+59698 y(\230)40966 59702 y(neda,)i(Luis)g(Hern)47074
+59698 y(\264)47025 59702 y(andez,)g(and)f(Pr)52272 59698
+y(\264)52198 59702 y(ospero)28693 60698 y(L)29308 60694
+y(\264)29234 60698 y(opez,)394 b(\223Hierarch)l(y)303
+b(in)e(noise)i(e)-13 b(xpressions)302 b(for)g(nullor)-18
+b(-based)302 b(ampli\002ers,)-62 b(\224)396 b(in)28693
+61694 y Fa(ICED)309 b(Pr)-40 b(oceedings)p Fg(,)312 b(2004.)26664
+62691 y([10])553 b(T)-66 b(.)262 b(Quarles,)i(A.R.)f(Ne)-22
+b(wton,)263 b(D.O.)g(Perderson,)g(and)f(A.)h(Sangio)-13
+b(v)-22 b(anni,)331 b Fa(SPICE3)28693 63687 y(V)-98 b(er)-9
+b(sion)427 b(3f3)f(User')-35 b(s)428 b(Manual)p Fg(,)780
+b(Uni)-22 b(v)-13 b(ersity)427 b(of)f(California,)h(Berk)-9
+b(ele)c(y)-58 b(,)427 b(Ca.,)28693 64683 y(94720,)309
+b(May)h(1993.)26664 65680 y([11])553 b(APLA)-35 b(C)540
+b(Solutions)h(Corporation,)e(Helsinki,)j(Finland,)1145
+b Fa(APLA)-27 b(C)540 b(Cir)-33 b(cuit)28693 66676 y(Simulation)309
+b(&)h(Design)h(T)-81 b(ool)310 b(7.80)f(Manual)p Fg(,)h(2002.)26664
+67672 y([12])553 b(Philips)310 b(Electronics,)409 b Fa(BFR520)310
+b(Pr)-40 b(oduct)310 b(data)g(sheet)p Fg(,)h(September)f(2004.)p
+eop end
+%%Trailer
+
+userdict /end-hook known{end-hook}if
+%%EOF

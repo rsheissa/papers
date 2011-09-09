@@ -1,0 +1,120 @@
+# Este codigo fue escrito originalmente por
+# el Dr. Roberto Murphy Arteaga en codigo C
+# Hector V.L. lo reescribio en formato de  maple
+> restart:
+> fis:=1.09:
+> Vfb:=-0.4:
+> gam1:=0.95:
+> gam2:=0.6:
+> Ks:=0.9:
+> Knz:=0.2:
+> Knb:=0.04:
+> etaz:=0.007:
+> etal:=0.001:
+> Mov:=450.0:
+> DeltaL:=0.1:
+> DeltaW:=0.1:
+> Ugsz:=0.25:
+> Ugsl:=0.06:
+> Uds:=0.05:
+> Ubs:=0.02:
+> tox:=130.0:
+> Ecrit:=10:
+> lamd:=0.2:
+> lamg:=0.5:
+> lamb:=2.0:
+> lambs:=1.0:
+> fid:=0.05:
+> eta:=1.5:
+> Kh1:=1.01:
+> Kh2:=1.05:
+> Kgsh:=1.01:
+> Ksig:=0.01:
+> Ksub:=.1:
+> T:=300.0:
+> Rs:=40.0:
+> Rd:=40.0:
+> kbol:=8.61706e-5:
+> eox:=3.45313e-13: #
+> Cox:=eox/tox*1.0e8:
+> Vb:=Vs:
+> Weff:=W-DeltaW:
+> Leff0:=L-DeltaL:
+> 
+> pow:=proc(f,p)
+> RETURN(f^p):
+> end:
+> 
+> #Función VBST:  Definida en el modelo
+> VBST:=fis-pow((gam1-gam2)/Ks+sqrt(fis),2):
+> #Función hiperbólica VBSH:  Definida  en  el  modelo
+> VBSH:=0.5*(Vb-Vs+Kh1*VBST+sqrt(pow(Vb-Vs+Kh1*VBST, 2.0)-4.0*(Vb-Vs)*VBST)):
+> 
+> #Función  VT:  Calcula el voltaje de encendido
+> term1:=Vfb+fis+gam1*(sqrt(fis-VBSH)-sqrt(fis)):
+> term2:=-0.5*Ks*pow(sqrt(fis-VBSH)-sqrt(fis),2):
+> term3:=gam2*(sqrt(fis-Vb+Vs)-sqrt(fis-VBSH)):
+> term4:=(Knz+Knb*(Vb-Vs))/Weff-(etaz+etal/Leff)*(Vd-Vs):
+> VT:=(term1+term2+term3+term4)*p2:
+> 
+> 
+
+> #Función hiperbólica VGSH:  Definida  en  el  modelo
+> VGSH:=0.5*(Vg-Vs+Kgsh*VT+sqrt(pow((Vg-Vs+Kgsh*VT), 2.0)-4.0*(Vg-Vs)*VT)):
+> 
+> 
+> #Función FG:  Definida en el modelo
+> FG:=1.0-1.0/(1.744+0.8364*(fis-Vb+Vs)):
+> 
+> #Función FA:  Definida  en el modelo*/
+> FA:=1.0+FG*gam1/(2*sqrt(fis-Vb+Vs)):
+> 
+> #Función VC:  Definida en el modelo*/
+> VC:=(VGSH-VT)/(FA*Ecrit*Leff):
+> 
+> #Función VDSSAT:  Voltaje de saturación
+> K:=0.5*(1.0+VC+sqrt(1.0+2*VC)):
+> VDSSAT:=(Vg-Vs-VT)/(FA*sqrt(K)):
+> 
+> 
+> #Función hiperbólica VDSH:  Definida  en  el  modelo
+> term1:=Vd-Vs+Kh2*VDSSAT:
+> term2:=pow(Vd-Vs+Kh2*VDSSAT,2)-4.0*(Vd-Vs)*VDSSAT:
+> VDSH:=0.5*(term1-sqrt(term2)):
+> 
+> 
+> #Función fs:  Definida  en  el modelo
+> fs:=0.5*(1-(Vg-Vs-VT)/sqrt(pow(Vg-Vs-VT,2.0)+Ksig)):
+> 
+> #Función fl:  Definida en el modelo
+> term1:=lamd*(sqrt(fid+Vd-Vs-VDSH)-sqrt(fid)):
+> term2:=pow(VGSH-VT, 1.5)+lamg:
+> term3:=lamb/(1.0-(Vb-Vs)/lambs):
+> fl:=term1/(term2*term3):
+> #fl:=subs(Leff=Leff0,fl):
+> 
+> #Función Alfa:  Definida  en  el modelo
+> term1:=(2.0*eta*eta/FA)*pow(kbol*T,2.0)*exp(Ksub*fs):term2:=1.0-fs*exp(-(Vd-Vs)*p3/(kbol*T)):
+> term3:=1.0+(1.0-fs)*fl:
+> Alfa:=term1*term2*term3:
+> 
+> #Función Efe:  Definida en el modelo
+> Efe:=(Vg-Vs-VT)*VDSH-0.5*FA*pow(VDSH,2.0):
+> 
+> #Función meff:  Calculo de movilidad efectiva
+> term1:=1.0+(Ugsz+Ugsl/Leff)*(VGSH-VT):
+> term2:=Ubs*(sqrt(fis-VBSH)-sqrt(fis))+Uds*VDSH:
+> term3:=1.0+VDSH*(1.0-fs)/(Ecrit*Leff):
+> MR:=(term1-term2)*term3:
+> meff:=Mov/MR:
+> 
+> #Función Ids:  Corriente de drenaje para todas las regiones de operación
+> movilidad:=meff:
+> Ksw:=1.0-2*fs:
+> beta:=(Cox*movilidad*Weff/Leff):
+> term1:=sqrt(0.5*Efe*FA/pow(eta,2)):
+> term2:=exp(term1*Ksw/(kbol*T)):
+> term3:=pow(ln(1.0+term2),2.0):
+> Ids:=Alfa*beta*term3: #corriente de drenaje
+> 
+> 

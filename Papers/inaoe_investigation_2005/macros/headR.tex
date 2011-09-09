@@ -1,0 +1,46 @@
+%%% This file contains macros for producing FLUSHED RIGHT
+%%% headers for slides under the seminar style.
+
+%% *** normal ***
+\newcommand{\Rheading}[1]{\begin{flushright}\large\bf #1\end{flushright}}
+
+%% *** with shadowbox box (as in a window) ***
+\newcommand{\RHeading}[1]{%
+  \begin{flushright}
+    \large\bf
+    \shadowbox{#1}%
+  \end{flushright}
+  \vspace{1ex minus 1ex}}
+
+%% *** with doublebox box (as in a frame) ***
+\newcommand{\RDheading}[1]{%
+  \begin{flushright}
+    \large\bf
+    \doublebox{#1}%
+  \end{flushright}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box ***
+\newcommand{\Roheading}[1]{%
+  \begin{flushright}
+    \large\bf
+    \ovalbox{#1}%
+  \end{flushright}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box  PLUS shadow (not visible in xdvi!!!) ***
+\newcommand{\Rshoheading}[1]{%
+  \begin{flushright}
+    \large\bf
+    \textshade{roundcorners}{#1}%
+  \end{flushright}
+  \vspace{1ex minus 1ex}}
+
+%% *** with big_oval box ***
+\newcommand{\ROheading}[1]{%
+  \begin{flushright}
+    \large\bf
+    \Ovalbox{#1}%
+  \end{flushright}
+  \vspace{1ex minus 1ex}}
+

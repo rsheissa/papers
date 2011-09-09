@@ -1,0 +1,24 @@
+\begin{thebibliography}{1}
+
+\bibitem{verhoeven}
+C.J.M. Verhoeven, A.van Staveren, G.L.E. Monna, and M.H.L. Kouwenhoven,
+\newblock {\em Strutured Electronic Design, Negative-feedback Amplifiers},
+\newblock Delftese Uitgevers Maatschappij, 2001.
+
+\bibitem{c++1}
+B.~Stroustrup,
+\newblock ``What is object-oriented programming? (1991 revised version),''
+\newblock {\em Proc. 1st European Software Festival}, February 1991.
+
+\bibitem{nordholt}
+E.H. Nordholt,
+\newblock {\em Design of High Performance Negative-feedback amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\bibitem{stoffels}
+J.~Stoffels,
+\newblock {\em Automation in High-performance Negative Feedback Amplifier
+  Design},
+\newblock Ph.D. thesis, Delft University of Technology, 1988.
+
+\end{thebibliography}

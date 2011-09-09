@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: midwest_2006.aux
+The style file: /home/rsheissa/papers/midwest_2006/IEEEtran.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: bib/midwest2006.bib
+-- IEEEtran.bst version 1.11 (2003/04/02) by Michael Shell.
+-- http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+
+Done.
+You've used 8 entries,
+            3975 wiz_defined-function locations,
+            839 strings with 8056 characters,
+and the built_in function-call counts, 3439 in all, are:
+= -- 244
+> -- 67
+< -- 7
++ -- 34
+- -- 15
+* -- 141
+:= -- 608
+add.period$ -- 16
+call.type$ -- 8
+change.case$ -- 4
+chr.to.int$ -- 15
+cite$ -- 8
+duplicate$ -- 272
+empty$ -- 369
+format.name$ -- 17
+if$ -- 765
+int.to.chr$ -- 0
+int.to.str$ -- 8
+missing$ -- 52
+newline$ -- 44
+num.names$ -- 8
+pop$ -- 141
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 282
+stack$ -- 0
+substring$ -- 39
+swap$ -- 163
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 0
+warning$ -- 0
+while$ -- 11
+width$ -- 9
+write$ -- 82

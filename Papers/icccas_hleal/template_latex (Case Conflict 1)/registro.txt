@@ -1,0 +1,27 @@
+;; This buffer is for notes you don't want to save, and for Lisp evaluation.
+;; If you want to create a file, visit that file with C-x C-f,
+;; then enter the text in that file's own buffer.
+
+Paper Title:   	 Numerical continuation scheme for tracing the double bounded homotopy for analysing nonlinear circuits
+Area:  	Theory, Design and Implementation of Circuits and Systems
+Subarea:  	Nonlinear Circuits and Systems
+Paper ID:   	#08_02_09
+Abstract:  	A numerical continuation for tracing a novel homotopy method for obtaining DC solutions of nonlinear circuits is proposed. The homotopy method is called double bounded homotopy and it is used to find multiple DC solutions with the advantage of having a stop criterion which is based on the property of having a double bounded trajectory. The main properties of this homotopy are explained by using the Lambert W function. Finally, key aspects of the implementetion of the numerical continuation for this new homotopy are explained.
+File Name:  	hleal.pdf
+Size:  	280kb
+Upload Time:  	2005-01-19 23:46:18
+
+
+
+
+ Numerical continuation scheme for tracing the double bounded homotopy for analysing nonlinear circuits
+Area:  	Theory, Design and Implementation of Circuits and Systems
+Subarea:  	Nonlinear Circuits and Systems
+Paper ID:   	(DO NOT FORGET IT!)
+Abstract:  	A numerical continuation for tracing the double bounded homotopy for obtaining DC solutions of nonlinear circuits is proposed. The double bounded homotopy is used to find multiple DC solutions with the advantage of having a stop criterion which is based on the property of having a double bounded trajectory. The key aspects of the implementation of the numerical continuation. Besides, in order to trace and applied the stop criterion some blocks of the numerical continuation are modified and explained.
+File Name:  	hleal.pdf
+Size:  	282kb
+Upload Time:  	2005-01-20 15:37:59
+
+
+

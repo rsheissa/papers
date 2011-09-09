@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (Web2C 7.5.4)
+The top-level auxiliary file: iced2006.aux
+The style file: /home/rsheissa/papers/vlsi_dat_2007/ieeebib.bst
+Database file #1: bib/iced2006.bib
+You've used 7 entries,
+            1838 wiz_defined-function locations,
+            490 strings with 4149 characters,
+and the built_in function-call counts, 939 in all, are:
+= -- 78
+> -- 29
+< -- 0
++ -- 14
+- -- 7
+* -- 46
+:= -- 148
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 0
+chr.to.int$ -- 0
+cite$ -- 7
+duplicate$ -- 58
+empty$ -- 116
+format.name$ -- 7
+if$ -- 220
+int.to.chr$ -- 0
+int.to.str$ -- 7
+missing$ -- 8
+newline$ -- 37
+num.names$ -- 4
+pop$ -- 34
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 14
+stack$ -- 0
+substring$ -- 0
+swap$ -- 7
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 4
+width$ -- 8
+write$ -- 71

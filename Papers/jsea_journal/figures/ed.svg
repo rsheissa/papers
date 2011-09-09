@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5a -->
+
+<!-- CreationDate: Wed Apr 28 21:01:30 2010 -->
+
+<!-- Magnification: 1.000 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="5.3in"
+   height="3.0in"
+   viewBox="738 738 6363 3624"
+   id="svg2837"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="ed.eps">
+  <metadata
+     id="metadata2917">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2915">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 135 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="477.00003 : 135 : 1"
+       inkscape:persp3d-origin="238.50002 : 90 : 1"
+       id="perspective2919" />
+  </defs>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     id="namedview2913"
+     showgrid="false"
+     inkscape:zoom="2.7797061"
+     inkscape:cx="193.6366"
+     inkscape:cy="163.78002"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2837"
+     inkscape:snap-grids="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3022" />
+  </sodipodi:namedview>
+  <rect
+     id="rect2843"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     rx="0"
+     height="450"
+     width="1200"
+     y="1800"
+     x="2250" />
+  <polyline
+     id="polyline2859"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4500,1200 4500,1800 " />
+  <polyline
+     id="polyline2861"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4500,2250 4500,2850 " />
+  <polyline
+     id="polyline2863"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2850,1800 4500,1200 " />
+  <polyline
+     id="polyline2865"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="2850,2250 2850,2850 " />
+  <polyline
+     id="polyline2867"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="1350,2850 2850,2250 " />
+  <polyline
+     id="polyline2869"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6450,2250 6450,2850 " />
+  <polyline
+     id="polyline2871"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="4500,1200 6450,1800 " />
+  <polyline
+     id="polyline2873"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="6450,3300 6450,3900 " />
+  <polyline
+     id="polyline2875"
+     style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+     points="5850,4125 4500,3300 " />
+  <g
+     id="g2961">
+    <rect
+       x="3900"
+       y="750"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2841" />
+    <g
+       transform="translate(227.48562,-27.48)"
+       id="g2957">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2877"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="1125"
+         x="4027"
+         xml:space="preserve">BLOCK</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2879"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="975"
+         x="4080.6838"
+         xml:space="preserve">MAIN</text>
+    </g>
+  </g>
+  <g
+     id="g2973"
+     transform="translate(30.001799,10.664)">
+    <text
+       xml:space="preserve"
+       x="2382.2"
+       y="1987"
+       font-style="normal"
+       font-weight="normal"
+       font-size="144"
+       id="text2881"
+       style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">SYNTHESIS 1</text>
+    <text
+       xml:space="preserve"
+       x="2505.6765"
+       y="2137"
+       font-style="normal"
+       font-weight="normal"
+       font-size="144"
+       id="text2883"
+       style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times">BLOCK A</text>
+  </g>
+  <g
+     id="g2981">
+    <rect
+       x="3900"
+       y="1800"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2845" />
+    <g
+       transform="translate(28.20175,10.664)"
+       id="g2977">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2885"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="1987"
+         x="4034"
+         xml:space="preserve">SYNTHESIS 1</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2887"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="2137"
+         x="4165.6128"
+         xml:space="preserve">BLOCK B</text>
+    </g>
+  </g>
+  <g
+     id="g2991">
+    <rect
+       x="5850"
+       y="1800"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2847" />
+    <g
+       transform="translate(28.20175,10.664)"
+       id="g2987">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2889"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="1987"
+         x="5984"
+         xml:space="preserve">SYNTHESIS 1</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2891"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="2137"
+         x="6112.7324"
+         xml:space="preserve">BLOCK C</text>
+    </g>
+  </g>
+  <g
+     id="g3034">
+    <rect
+       x="750"
+       y="2850"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2849" />
+    <g
+       transform="translate(45.669738,10.664)"
+       id="g3018">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2893"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3037"
+         x="860.70001"
+         xml:space="preserve">SYNTHESIS 2</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2895"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3187"
+         x="960.44135"
+         xml:space="preserve">BLOCK A1</text>
+    </g>
+  </g>
+  <g
+     id="g3028">
+    <rect
+       x="2250"
+       y="2850"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2851" />
+    <g
+       transform="translate(45.669799,10.664)"
+       id="g3024">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2897"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3037"
+         x="2360.7"
+         xml:space="preserve">SYNTHESIS 2</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2899"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3187"
+         x="2454.6094"
+         xml:space="preserve">BLOCK A2</text>
+    </g>
+  </g>
+  <g
+     id="g3044">
+    <rect
+       x="3900"
+       y="2850"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2853" />
+    <g
+       transform="translate(42.169799,10.664)"
+       id="g3040">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2901"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3037"
+         x="4014.2"
+         xml:space="preserve">SYNTHESIS 2</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2903"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3187"
+         x="4117.8789"
+         xml:space="preserve">BLOCK B1</text>
+    </g>
+  </g>
+  <g
+     id="g3054">
+    <rect
+       x="5887"
+       y="2850"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2855" />
+    <g
+       transform="translate(42.169555,10.664)"
+       id="g3050">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2905"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3037"
+         x="6001.2002"
+         xml:space="preserve">SYNTHESIS 2</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2907"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="3187"
+         x="6104.8789"
+         xml:space="preserve">BLOCK C1</text>
+    </g>
+  </g>
+  <g
+     id="g3064">
+    <rect
+       x="5860.1558"
+       y="3900"
+       width="1200"
+       height="450"
+       rx="0"
+       style="fill:none;stroke:#000000;stroke-width:7;stroke-linecap:butt;stroke-linejoin:miter"
+       id="rect2857" />
+    <g
+       transform="translate(51.921316,10.664)"
+       id="g3060">
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2909"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="4087"
+         x="5967.7002"
+         xml:space="preserve">SYNTHESIS 3</text>
+      <text
+         style="font-size:144px;font-style:normal;font-weight:normal;text-anchor:start;fill:#000000;stroke-width:0.025in;font-family:Times"
+         id="text2911"
+         font-size="144"
+         font-weight="normal"
+         font-style="normal"
+         y="4237"
+         x="6014.2827"
+         xml:space="preserve">BLOCK C1.1</text>
+    </g>
+  </g>
+</svg>

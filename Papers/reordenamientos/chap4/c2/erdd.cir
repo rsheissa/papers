@@ -1,0 +1,8 @@
+CIRCUITO ERDD
+V1 1 0 30
+R2 1 2 13300
+K3 2 3 i=(2.5*u^3-10.5*u^2+11.8*u)*1e-3
+K4 3 0 i=(0.43*u^3-2.69*u^2+4.56*u)*1e-3
+# Directivas de analisis
+dc op h1
+end

@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: n4hletter.aux
+The style file: amsplain.bst
+Database file #1: carta.bib
+Warning--I didn't find a database entry for "xxx1"
+Warning--missing publisher in homo_allgower
+Warning--missing pages in cont_quasi
+Warning--missing journal name in homo_ogrodzki
+Warning--missing pages in homo_ogrodzki
+Warning--missing pages in homo_MOS
+Warning--missing journal name in Schwa_book
+Warning--missing pages in Schwa_book
+You've used 12 entries,
+            2213 wiz_defined-function locations,
+            578 strings with 5699 characters,
+and the built_in function-call counts, 3430 in all, are:
+= -- 289
+> -- 149
+< -- 0
++ -- 61
+- -- 46
+* -- 315
+:= -- 565
+add.period$ -- 12
+call.type$ -- 12
+change.case$ -- 59
+chr.to.int$ -- 0
+cite$ -- 19
+duplicate$ -- 133
+empty$ -- 299
+format.name$ -- 46
+if$ -- 698
+int.to.chr$ -- 0
+int.to.str$ -- 12
+missing$ -- 25
+newline$ -- 46
+num.names$ -- 24
+pop$ -- 72
+preamble$ -- 1
+purify$ -- 47
+quote$ -- 0
+skip$ -- 72
+stack$ -- 0
+substring$ -- 204
+swap$ -- 19
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 46
+warning$ -- 7
+while$ -- 31
+width$ -- 14
+write$ -- 107
+(There were 8 warnings)

@@ -1,0 +1,20 @@
+{`1` = 5., `2` = .7844416703, V1_rc = -.4215558330e-2}
+{`1` = 5., V1_rc = -.2726632465e-2, `2` = 2.273367535}
+{V1_rc = -.1495309205e-2, `2` = 3.504690795, `1` = 5.}
+
+error=0.06, itemax=60. h=0.1397 CHUAAAA
+
+1,2,V1_rc & 9~3 & 27.700 & H=.1397 \\ \hline
+1,V1_rc,2 & 9~3 & 27.569 & H=.1397 \\ \hline
+2,1,V1_rc & 9~3 & 27.249 & H=.1397 \\ \hline
+2,V1_rc,1 & 9~3 & 26.309 & H=.1397 \\ \hline
+V1_rc,1,2 & 9~3 & 26.199 & H=.1397 \\ \hline
+V1_rc,2,1 & 9~3 & 25.850 & H=.1397 \\ \hline
+
+
+EL REORDENAMIENTO DE LAS ECUACIONES NODALES
+NO TIENE EFECTOS SOBRE LA HOMOTOPIA DE CHUA!
+
+EL REORDENAMIENTO DE LA ECUACION DE LA LONGITUD DEL ARCO NO AFECTA EN NADA  LA HOMOTOPIA
+
+

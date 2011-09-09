@@ -1,0 +1,10 @@
+TEST DEL METODO DE KHAO MODIFICADO H=.5
+V1 1 0 5
+r1 1 2 1000
+K1 2 0 i=(0.8*u^3-5.25*u^2+9*u)*1e-3
+r2 2 3 50
+G3 3 0 V(K1) 0.04
+# Sentencias de analisis
+DC OP
+
+end

@@ -1,0 +1,104 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{homo_hspice}
+\emph{Star-hspice manual},  (1998), 6--1.
+
+\bibitem{homo_spectre}
+\emph{Affirma spectre circuit simulator user guide},  (2000), 17.
+
+\bibitem{homo_aplac}
+\emph{Aplac manual: Dc analysis},  (2004).
+
+\bibitem{cont_quasi}
+{J. E.} Dennis and {Jorge J.} Mor{\'e}, \emph{{Quasi-Newton} methods,
+  motivation and theory}, Siam Review \textbf{19} (1977), no.~1.
+
+\bibitem{lmoore}
+Mollick E., \emph{Establishing moore's law}, Annals of the History of Computing
+  \textbf{28} (2006), no.~3, 62--75.
+
+\bibitem{homo_green2}
+M.~M. Green, \emph{An efficient continuation method for use in globally
+  convergent dc circuit simulation}, ISSSE Proceedings (1995), 497--500.
+
+\bibitem{homo_BSIM}
+S.H. Jen, B.J. Sheu, and Y.~Oshima, \emph{A unified approach to submicron dc
+  mos transistor modeling for low-voltage ics}, Analog Integrated Circuits and
+  Signal Processing \textbf{12} (1997), 107--118.
+
+\bibitem{LTSpice}
+LTspice, \emph{Version iv}, Linear Techonology, Milpitas, CA, USA.
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c}, \emph{Artif\text{i}cial parameter homotopy
+  methods for the dc operating point problem}, IEEE transactions on
+  computer-aided design of integrated circuits and systems \textbf{12} (1997),
+  no.~6, 861--877.
+
+\bibitem{homo_ogrodzki}
+J.~Ogrodzki, \emph{Circuit simulation: methods and algorithms},  (1994).
+
+\bibitem{BHLHOM}
+Roychowdhury and R.~J.~Melville, \emph{Delivering global dc convergence for
+  large mixed-signal circuits via homotopy/continuation methods}, IEEE
+  Transactions on Computer-Aided Design of Integrated Circuits and Systems
+  \textbf{25} (2006), no.~1, 66.
+
+\bibitem{mnaxx}
+Chung-Wen~Ho Ruehli and {P.} {A.}~Brennan, \emph{The modified nodal approach to
+  network analysis}, IEEE Transactions on Circuits and Systems \textbf{22}
+  (1975), no.~6, 504.
+
+\bibitem{Schwa_book}
+{A. F.} Schwarz, \emph{Computer-aided design of microelectronic circuits and
+  systems: Volume 1},  (1987), ISBN 0-12-632431-X.
+
+\bibitem{homo_shur}
+M.~Shur, \emph{Introduction to electronic devices},  (1996).
+
+\bibitem{homo_sze}
+S.~M. Sze, \emph{Semiconductor devices: Physics and technology},  (1985).
+
+\bibitem{homo_tadeusiewicz}
+M.~Tadeusiewicz and K.~Glowienka, \emph{A contraction algorithm for finding all
+  the dc solutions of piecewise-linear circuits}, J. Circuits, Syst. Comput.
+  \textbf{4} (1994), 319--336.
+
+\bibitem{homo_chua}
+A.~Ushida and {L. O. Chua}, \emph{Tracing solution curves of non-linear
+  equations with sharp turning points}, Circuit Theory and Applications
+  \textbf{12} (1984), 1--21.
+
+\bibitem{homo_ushida1}
+{A.} Ushida, {Y.} Yamagami, {I. Kinouchi}, {Y. Nishio}, and {Y.} Inoue,
+  \emph{An efficient algorithm for finding multiple dc solutions based on the
+  spice-oriented newton homotopy method}, IEEE Transactions on Computer-Aided
+  Design of Integrated Circuits and Systems \textbf{21} (2002), no.~3,
+  337--348.
+
+\bibitem{homo_DWolfMulti}
+D.~M. Wolf and S.~R. Sanders, \emph{Multiparameter homotopy methods for
+  f\text{i}nding dc operating points of nonlinear circuits}, IEEE transactions
+  on circuits and systems-I: fundamental theory and aplications \textbf{43}
+  (1996), no.~10, 824--837.
+
+\bibitem{homo_yamamurawise}
+K.~Yamamura and T.~Ohshima, \emph{Finding all solutions of piecewise-linear
+  resistive circuits using linear programming}, IEEE transactions on circuits
+  and systems-I: fundamental theory and aplications \textbf{45} (1998),
+  434--445.
+
+\bibitem{homo_yamamura}
+K.~Yamamura, T.~Sekiguchi, and Y.~Inuoe, \emph{A f\text{i}xed-point homotopy
+  method for solving modif\text{i}ed nodal equations}, IEEE transactions on
+  circuits and systems-I: fundamental theory and aplications \textbf{46}
+  (1999), no.~6, 654--664.
+
+\end{thebibliography}

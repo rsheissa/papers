@@ -1,0 +1,908 @@
+
+%% bare_conf.tex 
+%% V1.2
+%% 2002/11/18
+%% by Michael Shell
+%% mshell@ece.gatech.edu
+%% 
+%% NOTE: This text file uses MS Windows line feed conventions. When (human)
+%% reading this file on other platforms, you may have to use a text
+%% editor that can handle lines terminated by the MS Windows line feed
+%% characters (0x0D 0x0A).
+%% 
+%% This is a skeleton file demonstrating the use of IEEEtran.cls 
+%% (requires IEEEtran.cls version 1.6b or later) with an IEEE conference paper.
+%% 
+%% Support sites:
+%% http://www.ieee.org
+%% and/or
+%% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/ 
+%%
+%% This code is offered as-is - no warranty - user assumes all risk.
+%% Free to use, distribute and modify.
+
+% *** Authors should verify (and, if needed, correct) their LaTeX system  ***
+% *** with the testflow diagnostic prior to trusting their LaTeX platform ***
+% *** with production work. IEEE's font choices can trigger bugs that do  ***
+% *** not appear when using other class files.                            ***
+% Testflow can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/testflow
+
+
+% Note that the a4paper option is mainly intended so that authors in
+% countries using A4 can easily print to A4 and see how their papers will
+% look in print. Authors are encouraged to use U.S. letter paper when 
+% submitting to IEEE. Use the testflow package mentioned above to verify
+% correct handling of both paper sizes by the author's LaTeX system.
+%
+% Also note that the "draftcls" or "draftclsnofoot", not "draft", option
+% should be used if it is desired that the figures are to be displayed in
+% draft mode.
+%
+% This paper can be formatted using the peerreviewca
+% (instead of conference) mode.
+\documentclass[conference]{IEEEtran}
+% If the IEEEtran.cls has not been installed into the LaTeX system files, 
+% manually specify the path to it:
+% \documentclass[conference]{../sty/IEEEtran} 
+
+
+% some very useful LaTeX packages include:
+
+%\usepackage{cite}      % Written by Donald Arseneau
+                        % V1.6 and later of IEEEtran pre-defines the format
+                        % of the cite.sty package \cite{} output to follow
+                        % that of IEEE. Loading the cite package will
+                        % result in citation numbers being automatically
+                        % sorted and properly "ranged". i.e.,
+                        % [1], [9], [2], [7], [5], [6]
+                        % (without using cite.sty)
+                        % will become:
+                        % [1], [2], [5]--[7], [9] (using cite.sty)
+                        % cite.sty's \cite will automatically add leading
+                        % space, if needed. Use cite.sty's noadjust option
+                        % (cite.sty V3.8 and later) if you want to turn this
+                        % off. cite.sty is already installed on most LaTeX
+                        % systems. The latest version can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/cite/
+
+%\usepackage{graphicx}  % Written by David Carlisle and Sebastian Rahtz
+                        % Required if you want graphics, photos, etc.
+                        % graphicx.sty is already installed on most LaTeX
+                        % systems. The latest version and documentation can
+                        % be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/required/graphics/
+                        % Another good source of documentation is "Using
+                        % Imported Graphics in LaTeX2e" by Keith Reckdahl
+                        % which can be found as esplatex.ps and epslatex.pdf
+                        % at: http://www.ctan.org/tex-archive/info/
+% NOTE: for dual use with latex and pdflatex, instead load graphicx like:
+%\ifx\pdfoutput\undefined
+%\usepackage{graphicx}
+%\else
+%\usepackage[pdftex]{graphicx}
+%\fi
+
+% However, be warned that pdflatex will require graphics to be in PDF
+% (not EPS) format and will preclude the use of PostScript based LaTeX
+% packages such as psfrag.sty and pstricks.sty. IEEE conferences typically
+% allow PDF graphics (and hence pdfLaTeX). However, IEEE journals do not
+% (yet) allow image formats other than EPS or TIFF. Therefore, authors of
+% journal papers should use traditional LaTeX with EPS graphics.
+%
+% The path(s) to the graphics files can also be declared: e.g.,
+% \graphicspath{{../eps/}{../ps/}}
+% if the graphics files are not located in the same directory as the
+% .tex file. This can be done in each branch of the conditional above
+% (after graphicx is loaded) to handle the EPS and PDF cases separately.
+% In this way, full path information will not have to be specified in
+% each \includegraphics command.
+%
+% Note that, when switching from latex to pdflatex and vice-versa, the new
+% compiler will have to be run twice to clear some warnings.
+
+
+%\usepackage{psfrag}    % Written by Craig Barratt, Michael C. Grant,
+                        % and David Carlisle
+                        % This package allows you to substitute LaTeX
+                        % commands for text in imported EPS graphic files.
+                        % In this way, LaTeX symbols can be placed into
+                        % graphics that have been generated by other
+                        % applications. You must use latex->dvips->ps2pdf
+                        % workflow (not direct pdf output from pdflatex) if
+                        % you wish to use this capability because it works
+                        % via some PostScript tricks. Alternatively, the
+                        % graphics could be processed as separate files via
+                        % psfrag and dvips, then converted to PDF for
+                        % inclusion in the main file which uses pdflatex.
+                        % Docs are in "The PSfrag System" by Michael C. Grant
+                        % and David Carlisle. There is also some information 
+                        % about using psfrag in "Using Imported Graphics in
+                        % LaTeX2e" by Keith Reckdahl which documents the
+                        % graphicx package (see above). The psfrag package
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/psfrag/
+
+%\usepackage{subfigure} % Written by Steven Douglas Cochran
+                        % This package makes it easy to put subfigures
+                        % in your figures. i.e., "figure 1a and 1b"
+                        % Docs are in "Using Imported Graphics in LaTeX2e"
+                        % by Keith Reckdahl which also documents the graphicx
+                        % package (see above). subfigure.sty is already
+                        % installed on most LaTeX systems. The latest version
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/subfigure/
+
+%\usepackage{url}       % Written by Donald Arseneau
+                        % Provides better support for handling and breaking
+                        % URLs. url.sty is already installed on most LaTeX
+                        % systems. The latest version can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/other/misc/
+                        % Read the url.sty source comments for usage information.
+
+%\usepackage{stfloats}  % Written by Sigitas Tolusis
+                        % Gives LaTeX2e the ability to do double column
+                        % floats at the bottom of the page as well as the top.
+                        % (e.g., "\begin{figure*}[!b]" is not normally
+                        % possible in LaTeX2e). This is an invasive package
+                        % which rewrites many portions of the LaTeX2e output
+                        % routines. It may not work with other packages that
+                        % modify the LaTeX2e output routine and/or with other
+                        % versions of LaTeX. The latest version and
+                        % documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/contrib/supported/sttools/
+                        % Documentation is contained in the stfloats.sty
+                        % comments as well as in the presfull.pdf file.
+                        % Do not use the stfloats baselinefloat ability as
+                        % IEEE does not allow \baselineskip to stretch.
+                        % Authors submitting work to the IEEE should note
+                        % that IEEE rarely uses double column equations and
+                        % that authors should try to avoid such use.
+                        % Do not be tempted to use the cuted.sty or
+                        % midfloat.sty package (by the same author) as IEEE
+                        % does not format its papers in such ways.
+
+%\usepackage{amsmath}   % From the American Mathematical Society
+                        % A popular package that provides many helpful commands
+                        % for dealing with mathematics. Note that the AMSmath
+                        % package sets \interdisplaylinepenalty to 10000 thus
+                        % preventing page breaks from occurring within multiline
+                        % equations. Use:
+%\interdisplaylinepenalty=2500
+                        % after loading amsmath to restore such page breaks
+                        % as IEEEtran.cls normally does. amsmath.sty is already
+                        % installed on most LaTeX systems. The latest version
+                        % and documentation can be obtained at:
+                        % http://www.ctan.org/tex-archive/macros/latex/required/amslatex/math/
+
+
+
+% Other popular packages for formatting tables and equations include:
+
+%\usepackage{array}
+% Frank Mittelbach's and David Carlisle's array.sty which improves the
+% LaTeX2e array and tabular environments to provide better appearances and
+% additional user controls. array.sty is already installed on most systems.
+% The latest version and documentation can be obtained at:
+% http://www.ctan.org/tex-archive/macros/latex/required/tools/
+
+% Mark Wooding's extremely powerful MDW tools, especially mdwmath.sty and
+% mdwtab.sty which are used to format equations and tables, respectively.
+% The MDWtools set is already installed on most LaTeX systems. The lastest
+% version and documentation is available at:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/mdwtools/
+
+
+% V1.6 of IEEEtran contains the IEEEeqnarray family of commands that can
+% be used to generate multiline equations as well as matrices, tables, etc.
+
+
+% Also of notable interest:
+
+% Scott Pakin's eqparbox package for creating (automatically sized) equal
+% width boxes. Available:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/eqparbox/
+
+
+
+% Notes on hyperref:
+% IEEEtran.cls attempts to be compliant with the hyperref package, written
+% by Heiko Oberdiek and Sebastian Rahtz, which provides hyperlinks within
+% a document as well as an index for PDF files (produced via pdflatex).
+% However, it is a tad difficult to properly interface LaTeX classes and
+% packages with this (necessarily) complex and invasive package. It is
+% recommended that hyperref not be used for work that is to be submitted
+% to the IEEE. Users who wish to use hyperref *must* ensure that their
+% hyperref version is 6.72u or later *and* IEEEtran.cls is version 1.6b 
+% or later. The latest version of hyperref can be obtained at:
+%
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/hyperref/
+%
+% Also, be aware that cite.sty (as of version 3.9, 11/2001) and hyperref.sty
+% (as of version 6.72t, 2002/07/25) do not work optimally together.
+% To mediate the differences between these two packages, IEEEtran.cls, as
+% of v1.6b, predefines a command that fools hyperref into thinking that
+% the natbib package is being used - causing it not to modify the existing
+% citation commands, and allowing cite.sty to operate as normal. However,
+% as a result, citation numbers will not be hyperlinked. Another side effect
+% of this approach is that the natbib.sty package will not properly load
+% under IEEEtran.cls. However, current versions of natbib are not capable
+% of compressing and sorting citation numbers in IEEE's style - so this
+% should not be an issue. If, for some strange reason, the user wants to
+% load natbib.sty under IEEEtran.cls, the following code must be placed
+% before natbib.sty can be loaded:
+%
+% \makeatletter
+% \let\NAT@parse\undefined
+% \makeatother
+%
+% Hyperref should be loaded differently depending on whether pdflatex
+% or traditional latex is being used:
+%
+%\ifx\pdfoutput\undefined
+%\usepackage[hypertex]{hyperref}
+%\else
+%\usepackage[pdftex,hypertexnames=false]{hyperref}
+%\fi
+%
+% Pdflatex produces superior hyperref results and is the recommended
+% compiler for such use.
+
+
+
+% *** Do not adjust lengths that control margins, column widths, etc. ***
+% *** Do not use packages that alter fonts (such as pslatex).         ***
+% There should be no need to do such things with IEEEtran.cls V1.6 and later.
+
+
+% correct bad hyphenation here
+\hyphenation{op-tical net-works semi-conduc-tor IEEEtran}
+
+
+
+
+\input{/home/hleal/papers/doblelim/macros/lin_alg.tex}
+\input{/home/hleal/papers/doblelim/macros/math_aux.tex}
+\input{/home/hleal/papers/doblelim/macros/jac_mtrx.tex}
+\input{/home/hleal/papers/doblelim/macros/cset_aux.tex}
+
+
+%\usepackage{spconf}
+\newtheorem{Theod}{{\bf Def\text{i}nition}}
+\newtheorem{Theos}{{\bf Statement}}
+\newtheorem{Theor}{{\bf Theorem}}
+\newtheorem{Theoc}{{\bf Corallary}}
+
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{rotate}
+\usepackage{rotating}
+
+
+
+
+\begin{document}
+
+% paper title
+\title{Numerical continuation scheme for tracing the double bounded homotopy for analysing  nonlinear circuits}
+
+
+% author names and affiliations
+% use a multiple column layout for up to three different
+% affiliations
+\author{\authorblockN{H\'ector V\'azquez-Leal}
+\authorblockA{National Institute for Astrophysics,\\
+Optics and Electronics\\
+Electronics Department, CAD Group, \\
+P.O. Box 51, 72000, Puebla, Pue., Mexico \\
+Email: hleal@inaoep.mx}
+\and
+\authorblockN{Luis Hern\'andez-Mart\'{\i}nez}
+\authorblockA{Laboratory of Nonlinear Systems,\\ School of Computer Sciences,\\ Swiss Federal Institute of \\ Technology Lausanne,\\
+Lausanne, Switzerland}
+\and
+\authorblockN{Arturo Sarmiento-Reyes} 
+\authorblockA{National Institute for Astrophysics,\\
+Optics and Electronics\\
+Electronics Department, CAD Group, \\
+P.O. Box 51, 72000, Puebla, Pue., Mexico}}
+
+
+% avoiding spaces at the end of the author lines is not a problem with
+% conference papers because we don't use \thanks or \IEEEmembership
+
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\authorblockN{Michael Shell\authorrefmark{1},
+%Homer Simpson\authorrefmark{2},
+%James Kirk\authorrefmark{3}, 
+%Montgomery Scott\authorrefmark{3} and
+%Eldon Tyrell\authorrefmark{4}}
+%\authorblockA{\authorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: mshell@ece.gatech.edu}
+%\authorblockA{\authorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\authorblockA{\authorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\authorblockA{\authorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+% use only for invited papers
+%\specialpapernotice{(Invited Paper)}
+
+% make the title area
+\maketitle
+
+
+
+\begin{abstract}
+%REDACTAR TODO
+A numerical continuation for tracing a novel homotopy method for obtaining  DC solutions of 
+nonlinear circuits is proposed.
+The homotopy method is called {\it double bounded homotopy} and it is used  to f\text{i}nd multiple DC solutions 
+with the advantage of having
+a stop criterion  which is based on the property of having a double bounded trajectory. 
+The main properties of this homotopy are explained by using the Lambert $\cal W$ function.
+F\text{i}nally, key aspects of the implementetion of the numerical continuation
+for this new homotopy are explained.
+\end{abstract}
+
+
+\section{Introduction}
+
+
+The problem of f\text{i}nding the DC operating point is important because
+it constitutes the starting point for other kinds of analyses such as
+the ac small signal and transient analyses \cite{homo_ogrodzki}.
+It consists in f\text{i}nding the roots of the nonlinear algebraic equations
+(NAEs) emanating from nonlinear resistive networks, NAEs that have the
+general form given by:
+\begin{equation}
+\pig{f}(\pig{x}) = \pig{0}
+\label{fofx}
+\end{equation}
+where $\pig{x}$ are the unknowns accordingly to the circuit analysis method
+used to set-up the equilibrium equation of the circuit.
+\par
+As it is well-known, equation (\ref{fofx}) may posses a single solution,
+no solution at all, or multiple solutions.
+In this paper, the attention is focused on the last case, where most
+of the Newton-Raphson (NR) methods fail to converge. Homotopy methods
+have been considered as a good choice of methods that overcome the
+shortcomings of the NR-like methods
+\cite{homo_ArtificialP},\cite{homo_DWolfMulti},\cite{cont_leu1}.
+
+
+Homotopy methods are based on forming an auxiliary equation in order to
+convert the problem of f\text{i}nding the roots of a NAE (a static problem)
+into
+a problem of f\text{i}nding the solution of an associated ordinary differential equation
+(a dynamic problem)
+\cite{homo_ogrodzki},\cite{cont_bra}. 
+This auxiliary equation, also called the homotopy equation, is formed
+by adding a parameter to the original equation:
+\begin{equation}
+\pig{H}(
+\pig{f}(\pig{x}), \lambda
+) = \pig{0}
+\label{fofx2}
+\end{equation}
+where  $\pig{H}(\cdot)$ is the homotopy relationship, $\pig{f}(\pig{x})$ is the original equilibrium equation of
+the circuit and $\lambda$ is the homotopy parameter.
+The solution is found by using a {\it numerical continuatio} procedure, where
+$\lambda$ is used as the integration parameter that varies from
+an initial value
+$\lambda_0$
+to a value
+$\lambda^{\ast}$ where a solution $\pig{x}^{\ast}$, to the original system
+(\ref{fofx}) is found.
+From this point, the integration procedure continues in order to search for
+another solution.
+The whole procedure results in tracing  a
+path where the solutions lie.
+%%Therefore, the homotopy trajectory is the set of solutions
+%%of $\pig{H}^{-1}(\pig{0})$.
+
+
+
+Although, homotopy methods are able to f\text{i}nd more than one solution to
+(\ref{fofx}), they still exhibit several lacks. Among them, it is worthy to mention the {\bf stop criterion}. 
+There are two types of paths of solutions,
+open and closed paths, the main problem is when to stop searching for
+more solutions?. For closed paths, this can be solved by testing whether
+a new solution has previously been found. For open paths, this is a serious
+drawback, because there is no reasonable and reliable stop criterion
+to decide when to stop seeking for more solutions.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+In \cite{homo_green}, a method was proposed  to bound the homotopy trajectory (in order to have a stop criterion) whithin the interval $\lambda \in [0,2]$.
+This method is applied under two condutions: f\text{i}rst, it is necessary to know {\it a priori} one DC solution in order to be used
+as initial point in the method, and second, the circuit needs to be passive in the rank $\lambda \in [0,2]$.
+The doble bounded Homotopy is proposed in order to circunvent the problem of stop criterion. Besides, a modif\text{i}ed
+numerical continuation is introduced in order to trace the homotopy trajectories and  implement the stop criterion.
+
+
+\section{The doble bounded Homotopy}
+
+
+The proposed homotopy is called {\bf double bounded homotopy} which is def\text{i}ned as
+\begin{Theod}
+The {\bf double bounded homotopy} is def\text{i}ned by
+\begin{equation}
+H(f(x),\lambda)=CQ+e^Q\ln(Df^2(x)+1)
+\label{fx}
+\end{equation}
+where $f(x)$ is the function to solve, $\lambda$ is the homotopy parameter, $a$ and $b$ are the values where the homotopy funcion solutions
+are the same than the solutions of $f(x)$,
+$C$ and $D$ are positive constants of the homotopy, and $Q$ is given by:
+\begin{displaymath}
+(\lambda-a)(\lambda-b)
+\end{displaymath}
+\label{InestCond3}
+\end{Theod}
+The term $(Df^2(x)+1)$ must be used in order
+to assure that the argument of the log-function  never becomes negative. This homotopy has the main propertie of
+bounding the trajectory in both $x$- and $\lambda$ directions.
+
+
+The double bounded homotopy has a  symmetry axis, which  gives  an important advantage that traditional homotopies
+does not have, because it can
+be used to shorten the lenght of the trajectory  by tracing only one of the symmetrical branches.
+ The F\text{i}gure \ref{halftrack} depicts
+the tracing strategy by shading the half side to be traced,
+where the initial and f\text{i}nal points ($x_i$ and $x_f$ respectively) of the homotopy trajectory  are located
+at the value of:
+
+\begin{displaymath}
+\begin{array}{l}
+(x_i,\lambda_i)=(x_i,(a+b)/2)\\
+(x_f,\lambda_f)=(x_f,(a+b)/2)
+\end{array}
+\end{displaymath}
+
+
+\begin{figure}[hbtp]
+\psfrag{xi}{{\small $[x_i,(a+b)/2]$}}
+\psfrag{xf}{{\small $[x_f,(a+b)/2]$}}
+\psfrag{o}{$\lambda$}
+\centerline{
+\epsfxsize=80mm
+\epsffile{/home/hleal/papers/doblelim/figs/halftrack.eps}}
+\caption{Numerical continuation  based on symetrical properties}
+\label{halftrack}
+\end{figure}
+
+\subsection{Properties}
+
+The homotopy function  can be solved for $\lambda$. It has two solutions:
+{
+\small
+\begin{displaymath}
+\begin{array}{c}
+\lambda_1=0.5(a+b)+0.5\sqrt{(b-a)^2-4{\cal{W}}(\ln(Df^2(x)+1)/C)} \\
+\lambda_2=0.5(a+b)-0.5\sqrt{(b-a)^2-4{\cal{W}}(\ln(Df^2(x)+1)/C)}
+\end{array}
+\end{displaymath}
+}
+In fact,  $\lambda_1$ and $\lambda_2$ represent the mirrored branches of
+the  homotopy trajectory. Analysis of these expressions allows us to
+determine the ranks of values for the functions  $\lambda_1$ and $\lambda_2$:
+\begin{displaymath}
+\begin{array}{l}
+0.5(a+b) \leqslant \lambda_1 \leqslant b\\\\
+\hspace{13mm}a \leqslant \lambda_2 \leqslant 0.5(a+b)
+\end{array}
+\end{displaymath}
+as shown in F\text{i}gure \ref{halftrack}.\par
+
+
+The ranks of the branches in the  $x$-direction  are def\text{i}ned by the function $f(x)$, when  $f(x)$ satisf\text{i}es:
+
+\begin{displaymath}
+\begin{array}{l}
+|f(x)|\leqslant(1/D)\sqrt{D(e^{(C/4)(b-a)^2 e^{(a-b)^2/4}}-1)}\\
+\end{array}
+\end{displaymath}
+
+
+
+\section{Modif\text{i}ed numerical continuation}
+
+The the numerical continuation is a mixture of a variety of numerical methods, focussed on designing 
+a path in order to accomplish specif\text{i}c needs of a homotopy formulation.\par
+
+For the proposed homotopy formulation, the numerical continuation consists in tracing the curve implicitly def\text{i}ned by Equation \ref{fx}.
+The numerical continuation procedure resorts to a well-known predictor-corrector scheme.
+The predictor  calculates the tangent to
+$(x^j,\lambda_j)$ and using a step length calculates the $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$
+over the tangent. The corrector uses the solution of the predictor in order to obtain
+a new point on the homotopy trajectory, given by  $(x^{j+1},\lambda_{j+1})$.
+An important task whithin the predictor-corrector scheme is the step control.\par
+Another important block is the so-called end-zero strategy that is 
+triggered (by each solution) when the homotopy trajectory bounces in $\lambda=a$ or $\lambda=b$
+depending on the branch where the solution lies.
+F\text{i}nally, the numerical continuation stops tracing when the trajectory returns to the symmetry axis
+$\lambda=(a+b)/2$.
+F\text{i}gure \ref{bloques} depicts the basic blocks of the numerical continuation procedure, where the dashed blocks
+are the specif\text{i}c characteristics added to the procedure in order to include a stop criterion. 
+
+
+
+
+\begin{figure}[h]
+\psfrag{p}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{c}{{$(x^{j+1},\lambda_{j+1})$}}
+\psfrag{s}{{$h_{j+2}=h_{j+1}\zeta$}}
+\psfrag{l1}{{\small $sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 $}}
+\psfrag{l2}{{\small $ \lambda \ne (a+b)/2$}}
+\psfrag{l}{{\small $\lambda=(a+b)/2$}}
+\centerline{
+\epsfxsize=54mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/bloques.eps}}
+\caption{Block diagram of the modif\text{i}ed numerical continuation}
+\label{bloques}
+\end{figure}
+
+
+
+\subsubsection{Predictor}
+
+The predictor point for $(x^j,\lambda_j)$ is given by:
+
+\begin{displaymath}
+(\bar{\pig{x}}^{j+1},\bar{\lambda}_{j+1})=(\pig{x}^j,\lambda_j)+h*\pig{t}
+\end{displaymath}
+where $h$ is an appropriate step length and $\pig{t}$ is a normalised vector tangent to the
+homotopy trajectory (see F\text{i}gure \ref{pcorrector}). This predictor can be considered as a step of the Euler
+method for solving the differential equation that describes the homotopy trajectory (continuation path). 
+Predictor steps are usually based on tangent predictions but there are
+different alternatives like the secant predictor \cite{homo_seydel}, interpolation predictor
+\cite{homo_allgower}, Taylor polynomial predictor \cite{homo_allgower}. 
+
+
+\begin{figure}[hbtp]
+\psfrag{A}{{$(x^j,\lambda_j)$}}
+\psfrag{B}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{C}{{$(x^{j+1},\lambda_{j+1})$}}
+\centerline{
+\epsfxsize=80mm
+\epsffile{/home/hleal/papers/doblelim/figs/pcorrector.eps}}
+\caption{Predictor-corrector steps}
+\label{pcorrector}
+\end{figure}
+
+ 
+\subsubsection{Corrector}
+
+When the predictor step f\text{i}nishes, it is necessary to f\text{i}t the homotopy trajectory by
+using a corrector step. This step  solves the Equation \ref{fx} by starting
+from $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$ (see F\text{i}gure \ref{pcorrector}). The common
+way to solve this equation is by using the Newton-Gauss method \cite{homo_allgower}, which
+can solved for systems of the type $R^{N+1} \Rightarrow R^N$.
+
+\subsubsection{Step Control}
+
+The Predictor-Corrector scheme can be optimized for tracing acceleration by
+using a step length control. A small constant step length can trace the curve successfully
+but not eff\text{i}ciently, because this process involves too many steps along ``f\text{l}at'' branches.
+Therefore, it is necessary to adapt the step length to the convergence behavior at each
+predictor-corrector step. The basic criterion is to control the step by observing the
+convergence quality of the corrector step. A change of the number of iterations in the corrector step produces
+a compensation factor $\zeta$, which affects the step length as follows:
+
+
+\begin{displaymath}
+h_{j+2}=h_{j+1} \zeta
+\label{zero}
+\end{displaymath}
+
+
+\subsubsection{F\text{i}nd Zero Strategy}
+
+Without an eff\text{i}cient f\text{i}nding zero strategy
+the numerical continuation is incomplete and the homotopy could fail to converge some operating
+points (maybe not any solution at all).
+The tracing of the homotopy trajectory begins in $\lambda=0$ and it ``ends''\footnote{In fact if it is wanted to f\text{i}nd multiple solutions the numerical continuation should follow beyond $\lambda=1$.} when $\rho=1$. Therefore,
+when the tracing is near to $\lambda=1$ the {\it f\text{i}nd Zero Strategy} begins. The most simple example
+of strategy is to use $[\pig{x}_f,\lambda_f]$ (of the last iteration) like the initial point
+to solve the $\pig{f}(\pig{x})$ with Newton method. 
+
+
+Nevertheless, as Newton method has local convergence it still could fail
+to f\text{i}nd the solution. In \cite{homo_sosonkina} are reported some techniques to do the {\it f\text{i}nd Zero Strategy} accurately and
+reliable.  The basic idea is
+to use two points ($p_1 < 1$ and $p_2 \geq 1$) around to $\lambda=1$, next, interpolate the point in $\lambda=1$ in order to
+obtain a point nearly to the real solution and use a like Newton method to f\text{i}nd the solution
+of the original system $\pig{f}(\pig{x})$.
+The double bounded homotopy has the characteristic of never cross the $\lambda=1$, hence, the f\text{i}ndig zero strategy
+should start when  bouncing in the bounding lines. A good way to achieve this process is to monitor the
+change of sign of the  $\Delta\lambda$ produced in the predictor step. This can be done by multipplaying
+the  $\Delta\lambda$ of two consecutive predictor steps.
+
+\begin{displaymath}
+sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 
+\label{zero1}
+\end{displaymath}
+
+
+
+\section{Examples}
+
+
+In order to illustrate the use of the double bounded homotopy, it is  applied to the next system of NAEs:
+\begin{displaymath}
+\begin{array}{c}
+f_1(x_1,x_2)=(x_2-1)(x_2-4)(x_2-6)+x_1=0\\
+f_2(x_1,x_2)=(x_1-3)(x_1-6)(x_1-9)+x_2=0
+\end{array}
+\end{displaymath}
+The graphic solution of the system is shown in F\text{i}gure \ref{9sol}.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/doblelimit_mul.eps}}
+\caption{System of f\text{i}ve solutions}
+\label{9sol}
+\end{figure}
+
+The homotopy formulation from Equation \ref{fx} results in:
+\begin{displaymath}
+\begin{array}{c}
+H_1(f_1,\lambda)=100Q+e^{Q}\ln(0.001f_1^2+1)=0\\
+H_2(f_2,\lambda)=100Q+e^{Q}\ln(0.001f_2^2+1)=0\\
+\end{array}
+\end{displaymath}
+where $Q=\lambda(\lambda-1)$; i.e. $a=0$ and $b=1$.
+
+
+
+The homotopy trajectories  are depicted
+in F\text{i}gure \ref{homote}. The starting points lie on the plane def\text{i}ned by $\lambda=0.5$, while,
+the solutions are obtained when $\lambda$ reaches the value of 1.
+
+\begin{figure}[h]
+\psfrag{ll}{$\lambda=0.5$}
+\psfrag{l}{$\lambda$}
+\psfrag{l1}{$\lambda=1$}
+\psfrag{x}{$x_1$}
+\psfrag{y}{$x_2$}
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/doblelimit_mul_sol.eps}}
+\caption{Homotopy trajectory}
+\label{homote}
+\end{figure}
+
+
+
+
+The double bounded homotopy is applied to the latch circuit \cite{homo_dobletrazado}  of
+F\text{i}gure  \ref{circu2}, which contains
+two NMOS transistors ($M_1$ and $M_2$), two linear resistors
+($R_1$ and $R_2$) and a voltage source ($E$). The model of the transistors is the unif\text{i}ed MOS model
+reported in \cite{homo_BSIM} which is a modif\text{i}ed version of the well-known
+BSIM model.
+
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/circu.eps}
+}
+\caption{Example circuit}
+\label{circu2}
+\end{figure}
+
+The  F\text{i}gure \ref{circugraf} show the graph of the equilibrium equation and homotopy trajectory of
+the circuit in the space of $(v_1,v_2,I_E)$. The homotopy f\text{i}nd the three solutions of the circuit.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/smitt.eps}
+}
+\caption{Graphic of the equilibrium equation of the circuit and homotopy trajectory}
+\label{circugraf}
+\end{figure}
+
+
+
+
+
+F\text{i}gure \ref{chua} depict the chua's benchmark circuit of nine solutions. This circuit has 4 bipolar transistors modeled by the half-side Ebers-Moll model.
+
+The equations system formulation is the same of \cite{homo_chua} which is based
+on the brach voltages $v_1$, $v_2$, $v_3$, $v_4$. F\text{i}gure \ref{chuaf} depict
+the homotopy trajectory and the six solutions found versus the branch voltage $v_1$.
+
+\begin{figure}[hbt]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/chiaf.eps}}
+\caption{Solution of the Chua's circuit}
+\label{chuaf}
+\end{figure}
+
+
+\begin{figure}[hbt]
+\psfrag{F}{{\tiny $I_D=10^{-9}(e^{40v_D}-1)$}}
+\psfrag{b}{{\tiny $\alpha=0.98$}}
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/iscas2004/figs/chua.eps}}
+\caption{Chua's circuit with nine solutions}
+\label{chua}
+\end{figure}
+
+\section{Conclusions}
+In this work presents a numerical continuation for tracing a new homotopy
+method to obtain the operating points of nonlinear circuits having
+multiple solutions. 
+This homotopy method is called the double bounded homotopy and it overcomes the shortcomings of
+traditional homotopy schemes regarding the stop criterion. The geometrical properties of the method have been
+analysed by using the Lambert $\cal W$ function. The key aspects of the implementation of the numerical continuation were depicted.
+
+%\newpage
+\bibliographystyle{IEEEbib}
+ \bibliography{/home/hleal/papers/doblelim/bib/homoto,/home/hleal/papers/doblelim/bib/contin,/home/hleal/papers/doblelim/bib/netwth}
+
+
+
+%\begin{abstract}
+%The abstract goes here.
+%\end{abstract}
+
+% no keywords
+
+% For peer review papers, you can put extra information on the cover
+% page as needed:
+% \begin{center} \bfseries EDICS Category: 3-BBND \end{center}
+%
+% for peerreview papers, inserts a page break and creates the second title.
+% Will be ignored for other modes.
+\IEEEpeerreviewmaketitle
+
+
+
+%\section{Introduction}
+% no \PARstart
+%This demo file is intended to serve as a ``starter file"
+%for IEEE conference papers produced under \LaTeX\ using IEEEtran.cls version
+%1.6b and later.
+
+% May all your publication endeavors be successful.
+
+%\hfill mds
+ 
+%\hfill November 18, 2002
+
+
+%\subsection{Subsection Heading Here}
+%Subsection text here.
+
+%\subsubsection{Subsubsection Heading Here}
+%Subsubsection text here.
+
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class option
+% should be used if it is desired that the figures are to be displayed while
+% in draft mode.
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\caption{Simulation Results}
+%\label{fig_sim}
+%\end{figure}
+
+
+% An example of a double column floating figure using two subfigures.
+%(The subfigure.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfigure command, the
+% \label for the overall fgure must come after \caption.
+% \hfil must be used as a separator to get equal spacing
+%
+%\begin{figure*}
+%\centerline{\subfigure[Case I]{\includegraphics[width=2.5in]{subfigcase1}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\label{fig_first_case}}
+%\hfil
+%\subfigure[Case II]{\includegraphics[width=2.5in]{subfigcase2}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex
+%\label{fig_second_case}}}
+%\caption{Simulation results}
+%\label{fig_sim}
+%\end{figure*}
+
+
+
+% An example of a floating table. Note that, for IEEE style tables, the 
+% \caption command should come BEFORE the table. Table text will default to
+% \footnotesize as IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+%\caption{An Example of a Table}
+%\label{table_example}
+%\begin{center}
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{center}
+%\end{table}
+
+
+%\section{Conclusion}
+%The conclusion goes here.
+
+% conference papers do not normally have an appendix
+
+% use section* for acknowledgement
+%\section*{Acknowledgment}
+% optional entry into table of contents (if used)
+%\addcontentsline{toc}{section}{Acknowledgment}
+%The authors would like to thank...
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+% NOTE: BibTeX documentation can be easily obtained at:
+% http://www.ctan.org/tex-archive/biblio/bibtex/contrib/doc/
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% standard IEEE bibliography style from:
+% http://www.ctan.org/tex-archive/macros/latex/contrib/supported/IEEEtran/bibtex
+%\bibliographystyle{IEEEtran.bst}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+%\begin{thebibliography}{1}
+
+%\bibitem{IEEEhowto:kopka}
+%H.~Kopka and P.~W. Daly, \emph{A Guide to {\LaTeX}}, 3rd~ed.\hskip 1em plus
+%  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+
+%\end{thebibliography}
+
+
+% that's all folks
+\end{document}
+
+

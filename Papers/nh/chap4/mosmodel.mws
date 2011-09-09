@@ -1,0 +1,54 @@
+{VERSION 6 0 "IBM INTEL LINUX" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 
+0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Text Ou
+tput" -1 2 1 {CSTYLE "" -1 -1 "Courier" 1 10 0 0 255 1 0 0 0 0 0 1 3 
+0 3 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 7 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 -1 -1 
+0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 1007 "restart:\nwith(plo
+ts):\nfis:=1.09:\nVfb:=-0.4:\ngam1:=0.95:\ngam2:=0.6:\nKs:=0.9:\nKnz:=
+0.2:\nKnb:=0.04:\netaz:=0.007:\netal:=0.001:\nMov:=450.0:\nDeltaL:=0.1
+:\nDeltaW:=0.1:\nUgsz:=0.25:\nUgsl:=0.06:\nUds:=0.05:\nUbs:=0.02:\ntox
+:=130.0:\nEcrit:=10:\nlamd:=0.2:\nlamg:=0.5:\nlamb:=2.0:\nlambs:=1.0:
+\nfid:=0.05:\neta:=1.5:\nKh1:=1.01:\nKh2:=1.05:\nKgsh:=1.01:\nKsig:=0.
+01:\nKsub:=.1:\nT:=300.0:\nRs:=40.0:\nRd:=40.0:\nkbol:=8.61706e-5:\neo
+x:=3.45313e-13: #\nCox:=eox/tox*1.0e8:\nVb:=Vs:\nWeff:=W-DeltaW:\nLeff
+0:=L-DeltaL:\n\npow:=proc(f,p)\nRETURN(f^p):\nend:\n\n#Funci\363n VBST
+:  Definida en el modelo\nVBST:=fis-pow((gam1-gam2)/Ks+sqrt(fis),2):\n
+#Funci\363n hiperb\363lica VBSH:  Definida  en  el  modelo\nVBSH:=0.5*
+(Vb-Vs+Kh1*VBST+sqrt(pow(Vb-Vs+Kh1*VBST, 2.0)-4.0*(Vb-Vs)*VBST)):\n\n#
+Funci\363n  VT:  Calcula el voltaje de encendido\nterm1:=Vfb+fis+gam1*
+(sqrt(fis-VBSH)-sqrt(fis)):\nterm2:=-0.5*Ks*pow(sqrt(fis-VBSH)-sqrt(fi
+s),2):\nterm3:=gam2*(sqrt(fis-Vb+Vs)-sqrt(fis-VBSH)):\nterm4:=(Knz+Knb
+*(Vb-Vs))/Weff-(etaz+etal/Leff)*(Vd-Vs):\nVT:=(term1+term2+term3+term4
+)*p2:\n\n" }}{PARA 7 "" 1 "" {TEXT -1 50 "Warning, the name changecoor
+ds has been redefined\n" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 911 
+"#Funci\363n hiperb\363lica VGSH:  Definida  en  el  modelo\nVGSH:=0.5
+*(Vg-Vs+Kgsh*VT+sqrt(pow((Vg-Vs+Kgsh*VT), 2.0)-4.0*(Vg-Vs)*VT)):\n\n\n
+#Funci\363n FG:  Definida en el modelo\nFG:=1.0-1.0/(1.744+0.8364*(fis
+-Vb+Vs)):\n\n#Funci\363n FA:  Definida  en el modelo*/\nFA:=1.0+FG*gam
+1/(2*sqrt(fis-Vb+Vs)):\n\n#Funci\363n VC:  Definida en el modelo*/\nVC
+:=(VGSH-VT)/(FA*Ecrit*Leff):\n\n#Funci\363n VDSSAT:  Voltaje de satura
+ci\363n\nK:=0.5*(1.0+VC+sqrt(1.0+2*VC)):\nVDSSAT:=(Vg-Vs-VT)/(FA*sqrt(
+K)):\n\n\n#Funci\363n hiperb\363lica VDSH:  Definida  en  el  modelo\n
+term1:=Vd-Vs+Kh2*VDSSAT:\nterm2:=pow(Vd-Vs+Kh2*VDSSAT,2)-4.0*(Vd-Vs)*V
+DSSAT:\nVDSH:=0.5*(term1-sqrt(term2)):\n\n\n#Funci\363n fs:  Definida \+
+ en  el modelo\nfs:=0.5*(1-(Vg-Vs-VT)/sqrt(pow(Vg-Vs-VT,2.0)+Ksig)):\n
+\n#Funci\363n fl:  Definida en el modelo\nterm1:=lamd*(sqrt(fid+Vd-Vs-
+VDSH)-sqrt(fid)):\nterm2:=pow(VGSH-VT, 1.5)+lamg:\nterm3:=lamb/(1.0-(V
+b-Vs)/lambs):\nfl:=term1/(term2*term3):\n#fl:=subs(Leff=Leff0,fl):\n" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 736 "#Funci\363n Alfa:  Defin
+ida  en  el modelo\nterm1:=(2.0*eta*eta/FA)*pow(kbol*T,2.0)*exp(Ksub*f
+s):term2:=1.0-fs*exp(-(Vd-Vs)*p3/(kbol*T)):\nterm3:=1.0+(1.0-fs)*fl:\n
+Alfa:=term1*term2*term3:\n\n#Funci\363n Efe:  Definida en el modelo\nE
+fe:=(Vg-Vs-VT)*VDSH-0.5*FA*pow(VDSH,2.0):\n\n#Funci\363n meff:  Calcul
+o de movilidad efectiva\nterm1:=1.0+(Ugsz+Ugsl/Leff)*(VGSH-VT):\nterm2
+:=Ubs*(sqrt(fis-VBSH)-sqrt(fis))+Uds*VDSH:\nterm3:=1.0+VDSH*(1.0-fs)/(
+Ecrit*Leff):\nMR:=(term1-term2)*term3:\nmeff:=Mov/MR:\n\n#Funci\363n I
+ds:  Corriente de drenaje para todas las regiones de operaci\363n\nmov
+ilidad:=meff:\nKsw:=1.0-2*fs:\nbeta:=(Cox*movilidad*Weff/Leff):\nterm1
+:=sqrt(0.5*Efe*FA/pow(eta,2)):\nterm2:=exp(term1*Ksw/(kbol*T)):\nterm3
+:=pow(ln(1.0+term2),2.0):\nIds:=Alfa*beta*term3:\n" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "3 0 0" 0 }{VIEWOPTS 1 1 0 1 1 
+1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

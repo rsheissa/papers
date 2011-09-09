@@ -1,0 +1,37 @@
+\begin{thebibliography}{1}
+
+\bibitem{barnes}
+Timothy~J. Barnes,
+\newblock {\em Electronic CAD Frameworks},
+\newblock Kluwer Academic Publishers, 1992.
+
+\bibitem{verhoeven}
+C.J.M. Verhoeven, A.van Staveren, G.L.E. Monna, and M.H.L. Kouwenhoven,
+\newblock {\em Strutured Electronic Design, Negative-feedback Amplifiers},
+\newblock Delftese Uitgevers Maatschappij, 2001.
+
+\bibitem{nordholt}
+E.H. Nordholt,
+\newblock {\em Design of High Performance Negative-feedback amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\bibitem{joyanes}
+L.~Joyanes-Aguilar,
+\newblock {\em Borland C++},
+\newblock McGraw-Hill, 1993.
+
+\bibitem{qt}
+Trolltech, Oslo, Norway,
+\newblock {\em Qt Reference Documentation}, 2005,
+\newblock Ver. 3.3.4.
+
+\bibitem{bfr520}
+Philips Electronics,
+\newblock {\em BFR520 Product data sheet}, September 2004.
+
+\bibitem{hspice}
+Avant! Software,
+\newblock {\em Star-Hspice Manual}, 2001,
+\newblock \mbox{Release 2001.2}.
+
+\end{thebibliography}

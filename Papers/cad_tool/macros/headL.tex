@@ -1,0 +1,46 @@
+%%% This file contains macros for producing FLUSHED LEFT
+%%% headers for slides under the seminar style.
+
+%% *** normal ***
+\newcommand{\Lheading}[1]{\begin{flushleft}\large\bf #1\end{flushleft}}
+
+%% *** with shadowbox box (as in a window) ***
+\newcommand{\LHeading}[1]{%
+  \begin{flushleft}
+    \large\bf
+    \shadowbox{#1}%
+  \end{flushleft}
+  \vspace{1ex minus 1ex}}
+
+%% *** with doublebox box (as in a frame) ***
+\newcommand{\LDheading}[1]{%
+  \begin{flushleft}
+    \large\bf
+    \doublebox{#1}%
+  \end{flushleft}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box ***
+\newcommand{\Loheading}[1]{%
+  \begin{flushleft}
+    \large\bf
+    \ovalbox{#1}%
+  \end{flushleft}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box  PLUS shadow (not visible in xdvi!!!) ***
+\newcommand{\Lshoheading}[1]{%
+  \begin{flushleft}
+    \large\bf
+    \textshade{roundcorners}{#1}%
+  \end{flushleft}
+  \vspace{1ex minus 1ex}}
+
+%% *** with big_oval box ***
+\newcommand{\LOheading}[1]{%
+  \begin{flushleft}
+    \large\bf
+    \Ovalbox{#1}%
+  \end{flushleft}
+  \vspace{1ex minus 1ex}}
+

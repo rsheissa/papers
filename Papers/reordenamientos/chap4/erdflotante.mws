@@ -1,0 +1,2440 @@
+{VERSION 4 0 "IBM INTEL LINUX22" "4.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{CSTYLE "" 0 21 "" 0 1 0 0 0 1 0 0 0 0 2 0 0 0 0 1 }{CSTYLE "" -1 23 "
+Courier" 1 10 0 0 0 0 0 0 0 0 0 0 3 0 0 1 }{PSTYLE "Normal" -1 0 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }0 0 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "Text Output" -1 2 1 {CSTYLE "" -1 -1 "Courier
+" 1 10 0 0 255 1 0 0 0 0 0 1 3 0 3 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 
+}{PSTYLE "Heading 1" 0 3 1 {CSTYLE "" -1 -1 "" 1 18 0 0 0 0 0 1 0 0 0 
+0 0 0 0 1 }1 0 0 0 8 4 0 0 0 0 0 0 -1 0 }{PSTYLE "Heading 2" 3 4 1 
+{CSTYLE "" -1 -1 "" 1 14 0 0 0 0 0 0 0 0 0 0 0 0 0 1 }0 0 0 -1 8 2 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 2 6 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 
+0 0 0 0 2 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Warning" 2 
+7 1 {CSTYLE "" -1 -1 "" 0 1 0 0 255 1 0 0 0 0 0 0 1 0 0 0 }0 0 0 -1 
+-1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Error" 7 8 1 {CSTYLE "" -1 -1 "" 0 1 
+255 0 255 1 0 0 0 0 0 0 0 0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }
+{PSTYLE "Maple Output" 0 11 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 
+0 0 0 0 0 1 }3 3 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 86 "restart; #esta versi
+on selimita a probar si las variables globales no se reinicializan" }}
+}{SECT 1 {PARA 3 "" 0 "" {TEXT -1 66 "Rutinas para la seleccion y reor
+denamiento del nodo mas no linenal" }}{SECT 0 {PARA 4 "" 0 "" {TEXT 
+-1 25 "Parser modificado(parche)" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 28 "LoadCircuito:=proc(filename)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 63 "####################zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "#  Modificado el dia 18 de juli
+o del 2000, por Hector Vazquez Leal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+62 "#  Solo se agrego la variable global Elementos conteniendo el " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "#  Netlist sin modificaciones a los
+ nodos debidas a los trasanctores, F,H" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 63 "#####################zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz
+z" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "local parse;" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 22 "parse:=homo(filename);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "if parse<> 1 then ERROR(\"\"):fi:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 7124 "homo:= proc(filename)\n## Input t
+he file name that is going to read.\nglobal Anlist, Control, Definelis
+t, Definition, Diaglist, Elements, Ex,\n       Exac, Exdc, Fx, IClist,
+ Models, Names, Namesfun, Nodes, Outlist,\n       Rnolineal, TFlist, T
+itle, Values, Vars, Xac, Xdc, X0, X1, Ymna,\n       Ymnaac, Ymnadc,Ele
+mentos,NodosPes,opt_reor,MaxNodo,xcir,fxcir,Ymnalinh,Exch,Ymnanlh,x0,Y
+mnadcSy,optscorr: \nlocal a0, a1, a2, a3, a4, a5, a6, a7, tag:\nAnlist
+:=[]: Control:=[]: Definelist:=[[],[]]: Diaglist:=[]: Elements:=[]: \n
+Ex:=`Ex`:opt_reor:=[1,1,1,200]:\nIClist:=[]: Models:=[]: Names:=[]: Na
+mesfun:=[]: Nodes:=\{\}: Outlist:=[]: \nTitle:=[]: \nValues:=[]: X0:=`
+X0`: Ymna:=`Ymna`: Ymnaac:=`Ymnaac`: Ymnadc:=`Ymnadc`:\nprint(`  * * *
+ HOMOTOPY  SIMULATOR * * *`);\nprint(` by CAD INAOE group `);\nprint(`
+ 30/05/99 + 19/07/2000`):  tag:=0:\nTitle:=readline(filename):\nprintf
+(`Reading file: %s\\n`, Title):\na0:=readline(filename): a1:=1: a4:=tr
+ue:\nwhile a0<>0 do\na0:=convert(a0, name);\n   if length(a0)=0 then  \+
+                       ## I just had read a empty line.\n   elif subst
+ring(a0, 1..1)= `#` then            ## I just had read a comment.\n   \+
+elif spaces(a0) then                         ## I just had read a line
+ filled of space.\n#--------------------------------------------------
+-----------------------------\n# Esta parte de codigo fue modificado e
+l dia 12 de Agosto de 1998. Hora: 14:30\n# Maria del Rocio De Jesus Ve
+ntura.\n# Arturo Montiel Martinez.\n#---------------------------------
+----------------------------------------------\n\n   elif ddusr(a0) th
+en\n      a0:=readline(filename): \n      a0:=convert(a0, name);\n    \+
+  while searchtext(`USERENDS`,a0)<>1 do\n         if length(a0)=0 or s
+ubstring(a0,1..1)= `#`  then\n         elif defusr(a0) then           \+
+              ## I just read an user define.\n              a2:=Define
+(a0):\n              if (searchtext(`=`,a2[2]) <> 0) then\n           \+
+      printf(`WARNING: Illegal expression %s in user definition.\\n`,a
+2[2]):\n              else\n                 Definelist:=[[op(Defineli
+st[1]), op(1, a2)], [op(Definelist[2]), op(2, a2)]]:\n              fi
+:\n         else\n            printf(`WARNING: Illegal statement %s in
+ user definition.\\n`,a0):\n         fi:\n         a0:=readline(filena
+me): \n         a0:=convert(a0, name);\n         if (a0=`0`) or (lengt
+h(a0)=0) then\n            printf(`\"USERENDS\" statement expected in \+
+file %s.\\n`,filename):\n            RETURN():\n         fi:\n      od
+:\n#------------------------------------------------------------------
+-------------\n   elif anastm(a0) then                         ## I ju
+st read an analysis statement.\n      a2:=Readoptions(a0, 1):\n      A
+nlist:=[op(Anlist), a2]:\n   elif output(a0) then                     \+
+    ## I just read an output statement.\n      a2:=Readoptions(a0, 12)
+:\n      Outlist:=[op(Outlist), a2]:\n   elif diagst(a0) then         \+
+                ## I just read a diagnostic tatement.\n      Diaglist:
+=[op(Diaglist), a0]:\n   elif models(a0) then                         \+
+## I just read a model definition.\n      a2:=Readoptions(a0, 19):\n  \+
+    a0:=readline(filename): a1:=a1+1: a5:=[]:\n      a0:=convert(a0, n
+ame);\n      while searchtext(`MODELENDS`,a0)<>1 do\n         if lengt
+h(a0)=0 or substring(a0,1..1)= `#`  then\n         elif device(a0) the
+n\n            a3:=Readoptions(a0, 0):\n            a5:=[op(a5), a3]:
+\n         else\n            printf(`Unexpected statement %s in model \+
+definition.\\n`,a0):\n            printf(`Device definition expected i
+n model definition `):\n            printf(`%s.\\n`,convert(a2,string)
+): a4:=false:\n         fi:\n         a0:=readline(filename): a1:=a1+1
+:\n         a0:=convert(a0, name);\n         if (a0=`0`) or (length(a0
+)=0)  then\n            printf(`'MODELENDS' statement expected in file
+ %s.\\n`,filename):\n            RETURN():\n         fi:\n      od:\n \+
+     if searchtext(`npn`,op(3,a2))=1 or searchtext(`pnp`,op(3,a2))=1 t
+hen \n         a3:=subsop(1=cat(`Q`,op(2,a2)),a2):\n      elif searcht
+ext(`nmos`,op(3,a2))=1 or searchtext(`pmos`,op(3,a2))=1 then \n       \+
+  a3:=subsop(1=cat(`M`,op(2,a2)),a2):\n      else a3:=subsop(1=cat(`X`
+,op(2,a2)),a2): fi:\n      for a6 from nops(a3) by -1 to 1 do\n       \+
+  if searchtext(`=`,a3[a6])<>0 then a3:=subsop(a6=NULL,a3): fi:\n     \+
+ od:\n      a3:=subsop(2=NULL,3=NULL,a3):\n      a3:=[op(a3),op(2,a2)]
+:\n      a5:=[op(a5), a3]:\n      a2:=[op(a2), a5]:\n      Models:=[op
+(Models), a2]:\n   elif endstm(a0) then                         ## I j
+ust read end of file.\n      a1:=a1+1: a3:=0:\n      while a0<>0 do a0
+:=readline(filename): a3:=a3+1: od:\n            a0:=convert(a0, name)
+;\n### WARNING: %x or %X format should be %y or %Y if used with floati
+ng point arguments\n      printf(`   %d extra line(s) had been reading
+ after \"end\" label.\\n`, a3):\n      break:\n   elif device(a0) then
+                         ## I just read a device.\n      a2:=Readoptio
+ns(a0, 0):\n      Elements:=[op(Elements), a2]:\n   else printf(`Unkno
+w statement: %s.\\n`,a0): a4:=false: fi:\n   a0:=readline(filename): a
+1:=a1+1:\n   a0:=convert(a0, name);\nod:\nprintf(`\\n   Simulator had \+
+read %d lines.\\n`, a1):\nprintf(`Concluding reading of the Input File
+.\\n`):\nif nops(Elements)=0 then ## If there is not circuit descripti
+on...\n   printf(`Must be specify the Circuit in order to could carry \+
+out something.\\n`):\n   RETURN():\nelse \n   a7[1]:=checkelements(): \+
+  ## Check for general errors in circuit description.\n   a7[2]:=arena
+mesright():   ## Check for repeated names.\n   a7[3]:=arenodesright(1)
+:  ## Check for floating nodes and self loop nodes.\n   a7[4]:=arevalu
+esright():  ## Check for device values.\n   a7[5]:=arecontrolright(): \+
+## Check for controlled sources.\n   a7[6]:=aremodelsright():  ## Chec
+k for models existence.\nfi:\nElementos:=Elements: #print('Anlist'=Anl
+ist);\n #print('Control'=Control);\n #print('Definelist'=Definelist);
+\n #print('Diaglist'=Diaglist);\n print('Elementos'=Elementos): #print
+('IClist'=IClist);\n #print('Models'=Models);\n #print('Names'=Names);
+\n #print('Namesfun'=Namesfun);\n #print('Nodes'=Nodes);\n #print('Out
+list'=Outlist);\n #print('Title'=Title);\n #print('Values'=Values);\n#
+----------------------------------------------------------------------
+----\n# esta parte no es necesaria para la implementacion de la parte \+
+que me rresponde\n# --------------------------------------------------
+----------------------\nsplitANIC():\na7[7]:=areICright():\nif a7[1] a
+nd a7[2] and a7[3] and a7[4] and a7[5] and a7[6] and a7[7] then\n   a7
+[8]:=areanlistright():\n   a7[9]:=aredefinelistright():\n   a7[10]:=ar
+eoutlistright():\n   a7[11]:=arediagright():\n   a0:=getnodesready():
+\n   Nodes:=a0[1]:\n   #Rnolineal:=a0[2]:\n   a0:=areallnodes():\n   E
+lements:=subsop(2=a0[1], Elements):\n   #Control:=a0[2]:\n#elimino tod
+as estas lineas para evitar el analisiz CACB 8/8/98\n  # sortAnlist():
+\n   if a7[8] and a7[9] and a7[10] and a7[11] then\n       \n        #
+todo esta correcto senal de que no hay errores en lcircuito\n        t
+ag:=1:\n    #  doanalysis():\n     # printoutuser():\n   else\n      p
+rintf(`Check input file in order to eliminate all error.\\n`):\n   fi:
+\nelse\n   printf(`Check input file in order to eliminate all error.\\
+n`):\nfi:\n#printall():\n#RETURN(eval(tag)):\nRETURN(eval(tag)):\nend:
+\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 91 "Ruti
+nas para el calculo de las matrices Ar_A, Al_A (matriz de incidencias \+
+de nodos a ramas)" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+{TEXT 23 0 "" }{MPLTEXT 1 0 67 "## This procedure is in order to split
+ Netlist ---Elements--- into " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "##
+ Linear Netlist ---ElementsRl ---  and Nonlinear Netlist ---ElementsRn
+---" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "## for nonlinear resistive c
+ircuits (D,K,R). " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 664 "#--------------------------------------------
+-------------------------------------------------------------------- \+
+\n#  funcion que regresa  una lista de nodos en string ordenados .... \+
+\n#  la lista puede contener caracteres alfanumericos \nSort_Str := pr
+oc(LisT) \nlocal l_end, l_num, l_str, xx, LT,i; \nLT:=LisT; l_end:=[];
+ l_str:=[]; l_num:=[]; \nfor i from 1 to (nops(LT)) do \n   xx:=parse(
+LT[i]); \n   if type(xx,numeric) then \n      l_num:=[(op(l_num)), xx]
+; \n   elif type(xx,numeric)=false then \n      l_str:=[(op(l_str)), x
+x]; \n   fi; \nod; \nl_num:=sort(l_num); l_str:=sort(l_str); \nl_end:=
+[(op(l_num)), (op(l_str))]; \nl_end:=Str_any(l_end); \nRETURN(l_end); \+
+\nend: \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 115 "#--------------------
+----------------------------------------------------------------------
+---------------------- \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1102 "#---
+----------------------------------------------------------------------
+--------------------------------------- \n#   conjunto de funciones co
+ntruidas por....: \n#        Arturo Montiel Martinez  \n#        Miner
+va Gomez Marcos \n#   estas funciones han sido creadas con el proposit
+o de obtener el \n#   grafo y la matriz A del netlist dado, del parser
+ de Rodrigo... \n#   Ultima fecha de modificacion: 5 de julio de 1998.
+ \n#   hora: 21:46     \n#   \n#--------------------------------------
+----------------------------------------------------------------------
+---- \nnl2node := proc(NetList) \n#  regresa solo la lista de nodos \n
+#  A.M.M. \nlocal Terminals, paso1, paso2, Vlist; \n#with(networks): \+
+\n# Se obtienen del netlist los terminales [ [1 2],[2 3],....]  \nTerm
+inals :=NetList[2]: \n# convertimos los pares en un arreglos \npaso1 :
+=convert(Terminals,array): \n# convertimos el arreglo a un Set \npaso2
+ :=convert(paso1,set): \n# por ultimo convertimos el Set a una lista..
+. \n# este procedure esta sujeto a cambios ultima modificacion 24 de N
+ov. 97  \nVlist :=convert(paso2,list): \nRETURN(Vlist); \nend:  \n#res
+tart;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 401 "#----------------Funcion \+
+auxiliar de Str_a_value-haciendo la conversion de entero a cadena-----
+-------------------------------- \nStr_any := proc(LS) \nlocal j, posx
+x1, posx1, Terminals_string1; \nTerminals_string1:=[]; \nfor j from 1 \+
+to nops(LS) do \n   posx1:= op(j,LS); \n   posxx1:= convert(posx1, nam
+e); \n   Terminals_string1:=[(op(Terminals_string1)), posxx1]; \nod: \+
+\nRETURN(Terminals_string1); \nend: \n" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 518 "matrix_A := proc(LS) \n
+local BL, TL, PL, ML, NL, vnodes, nodes, branches, first, Azero, \n   \+
+ j, terminals, tpos, tneg, idxpos, idxneg, temps, temp2, fin, \n    al
+l, Aa, Ai, Agen,A; \n#  \n#        Separating the lists from the input
+ file \n# ----------------------------------------------- \n BL:=LS[1]
+:                   #The list of components names \n TL:=LS[2]:       \+
+            #The list of terminals \n PL:=LS[3]:                   #Th
+e list of parameters anm models \n ML:=LS[4]:                   #The l
+ist of controls" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 2 " \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 99 "# Prepa
+ring the set of vertices.  Funcion que retorna el numero de nodos o #v
+ertices del grafo... \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 " NL:=nl2
+node(LS); \n NL:=Sort_Str(NL); \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 
+"#  \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 647 "#        Reading the LIN
+ear ALGebra library \n#   and preparing some auxiliar objects: \n#    \+
+* vnodes is a list with the names of all nodes \n#                    \+
+ | n1 | \n#                     | n2 | \n#                     | ...| \+
+\n#                     | nn | \n#      nn includes the datum node, wh
+ich is called either \n#      \"gnd\" or \"0\" (zero). \n#    * nodes \+
+is the number of nodes in the circuit, including datum \n#    * branch
+es is the number of branches in the circuit \n#    * first is a (1 x b
+ranches+1) matrix with the labels for all branches \n#                \+
+     | 0  b1 b2 ... bb| \n#                      \n vnodes:=convert(NL
+,vector); \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 186 "#   Obtenemos el n
+umero de vertices \n nodes:=nops(NL); \n#   Obtenemos el numero de ram
+as \n### WARNING: `branches` might conflict with Maple's meaning of th
+at name\n  branches:=nops(BL); \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+80 " first:=concat(array([[0]]),transpose(convert(convert(LS[1],vector
+),matrix))); \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 421 "#  \n#        F
+orming a nodesxbranches matrix filled with zeroes \n  Azero:=matrix(no
+des,branches,0): \n#  \n#        Forming the incidence matrix of the c
+ircuit \n for j from 1 to branches do \n    terminals:=LS[2][j]: \n   \+
+ tpos:=terminals[1]: \n    tneg:=terminals[2]: \n    if member(tpos,NL
+,'idxpos') then \n      Azero[idxpos,j]:=+1: \n    fi; \n    if member
+(tneg,NL,'idxneg') then \n      Azero[idxneg,j]:=-1: \n    fi: \n od: \+
+\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 340 "#  \n#        Concatenating \+
+the vector with nodes \n#        names to the Incidence matrix: \n#  \+
+\n#                 | n1 |  |     /\\     | \n#                 | n2 |
+  |    /  \\    | \n#                 | n3 |  |   / /\\ \\   | \n#    \+
+             | ...|  |  / ___  \\  | \n#                 | nn |  | /_/
+   \\__\\ | \n#  \n Azero:=concat(vnodes,Azero); \n" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 1551 "#  \n#        Putting the DATUM on the previous \+
+matrix at the last row. \n#    i.e. move the row of gnd or 0 (zero) to
+ the last position. \n#   En esta parte solo hay que analizar la parte
+ del nodo de referncia que '0'   -----NOTA: no se utiliza ---gnd----- \+
+\n if member(`0`,NL,'temp2') then            #cuando los nodos son cad
+enas (strings) \n   temps:=subvector(Azero,temp2,1..coldim(Azero)): \n
+   fin:=delrows(Azero,temp2..temp2): \n fi: \n#        Forming the inc
+idence matrix labelled by nodes and branches \n#  \n#                 \+
+| 0  |  b1 b2 ... bb| \n#                 |----|--------------| \n#   \+
+              | n1 |       /\\     | \n#           all = | n2 |      /
+  \\    | \n#                 | n3 |     / /\\ \\   | \n#             \+
+    | ...|    / __   \\  | \n#                 |gnd |   /_/   \\__\\ |
+ \n fin:=extend(fin, 1, 0, 0); \n fin:=transpose(fin); \n first:=trans
+pose(first); \n fin:=concat(first, fin); \n fin:=transpose(fin); \n te
+mps:=transpose(convert(temps, matrix)); \n all:=copyinto(temps, fin, r
+owdim(fin), 1); \n#        Forming the REDUCED incidence matrix labell
+ed by nodes and branches \n#  \n#                 | 0  |  b1 b2 ... bb
+| \n#                 |----|--------------| \n#                 | n1 |
+       /\\     | \n#            Aa = | n2 |      /  \\    | \n#       \+
+          | n3 |     / /\\ \\   | \n#                 | ...|    / ___ \+
+ \\  | \n#                 |n-1 |   /_/   \\__\\ | \n#  \n Aa:=submatr
+ix(all,2..rowdim(all),2..coldim(all)); \n#  \n#  \n#        Forming th
+e node-to-branch incidence matrix \nA:=submatrix(Aa,1..rowdim(Aa)-1,1.
+.coldim(Aa)); \n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "Agen:=[all, Aa,
+ A];" }{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "RETURN(Agen)
+;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}}}{SECT 0 {PARA 4 "" 0 
+"" {TEXT -1 81 "Rutina de seleccion de criterio de asignacion de pesos
+  y tipo de reordenamiento " }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+65 "#_______________________________________________________________#
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "Reordena_Nodo_NoLin := proc(OPC
+IONES,Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "####################
+###########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 64 "#  CAD INAOE group  @@@@      CAD INAOE group        \+
+@@@@@@@@@@@" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "# METODOS DE HOMOTOP
+IA @@@@@@ KHAO @@@@@@@@@@@@@@@@@@@@@@@@@@@@@" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 64 "#@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@@@@@@@@@@@" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 61 "#RUTINAS DE CALCULO Y REORDENAMIENTO DE EL NODO MAS
+ NO LINEAL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "#CREADAS POR RAUL ENR
+IQUEZ Y HECTOR VAZQUEZ (FEBRE-MAYO/2000)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "#MODIFICACIONE
+S JUNIO/2000 POR HECTOR VAZQUEZ LEAL(HVL)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "#SE CALCULA EL
+ PESO DE LOS NODOS SEGUN LOS SIGUIENTES CRITERIOS" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "# 1. SE CUEN
+TAN EL NUMERO DE RAMAS NO LINEALES CONECTADAS" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "#    A CADA NODO Y SE TOMAN COMO EL PESO DE CADA NODO
+." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#    (EL PESO AUMENTA EN UNO P
+OR CADA RAMA NO-LINEAL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "# 2. SE L
+E ASIGNAN PESOS A LAS FUNCIONES NO LINELES SEGUN EL CRITERIO   " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "#    DE CLASIFICACION DE FUNCIONES \+
+DE VANDENBERGHE y numero de jorobas" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+52 "# 3. solo CLASIFICACION DE FUNCIONES DE VANDENBERGHE" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 17 "# 4. SOLO JOROBAS" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 69 "# 5. Solo se analiza Ec. completa del nodo + Vandenbe
+rghe + Jorobas  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "# 6. Solo se an
+aliza Ec. completa del nodo + Vandenberghe " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 52 "# 7. Solo se analiza Ec. completa del nodo + Jorobas
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 92 "#-------------------------------------------------------------
+------------------------------" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# LAS RUTINAS DE REORDENAMIENTO
+ A ELEGIR SON:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 67 "# 1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON E
+L #ULTIMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LISTA
+ NODES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "# 2. SE REORDENAN LOS NOD
+OS DE MENOR A MAYOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "# 3. SE
+ REORDENAN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 96 "#----------------------------------------------------
+-------------------------------------------" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "#  banderas para todos los criterios" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 26 "#  opt_reor:=[a,b,c,paso];" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 69 "#  a=1 pesa la ecuacion extra debida a las resistenci
+as no lineales, " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "#  b=1 pesa los
+ transactores que dependen de ramas no lineales " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "#  c=1 pesa lo
+s transactores que dependen de una conductancia no-lineal" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 90 "#     y la ecuacion del nodo agregado en cor
+to con el segundo nodo de la rama controladora" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 88 "#  paso= indica el numero de pasos en los que se subd
+ividira el intervalo en el cual se " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+47 "#         buscaran las jorobas de las funciones" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#   opt_reo
+r:=[1,1,1,200]; es el valor por default" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 95 "#######################
+######################################################################
+##" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "if OPCIONES=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+43 "criterio_1(Reor):  #ejecuta primer criterio" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "else if OPCIONES=2 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "criterio_2(Reor):  #ejecuta segundo criterio" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "else if OPCIONES=3 then" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 40 "criterio_3(Reor):  #  ejecuta criterio 3" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "else if OPCIONES=4 then" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 19 "criterio_4(Reor):  " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "else if OPCIONES=5 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "criterio_5(Reor):  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 23 "else if OPCIONES=6 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "cr
+iterio_6(Reor):  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "else if OPCION
+ES=7 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "criterio_7(Reor):  " }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "else print(\"Opcion no valida, con
+sultar ayuda\");" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "e
+nd: \n" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 72 "Criterio 1 Pesos por \+
+default de 1 (mas simple)+3 Tipos de reordenamiento" }}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 65 "#__________________________________________
+_____________________#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "criterio_
+1 := proc(Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "################
+#################################################" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 67 "# SE CUENTAN EL NUMERO DE RAMAS NO LINEALES CONECTA
+DAS A CADA NODO " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "# Y SE TOMAN CO
+MO EL PESO DEL NODO(S)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "# SE CREA
+ UNA LISTA CON LOS NODOS CON EL MAYOR PESO" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 43 "# SE ELIJE EL PRIMERO DE ELLOS POR DEFAULT " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 52 "# Y se elije uno de los tres tipos de reo
+rdenamiento" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 67 "# 1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON EL #
+ULTIMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LISTA NO
+DES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "# 2. SE REORDENAN LOS NODOS \+
+DE MENOR A Mayor PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "# 3. SE RE
+ORDENAN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#######################
+##########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 85 "local NumNodos,
+NumRamas, MaxNodes,ii, MaxN, temp,rec,RamasPesoNL,FuncionesPeso,f1,f2:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "global Nodes,NodosPeso,NodosPes
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"Ejecutando criterio #1
+\"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "NumNodos:= CalculaNumeroNod
+os(); # Calcula el numero de nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+61 "NumRamas:=nops(Names);           # Calcula el numero de ramas" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "# clasifica los elementos en lineal
+es y no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "splitlinnon():
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 77 "RamasPesoNL:=GetRamasPesosNL_1(
+);  # calcula el peso de las ramas no lineales" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 "# LISTA DE PESOS DE LOS NODOS" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 58 "NodosPeso := GetNodosPesos(NumNodos,NumRamas,RamasPes
+oNL):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "########checa si los trans
+actores de penden de ramas no lineales################################
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "###############################
+#################################################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(\"TEST:peso de las ramas no l
+ineales\",ElementsRn[1],\"=\",RamasPesoNL);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL ORDEN
+ DE Ar_A, sin Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[2]=
+1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosPeso:=PesaTransactor
+es(RamasPesoNL,NodosPeso); # pesa los transactores" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL ORD
+EN DE Ar_A, con Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncionesPeso(NodosPeso):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 21 "if opt_reor[1]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "Fu
+ncionesPeso:=PesaResistores(FuncionesPeso,RamasPesoNL): # Pesas los Re
+sitores NL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "print(\"Lista de peso
+s con  resistores no-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[3]=1 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 88 "FuncionesPeso:=PesaTransactores_MNA_NL(RamasPesoNL,Fu
+ncionesPeso):  # Pesa Transactores " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+89 "                                                     # con element
+o controlador No-lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "print(\"
+Lista de pesos de transactores con elemento controlador No-lineal\",Fu
+ncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 26 "Reord(FuncionesPeso,Reor):" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 34 "CreaFuncionesPeso:=proc(NodosPeso)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "###################################
+#####################################################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 40 "# crea la lista de peso de las funciones" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "###################################
+#####################################################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 23 "local FuncionesPeso,ii:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 48 "# crea la lista de pesos de todas las funciones " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "for ii from 1 to nops(Nodes) do Fun
+cionesPeso[ii]:=0 od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 80 "FuncionesP
+eso:=convert(FuncionesPeso, list):# crea la variable de pesos de nodos
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "# concatena la lista vacia corr
+espondiente a las funciones de los elementos MNA" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 56 "# con la lista de los pesos de las ecuaciones nodales
+ NA" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "for ii from 1 to nops(NodosP
+eso) do FuncionesPeso[ii]:=NodosPeso[ii] od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "RETURN(FuncionesPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 24 "ComplementaNodes:=proc()" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "local arreglo:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "
+global Nodes,NodosPes:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "arreglo:=
+Complementa(Nodes,NodosPes);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "pri
+nt(\"nodes original=\",Nodes);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "p
+rint(\"NodesPeso original=\",NodosPes);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 18 "Nodes:=arreglo[1]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Nodos
+Pes:=arreglo[2]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"nodes i
+nvertido=\",Nodes);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "print(\"Node
+sPeso invertido=\",NodosPes);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 28 "Complementa:=proc(nod,pesos)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 67 "################################################################
+###" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "# completa el par de listas \+
+que se le ofrecen como argumentos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+53 "# y las devuelve reordenas en una lista de dos listas" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 69 "############################################
+#########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "local \+
+ii,Ns,rr,templist,Np,pe,t1,t2,tf,tfs,resul,s1,s2,s,n:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 15 "resul:=[[],[]]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 65 "Ns:=convert(nod,list): # redeclara varibles( debido a conflictos
+)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "Np:=convert(pesos,list):#     \+
+               ????????????????" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "
+n:=nops(Np):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "for ii from 1 to n \+
+do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "templist[ii]:=0:  #crea la li
+sta vacia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "pe[ii]:=0:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "te
+mplist:=convert(templist,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "
+pe:=convert(pe,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for ii fro
+m 1 to n do  # ciclo de reordenamiento" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 25 "templist[n-ii+1]:=Ns[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+19 "pe[n-ii+1]:=Np[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "resul:=[templist,pe]:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 14 "RETURN(resul):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "GetElementSymbol:=pr
+oc(Ele)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "########################
+############################################################" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 70 "#  Devueleve la primera letra del element
+o que se le da como argumento" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "##
+######################################################################
+############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "RETURN(convert(conv
+ert(Ele,string)[1],symbol)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 32 "AddStringToSymbol:=proc(Ele1,st)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 84 "#####################################################
+###############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "
+#  Se agraga una cadena(st) al symbolo(Ele1)  y se retorna el resultad
+o" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "# en forma de simbolo" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "###################################
+#################################################" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 10 "local Ele:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "El
+e:=Ele1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Ele:=convert(Ele,string
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Ele:=cat(Ele,\"_rc1\"):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Ele:=convert(Ele,symbol):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 12 "RETURN(Ele):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 51 "PesaTransactores_MNA_NL:=proc(RamasPeso,Nod
+osPeso1)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#######################
+######################################################################
+###" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "# Pesa la rama de un transac
+tor en funcion del elemento                                        #" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "# controlador, en caso de ser no \+
+lineal checa su peso y se lo asigna al                        #" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "# transactor                       \+
+                                                            #" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "###################################
+#############################################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "local Transact,ii,jj,kk,nod,NodosPe
+so,Ele,EleM:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NodosPeso:=NodosPes
+o1:" }{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 90 "Transact:=Cre
+aListaTransactores():      # Crea una lista de transactores mas facil \+
+de usar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 " # Cuanto pesa la funcio
+n de rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "for ii from 1 to nops(
+Transact[2]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "    for jj from \+
+1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "    \+
+          Ele:=GetElementSymbol(ElementsRn[1][jj]); # simbolo del elem
+entocontrolador" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "       if Elemen
+tsRn[1][jj]=Transact[2][ii] and ( Ele=K or Ele=k ) then" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 94 "      #   nod:=GetNodos(Transact[2][ii]);  # D
+evuelve el par de nodos del elemento controlador" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "         for kk
+ from 1 to nops(Nodes) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "      \+
+       EleM:=AddStringToSymbol(Transact[1][ii],\"rc1\"):" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "       \+
+      if EleM=Nodes[kk] then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "   \+
+          NodosPeso[kk]:=RamasPeso[jj]+ NodosPeso[kk]:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 15 "            fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "         od:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 40 "       break;  # Optimizacion del codigo" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "       fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "RETURN(NodosPeso): " }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+48 "PesaResistores:=proc(FuncionesPeso1,RamasPesoNL)" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 88 "################################################
+########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 69 "# Asigna los pesos delos resistores NL  a la rama MNA
+ correspondiente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "# Primero encue
+ntra el resistor dentro del indice de los resistores NL" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 79 "# y lo busca dentro de la variable Nodes para \+
+asignarle el peso correspondiente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+57 "# a la lsita de pesos de todas las funciones de la matriz" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "# devuelve la lista de pesos comple
+ta" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "#############################
+###########################################################" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 27 "local ii,Ele,FuncionesPeso:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 30 "FuncionesPeso:=FuncionesPeso1:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 40 "#Busca Resistencia no lineal y su indice" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "for ii from 1 to nops(ElementsRn[1]
+) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "    if FiltraR(ii)=0 then  \+
+    " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "       Ele:=ElementsRn[1,ii
+]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "       FuncionesPeso:=AsignaP
+esoR(Ele,ii,FuncionesPeso,RamasPesoNL): # asigna el correspondiente" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "                                  \+
+                       # al renglon MNA" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 7 "    fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "od;     " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 22 "RETURN(FuncionesPeso);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "AsignaPesoR:=proc(Ele1 ,jj,Funcione
+sPeso1,RamasPesoNL)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "############
+######################################################################
+##" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "# Asigana el peso de el resis
+tor a la rama MNA correspondiente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 
+"#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "#############################
+#######################################################" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 29 "local Ele, ii, FuncionesPeso:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 10 "Ele:=Ele1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 
+"FuncionesPeso:=FuncionesPeso1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "
+Ele:=convert(Ele,string):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "Ele:=c
+at(Ele,\"_rc\"): # concatena el nombre del resistor(Rx) con \"_rc\"" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Ele:=convert(Ele,symbol);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "for ii from 1 to nops(Nodes) do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "    if  Ele=Nodes[ii]   then      \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "        FuncionesPeso[ii]:=Rama
+sPesoNL[jj]         " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "od;     " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "RETURN(FuncionesPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 27 "Reord:=proc(NodosPeso,Reor)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 61 "#####################################################
+########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "#  Reordena los nodos s
+egun uno de tres criterios" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "#  Pr
+imero calcula el nodo mas no lineal,luego ejecuta el" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 41 "#  uno de los criterios de reordenamiento" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "###################################
+##########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "local
+ MaxNodes,rec,MaxN:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "global Nodes
+,NodosPes,MaxNodo:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "#############
+################################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "MaxNodes:= GetNodoMasNonLin(NodosPeso):" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 54 "MaxN:=MaxNodes[1]: # Saca el primer nodo mas \+
+no pesado" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "MaxNodo:=MaxN:  #varia
+ble global que indica en nodo mas pesado" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 53 "# el criterio de desempate se programara mas adelante
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "###############################
+##############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#
+info al usuario################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "print(\"Los nodos Mas no lineales son:\",MaxNodes):" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"Se eligio el nodo\",MaxN)
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "print(\"El roden original de N
+odes:\",Nodes):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "################
+################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "rec:=Reordena(Nodes,NodosPeso,R
+eor,MaxN):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "Nodes:=rec[1]:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "NodosPes:=rec[2]:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 34 "print(\"Reordenando Nodes:\",Nodes):" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "GetRamasPesosNL_1:=proc()" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "##################################
+####################################################################" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "# CALCULA EL PESO DE LAS RAMAS NO
+ LINEALES       #segun criterio #1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+42 "# asigna 1 como peso a cada rama no lineal" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 102 "####################################################
+##################################################" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 "local RamasPeso,p,ii:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 47 "# crea lista de pesos de ramas segun criterio 1" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "for ii from 1 to nops(ElementsRn[1]
+) do RamasPeso[ii]:=0 od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "RamasP
+eso:=convert(RamasPeso, list):# crea la variable NodosPeso " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 39 "for ii from 1 to nops(ElementsRn[1]) do" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "     p:=1:               # peso a
+signado por default a una rama no lineal bajo" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 47 "     RamasPeso[ii]:=p:   # este simple criterio" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "od;     " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "RETURN(RamasPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 38 "Reordena:=proc(Nd,NodosPeso,Reor,MaxN)" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 49 "##############################################
+###" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "# reordena la variable nodes
+ segun 3 criterios" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 48 "############################################
+####" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "local rec:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 13 "global Nodes:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+35 "# selecciona tipo de reordenamiento" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 14 "if Reor=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "#ordena c
+on un simple intercambio del nodo mas no lineal" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "# y el ultimo de la matriz MNA" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "rec:=Ordenamiento_1(Nd,NodosPeso,MaxN):" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "else if Reor=2 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "#ordena en forma ascendiente los nodos segun" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "#sus pesos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "rec:=Ordenamiento_2(Nd,NodosPeso):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 19 "else if Reor=3 then" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 34 "rec:=Ordenamiento_3(Nd,NodosPeso):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 60 "else print(\"Reordenamiento no reconocido, consultar \+
+ayuda\");" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "RETURN(rec):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "Ordenamiento_1:=proc(nod,NodosPeso,
+MaxN)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "##########################
+##############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "#
+ ordena nodos segun criterio de intercambio del nodo ##" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 56 "# mas no lineal con el ultimo de la matriz MNA
+        ##" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "#####################
+###################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "local ii,tempo,last,Ns,resul,n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+15 "resul:=[[],[]]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "Ns:=nod:  # \+
+variable que contiene el nombre del los Nodos y Pseudonodos" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 17 "last := nops(Ns):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "for ii from 1 to last do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "   if Ns[ii] = MaxN then " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "      tempo:=Ns[ last ]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 41 "      Ns[ last] := Ns[ii] :  #intercambio" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 20 "      Ns[ii]:=tempo:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "   break: " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   fi
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "resul:=[Ns,NodosPeso]:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 51 "RETURN(resul):        #devuelve el array reordenado" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "GetMayorPeso := proc(lista)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "###################################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "# obtiene el menor
+ peso una lista" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "# y su indece co
+rrespondiente y lo devuelve" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "####
+###########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "local MayorPeso,nn,rr,lis,indice,NumNodos:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 18 "rr[1]:=0:rr[2]:=0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "lis:=conver(rr,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "MayorPeso:=lista[1]: #pr
+imer elemento a probar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "indice:=1
+:           # y su indicee" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NumNodos:=nops(lista):" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "for nn
+ from 1 to NumNodos do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "if lista
+[nn]>MayorPeso then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "MayorPeso:=
+lista[nn]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "indice:=nn:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "o
+d;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "lis[2]:=indice:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 18 "lis[1]:=MayorPeso:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 60 "RETURN(lis): # retorna el mayor peso de la lista y su
+ indice" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "Ordenamiento_2:=proc(nod,pesos)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 67 "#####################################################
+##############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "# Ordena los nodo
+s de menor a mayor  peso" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "# las corrientes de los elementos M
+NA no-compatibles" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "# simplemente \+
+se mandan al comienzo de la lista de " }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 55 "# de columnas de la matriz MNA y no se toman en cuenta " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "# en el reordenamiento" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 69 "############################################
+#########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "local \+
+ii,Ns,rr,templist,Np,pe,t1,t2,tf,tfs,resul,s1,s2,s,n:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 15 "resul:=[[],[]]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "Ns:=convert(nod,list): # r
+edeclara varibles( debido a conflictos)" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 61 "Np:=convert(pesos,list):#                    ????????????????
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "n:=nops(Np):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "for ii from \+
+1 to n do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "templist[ii]:=0:  #cre
+a la lista vacia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "pe[ii]:=0:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "templist:=convert(templist
+,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "pe:=convert(pe,list):" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "for ii from 1 to n do  # cic
+lo de reordenamiento" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "rr:=GetMeno
+rPeso(Np, nops(Np) ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "templist[i
+i]:=Ns[ rr[2] ]: #crea la nueva lista ordenada" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 62 "pe[ii]:=rr[1]:             #guarda los pesos en el nu
+evo orden" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "#elimina el elemento e
+ncontrado del array" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "t1:=rr[2]-1:
+t2:=rr[2]+1: tf:=nops(Np):tfs:=nops(Ns):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "if t1=0 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "N
+p:= [op(t2..tf,Np)]: # solo cuando el elemento es el primero" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 35 "Ns:= [op(t2..tfs,Ns)]:# de la lista" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 34 "Np:= [op(1..t1,Np),op(t2..tf,Np)]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 35 "Ns:= [op(1..t1,Ns),op(t2..tfs,Ns)]:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "resul:=[templist,pe]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN
+(resul):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "Ordenamiento_3:=proc(nod,pesos)" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 53 "#############################################
+########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "#ordena los nodos de me
+nor a mayor  peso" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 51 "#las corrientes de los elementos MNA no-compa
+tibles" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#simplemente se mandan al
+ comienzo de la lista de " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "#de co
+lumnas de la matriz MNA y no se toman en cuenta " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 34 "#en el reordenamiento de los nodos" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "###########
+#########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 59 "local ii,Ns,rr,templist,Np,pe,t1,t2,tf,tfs,resul,s1,s
+2,s,n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "resul:=[[],[]]:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "Ns:
+=convert(nod,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "Np:=convert(
+pesos,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "n:=nops(Np):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "for ii from 1 to n do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "templi
+st[ii]:=0:  #crea la lista vacia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 
+"pe[ii]:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "templist:=
+convert(templist,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "pe:=conv
+ert(pe,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "for ii from \+
+1 to n do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "rr:=GetMayorPeso(Np, n
+ops(Np) ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "templist[ii]:=Ns[ rr[
+2] ]: #crea la nueva lista ordenada" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+62 "pe[ii]:=rr[1]:             #guarda los pesos en el nuevo orden" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "#elimina el elemento encontrado del
+ array" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "t1:=rr[2]-1:t2:=rr[2]+1: \+
+tf:=nops(Np):tfs:=nops(Ns):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "if t
+1=0 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Np:= [op(t2..tf,Np)]:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "Ns:= [op(t2..tfs,Ns)]:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 34 "Np:= [op(1..t1,Np),op(t2..tf,Np)]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 35 "Ns:= [op(1..t1,Ns),op(t2..tfs,Ns)]:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "resul:=[templist,pe]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN
+(resul):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 97 "#____________
+______________________________________________________________________
+_____________#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "GetNodosPesos:=pr
+oc(NumNodos,NumRamas,RamasPeso)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 
+"#####################################################################
+#################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+49 "# crea y devuelve la lista de pesos de los nodos " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 62 "# cuenta el numero de ramas no lineales conectad
+as a cada nodo" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "# devuelve una li
+sta con los pesos de todos los nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 102 "###############################################################
+#######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 75 "local MaxNodes,NodosPeso,elemen,resul,n,rr,matrix_a,Ar_A,Al_A,
+ii,p,Mascara:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#CALCULA LA MATRIZ
+ A DE INCIDENCIAS DE NODOS A RAMAS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+30 "matrix_a:=matrix_A(Elementos):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "#OBTIENE LA MATRIZ A DE ETIQUETAS NO REDUCIDA" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 34 "Al_A:=convert(matrix_a[1],matrix):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#OBTIENE L
+A MATRIZ A DE SIN ETIQUETAS Y REDUCIDA ( SIN NODO CERO)" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 35 "Ar_A:=convert(matrix_a[3],matrix): " }{TEXT 
+-1 1 "\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de pesos d
+e nodos segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "for ii \+
+from 1 to NumNodos do NodosPeso[ii]:=0 od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 65 "NodosPeso:=convert(NodosPeso, list):# crea la variabl
+e NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 64 "#Ar_A[nodo ,rama ]=1,-1   si existe conexion del no
+do a una rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "#Ar_A[ nodo,rama ]
+=0     si no existe conexion del nodo a una rama" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 72 "for n from 1 to NumNodos do  # bucle para contar inci
+dencias de ramas NL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "    for rr f
+rom 1 to NumRamas do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "        if \+
+Ar_A[n,rr]<>0 then      #" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "      \+
+        elemen:=Names[rr]:   # indice del elemento a probar|" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 52 "              resul:=0:            # bucl
+e de prueba" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "              for ii
+ from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+51 "                   if ElementsRn[1,ii]=elemen then " }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 64 "                      p:=RamasPeso[ii]:   # es
+te simple criterio" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 93 "             \+
+         resul:=FiltraR(ii):  # Asigna cero si el elemento es una resi
+stencia NL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "                     \+
+ resul:=resul*EnmascaraConductNLControl_FH(Al_A[n+1,1],elemen):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "                      #  resul = ba
+ndera de nolinealidad" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "          \+
+         fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "              od;  \+
+                #  resul = 1 ,  si no es lineal" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "              # suma 1 al peso si no es lineal la ram
+a" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "               if resul=1 then
+ NodosPeso[n]:=NodosPeso[n]+p fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+11 "        fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    od:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(NodosPeso):" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "GetNodosNM:=proc(ele)" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 59 "############################################
+###############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# devuelve el pa
+r de nodos correspondiente al" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "# \+
+elemento q se da como argumento" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "
+###########################################################" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 16 "local ii, resul:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 38 "for ii from 1 to nops(Elementos[1]) do" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 32 "    if Elementos[1][ii]=ele then" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "       resul:=Elementos[2][ii]:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 7 "    fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "o
+d:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(resul):" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+41 "EnmascaraConductNLControl_FH:=proc(Nd,El)" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 96 "#####################################################
+###########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 76 "# En el caso de existir una transactor F o H que depe
+nda de una conductancia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 86 "# no lin
+eal(\"El\") que este unida al nodo \"Nd\" entonces se manda un \"0\" p
+ara enmascarar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "# tal conductanci
+a a la hora de calcular el peso del nodo, en caso contraro se devuelve
+ \"1\"" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "# y tal conductancia si s
+e pesa" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#########################
+######################################################################
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "local Transact,ii,jj,kk,nod,No
+dosPeso,Ele,EleM,MascaraRamas:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "N
+odosPeso:=NodosPeso1:" }{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 90 "Transact:=CreaListaTransactores();      # Crea una lista de tran
+sactores mas facil de usar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 " # Cu
+anto pesa la funcion de rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "for
+ ii from 1 to nops(Transact[2]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+43 "    for jj from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 91 "               Ele:=GetElementSymbol(ElementsRn[1][jj
+]); # simbolo del elemento controlador" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 79 "               if ElementsRn[1][jj]=Transact[2][ii] and ( Ele=
+K or Ele=k ) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "             \+
+   nod:=GetNodosNM(Transact[2][ii]):  # Devuelve el par de nodos del e
+lemento controlador" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 101 "           \+
+    # Crea mascara, parcha la conductancia no lineal por ser elemento \+
+controlador de F o H" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "           \+
+     if nod[2]=Nd and ElementsRn[1][jj]=El then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "                     if opt_reor[3]=1 then" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 95 "                         RETURN(0):  # SE
+ DEBE OPTIMIZAR para velicidad A FUTURO toda la rutina" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 24 "                     fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 51 "                     RETURN(1):                    " 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "                fi:   " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 40 "       break;  # Optimizacion del codigo
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "       fi:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "RETURN(1):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "CreaL
+istaVaciaTran:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "##########
+####################################################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 62 "# Crea la lista de transactores Vacia           \+
+    ##########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "#################
+#############################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "local Trans,ii:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 
+"for ii from 1 to nops(Elements[4]) do Trans[ii]:=0 od:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 27 "Trans:=convert(Trans,list):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 14 "RETURN(Trans):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 "CreaListaTransactores:=proc()" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 61 "#####################################################
+########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "# Crea la lista de tran
+sactores en base al netlist " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "# y
+ en forma de una lista de nombres y pares de nodos" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 61 "###################################################
+##########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "local Transact,Trans,
+Dep,ele,el,ii,jj:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "Transact:=[[],
+[]];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "Trans:=CreaListaVaciaTran()
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "Dep:=CreaListaVaciaTran():" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "# filtra lista de transactores  " }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "for ii from 1 to nops(Elements[4])
+ do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "Trans[ii]:=Elements[4][ii][1
+]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "ele:=convert(Elements[4][ii][
+2],string);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "el:=\"\";" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 67 "for jj from 3 to length(ele)-1 do  # garant
+iza la longitud variable" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "el:=cat
+(el,ele[jj]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 28 "Dep[ii]:=convert(el,symbol);" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "Transac
+t:=[Trans,Dep];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "RETURN(Transact)
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "GetNodos:=proc(
+ele)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "###########################
+################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 
+"# devuelve el par de nodos correspondiente al" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 33 "# elemento q se da como argumento" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 59 "###################################################
+########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "local ii, resul:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "for ii from 1 to nops(Elements[1]) \+
+do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "    if Elements[1][ii]=ele th
+en" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "       resul:=Elements[2][ii]
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(resul
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 44 "PesaTransactores:=proc(RamasPeso,NodosPeso1)" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#################################
+###############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "# Pesa la rama d
+e un transactor en funcion del elemento" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 72 "# controlador, en caso de ser no lineal checa su peso y se lo \+
+asigna al " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "# transactor" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "###################################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "local Transact,ii,
+jj,kk,nod,NodosPeso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NodosPeso:=
+NodosPeso1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "Transact:=CreaListaT
+ransactores():      # Vacia, solo la dimenciona" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "#Cuanto pesa la funcion de rama" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 37 "for ii from 1 to nops(Transact[2]) do" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 43 "    for jj from 1 to nops(ElementsRn[1]) do" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "       if ElementsRn[1][jj]=Transa
+ct[2][ii] then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 84 "         nod:=Get
+Nodos(Transact[1][ii]); # Devuelve el par de nodos correspondientes" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "         for kk from 1 to nops(Nod
+es) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "             if nod[1]=No
+des[kk] then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "             NodosP
+eso[kk]:=RamasPeso[jj]+NodosPeso[kk]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 16 "             fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "         \+
+    if nod[2]=Nodes[kk] then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "   \+
+          NodosPeso[kk]:=RamasPeso[jj]+NodosPeso[kk]:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 16 "             fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 12 "         od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "       brea
+k;  #optimizacion del codigo" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "   \+
+    fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(
+NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "GetNodoMas
+NonLin:=proc(NodosPeso)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "########
+########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 50 "# Trae el nodo mas no lineal, de la lista de pesos" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "# de lo nodos ya calculada" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "###################################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "local MayorPeso,ma
+trix_a,Al_A,MaxNodes,NumNodos,rr:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#CALCULA LA MATRIZ A DE INCIDE
+NCIAS DE NODOS A RAMAS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "matrix_a:
+=matrix_A(Elementos):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "#OBTIENE L
+A MATRIZ A DE ETIQUETAS NO REDUCIDA" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+34 "Al_A:=convert(matrix_a[1],matrix):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "NumNodos:=nops(NodosPeso
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# obtiene el mayor peso de la
+ lista NodosPeso" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "#modificar codi
+go" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "rr:=GetMayorPeso(NodosPeso):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "MayorPeso:=rr[1]:  #solo intere
+sa el nodo" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "# obtiene el lista de nodos mas pesados" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 57 "MaxNodes:= GetMaxNodesList(MayorPeso,NumNodos
+,NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "RETURN(MaxNodes):" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 28 "CalculaNumeroNodos := proc()" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 44 "############################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "# Calcula el numero de nodos" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "#\027en  base a la matriz de etique
+tas" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "############################
+################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 54 "#local matrix_a,Ar_A:  vieja rutina solo de re
+ferencia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#CALCULA LA MATRIZ A DE
+ INCIDENCIAS DE NODOS A RAMAS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "#m
+atrix_a:=matrix_A(Elementos):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#O
+BTIENE LA MATRIZ A DE SIN ETIQUETAS Y REDUCIDA ( SIN NODO CERO)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "#Ar_A:=convert(matrix_a[3],matrix):
+ " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "#RETURN ( rowdim(Ar_A) ): # RE
+TORNA EL numero de nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "local NL,num,jj,aaa,ele:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 43 " NL:=nl2node(Elements): \n NL:=Sort_Str(N
+L);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "num:=0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 "for jj from 1 to  nops(NL) do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "aaa:=NL[jj]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "aa
+a:=convert(aaa,string);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "ele:=aaa
+[1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "if ele <> \"F\" and ele <> \+
+\"f\" and ele <> \"H\" and ele <> \"h\" then num:=num+1 fi;" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "
+num:=num-1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "RETURN(num): " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "GetMenorPeso := proc(lista,NumNodos)" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 48 "################################################
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "# obtiene el menor peso una lis
+ta" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "# y su indece correspondiente
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "###############################
+################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "local MenorPeso
+,nn,rr,lis,indice:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "rr[1]:=0:rr[2
+]:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "lis:=conver(rr,list):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+46 "MenorPeso:=lista[1]: #primer elemento a probar" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 35 "indice:=1:           # y su indicee" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "for nn f
+rom 1 to NumNodos do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "if lista[n
+n]<MenorPeso then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "MenorPeso:=li
+sta[nn]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "indice:=nn:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od;
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "lis[2]:=indice:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 18 "lis[1]:=MenorPeso:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 60 "RETURN(lis): # retorna el mayor peso de la lista y su
+ indice" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "GetMaxNodesLi
+st:=proc(MayorPeso,NumNodos,NodosPeso)" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 41 "#########################################" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 39 "# obtiene el lista de nodos mas pesados" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 41 "#########################################" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "local MaxNodos,ii,nn,MaxN:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "for ii from 1 to NumNodos do MaxN[i
+i]:=0 od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "MaxN:=convert(MaxN,lis
+t):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 6 "ii:=1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "for nn fr
+om 1 to NumNodos do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "    if Nodos
+Peso[nn]=MayorPeso then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "       \+
+MaxN[ii]:=Nodes[nn];        #" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "  \+
+     ii:=ii+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "for ii from 1 to NumNodos do " 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "if MaxN[ii]=0 then break fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "MaxNodos[ii]:=0:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "MaxNodos:
+=convert(MaxNodos,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "for ii from 1 to NumNodos do " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "if MaxN[ii]=0 then break fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "MaxNodos[ii]:=MaxN[ii]:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+17 "RETURN(MaxNodos):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT 
+-1 75 "Criterio 2 Vandenberghe + Jorobas                +3 Tipos de re
+ordenamiento" }}{EXCHG {PARA 0 "" 0 "" {TEXT -1 0 "" }{MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 23 "criterio_2:= proc(Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 104 
+"#####################################################################
+###################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "####rutinas credas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "# Clasifica las funciones de rama(no-lineales)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "# segun el criterio de Bounded, Hal
+f bounded, Unbounded de VANDERBERGE" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+64 "# como criterio extra se cuenta el numero de jorobas de la curva" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "# se suman los pesos de las ramas
+ no lineales conectadas al nodo en" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "# analisis y se reordenan los nodos segun... " }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 66 "#1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON EL #U
+LTIMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LISTA NOD
+ES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NODOS DE
+ MENOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE REORD
+ENAN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 104 "###############################################################
+#########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "local NumNodos,
+NumRamas, MaxNodes,ii, MaxN, temp,rec,NodosPeso,RamasPesoNL,FuncionesP
+eso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "global Nodes:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 32 "print(\"Ejecutando criterio #2\"):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de nodos" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 32 "NumNodos:= CalculaNumeroNodos();" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de ramas" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 50 "#clasifica los elementos en lineales y no lineales" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 79 "SplitElements(); # y separa las listas de los componentes en v
+ariables globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "RamasPesoNL:=G
+etRamasPesosNL_2();  # calcula el peso de las ramas no lieales" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#LISTA DE PESOS DE LOS NODOS" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "NodosPeso := GetNodosPesos(NumNodos
+,NumRamas,RamasPesoNL):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "########
+checa si los transactores de penden de ramas no lineales##############
+##################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#############
+######################################################################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(\"TEST:peso \+
+de las ramas no lineales\",ElementsRn[1],\"=\",RamasPesoNL);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESOS DE LOS NODOS
+ EN EL ORDEN DE Ar_A,sin Transactores\",NodosPeso);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[
+2]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosPeso:=PesaTransac
+tores(RamasPesoNL,NodosPeso); # pesa los transactores" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL \+
+ORDEN DE Ar_A, con Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncionesPeso(NodosPeso):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 21 "if opt_reor[1]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "Fu
+ncionesPeso:=PesaResistores(FuncionesPeso,RamasPesoNL): # Pesas los Re
+sitores NL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "print(\"Lista de peso
+s con  resistores no-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[3]=1 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 88 "FuncionesPeso:=PesaTransactores_MNA_NL(RamasPesoNL,Fu
+ncionesPeso):  # Pesa Transactores " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+89 "                                                     # con element
+o controlador No-lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "print(\"
+Lista de pesos de transactores con elemento controlador No-lineal\",Fu
+ncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 68 "Reord(FuncionesPeso,Reor): # reordena la varia
+ble Nodes, segun Pesos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 25 "GetRamasPesosNL_2:=proc()" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 102 "####################################################
+##################################################" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 67 "# CALCULA EL PESO DE LAS RAMAS NO LINEALES       #s
+egun criterio #1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "##############
+######################################################################
+##################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "local RamasPe
+so,p,ii,IZQ,f:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de p
+esos de ramas segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "f
+or ii from 1 to nops(ElementsRn[1]) do RamasPeso[ii]:=0 od:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 65 "RamasPeso:=convert(RamasPeso, list):# cre
+a la variable NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "for ii \+
+from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 
+"       ##evalua el peso segun el criterio de vandenberghe" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 44 "       ## se modificara con los subcriterio
+s" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "       f:=op(2, ElementsRn[3,i
+i] ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 "       IZQ:=op(1, Elements
+Rn[3,ii] ): # \"u\" o \"i\"" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "    \+
+   p:=GetPesoVandenberghe(f,IZQ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+46 "       p:=GetPesoJorobas(f,opt_reor[4],IZQ)+p:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 28 "       RamasPeso[ii]:=p:    " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 8 "od;     " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(
+RamasPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Fil
+traR:=proc(indice)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "#############
+######################################################################
+#####" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 83 "# Esta rutina  devuelve ce
+ro si el elemento de prueba es una conductancia no lineal" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 86 "# de esta forma se elimina la influencia de \+
+las K sobre el nodo a la hora de calcular " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "# las no linealidades al rededor de el nodo." }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "# ya que en la formulacion MNA las \+
+conductancias solo contribuyen con una corriente en la" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 64 "# ecuacion del nodo y esta resulta ser la vari
+able independiente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "#############
+######################################################################
+#####" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "local IZQ,aa:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 46 "IZQ:=op(1, ElementsRn[1,indice] ): # \"u\" o
+ \"i\"" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "aa:=convert(IZQ,string): \+
+IZQ:=convert(aa[1],symbol):" }{TEXT -1 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "if IZQ=K then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 " \+
+ RETURN(1):        ###########  i=f(u) , DEVUELVE 1 EN ESTE CASO" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[1]=1 then" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "   RETURN(0):       ###########  u
+=f(i) ,  DEVUELVE 0 EN ESTE CASO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "
+fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "RETURN(1):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}
+}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 78 "Criterio 3 Solo Vandenberghe   \+
+                     +3 Tipos de reordenamiento" }}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "criterio
+_3:= proc(Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "################
+######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 39 "###rutinas credas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "# clasifica las funciones de rama(no-lineales)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "# segun el criterio de bounded, Hal
+f bounded, Unbounded de VANDERBERGE" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+67 "# se suman los pesos de las ramas no lineales conectadas al nodo e
+n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# analisis y se reordenan los \+
+nodos segun... " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 66 "#1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON \+
+EL #ULTIMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LIST
+A NODES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NOD
+OS DE MENOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE \+
+REORDENAN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "#####################################################
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 89 "local NumNodos,NumRamas, MaxNodes,ii, MaxN, temp,rec,NodosPeso
+,RamasPesoNL,FuncionesPeso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "glob
+al Nodes:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"Ejecutando cri
+terio #3\"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero \+
+de nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "NumNodos:= CalculaNumer
+oNodos();" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de \+
+ramas" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#clasifica los elementos en lineale
+s y no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 79 "SplitElements(); # y separa las listas de lo
+s componentes en variables globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+76 "RamasPesoNL:=GetRamasPesosNL_3();  # calcula el peso de las ramas \+
+no lieales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#LISTA DE PESOS DE LO
+S NODOS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "NodosPeso := GetNodosPes
+os(NumNodos,NumRamas,RamasPesoNL):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+96 "########checa si los transactores de penden de ramas no lineales##
+##############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#
+######################################################################
+#########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(
+\"TEST:peso de las ramas no lineales\",ElementsRn[1],\"=\",RamasPesoNL
+);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESOS \+
+DE LOS NODOS EN EL ORDEN DE Ar_A,sin Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "if opt_reor[2]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosP
+eso:=PesaTransactores(RamasPesoNL,NodosPeso); # pesa los transactores
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE
+ LOS NODOS EN EL ORDEN DE Ar_A, con Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncion
+esPeso(NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 21 "if opt_reor[1]=1 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 82 "FuncionesPeso:=PesaResistores(FuncionesPeso,RamasPeso
+NL): # Pesas los Resitores NL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "pr
+int(\"Lista de pesos con  resistores no-lineal\",FuncionesPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[3]=1 then" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "FuncionesPeso:=PesaTransactores_MNA
+_NL(RamasPesoNL,FuncionesPeso):  # Pesa Transactores " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 89 "                                                \+
+     # con elemento controlador No-lineal" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 89 "print(\"Lista de pesos de transactores con elemento c
+ontrolador No-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 68 "Reord(FuncionesPeso,Reor): # reordena la variable Nod
+es, segun Pesos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "GetRam
+asPesosNL_3:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "###########
+######################################################################
+#####################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "# CALCULA \+
+EL PESO DE LAS RAMAS NO LINEALES       #segun criterio #1" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 60 "# asigna a ramas pesos segun el criterio de \+
+vandenberghe de " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "# clasificacion
+ de funciones" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "#################
+######################################################################
+###############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "local RamasPeso,
+p,ii,IZQ,f:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de peso
+s de ramas segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "for \+
+ii from 1 to nops(ElementsRn[1]) do RamasPeso[ii]:=0 od:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 65 "RamasPeso:=convert(RamasPeso, list):# crea la
+ variable NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "for ii from
+ 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "   \+
+    ##evalua el peso segun el criterio de vandenberghe" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 44 "       ## se modificara con los subcriterios" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "       f:=op(2, ElementsRn[3,ii] \+
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "       IZQ:=op(1, ElementsRn[
+3,ii] ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "       p:=GetPesoVanden
+berghe(f,IZQ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "       RamasPeso[
+ii]:=p:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "od;     " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "RETURN(RamasPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "GetPesoVandenberghe:=proc(ff,IZQ)" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 94 "#################################
+#############################################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 71 "# determina el peso de las funcione
+s segun el criterio de clasificacion" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 60 "# de vandenberghe  y pesos asignados arbitrariamente a cada " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "# clasificacion" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 39 "# Bounded=1,Half Bounded=2, Unbounded=3" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 95 "########MODIFICABLE POR USUARIO############
+####################################################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 95 "################################################
+###############################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "local resul,f:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "
+resul:=0: #peso en caso de error" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "if IZQ=u then" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 42 "f:=subs(i=u,ff): # solo para cuando u=f(i)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "else " }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 29 "f:=ff:           #caso i=f(u)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "##MODIFICABLE POR USUAR
+IO##MODIFICABLE POR USUARIO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "if I
+sBounded(f)=1 then  # prueva el tipo de funcion" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 56 "resul:=3:               # el peso asignado es arbitra
+rio" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 31 "else if IsHalfbounded(f)=1 then" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "resul:=2:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "else if IsUnbounded(f)=1 then" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "resul:=1:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "else print(\"ER
+ROR EN RUTINAS DE CLASIFICACION VANDENBERGHE\",f);" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 50 "##MODIFICABLE POR USUARIO##MODIFICABLE POR USUARIO" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 14 "RETURN(resul):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "# Deter
+mina el tipo de funcion segun LIEVEN VANDENBERGHE " }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 20 "IsUnbounded:=proc(f)" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 78 "##############################################################
+################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "# determina si \+
+la funcion es Unbounded" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "# devuel
+ve 1 si la funcion es del tipo Unbounded y cero " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "# en caso contrario" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 77 "################################################################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "local RESUL,limite
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "RESUL:=0:    " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 30 "limite:=limit(f, u=-infinity):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 43 "if limite=infinity or limite=-infinity then" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "   limite:=limit(f, u=infinity):" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "   if limite=infinity or limite=-i
+nfinity then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "      RESUL:=1:    \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(RESUL
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "IsBounde
+d:=proc(f)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "#####################
+##################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "#Determina si
+ la funcion es Bounded" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "#devuelve
+ 1 si la funcion es del tipo Bounded y cero " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "#en caso contrario" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+38 "######################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 19 "local RESUL,limite:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 13 "RESUL:=0:    " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "limite:=limi
+t(f, u=-infinity):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "if limite<>in
+finity and limite<>-infinity then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+32 "   limite:=limit(f, u=infinity):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 49 "   if limite<>infinity and limite<>-infinity then" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 19 "      RESUL:=1:    " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 6 "   fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(RESUL):" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 22 "IsHalfbounded:=proc(f)" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 57 "##################################################
+#######" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "#Determina si la funcion
+ es Half Bounded" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "#devuelve 1 si \+
+la funcion es del tipo Bounded y cero " }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 18 "#en caso contrario" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "#####
+####################################################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 27 "local RESUL,limite,izq,der:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 13 "RESUL:=0:    " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 
+"izq:=0:der:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "limite:=limit(f,
+ u=-infinity):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "if limite=infinit
+y or limite=-infinity then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "izq:=1
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 29 "limite:=limit(f, u=infinity):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 43 "if limite=infinity or limite=-infinity then" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 7 "der:=1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "if (der=1 and izq=0) or (
+der=0 and izq=1) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "RESUL:=1: \+
+ # Se confirma que es half bounded" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(RESUL):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 83 "Criterio 4 Solo Jorobas    \+
+                              +3 Tipos de reordenamiento" }}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "criterio_4:= proc(Reor)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "###################################
+###################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "###rutinas c
+redas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "#Se \+
+cuenta el numero de jorobas de las funcion de rama(no lineales)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "# la cual puede ser del tipo i=f(u)
+, u=f(i), donde el rango de " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "# b
+usqueda de las jorobas probiene de las siguientes formulas" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "# si
+ v1,v2,..vn son las fuentes de voltaje del circuito" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 33 "# RangoVoltaje:=|v1|+|v2|+...|vn|" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 57 "# si i1,i2,..in son las fuentes de corriente del
+ circuito" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "# RangoCorriente=|i1|+
+|i2|+...|in|" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "# MayorResists= may
+or resistencia del circuito" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# ul
+=RangoVoltaje+RangoCorriente*MayorResists" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "# il=RangoCorriente+RangoVoltaje/MenorResists" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+38 "# u=[-ul,ul] RANGO PARA LOS VOLTAJES U" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 40 "# i=[-il,il] RANGO PARA LAS CORRIENTES I" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "# se \+
+suman los pesos de las ramas no lineales conectadas al nodo en" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# analisis y se reordenan los nodos
+ segun... " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "# Los criterios de re
+ordenamiento son:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 66 "#1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON
+ EL #ULTIMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LIS
+TA NODES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NO
+DOS DE MENOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE
+ REORDENAN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "#####################################################
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 89 "local NumNodos,NumRamas, MaxNodes,ii, MaxN, temp,rec,NodosPeso
+,RamasPesoNL,FuncionesPeso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "glob
+al Nodes:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"Ejecutando cri
+terio #4\"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero \+
+de nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "NumNodos:= CalculaNumer
+oNodos();" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de \+
+ramas" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#clasifica los elementos en lineale
+s y no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 79 "SplitElements(); # y separa las listas de lo
+s componentes en variables globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+76 "RamasPesoNL:=GetRamasPesosNL_4();  # calcula el peso de las ramas \+
+no lieales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#LISTA DE PESOS DE LO
+S NODOS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "NodosPeso := GetNodosPes
+os(NumNodos,NumRamas,RamasPesoNL):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+96 "########checa si los transactores de penden de ramas no lineales##
+##############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "#
+######################################################################
+#########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(
+\"TEST:peso de las ramas no lineales\",ElementsRn[1],\"=\",RamasPesoNL
+);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESOS \+
+DE LOS NODOS EN EL ORDEN DE Ar_A,sin Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "if opt_reor[2]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosP
+eso:=PesaTransactores(RamasPesoNL,NodosPeso); # pesa los transactores
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE
+ LOS NODOS EN EL ORDEN DE Ar_A, con Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncion
+esPeso(NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_
+reor[1]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "FuncionesPeso:=Pe
+saResistores(FuncionesPeso,RamasPesoNL): # Pesas los Resitores NL" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "print(\"Lista de pesos con  resisto
+res no-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "f
+i:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "if opt_reor[3]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 88 "FuncionesPeso:=PesaTransactores_MNA_NL(RamasPesoNL,FuncionesPe
+so):  # Pesa Transactores " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "     \+
+                                                # con elemento control
+ador No-lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "print(\"Lista de \+
+pesos de transactores con elemento controlador No-lineal\",FuncionesPe
+so);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "Reord(Funciones
+Peso,Reor): # reordena la variable Nodes, segun Pesos" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "GetRamasPesosNL_4:=proc()" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 102 "########################################
+##############################################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "# CALCULA EL PESO DE LAS RAMAS NO L
+INEALES       #segun criterio #1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 78 
+"# asigna a ramas pesos segun el criterio de jorobas clasificacion de \+
+funciones" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 102 "#####################
+######################################################################
+###########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "local RamasPeso,p,ii
+,IZQ,f:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de pesos de
+ ramas segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "for ii f
+rom 1 to nops(ElementsRn[1]) do RamasPeso[ii]:=0 od:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 65 "RamasPeso:=convert(RamasPeso, list):# crea la va
+riable NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "for ii from 1 \+
+to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "      \+
+ ##evalua el peso segun el criterio de vandenberghe" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 44 "       ## se modificara con los subcriterios" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "       f:=op(2, ElementsRn[3,ii] ):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "       IZQ:=op(1, ElementsRn[3,
+ii] ): # \"u\" o \"i\" " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "       p
+:=GetPesoJorobas(f,opt_reor[4],IZQ):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 30 "       RamasPeso[ii]:=p:      " }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 8 "od;     " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(RamasPeso);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "GetPesoJorobas:
+=proc(f,pasos,IZQ)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "#############
+##########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 59 "#determina el peso de las funciones segun el criterio
+ de el" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "#el numero de jorobas don
+de a cada joroba se le asigna un peso " }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 63 "#de 1 y retorna el peso total, devuelve cero si no hay jorobas
+." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "#el rango de analisis queda da
+do por " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "# si v1,v2,..v
+n son las fuentes de voltaje del circuito" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 33 "# RangoVoltaje:=|v1|+|v2|+...|vn|" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 57 "# si i1,i2,..in son las fuentes de corriente del ci
+rcuito" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "# RangoCorriente=|i1|+|i2
+|+...|in|" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "# MayorResists= mayor \+
+resistencia del circuito" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# ul=Ra
+ngoVoltaje+RangoCorriente*MayorResists" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 45 "# il=RangoCorriente+RangoVoltaje/MenorResists" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "# u=[-ul,
+ul] RANGO PARA LOS VOLTAJES U" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "# \+
+i=[-il,il] RANGO PARA LAS CORRIENTES I" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "#######################
+#################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+60 "local resul,MaxVoltaje,MinVoltaje,MaxCorriente,MinCorriente:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "resul:=0: #peso cero por default" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+13 "if IZQ=u then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 70 "MaxCorriente :
+=   GetMaxRangoCorriente():  #cacula el rang de analisis" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 31 "MinCorriente := - MaxCorriente:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 57 "resul := GetJorobasFI(f,pasos,MinCorriente,Ma
+xCorriente):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "else" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 66 "MaxVoltaje :=   GetMaxRangoVoltaje():  #cacula
+ el rang de analisis" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "MinVoltaje \+
+:= - MaxVoltaje:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "resul := GetJor
+obasFU(f,pasos,MinVoltaje,MaxVoltaje):" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN(resul):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "# rutinas para calculo del rango de analisis" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "# en funcion de voltajes y..." }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "# ademas del calculo de jorobas en \+
+el rango antes calculado" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "SplitElements:=proc()" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 46 "#############################################
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# Separa las listas asociadas \+
+a los elementos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "# y las conviert
+es en  globales con la finalidad de que el resto" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "# de las  rutinas las usen...." }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 46 "##############################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "global Labels,ParejasNodos,Valores:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "splitlinnon():" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 57 "#ElementsRl: # variable que guarda los elementos
+ lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "Labels:=ElementsRl[1]:
+" }{TEXT -1 5 "     " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "ParejasNodo
+s:=ElementsRl[2]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "Valores:=Eleme
+ntsRl[3]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 19 "GetFuentesV:=proc()" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 54 "#####################################################
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 56 "# Devuelve la lista de fuentes
+ independientes de voltaje" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "# ###
+######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 42 "local jj,ii,Ele,fuentesV,LabV,NodosV,Valo:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 21 "fuentesV:=[[],[],[]]:" }{TEXT -1 0 "" }{MPLTEXT 1 
+0 47 "# declara la lista de fuentes en tres sublistas" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 25 "#la sublista 1= etiquetas" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "#la sublista 2= par de nodos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 23 "#la sublista 3= Valores" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 6 "jj:=1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for ii fr
+om 1 to nops(Labels) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "      El
+e:=substring(Labels[ii],1..1):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 " \+
+     if Ele='V' or Ele='v'  then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 
+"                    LabV[jj]:=Labels[ii]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "                    NodosV[jj]:=ParejasNodos[ii]:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "                    Valo[jj]:=Valor
+es[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "                   jj:=j
+j+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "      fi:" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "if jj<>1 \+
+then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "LabV:=convert(LabV,list):" 
+}{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "NodosV:=convert(No
+dosV,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "Valo:=convert(Valo,l
+ist):" }{TEXT -1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "fuentesV:=[
+LabV,NodosV,Valo]: # crea la lista de fuentes de voltaje" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(fuentesV): " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 39 "end:###################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+16 "GetSumaV:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "###########
+###########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 57 "# Suma de los valores absolutos de las fuentes de vol
+taje" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "###########################
+###########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "loca
+l fuentesV,NumFuentesV,RangoVoltaje,ii:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 24 "fuentesV:=GetFuentesV():" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 
+"NumFuentesV:=nops(fuentesV[1]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 
+"RangoVoltaje:=0:  # Resultado" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "i
+f NumFuentesV<>0 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "  for ii \+
+from 1 to NumFuentesV do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "       \+
+  RangoVoltaje:=abs(fuentesV[3][ii])+RangoVoltaje:       " }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 5 "  od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi
+:" }{MPLTEXT 0 21 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "RETURN(Ran
+goVoltaje):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "GetFuentes
+I:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "######################
+####################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 62 "#Declara la lista de fuentes de corriente en tres sublistas, [" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "#labes],[nodos],[valores]" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "###################################
+#######################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "local fu
+entesI,jj,ii,L1,L2,L3,LL1,LL2,LL3,p1,p2,ts:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "fuentesI:=[[],[],[]]:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 6 "jj:=1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "p1:='I1': # VARIAB
+LE PARA BUSCAR CORRIENTES" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "p2:='i
+1': # \"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"\"" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for ii from 1 to nops(Labels) do" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "         ts:=substring(Labels[ii],
+1..1):    " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "      if ts=substring
+(p1,1..1) or ts=substring(p2,1..1) then" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 38 "                   L1[jj]:=Labels[ii]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "                   L2[jj]:=ParejasNodos[ii];" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "                   L3[jj]:=Valores[
+ii];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "                   jj:=jj+1
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "      fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "if jj<>1 the
+n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "LL1:=convert(L1,list):LL2:=con
+vert(L2,list):LL3:=convert(L3,list):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 24 "fuentesI:=[LL1,LL2,LL3]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 18 "RETURN(fuentesI): " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "end:#
+##################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "GetSumaI:=proc()" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 43 "###########################################
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "#Suma de los valores absolutos \+
+de las fuentes de corriente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "####
+#######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 45 "local NumFuentesI,fuentesI,ii,RangoCorriente:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 65 "fuentesI:=GetFuentesI():  # crea la lista de fue
+ntes de corriente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "#print(fuentes
+I);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "NumFuentesI:=nops(fuentesI[1
+]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RangoCorriente:=0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 23 "if NumFuentesI<>0 then " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 34 "   for ii from 1 to NumFuentesI do" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 68 "         RangoCorriente:=abs(fuentesI[3][ii])
++RangoCorriente:       " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   od:" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "RETURN(RangoCorriente):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "GetResist:=proc
+()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "#############################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "#crea la lista de \+
+resistencias           #" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "#######
+###################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+33 "local Resists,ii,jj,R1,R2,R3,Ele:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 24 "Resists:=[ [],[],[] ]:  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "jj
+:=1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for ii from 1 to nops(Label
+s) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "      Ele:=substring(Label
+s[ii],1..1): #ELEMENTO A PROBAR" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "
+      if Ele='r' or Ele='R' then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 
+"                   R1[jj]:=Labels[ii]: #LABELS DE LOS ELEMENTOS LIN.
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "                   R2[jj]:=Pare
+jasNodos[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "                  \+
+ R3[jj]:=Valores[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "          \+
+         jj:=jj+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "      fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 63 "R1:=convert(R1,list):R2:=convert(R2,list):R3:=convert(R3,list):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "Resists:=[R1,R2,R3]:" }{TEXT 
+-1 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "RETURN(Resists): " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "end:###############################
+####" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "GetMaxResist:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 45 "#############################################" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 45 "# obtiene la resistencia mayor              #" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "###################################
+##########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "local MayorResists,Re
+sists,n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Resists:=GetResist();" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "MayorResists:=Resists[3][1]:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "for n from 1 to nops(Resists[3]) do
+ " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "if Resists[3][n]>MayorResists \+
+then MayorResists:=Resists[3][n] fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 3 "od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "RETURN(MayorResists):" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "end:#############################
+#########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "GetMinResist:=p
+roc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "##########################
+#############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "# trae la resisten
+cia menor           #" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "##########
+#############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "lo
+cal MenorResists,Resists,n:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "Resi
+sts:=GetResist();" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }{TEXT -1 0 "
+" }{MPLTEXT 1 0 28 "MenorResists:=Resists[3][1];" }{TEXT -1 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "for n from 1 to nops(Resists[3]) do
+ " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "if Resists[3][n]<MenorResists \+
+then MenorResists:=Resists[3][n] fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 3 "od;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "RETURN(MenorResists):" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "end:#############################
+#########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "GetMaxRangoVolt
+aje:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "####################
+################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 
+"# obtiene el rango maximo de voltaje################" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "# si v1,v
+2,..vn son las fuentes de voltaje del circuito" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 33 "# RangoVoltaje:=|v1|+|v2|+...|vn|" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 46 "# MayorResists= mayor resistencia del circuito" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "# ul=RangoVoltaje+RangoCorriente*Ma
+yorResists" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "# u=[-ul,ul] RANGO PA
+RA LOS VOLTAJES U" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "##############
+######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 48 "local MayorResists,RangoCorriente,RangoVoltaje: " }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 29 "MayorResists:=GetMaxResist();" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 27 "RangoCorriente:=GetSumaI():" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 25 "RangoVoltaje:=GetSumaV():" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "RETURN(RangoVoltaje+RangoCorriente*MayorResists):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "end:###############################
+###############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 28 "GetMaxRangoCorriente:=proc()" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 48 "################################################" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "# obtiene el rango maximo de corri
+ente" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "# nota:????????????????????
+?????????????????????????" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "# Deve
+ra provarse antes la existencia de almenos una resistencia" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 65 "# lineal devido a la divicion por cero que \+
+provocaria su ausencia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#########
+#######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 47 "local MenorResists,RangoVoltaje,RangoCorriente:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 29 "MenorResists:=GetMinResist();" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 25 "RangoVoltaje:=GetSumaV():" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "RangoCorriente:=GetSumaI():" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "RETURN(RangoCorriente+RangoVoltaje/MenorResists):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "end:###############################
+################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 63 "GetJorobasFI:=proc(f,pasos,MinRangoCorriente,M
+axRangoCorriente)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "##############
+#######################################" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 45 "# Calcula el numero de jorobas de una funcion" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 33 "# y devuelve el numero de jorobas" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 54 "# ############################################
+########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "local tu,fd,NonLin,sign
+o,signoT,TamPaso,ii:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "#SplitEleme
+nts(); #separa la listas asociadas a los elementos" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 53 "fd:= diff(f,i);  ##Deriva simbolicamente la funcion
+##" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "tu:=MinRangoCorriente;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "TamPaso:=2*MaxRangoCorriente/pasos;
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "signo:=  eval(fd,i=MinRangoCorr
+iente):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "signoT:=eval(fd,i=MinRan
+goCorriente):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "NonLin:=0:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "for ii from 1 to pasos do" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 34 "            signo:= eval(fd,i=tu):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "            if sign(evalf(signoT)) \+
+<> sign(evalf(signo)) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "     \+
+           NonLin:= NonLin+1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "  \+
+          fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "            signoT
+:=signo:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "            tu:=tu+TamP
+aso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "RETURN(NonLi
+n):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "end:########################
+###############" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 59 "GetJorobasFU:=proc(f,pasos,MinRangoVoltaje,MaxRa
+ngoVoltaje)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "####################
+#################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+45 "# Calcula el numero de jorobas de una funcion" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 33 "# y devuelve el numero de jorobas" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 54 "# ##############################################
+######" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "local tu,fd,NonLin,signo,
+signoT,TamPaso,ii:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "#SplitElement
+s(); #separa la listas asociadas a los elementos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 53 "fd:= diff(f,u);  ##Deriva simbolicamente la funcion##
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "tu:=MinRangoVoltaje;" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 33 "TamPaso:=2*MaxRangoVoltaje/pasos;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "signo:=  eval(fd,u=MinRangoVoltaje)
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "signoT:=eval(fd,u=MinRangoVolt
+aje):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "NonLin:=0:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 25 "for ii from 1 to pasos do" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 34 "            signo:= eval(fd,u=tu):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 61 "            if sign(evalf(signoT)) <> sign(evalf
+(signo)) then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "                No
+nLin:= NonLin+1;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "            fi:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "            signoT:=signo:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "            tu:=tu+TamPaso:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "RETURN(NonLin):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 43 "end:#####################################
+##" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT -1 90 "Criterio 5 \+
+Solo se analiza Ec. completa del nodo + Vandenberghe + Jorobas + 3 Tip
+os de... " }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "criterio_5:= pr
+oc(Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "#######################
+###############################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "
+####rutinas credas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "# Clasifica la
+ ecuacion del nodo(solo el lado derecho de la ec.)" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 30 "#\026segun el criterio de bounded" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 49 "# Bounded, Half bounded, Unbounded de VANDERBERG
+E" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "# como criterio extra se cuent
+a el numero de jorobas de la curva" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+51 "# se asignan pesos a los nodos y se reordena segun " }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "#1. EL \+
+NODO MAS NO LINEAL SE INETERCAMBIA CON EL #ULTIMO  NODO DE " }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LISTA NODES" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NODOS DE MENOR A MENOR PESO" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE REORDENAN LOS NODOS DE MAYOR
+ A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "##################
+#####################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "local NumNodos,NumRamas, M
+axNodes,ii, MaxN, temp,rec,NodosPeso,RamasPesoNL,FuncionesPeso:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "global Nodes:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "print(\"Ejecutando criterio #5\"):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 27 "#Calcula el numero de nodos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "NumNodos:= CalculaNumeroNodos();" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 27 "#Calcula el numero de ramas" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 50 "#clasifica los elementos en lineales y no lineales" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "S
+plitElements(); # y separa las listas de los componentes en variables \+
+globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 76 "RamasPesoNL:=GetRamasPesosNL_2();  # calcula el peso \+
+de las ramas no lieales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#LISTA D
+E PESOS DE LOS NODOS" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "NodosPeso :
+= GetNodosPesos5(NumNodos,NumRamas):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 96 "########checa si los transactores de penden de ramas no lineales
+################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 
+"#####################################################################
+###########################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "prin
+t(\"TEST:peso de las ramas no lineales\",ElementsRn[1],\"=\",RamasPeso
+NL);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESO
+S DE LOS NODOS EN EL ORDEN DE Ar_A,sin Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "if opt_reor[2]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosP
+eso:=PesaTransactores(RamasPesoNL,NodosPeso); # pesa los transactores
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE
+ LOS NODOS EN EL ORDEN DE Ar_A, con Transactores\",NodosPeso);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncion
+esPeso(NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_
+reor[1]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "FuncionesPeso:=Pe
+saResistores(FuncionesPeso,RamasPesoNL): # Pesas los Resitores NL" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "print(\"Lista de pesos con  resisto
+res no-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "f
+i:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "if opt_reor[3]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 88 "FuncionesPeso:=PesaTransactores_MNA_NL(RamasPesoNL,FuncionesPe
+so):  # Pesa Transactores " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "     \+
+                                                #con elemento controla
+dor No-lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "print(\"Lista de p
+esos de transactores con elemento controlador No-lineal\",FuncionesPes
+o);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 68 "Reord(FuncionesPeso,Reor): # reordena la variable Nod
+es, segun Pesos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 65 "#____________________________________________________
+___________#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "GetNodosPesos5:=pro
+c(NumNodos,NumRamas)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "###########
+########################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "# crea y devuelve la lista de pesos de los nodos " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "# checa que elementos alredero del \+
+nodo son no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "# y les cue
+nta el numero de jorobas y clasifica sus funciones" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 60 "# de rama segun vandenberghe(asigan peso a la clasi
+ficacion)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "# devuelve una lista c
+on los pesos de todos los nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "
+###################################################" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 73 "local MaxNodes,NodosPeso,elemen,resul,n,rr,matrix_
+a,Ar_A,Al_A,ii,p,f,IZQ:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#CALCULA
+ LA MATRIZ A DE INCIDENCIAS DE NODOS A RAMAS" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "matrix_a:=matrix_A(Elementos):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "#OBTIENE LA MATRIZ A DE ETIQUETAS NO REDUCIDA" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "Al_A:=convert(matrix_a[1],matrix):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#OBTIENE LA MAT
+RIZ A DE SIN ETIQUETAS Y REDUCIDA ( SIN NODO CERO)" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 35 "Ar_A:=convert(matrix_a[3],matrix): " }{TEXT -1 1 "
+\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "#print(\"Al_A=\",Al_A); ##TES
+T##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "#print(\"Ar_
+A=\",Ar_A);##TEST##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de
+ pesos de nodos segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 
+"for ii from 1 to NumNodos do NodosPeso[ii]:=0 od:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 65 "NodosPeso:=convert(NodosPeso, list):# crea la varia
+ble NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "#Ar_A[nodo
+ ,rama ]=1,-1   si existe conexion del nodo a una rama" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 66 "#Ar_A[ nodo,rama ]=0     si no existe conexion
+ del nodo a una rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "for n from \+
+1 to NumNodos do  # bucle para contar incidencias de ramas NL" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "f:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 5 "p:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "resul:=0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "    for rr from 1 to NumRamas do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "        if Ar_A[n,rr]<>0 then      \+
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "              elemen:=Names[rr
+]:   # indice del elemento a probar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+43 "                          # bucle de prueba" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "            " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "  \+
+            for ii from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 50 "                   if ElementsRn[1,ii]=elemen then
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "                   ##evalua el \+
+peso segun el criterio de vandenberghe" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 56 "                   ## se modificara con los subcriterios" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 104 "                      f:=f+op(2, E
+lementsRn[3,ii] ): #*EnmascaraConductNLControl_FH(Al_A[n+1,1],elemen):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "                      resul:=1:
+ # bandera de nolinealidad" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "     \+
+              fi:  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 60 "              od;                  # resul=1
+ si no es lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "       fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "    if resul=1 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 60 "     #  print(\"fn\",f);  ##TEST##TEST##TEST##TEST##TEST##TEST" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "       f:=subs(i=0,f): # elimina \+
+las funciones de rama u=f(i)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "   \+
+   # print(\"fn\",f);  ##TEST##TEST##TEST##TEST##TEST##TEST" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 35 "       p:=GetPesoVandenberghe(f,i):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 58 "       p:=GetPesoJorobas(f,opt_reor
+[4],i)+p:              " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "       N
+odosPeso[n]:=p: #ASIGNA PESO AL NODO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 7 "    fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RET
+URN(NodosPeso):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 4 "" 0 "
+" {TEXT -1 81 "Criterio 6 Solo se analiza Ec. completa del nodo + Vand
+enberghe  + 3 Tipos de... " }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "criterio_6:= proc(Reor)" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "###################################
+###################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "####rutinas \+
+credas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "#Cl
+asifica la ecuacion del nodo(solo el lado derecho de la ec.)" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 67 "# segun el criterio Bounded, Half bounded
+, Unbounded de VANDERBERGE" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "# se \+
+asignan pesos a los nodos y se reordena segun " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 66 "#1. EL NODO MA
+S NO LINEAL SE INETERCAMBIA CON EL #ULTIMO  NODO DE " }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 18 "#   LA LISTA NODES" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NODOS DE MENOR A MENOR PESO" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE REORDENAN LOS NODOS DE MAYOR
+ A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "##################
+#####################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "local NumNodos,NumRamas, M
+axNodes,ii, MaxN, temp,rec,NodosPeso,RamasPesoNL,FuncionesPeso:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "global Nodes:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "print(\"Ejecutando criterio #6\"):" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 27 "#Calcula el numero de nodos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "NumNodos:= CalculaNumeroNodos();" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 27 "#Calcula el numero de ramas" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 50 "#clasifica los elementos en lineales y no lineales" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 79 "S
+plitElements(); # y separa las listas de los componentes en variables \+
+globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "RamasPesoNL:=GetRamasPe
+sosNL_3();  # calcula el peso de las ramas no lieales" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 28 "#LISTA DE PESOS DE LOS NODOS" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 47 "NodosPeso := GetNodosPesos6(NumNodos,NumRamas):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "########checa si los transactores d
+e penden de ramas no lineales################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "###################################
+#############################################################" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(\"TEST:peso de las ramas no l
+ineales\",ElementsRn[1],\"=\",RamasPesoNL);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL ORDEN
+ DE Ar_A,sin Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[2]=1 then" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosPeso:=PesaTransactores(RamasP
+esoNL,NodosPeso); # pesa los transactores" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL ORDEN
+ DE Ar_A, con Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncionesPeso(NodosPeso):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[1]=1 then" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "FuncionesPeso:=PesaResistores(Func
+ionesPeso,RamasPesoNL): # Pesas los Resitores NL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 64 "print(\"Lista de pesos con  resistores no-lineal\",Fu
+ncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_r
+eor[3]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "FuncionesPeso:=Pes
+aTransactores_MNA_NL(RamasPesoNL,FuncionesPeso):  # Pesa Transactores \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "                               \+
+                      # con elemento controlador No-lineal" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 89 "print(\"Lista de pesos de transactores con \+
+elemento controlador No-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 68 "Reord(FuncionesPeso,Reor): # reordena la var
+iable Nodes, segun Pesos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 65 "#_____________________________________________
+__________________#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "GetNodosPeso
+s6:=proc(NumNodos,NumRamas)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "####
+###############################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 49 "# crea y devuelve la lista de pesos de los nodos " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "# checa que elemtos al redero del n
+odo son no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "# y les cuen
+ta el numero de jorobas y clasifica sus funciones" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 60 "# de rama segun vandenberghe(asigan peso a la clasi
+ficacion)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "# devuelve una lista c
+on los pesos de todos los nodos" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "
+###################################################" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 73 "local MaxNodes,NodosPeso,elemen,resul,n,rr,matrix_
+a,Ar_A,Al_A,ii,p,f,IZQ:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "#CALCULA
+ LA MATRIZ A DE INCIDENCIAS DE NODOS A RAMAS" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "matrix_a:=matrix_A(Elementos):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "#OBTIENE LA MATRIZ A DE ETIQUETAS NO REDUCIDA" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "Al_A:=convert(matrix_a[1],matrix):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#OBTIENE LA MAT
+RIZ A DE SIN ETIQUETAS Y REDUCIDA ( SIN NODO CERO)" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 35 "Ar_A:=convert(matrix_a[3],matrix): " }{TEXT -1 1 "
+\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "#print(\"Al_A=\",Al_A); ##TES
+T##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "#print(\"Ar_
+A=\",Ar_A);##TEST##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "# crea lista de
+ pesos de nodos segun criterio 1" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 49 
+"for ii from 1 to NumNodos do NodosPeso[ii]:=0 od:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 65 "NodosPeso:=convert(NodosPeso, list):# crea la varia
+ble NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "#Ar_A[nodo
+ ,rama ]=1,-1   si existe conexion del nodo a una rama" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 66 "#Ar_A[ nodo,rama ]=0     si no existe conexion
+ del nodo a una rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "for n from \+
+1 to NumNodos do  # bucle para contar incidencias de ramas NL" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "f:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 5 "p:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "resul:=0:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "    for rr from 1 to NumRamas do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "        if Ar_A[n,rr]<>0 then      \+
+#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "              elemen:=Names[rr
+]:   # indice del elemento a probar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+43 "                          # bucle de prueba" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 12 "            " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "  \+
+            for ii from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 49 "                  if ElementsRn[1,ii]=elemen then
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 101 "                      f:=f+op(
+2, ElementsRn[3,ii] )*EnmascaraConductNLControl_FH(Al_A[n+1,1],elemen)
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "                      resul:=1
+: # bandera de nolinealidad" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "    \+
+               fi:  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 60 "              od;                  # resul=
+1 si no es lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "       fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 20 "    if resul=1 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 50 "##evalua el peso segun el criterio de vandenberghe" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 37 "## se modificara con los subcriterios" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "#       print(\"fn\",f);  ##TEST##T
+EST##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "    \+
+   f:=subs(i=0,f): # elimina las funciones de rama u=f(i)" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 60 " #      print(\"fn\",f);  ##TEST##TEST##TEST
+##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "       p:=Get
+PesoVandenberghe(f,i):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#      p:
+=GetPesoJorobas(f,200,i)+p:              " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 44 "       NodosPeso[n]:=p: #ASIGNA PESO AL NODO" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(NodosPeso):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{SECT 0 {PARA 4 "" 0 "" {TEXT 
+-1 76 "Criterio 7 Solo se analiza Ec. completa del nodo + Jorobas  + 3
+ Tipos de... " }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "criterio_7:
+= proc(Reor)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "###################
+###################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "####rutinas credas en junio/2000 por HVL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 61 "# cuenta el numero de jorobas de la ecuacion del nodo
+(el lado" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "# derecho de la ecuacio
+n MNA) y lo toma como el peso del nodo" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 2 "# " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 66 "#1. EL NODO MAS NO LINEAL SE INETERCAMBIA CON EL #ULT
+IMO  NODO DE " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "#   LA LISTA NODES
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#2. SE REORDENAN LOS NODOS DE M
+ENOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "#3. SE REORDEN
+AN LOS NODOS DE MAYOR A MENOR PESO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+55 "#######################################################" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "loc
+al NumNodos,NumRamas, MaxNodes,ii, MaxN, temp,rec,NodosPeso,RamasPesoN
+L,FuncionesPeso:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "global Nodes:" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "print(\"Ejecutando criterio #7\")
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de nodos" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "NumNodos:= CalculaNumeroNodos();" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#Calcula el numero de ramas" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "NumRamas:=nops(Names);" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 50 "#clasifica los elementos en lineales y no li
+neales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#--#" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 79 "SplitElements(); # y separa las listas de los compone
+ntes en variables globales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 76 "Ramas
+PesoNL:=GetRamasPesosNL_4();  # calcula el peso de las ramas no lieale
+s" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#LISTA DE PESOS DE LOS NODOS" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "NodosPeso := GetNodosPesos7(NumNo
+dos,NumRamas):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "########checa si \+
+los transactores de penden de ramas no lineales#######################
+#########" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 96 "######################
+######################################################################
+####" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "print(\"TEST:peso de las ra
+mas no lineales\",ElementsRn[1],\"=\",RamasPesoNL);" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 90 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL OR
+DEN DE Ar_A,sin Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[2]=
+1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "NodosPeso:=PesaTransactor
+es(RamasPesoNL,NodosPeso); # pesa los transactores" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 91 "print(\"TEST: LISTA DE PESOS DE LOS NODOS EN EL ORD
+EN DE Ar_A, con Transactores\",NodosPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 44 "FuncionesPeso:=CreaFuncionesPeso(NodosPeso):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_reor[1]=1 then" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 82 "FuncionesPeso:=PesaResistores(Func
+ionesPeso,RamasPesoNL): # Pesas los Resitores NL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 64 "print(\"Lista de pesos con  resistores no-lineal\",Fu
+ncionesPeso);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "if opt_r
+eor[3]=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 88 "FuncionesPeso:=Pes
+aTransactores_MNA_NL(RamasPesoNL,FuncionesPeso):  # Pesa Transactores \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 89 "                               \+
+                      # con elemento controlador No-lineal" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 89 "print(\"Lista de pesos de transactores con \+
+elemento controlador No-lineal\",FuncionesPeso);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "Reord(Funcio
+nesPeso,Reor): # reordena la variable Nodes, segun Pesos" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "#__________________________________
+_____________________________#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "G
+etNodosPesos7:=proc(NumNodos,NumRamas)" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 51 "###################################################" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 49 "# crea y devuelve la lista de pesos de lo
+s nodos " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "# checa que elemtos al \+
+redero del nodo son no lineales" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "
+# y les cuenta el numero de jorobas y clasifica sus funciones" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "# de rama segun vandenberghe(asigan
+ peso a la clasificacion)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "# devu
+elve una lista con los pesos de todos los nodos" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 51 "###################################################" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 73 "local MaxNodes,NodosPeso,elemen,r
+esul,n,rr,matrix_a,Ar_A,Al_A,ii,p,f,IZQ:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 52 "#CALCULA LA MATRIZ A DE INCIDENCIAS DE NODOS A RAMAS
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "matrix_a:=matrix_A(Elementos):
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "#OBTIENE LA MATRIZ A DE ETIQUET
+AS NO REDUCIDA" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "Al_A:=convert(mat
+rix_a[1],matrix):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+65 "#OBTIENE LA MATRIZ A DE SIN ETIQUETAS Y REDUCIDA ( SIN NODO CERO)
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "Ar_A:=convert(matrix_a[3],matri
+x): " }{TEXT -1 1 "\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 "#print(\"A
+l_A=\",Al_A); ##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 51 "#print(\"Ar_A=\",Ar_A);##TEST##TEST##TEST##TEST##TEST" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+47 "# crea lista de pesos de nodos segun criterio 1" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 49 "for ii from 1 to NumNodos do NodosPeso[ii]:=0 od:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "NodosPeso:=convert(NodosPeso, l
+ist):# crea la variable NodosPeso " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 64 "#Ar_A[nodo ,rama ]=1,-1   si
+ existe conexion del nodo a una rama" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 66 "#Ar_A[ nodo,rama ]=0     si no existe conexion del nodo a una ra
+ma" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "for n from 1 to NumNodos do  \+
+# bucle para contar incidencias de ramas NL" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 5 "f:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "p:=0:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "resul:=0:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 32 "    for rr from 1 to NumRamas do" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 36 "        if Ar_A[n,rr]<>0 then      #" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 65 "              elemen:=Names[rr]:   # indice de
+l elemento a probar" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "            \+
+              # bucle de prueba" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "
+            " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "              for i
+i from 1 to nops(ElementsRn[1]) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+49 "                  if ElementsRn[1,ii]=elemen then" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 101 "                      f:=f+op(2, ElementsRn[3,i
+i] )*EnmascaraConductNLControl_FH(Al_A[n+1,1],elemen):" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 57 "                      resul:=1: # bandera de n
+olinealidad" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "                   f
+i:  " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 60 "              od;                  # resul=1 si no es
+ lineal" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "       fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    o
+d:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 20 "    if resul=1 then " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "##evalua el peso segun el criterio \+
+de vandenberghe" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 "## se modificara
+ con los subcriterios" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "#       pr
+int(\"fn\",f);  ##TEST##TEST##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 61 "       f:=subs(i=0,f): # elimina las funciones d
+e rama u=f(i)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 60 "#       print(\"fn
+\",f);  ##TEST##TEST##TEST##TEST##TEST##TEST" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "#       p:=GetPesoVandenberghe(f,i):" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 57 "        p:=GetPesoJorobas(f,opt_reor[4],i):     \+
+         " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 44 "       NodosPeso[n]:=p
+: #ASIGNA PESO AL NODO" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "RETURN(NodosPes
+o):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}
+}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "#Carga del paquete dc y del \+
+archivo cir" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "#with(linalg):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 59 "#libname:= \"c:/abcd/dc/lib
+\", libname;        # para windows" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+40 "libname:= \"/home/hleal/dc/lib\", libname;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 9 "with(dc);" }{TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 
+0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }}{PARA 0 "" 0 "" {TEXT -1 0 "" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#>%(libnameG6$Q3/home/hleal/dc/lib6\"Q
+5/usr/local/maple/lib6\"" }}{PARA 7 "" 1 "" {TEXT -1 80 "Warning, the \+
+protected names norm and trace have been redefined and unprotected\n" 
+}}{PARA 7 "" 1 "" {TEXT -1 50 "Warning, the name changecoords has been
+ redefined\n" }}{PARA 7 "" 1 "" {TEXT -1 75 "Warning, `deltax` is impl
+icitly declared local to procedure `chua_arcoini`\n" }}{PARA 7 "" 1 "
+" {TEXT -1 67 "Warning, `deltax` is implicitly declared local to proce
+dure `chua`\n" }}{PARA 8 "" 1 "" {TEXT -1 62 "on line 1903, syntax err
+or, reserved word `error` unexpected:\n" }}{PARA 6 "" 1 "" {TEXT -1 
+47 "local c0,n0,runopth,ban,itermax,error,h,r0,l0: " }}{PARA 6 "" 1 "
+" {TEXT -1 37 "                                    ^" }}{PARA 7 "" 1 "
+" {TEXT -1 41 "Warning, unprintable characters in input\n" }}{PARA 8 "
+" 1 "" {TEXT -1 60 "Error, while reading `/home/hleal/dc/parser/homoto
+pydc.txt`\n" }}{PARA 8 "" 1 "" {TEXT -1 60 "on line 16, syntax error, \+
+reserved word `error` unexpected:\n" }}{PARA 6 "" 1 "" {TEXT -1 55 "gl
+obal opt_nr, itermax, error, h, gmin, abstol, reltol:" }}{PARA 6 "" 1 
+"" {TEXT -1 29 "                            ^" }}{PARA 8 "" 1 "" 
+{TEXT -1 59 "Error, while reading `/home/hleal/dc/parser/opts_corr.txt
+`\n" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#7&%.NewtonRaphsonG%-homoanalysi
+sG%%initG%,loadcircuitG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "
+#loadcircuit(`c:/abcd/dc/examples/corriente.cir`);" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 42 "circu:=`/home/hleal/examples/cirtun2.cir`:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "LoadCircuito(circu);  #parser modif
+icados" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%B~~*~*~*~HOMOTOPY~~SIMULATO
+R~*~*~*G" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%5~by~CAD~INAOE~group~G" }
+}{PARA 11 "" 1 "" {XPPMATH 20 "6#%7~30/05/99~+~19/07/2000G" }}{PARA 6 
+"" 1 "" {TEXT -1 54 "Reading file: TEST DEL METODO DE KHAO MODIFICADO \+
+H=.5\015" }}{PARA 6 "" 1 "" {TEXT -1 20 "Unknow statement: \015." }}
+{PARA 6 "" 1 "" {TEXT -1 54 "   2 extra line(s) had been reading after
+ \"end\" label." }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 6 "" 1 "" 
+{TEXT -1 30 "   Simulator had read 8 lines." }}{PARA 6 "" 1 "" {TEXT 
+-1 37 "Concluding reading of the Input File." }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#/%*ElementosG7&7%%#V1G%#r1G%#K1G7%7$%\"1G%\"0G7$%\"2GF-
+7$F,F/7%%#5|.G%&1000|.G%?i=(0.8*u^3-5.25*u^2+9*u)*1e-3|.G7\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "Elements;" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#7&7%%#V1G%#r1G%#K1G7%7$%\"1G%\"0G7$%\"2GF+7$F*F-7%%#5
+|.G%&1000|.G%?i=(0.8*u^3-5.25*u^2+9*u)*1e-3|.G7\"" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 26 "#Reordena_Nodo_NoLin(2,1);" }}}{EXCHG {PARA 
+0 "> " 0 "" {MPLTEXT 1 0 20 "#ComplementaNodes();" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "IniVec
+Var:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 48 "global xcir,xcirini,
+fxcir,Ymnalinh,Exch,Ymnanlh:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 72 "spl
+itlinnon(): # Split the circuit in its linear part and nonlinear part
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "dcgeneralstampshomosy():    # O
+btain Ymnalin, Ymnanl, Exc in Symbolic form" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 73 "dcgeneralstampshomo():      # Obtain Ymnalin, Ymnanl,
+ Exc in Numeric form" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 67 "xcir:=matri
+x(nops(Nodes),1,Nodes):          #Setup of the x vector." }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 79 "#xcir:=matrix(3,1,[x1,x2,x3]):          #Setu
+p of the x vector.  para ec.a mano" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+72 "xcirini:=matrix(nops(Nodes),1,0):           #Setup of the initial \+
+point." }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 74 "#xcirini:=matrix(3,1,[0.0
+,0.0,0.0]):          #Setup of the initial point." }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 89 "fxcir:=evalm(evalm(evalm(Ymnalinh &* xcir)- Exch) +
+ Ymnanlh): #Formulation of the f(x)=0." }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 48 "#f1:=2*sin(0.4*3.1416*x1)*sin(0.4*3.1416*x3)-x2:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 40 "#f2:=2.5-x3+0.75*x2*sin(2*3.1416*x3)-x1;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "#f3:=1+0.8*x2*sin(2*3.1416*x1)-x3:
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 68 "#fxcir:=matrix(3,1,[f1,f2,f3]):
+          #Formulation of the f(x)=0." }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "OptiProc
+Method:=proc()" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "global xcirini,fx
+cir,xcir:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "local h0,h1:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 20 "h0:=rowdim(fxcir)-1:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 45 "printf(`Optimization Procedure Method \\n\\n`):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "h1:=minimo(submatrix(fxcir,1..h0,1.
+.1),xcir,xcirini,opt_h2[2]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "xci
+rini:=copyinto(h1,xcirini,1,1):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "
+printf(`Initial guess \\n\\n`):  #PARA PROBAR SU INFLUENCIA" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 15 "print(xcirini):" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "printf(`\\n\\n`):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+4 "end:" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "#Nodes:=[`2`,V1_
+rc,`1`];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "#Reordena_Nodo_NoLin(1,
+2);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "#opt_h2:=[50,0.001,0
+.5]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "#IniVecVar():" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 16 "#print(xcirini);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "#OptiProcMethod():" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 75 "#time(Reordena_
+Nodo_NoLin(1,1));  ###### (criterio, tipo de reordenamiento)" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "#EJECUTA KHAO CON REORDENAMINETO" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "#sd:=time(homoanalysis(khao)):" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "cpo:=proc(a,b)
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "local aa,bb,r,ii:" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 6 "aa:=a:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "bb
+:=b:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "r:=1:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 28 "for ii from 1 to nops(aa) do" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 41 "if abs(aa[ii]-bb[ii]) > 0.7 then r:=0 fi:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "RE
+TURN(r):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "CompRaizes:=p
+roc(raices)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 57 "local traices,traiz,
+cont,ii,jj,t1,t2,rr,comparo,ttraices:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "traices:=[op(2..nops(raice
+s),raices)]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "traiz:=raices[1]:" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "cont:=0:" }{TEXT -1 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 32 "for ii from 1 to nops(raices) do" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+17 "   if ii<>1 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "     traiz
+:=traices[1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "     traices:=[op(
+2..nops(traices),traices)];      " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 
+"   fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 21 "   ttraices:=traices:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 9 "   rr:=0:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 36 "   for jj from \+
+1 to nops(traices) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "       rr:
+=rr+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "       comparo:=cpo(traiz
+,ttraices[rr]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "       if compar
+o=1 then" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "          if rr=1 then
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 62 "             ttraices:=[op(2..n
+ops(ttraices),ttraices)];      " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "
+          else" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 39 "            t1:=o
+p(1..(rr-1),ttraices);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "         \+
+   t2:=op(rr+1..nops(ttraices),ttraices);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 30 "            ttraices:=[t1,t2]:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 13 "          fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 " \+
+       rr:=rr-1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "       fi:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 6 "   od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 18 "traices:=ttraices:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+16 "   cont:=cont+1:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "   if nops(
+traices)=1 then cont:=cont+1 fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 37 
+"   if nops(traices)<=1 then break fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "RETURN([nops(raices),
+cont]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "GetArchivoSal
+ida:=proc(circu,exte)" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "local ch,i
+i,punto,fil,filee:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "ch:=convert(c
+ircu,string):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "for ii from  1  to
+ length(ch) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "    if ch[ii]=\".
+\" then break fi;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 10 "punto:=ii:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 28 "fil:=substring(ch,1..punto):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "filee:=cat(fil,exte);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "RETURN
+(filee):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "#with(combinat, permute);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 37 "#premuta:=permute(Nodes,nops(Nodes));" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 65 "premuta:=[[`1`,`2`, V1_rc],[`1`, V1
+_rc, `2`], [`2`, V1_rc, `1`]];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "
+6#>%(premutaG7%7%%\"1G%\"2G%&V1_rcG7%F'F)F(7%F(F)F'" }}}{PARA 11 "" 1 
+"" {TEXT -1 0 "" }}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "#premuta[
+8];" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 36 "file:=GetArchivoSalida(circu,\"per\");" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 25 "fdp := fopen(file,WRITE):" }}{PARA 11 "" 1 "
+" {XPPMATH 20 "6#>%%fileGQA/home/hleal/examples/cirtun2.per6\"" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "PermutaOptiProcMethod:=proc(NodesT)
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 78 "###############################
+###############################################" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 1 "#" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 1 "#" }}{PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 78 "#############################################
+#################################" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+21 "global Nodes,xcirini:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "local \+
+xciriniT,ii,jj:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "IniVecVar():   #
+TEST#TEST#TEST#TEST#TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "OptiPro
+cMethod();" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "#print(xcir);" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "xciriniT:=copy(xcirini):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 31 "for ii from 1 to nops(Nodes) do" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "   \+
+ for jj from 1 to nops(Nodes) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 46 
+"      if NodesT[ii]=Nodes[jj] then break fi:  " }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "    od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "xciriniT
+[ii,1]:=xcirini[jj,1]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 38 "#print(\"Nodes\",Nodes,\"NodesT\",N
+odesT);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "#print(\"xcirini\",xciri
+ni);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "#print(\"xciriniT\",xcirini
+T);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "RETURN(xciriniT):" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 4 "end:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "
+" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 23 "#KHAOINI:=[30,0.001,1];
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#Nodes:=premuta[6];" }}{PARA 0 
+"> " 0 "" {MPLTEXT 1 0 17 "#opt_h2:=KHAOINI;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 45 "#xciriniT:=PermutaOptiProcMethod(premuta[1]):" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "#print(xciriniT);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "#IniVecVar():  \+
+ #TEST#TEST#TEST#TEST#TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#Node
+s:=premuta[1];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "#xcirini:=xcirini
+T:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 27 "#print(\"Nodessssss\",Nodes);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 54 "#print(\"premuta[kk]=\",premuta
+[kk],\"xcirini=\",xcirini):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 63 "#tim
+:=time(homoanalysis(khao)); #toma el tiempo de la homotopia" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "for Hh \+
+from .5 by .1 to .5 do " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "   " }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 24 "KHAOINI:=[80,0.0007,Hh];" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "for
+ ii from 1 to nops(premuta) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "#
+for ii from 3 to 3 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "#for dd fr
+om 8 to 8 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "for dd from 2 to no
+ps(premuta) do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 5 "     " }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 27 "           opt_h2:=KHAOINI;" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 30 "           Nodes:=premuta[dd]:" }}{PARA 0 "> " 
+0 "" {MPLTEXT 1 0 56 "           xciriniT:=PermutaOptiProcMethod(premu
+ta[ii]):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 "           Nodes:=premu
+ta[ii]:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 51 "           IniVecVar(): \+
+  #TEST#TEST#TEST#TEST#TEST" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "    \+
+       xcirini:=xciriniT:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "      \+
+     print(\"Reordenado ini\",xcirini);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 65 "#           print(\"premuta[dd]=\",premuta[ii],\"xcirini=\",xc
+irini):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 73 "           tim:=time(homoanalysis(khao)): #toma el ti
+empo de la homotopia" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "path[ii][dd
+]:=solsandpath;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 35 "   if nops(solsa
+ndpath[1])<>0 then " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 55 "#           \+
+print(\"Camino homotopico\", solsandpath[2]);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 62 "#           print(\"numero de elemntos=\",nops(solsan
+dpath[2]));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 42 "           kk:=CompR
+aizes(solsandpath[1]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 28 "           if kk[2]>=1 then " }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 1 " " }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 69 "     \+
+       for ff from 1 to nops(Nodes) do           #tabla de nodos" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "                 aa:=convert(Nodes[
+ff],string):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "                 fp
+rintf(fdp,aa):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 "                 \+
+if ff<>nops(Nodes) then fprintf(fdp,\",\") fi;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 15 "            od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 
+"            fprintf(fdp,\" & \"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+67 "            fprintf(fdp,convert(kk[1],string)):  # NUMERO DE RAIZE
+S" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "            fprintf(fdp,\"~\")
+:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 47 "            fprintf(fdp,conver
+t(kk[2],string)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 31 "            fp
+rintf(fdp,\" & \"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "            \+
+fprintf(fdp,convert(tim,string)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "            fprintf(fdp,\" & \"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 71 "            for ff from 1 to nops(Nodes) do   #tabla de nodos de
+ inicio" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 52 "                 aa:=con
+vert(premuta[dd,ff],string):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "   \+
+              fprintf(fdp,aa):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 61 " \+
+                if ff<>nops(Nodes) then fprintf(fdp,\",\") fi;" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "            od:" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "#            \+
+fprintf(fdp,\" & \"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 38 "#            fprintf(fdp,\"H=\"):       \+
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 45 "#            fprintf(fdp,conver
+t(Hh,string)):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "            fprin
+tf(fdp,\" \\\\\\\\ \\\\hline\"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 30 
+"            fprintf(fdp,\"\\n\"):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+10 "       fi:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "    fi:" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "o
+d:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%/LinearElementsG
+7%7$%#V1G%#r1G7$7$%\"1G%\"0G7$%\"2GF,7$\"\"&\"%+5" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#/%2NonlinearElementsG7%7#%#K1G7#7$%\"1G%\"2G7#/%\"iG,(*
+$)%\"uG\"\"$\"\"\"$\"\")!\"%*&$\"$D&!\"&F4)F2\"\"#F4!\"\"*&$\"\"*!\"$F
+4F2F4F4" }}{PARA 6 "" 1 "" {TEXT -1 30 "Optimization Procedure Method \+
+" }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 6 "" 1 "" {TEXT -1 14 "Initi
+al guess " }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#-%'matrixG6#7%7#\"\"!F'F'" }}{PARA 6 "" 1 "" {TEXT -1 
+0 "" }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6
+#/%/LinearElementsG7%7$%#V1G%#r1G7$7$%\"1G%\"0G7$%\"2GF,7$\"\"&\"%+5" 
+}}{PARA 11 "" 1 "" {XPPMATH 20 "6#/%2NonlinearElementsG7%7#%#K1G7#7$%
+\"1G%\"2G7#/%\"iG,(*$)%\"uG\"\"$\"\"\"$\"\")!\"%*&$\"$D&!\"&F4)F2\"\"#
+F4!\"\"*&$\"\"*!\"$F4F2F4F4" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$Q/Reord
+enado~ini6\"-%'matrixG6#7%7#\"\"!F)F)" }}{PARA 6 "" 1 "" {TEXT -1 8 "Y
+mnalin " }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 
+20 "6$-%'matrixG6#7%7%\"\"!F(\"\"\"7%F(#F)\"%+5F(7%F)F(F(-F$6#7%F'7%F(
+*&F)F)%#r1G!\"\"F(F-" }}{PARA 6 "" 1 "" {TEXT -1 4 "Exc " }}{PARA 11 "
+" 1 "" {XPPMATH 20 "6$-%'matrixG6#7%7#\"\"!F'7#\"\"&-F$6#7%F'F'7#%#V1G
+" }}{PARA 6 "" 1 "" {TEXT -1 24 "Nonlinear contributions " }}{PARA 6 "
+" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6$-%'matrixG6#7%7
+#,**$),&%\"1G\"\"\"%\"2G!\"\"\"\"$F-$\"\")!\"%*&$\"$D&!\"&F-)F+\"\"#F-
+F/*&$\"\"*!\"$F-F,F-F-*&$F<F=F-F.F-F/7#,*F)$!\")F3*&$F6F7F-F8F-F-*&$F<
+F=F-F,F-F/*&F;F-F.F-F-7#\"\"!-F$6#7%7#%#K1G7#,$FOF/FI" }}{PARA 6 "" 1 
+"" {TEXT -1 5 "f(x) " }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 
+"" {XPPMATH 20 "6#-%'matrixG6#7%7#,,%&V1_rcG\"\"\"*&$\"\")!\"%F*),&%\"
+1GF*%\"2G!\"\"\"\"$F*F**&$\"$D&!\"&F*)F0\"\"#F*F3*&$\"\"*!\"$F*F1F*F**
+&$F=F>F*F2F*F37#,*F2$\"+++++5!#6*&$F-F.F*F/F*F3*&$F7F8F*F9F*F**&$F=F>F
+*F1F*F37#,&F1F*\"\"&F3" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#%#|+|+G" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6$Q*inhomomet6\"-%$fxhGF$" }}{PARA 6 "" 
+1 "" {TEXT -1 0 "" }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 11 "" 1 "" 
+{XPPMATH 20 "6#%D________________Khao_______________G" }}{PARA 6 "" 1 
+"" {TEXT -1 56 "Parameters: ITMAX= 80         ERROR= .0007    H=.5    \+
+  " }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}
+{PARA 6 "" 1 "" {TEXT -1 14 "Initial guess " }}{PARA 6 "" 1 "" {TEXT 
+-1 0 "" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#-%'matrixG6#7%7#\"\"!F'F'" }
+}{PARA 6 "" 1 "" {TEXT -1 0 "" }}{PARA 6 "" 1 "" {TEXT -1 0 "" }}
+{PARA 8 "" 1 "" {TEXT -1 36 "Error, (in inverse) singular matrix\n" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "fclose(fdp);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 12 "solsandpath;" }}{PARA 11 "" 1 "" {XPPMATH 20 "6#%,s
+olsandpathG" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "
+27 7 0" 13 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 
+1 }

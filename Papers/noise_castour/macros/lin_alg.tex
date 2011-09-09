@@ -1,0 +1,130 @@
+%
+%	LINear ALGebra Macros
+%
+%  a) Matrix & vector alike manipulations
+%
+%
+
+%%BUT firstly, a macro to set the first letter and word of
+%%a paagraph in a bigger size than the rest of the text.
+%% arg1=1stletter, arg2=rest_of_word
+%% Example
+%% /*****\HIS is a big T.
+%%    *
+%%    *
+\def\PARAstart#1#2{\begingroup\def\par{\endgraf\endgroup\lineskiplimit=0pt}
+    \setbox2=\hbox{\uppercase{#2} }\newdimen\tmpht \tmpht \ht2
+    \advance\tmpht by \baselineskip\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}}
+    \count7=\tmpht \count8=\ht1\divide\count8 by 1000 \divide\count7 by\count8
+    \tmpht=.001\tmpht\multiply\tmpht by \count7\font\hhuge=cmr10 at \tmpht
+    \setbox1=\hbox{{\hhuge #1}} \noindent \hangindent1.05\wd1
+    \hangafter=-2 {\hskip-\hangindent \lower1\ht1\hbox{\raise1.0\ht2\copy1}%
+    \kern-0\wd1}\copy2\lineskiplimit=-1000pt}
+
+
+%
+%	HORIZONTAL VECTORS	x1, x2, ... xn
+
+%	x1, x2, .. xn
+%
+\newcommand{\hvec}
+	   {\mbox{$x_1, x_2,\cdots,x_n$ }}
+
+%	(x)1, (x)2, ... (x)n
+%
+\newcommand{\hvecx}[1]
+	   {\mbox{${#1}_1, {#1}_2,\cdots,{#1}_n$ }}
+
+%
+%	(x)1, (y)2, ... (z)n
+\newcommand{\hvecxyz}[3]
+	   {\mbox{${#1}_1, {#2}_2,\cdots,{#3}_n$ }}
+
+%
+%	VERTICAL VECTORS
+
+\newcommand{\vvec}
+		{\mbox{$
+			\begin{array}{c}
+			x_1 \\ x_2 \\ \vdots \\ x_n \\
+			\end{array}
+		$}}
+
+%
+\newcommand{\vvecx}[1]
+		{\mbox{$
+			\begin{array}{c}
+			#1_1 \\ #1_2 \\ \vdots \\ #1_n \\
+			\end{array}
+		$}}
+
+%
+\newcommand{\vvecxyz}[3]
+		{\mbox{$
+			\begin{array}{c}
+			#1_1 \\ #2_2 \\ \vdots \\ #3_n \\
+			\end{array}
+		$}}
+
+%
+\newcommand{\dotcol}
+{\mbox{$ 
+	\begin{array}{c}
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+	\end{array}
+$}}
+
+
+%
+%	GENERIC MATRICES
+
+
+%
+\newcommand{\genmtrx}[3]
+{\mbox{$	%\left[
+\pmatrix{
+	#1_{11}	   & #1_{12}	& \cdots & #1_{1{#2}}	\cr 
+	#1_{21}	   & #1_{22}	& \cdots & #1_{2{#2}}	\cr 
+	\vdots 	   & \vdots 	& \ddots & \vdots	\cr
+	#1_{{#3}1} & #1_{{#3}2} & \cdots & #1_{{#3}{#2}}\cr 
+		%\rigth]
+}
+	$}}
+
+%
+
+%
+				%% [ p1_{p2 p3} ]
+\newcommand{\biggmtrx}[3]
+{\mbox{$
+	\left[ 
+	\begin{array}{c}
+		{#1}_{11}	     \vspace{3mm}\\ 
+		{#1}_{21}	     \vspace{3mm}\\
+		\vdots	     \vspace{3mm}\\ 
+		{#1}_{{#3}1}   \vspace{3mm}\\ 
+	\end{array}
+	\begin{array}{c}
+		{#1}_{12}      \vspace{3mm}\\ 
+		{#1}_{22}      \vspace{3mm}\\
+		\vdots       \vspace{3mm}\\ 
+		{#1}_{{#3}2}   \vspace{3mm}\\ 
+	\end{array}
+	\begin{array}{c}
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\ddots\vspace{3mm}\\
+		\cdots
+	\end{array}
+	\begin{array}{c}
+		{#1}_{1{#2}}         \vspace{3mm}\\ 
+		{#1}_{2{#2}}         \vspace{3mm}\\
+		\vdots            \vspace{3mm}\\
+		{#1}_{{#3}{#2}}     \vspace{3mm}\\
+	\end{array}
+	\right]
+$}}

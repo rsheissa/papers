@@ -1,0 +1,143 @@
+<style type="text/css">
+body,td,th {
+	/*font-family:Tahoma,Arial, Helvetica, sans-serif;*/
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#0099CC;
+}
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color:#CCCCCC;
+	
+}
+
+a:link {
+	color: #3399CC;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #3399CC;
+}
+a:hover {
+	text-decoration: none;
+	color:orangered;
+}
+a:active {
+	text-decoration: none;
+	color: #3399CC;
+}
+.content_bg{
+background-color:#F7F7F7;
+border-left:#CCCCCC 1px dotted;
+border-top:#CCCCCC 1px dotted;
+border-bottom:#CCCCCC 1px dotted;
+}
+.main_bg{
+	font-size:12px;
+	background-color:white;
+}
+.sitemap{
+	font-size:12px;
+	border-bottom:#cccccc 1px dotted;
+}
+.login{
+width:100px;
+height:16px;
+font-size:12px;
+}
+.login_bt{
+font-size:12px;
+widows:50px;
+height:16px;
+BORDER: #666666 1px solid;
+background-color:#FFFFFF;
+}
+
+.nav_bg{
+	background-color:#077DB6;
+}
+.reg_main1{
+	font-size:12px;
+	BORDER-RIGHT: #666666 1px solid; 
+	BORDER-TOP: #666666 1px solid; 
+	BORDER-LEFT: #666666 1px solid; 
+	BORDER-BOTTOM: #666666 1px solid;
+	background-color:white;
+}
+.reg_main2{
+	font-size:12px;
+	BORDER-RIGHT: #666666 1px solid; 
+	BORDER-TOP: #666666 1px solid; 
+	BORDER-LEFT: #666666 1px solid; 
+	BORDER-BOTTOM: #666666 1px solid;
+	background-color:#F2F2F2;
+}
+.reg_head{
+	color:#FFFFFF;
+	background-color:#666666;
+	}
+.reg_button{
+	font-family: Tahoma,Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color:#666666;
+	BORDER: #666666 1px solid;
+	background-color:white;
+	height:20px;
+	width:85px;
+}
+.reg_input{
+	font-size:12px;
+	width:170px;
+	height:18px;
+	BORDER: #999999 1px solid;
+}
+.area_select{
+	font-size:12px;
+	width:220px;
+	height:18px;
+	BORDER: #999999 1px solid;
+}
+.ft_border{
+border-bottom:#cccccc 1px dotted;
+}
+.head_bg{
+font-size:12px;
+background-color:#999999;
+color:#ffffff;
+}
+.font12px{
+font-size:12px;
+color:#3399CC;
+}
+.font14px{
+font-size:14px;
+color:#3399CC;
+}
+.thinbottom{
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color:#CCCCCC;
+	}
+.highlight{
+color:red;
+font-size:12px;
+}
+.head{
+font-size:12px;
+color:#336666;
+}
+.font10px{
+font-size:10px;
+color:#336666;
+}
+.sponsors{
+color: #3399CC;
+text-decoration: none;
+font-size:16px;
+font-weight:bold;
+}
+</style>

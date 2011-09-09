@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: lrc_final_eng.aux
+The style file: dcu.bst
+Database file #1: lrc.bib
+Warning--there's a number but no volume in RES1
+You've used 21 entries,
+            2921 wiz_defined-function locations,
+            773 strings with 8581 characters,
+and the built_in function-call counts, 103431 in all, are:
+= -- 17101
+> -- 1287
+< -- 0
++ -- 8249
+- -- 392
+* -- 8982
+:= -- 20572
+add.period$ -- 42
+call.type$ -- 21
+change.case$ -- 294
+chr.to.int$ -- 21
+cite$ -- 22
+duplicate$ -- 308
+empty$ -- 599
+format.name$ -- 474
+if$ -- 18606
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 21
+newline$ -- 87
+num.names$ -- 218
+pop$ -- 59
+preamble$ -- 1
+purify$ -- 315
+quote$ -- 0
+skip$ -- 326
+stack$ -- 0
+substring$ -- 24246
+swap$ -- 58
+text.length$ -- 294
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 84
+warning$ -- 1
+while$ -- 452
+width$ -- 0
+write$ -- 294
+(There was 1 warning)

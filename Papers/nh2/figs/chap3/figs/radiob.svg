@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Creator: fig2dev Version 3.2 Patchlevel 5d -->
+
+<!-- CreationDate: Wed Apr  6 12:24:41 2011 -->
+
+<!-- Magnification: 1.050 -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="6.6in"
+   height="2.4in"
+   viewBox="3385 1212 7877 2866"
+   id="svg3133"
+   version="1.1"
+   inkscape:version="0.48.1 r9760"
+   sodipodi:docname="radiob.svg">
+  <metadata
+     id="metadata3189">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs3187" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="921"
+     id="namedview3185"
+     showgrid="false"
+     inkscape:zoom="2.5765173"
+     inkscape:cx="249.4174"
+     inkscape:cy="126.28569"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     inkscape:current-layer="svg3133" />
+  <g
+     style="stroke-width:.025in; fill:none"
+     id="g3135">
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="3401"
+       y="1417"
+       fill="#000000"
+       font-family="Times,Symbol"
+       font-style="normal"
+       font-weight="normal"
+       font-size="177"
+       text-anchor="start"
+       id="text3137">λ</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="4771"
+       y="3732"
+       fill="#000000"
+       font-family="New Century Schoolbook"
+       font-style="italic"
+       font-weight="bold"
+       font-size="189"
+       text-anchor="start"
+       id="text3139">x</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="5858"
+       y="3826"
+       fill="#000000"
+       font-family="Times"
+       font-style="italic"
+       font-weight="bold"
+       font-size="152"
+       text-anchor="start"
+       id="text3141">s</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="5716"
+       y="3732"
+       fill="#000000"
+       font-family="New Century Schoolbook"
+       font-style="italic"
+       font-weight="bold"
+       font-size="189"
+       text-anchor="start"
+       id="text3143">x</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="6566"
+       y="3826"
+       fill="#000000"
+       font-family="Times"
+       font-style="italic"
+       font-weight="bold"
+       font-size="152"
+       text-anchor="start"
+       id="text3145">r</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="6425"
+       y="3732"
+       fill="#000000"
+       font-family="New Century Schoolbook"
+       font-style="italic"
+       font-weight="bold"
+       font-size="189"
+       text-anchor="start"
+       id="text3147">x</text>
+    <!-- Ellipse -->
+    <ellipse
+       transform="translate(4913,3496) rotate(-0.00000000)"
+       rx="67"
+       ry="67"
+       style="fill:#000000;stroke:#000000;stroke-width:8;"
+       id="ellipse3149" />
+    <!-- Ellipse -->
+    <ellipse
+       transform="translate(6519,2173) rotate(-0.00000000)"
+       rx="67"
+       ry="67"
+       style="fill:#000000;stroke:#000000;stroke-width:8;"
+       id="ellipse3151" />
+    <!-- Ellipse -->
+    <ellipse
+       transform="translate(5811,1559) rotate(-0.00000000)"
+       rx="67"
+       ry="67"
+       style="fill:#000000;stroke:#000000;stroke-width:8;"
+       id="ellipse3153" />
+    <!-- Line -->
+    <polyline
+       points="4409,3480 10488,3480 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; stroke-dasharray:10 31;"
+       id="polyline3155" />
+    <!-- Line -->
+    <polyline
+       points="3637,4015 3637,1353 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3157" />
+    <!-- Arrowhead on XXXpoint 3637 4015 - 3637 1212-->
+    <polygon
+       points="3669 1355 3637 1229 3606 1355 3669 1355  "
+       style="stroke:#000000;stroke-width:8;stroke-miterlimit:8; fill:#000000;"
+       id="polygon3159" />
+    <!-- Line -->
+    <polyline
+       points="3637,4015 10929,4015 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; "
+       id="polyline3161" />
+    <!-- Arrowhead on XXXpoint 3637 4015 - 11070 4015-->
+    <polygon
+       points="10928 4047 11054 4015 10928 3984 10928 4047  "
+       style="stroke:#000000;stroke-width:8;stroke-miterlimit:8; fill:#000000;"
+       id="polygon3163" />
+    <!-- Line -->
+    <polyline
+       points="5811,1559 5811,3496 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; stroke-dasharray:10 31;"
+       id="polyline3165" />
+    <!-- Line -->
+    <polyline
+       points="6519,2173 6519,3448 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; stroke-dasharray:10 31;"
+       id="polyline3167" />
+    <!-- Line -->
+    <polyline
+       points="4346,1559 10425,1559 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:miter; stroke-linecap:butt; stroke-dasharray:41 41;"
+       id="polyline3169" />
+    <!-- Line -->
+    <polyline
+       points="4913,3480 4914,3478 4915,3474 4918,3465 4923,3453 4930,3434 4939,3409 4951,3378 4964,3340 4981,3296 5001,3245 5022,3187 5046,3125 5071,3057 5099,2985 5127,2911 5158,2834 5188,2756 5218,2678 5249,2600 5280,2522 5310,2447 5340,2373 5370,2303 5398,2235 5425,2171 5451,2110 5477,2052 5501,1997 5525,1947 5547,1900 5569,1857 5590,1817 5609,1780 5629,1748 5647,1717 5665,1690 5681,1667 5698,1646 5714,1627 5730,1611 5744,1598 5759,1588 5774,1580 5796,1571 5818,1567 5840,1568 5862,1573 5884,1584 5905,1597 5928,1615 5950,1636 5973,1660 5996,1688 6019,1717 6044,1749 6068,1781 6093,1816 6118,1850 6143,1886 6170,1921 6196,1954 6223,1987 6250,2017 6278,2046 6306,2072 6334,2096 6364,2116 6393,2133 6424,2146 6455,2157 6488,2162 6513,2163 6538,2163 6564,2160 6592,2155 6620,2149 6648,2139 6679,2129 6710,2116 6743,2102 6776,2087 6811,2070 6847,2051 6882,2031 6920,2010 6959,1988 6998,1966 7039,1942 7080,1919 7121,1895 7163,1869 7206,1845 7249,1821 7292,1797 7335,1774 7379,1751 7422,1729 7466,1708 7509,1688 7553,1669 7596,1652 7639,1635 7681,1620 7724,1608 7767,1596 7809,1587 7851,1580 7895,1573 7937,1569 7977,1567 8018,1567 8059,1568 8100,1572 8143,1576 8185,1584 8228,1592 8272,1603 8317,1614 8362,1628 8407,1643 8452,1659 8498,1677 8544,1697 8591,1718 8637,1740 8684,1763 8730,1788 8776,1814 8823,1841 8868,1868 8913,1897 8957,1926 9001,1955 9044,1986 9086,2016 9127,2047 9168,2078 9207,2109 9245,2140 9281,2171 9317,2201 9352,2232 9385,2262 9418,2291 9449,2321 9480,2350 9508,2379 9537,2407 9564,2435 9596,2470 9628,2503 9658,2537 9687,2572 9715,2605 9741,2639 9769,2674 9794,2709 9819,2745 9844,2783 9869,2820 9895,2860 9920,2902 9945,2944 9969,2988 9994,3033 10018,3079 10043,3124 10067,3168 10089,3212 10110,3254 10130,3293 10146,3328 10162,3359 10175,3385 10184,3406 10193,3423 10198,3435 10201,3442 10203,3446 10204,3448 "
+       style="stroke:#000000;stroke-width:8; stroke-linejoin:bevel; stroke-linecap:butt; "
+       id="polyline3171" />
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="6708"
+       y="3448"
+       font-style="italic"
+       font-weight="bold"
+       font-size="152"
+       id="text3173"
+       style="font-size:152px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;font-family:New Century Schoolbook">Symmetry axis</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="6472"
+       y="1984"
+       font-style="italic"
+       font-weight="normal"
+       font-size="152"
+       id="text3175"
+       style="font-size:152px;font-style:italic;font-weight:normal;text-anchor:start;fill:#000000;font-family:Times"><tspan
+         style="font-weight:bold;-inkscape-font-specification:Arial Bold Italic;font-family:Arial;font-style:italic;font-stretch:normal;font-variant:normal;font-size:159.22221097px"
+         id="tspan3233">ρ<tspan
+   style="font-size:132.68517581px;baseline-shift:sub"
+   id="tspan3235">r</tspan></tspan></text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="5763"
+       y="1370"
+       font-style="normal"
+       font-weight="normal"
+       font-size="152"
+       id="text3177"
+       style="font-size:159.22221096999999190px;font-style:italic;font-weight:bold;text-anchor:start;fill:#000000;font-family:Arial;-inkscape-font-specification:Arial Bold Italic">ρ<tspan
+   style="font-size:132.68517581000000405px;baseline-shift:sub;font-style:italic;-inkscape-font-specification:Arial Bold Italic"
+   id="tspan3231">s</tspan></text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="8267"
+       y="1511"
+       fill="#000000"
+       font-family="New Century Schoolbook"
+       font-style="italic"
+       font-weight="bold"
+       font-size="152"
+       text-anchor="start"
+       id="text3179">Solution Line</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="11102"
+       y="4062"
+       fill="#000000"
+       font-family="New Century Schoolbook"
+       font-style="italic"
+       font-weight="bold"
+       font-size="189"
+       text-anchor="start"
+       id="text3181">x</text>
+    <!-- Text -->
+    <text
+       xml:space="preserve"
+       x="4913"
+       y="3826"
+       fill="#000000"
+       font-family="Times"
+       font-style="italic"
+       font-weight="bold"
+       font-size="152"
+       text-anchor="start"
+       id="text3183">i</text>
+  </g>
+</svg>

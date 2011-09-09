@@ -1,0 +1,9 @@
+\documentclass[a4paper]{ecctd01}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{displaymath}
+u_{n,eq,in}=u_{nsource}+u_{nnullor}+(R_{s}+\frac{R_1R_2}{R_1+R_2})i_{nullor}+\frac{\frac{R_1R_2}{R_1+R_2}}{R_1}u_{nR_1}+\frac{R_1R_2}{R_1+R_2}u_{nR_2}

@@ -1,0 +1,119 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "Times" 1 12 0 
+0 0 1 2 2 2 2 2 2 1 1 1 1 }1 1 0 0 0 0 1 0 1 0 2 2 0 1 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "restart:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(
+plots):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 11 "Digits:=15;" }}{PARA 0 "
+> " 0 "" {MPLTEXT 1 0 11 "f1:=(x-10);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 
+"" {MPLTEXT 1 0 54 "ht1:=C*(t-1)*(t-2)+exp((t-1)*(t-2))*ln((C)*f1^2+1)
+=0;\n" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 
+"" {MPLTEXT 1 0 25 "YY:=x=-30..30:XX:=t=1..2:" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "hh
+:=subs(C=1,ht1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "#implicitplot(h
+h,XX,YY,axes=boxed,grid=[345,345]);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 7 "xy:=[];" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 28 "for i fr
+om 1 to 40 by 0.5 do" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 26 "hh:=subs(\{
+C=i,t=1.5\},ht1);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 16 "sol:=fsolve(hh
+):" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 14 "#print(sol,i);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 23 "xy:=[op(xy),[i,(sol)]];" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 3 "od:" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 4 "#xy;" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 34 "pointplot(xy,scaling=CONSTRAINED);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 27 "#inter1:=10-1.5*exp(0.1*x);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 42 "#plot(inter1,x=0..40,scaling=CONSTRAINED);" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "h:=C*(t-a)*(t-b)+exp((t-a)*
+(t-b))*ln(C*f11^2+1)=0;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 17 "
+sols:=solve(h,t);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 8 "sols[1]
+;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 50 "cero:=b^2-2*a*b+a^2-4*
+LambertW(1/C*ln(C*f11^2+1));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 53 "cero1:=b^2-2*a*b+a^2-4*LambertW(1/C
+*ln((f11^2+C)/C));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "pp1:=
+solve(cero,f11);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "pp2:=solve(cero
+1,f11);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "xx:=(subs(\{b=2,
+a=1\},pp1[1]));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "limit(xx
+,C=-infinity);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 10 "evalf(xx);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "eval
+f(subs(C=0.000000000001,xx));" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }
+}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 7 "#subs()" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 43 "plot(-xx+10,C=-10..40,scaling=CONST
+RAINED);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "tq:=50-10=xx;" 
+}}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "fsolve(tq,C);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 36 "hh:=subs(\{C=33.96543583,t=1.5\},ht1);" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 15 "sol:=solve(hh);" }}{PARA 0 "> " 0 "" {MPLTEXT 
+1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 59 "s1:=subs(\{f11=(x-1)*(x-2)*(x+3)*(x),a=1,b=2,C=10\}
+,sols[1]);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 19 "yprima:=diff(s1,x);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 29 "ybiprim
+a:=diff(diff(s1,x),x);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 34 "yprim
+av:=evalf(limit(yprima,x=0));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 38 "ybiprimav:=evalf(limit(ybiprima,x=1));" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 33 "abs((1+yprimav)^(1.5)/ybiprimav);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 13 "evalf(1/0.5);" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 41 "#ybiprimav:=evalf(limit(ybiprima,f11=0));" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 22 "s1:=subs(a=a,sols[1]);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 21 "yprima:=diff(s1,f11);" }}}
+{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "1/yprima;" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 30 "#limit(1/yprima,f11=infinity);" }}{PARA 0 "> " 0 "
+" {MPLTEXT 1 0 25 "#subs(f11=1000,1/yprima);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 
+0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 33 "ybiprima:=diff(diff(s1,f11),f11);" 
+}}{PARA 0 "> " 0 "" {MPLTEXT 1 0 10 "#D(s1)(x);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 24 "#implicitdiff(s1,f11,x);" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 14 "#diff(s1,x,x);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 
+1 0 20 "#simplify(ybiprima);" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 141 "#c
+ollect(ybiprima,1/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2
+)/(f11^2+C)^2*1/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)^2);
+" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 40 "ybiprimav:=evalf(limit(ybipr
+ima,f11=0));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 
+31 "subs(\{a=1,b=2,C=10\},ybiprimav);" }}}{EXCHG {PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 39 "fxprima:=diff((x-1)*(x-2)*(x+3)*(x),x);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 18 "subs(x=1,fxprima);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 9 "0.02*4^2;" }}{PARA 0 "> " 0 "" 
+{MPLTEXT 1 0 27 "fxbiprima:=diff(fxprima,x);" }}}{EXCHG {PARA 0 "> " 
+0 "" {MPLTEXT 1 0 20 "subs(x=0,fxbiprima);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 8 "14*0.02;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+10 "14*6*0.02;" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 19 "ffx:=2/(C
+^2*(a-b));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 32 "evalf(subs(\{
+a=1,b=2,C=10\},ffx));" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 25 "C^
+2*(a-b)/(2*fxprimax^2);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 156 
+"4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+
+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/l
+n((f11^2+C)/C)^2;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 122 "1/(b^2-2*a*b+a^2-4*LambertW(1/C*ln
+((f11^2+C)/C)))^(1/2)/(f11^2+C)^2*1/(1+LambertW(1/C*ln((f11^2+C)/C)))/
+ln((f11^2+C)/C)^2;" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 12 "with(plots):" }}}{EXCHG {PARA 0 "> \+
+" 0 "" {MPLTEXT 1 0 24 "f1:=(x-5)*(x-15)*(x-20);" }}}{EXCHG {PARA 0 ">
+ " 0 "" {MPLTEXT 1 0 17 "plot(f1,x=3..22);" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 0 "" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 41 "H:=60*y*(y-1)
++exp(y*(y-1))*ln(60*f1^2+1);" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 
+0 48 "implicitplot(H,x=-15..35,y=0..1,grid=[350,350]);" }}}{EXCHG 
+{PARA 0 "> " 0 "" {MPLTEXT 1 0 15 "sx:=solve(H,y);" }}}{EXCHG {PARA 0 
+"> " 0 "" {MPLTEXT 1 0 14 "diff(sx[1],x):" }}}{EXCHG {PARA 0 "> " 0 "
+" {MPLTEXT 1 0 9 "curvature" }}{PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}
+}{MARK "69" 0 }{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 
+33 1 1 }

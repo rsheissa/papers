@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{svelto}
+F.~Svelto, E.~Sacchi, F.~Gatta, D.~Manstretta, and R.~Castello,
+\newblock ``Cmos low-noise amplifier design,''
+\newblock in {\em Low-power Design Techniques and CAD Tools for Analog and RF
+  Integrated Circuits}, pp. 251--265. Kluwer Academic Publishers, 2001.
+
+\bibitem{verhoeven}
+C.J.M. Verhoeven, A.van Staveren, G.L.E. Monna, and M.H.L. Kouwenhoven,
+\newblock {\em Strutured Electronic Design, Negative-feedback Amplifiers},
+\newblock Delftese Uitgevers Maatschappij, 2001.
+
+\bibitem{nordholt}
+E.H. Nordholt,
+\newblock {\em Design of High Performance Negative-feedback amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\bibitem{stoffels}
+J.~Stoffels,
+\newblock {\em Automation in High-performance Negative Feedback Amplifier
+  Design},
+\newblock Ph.D. thesis, Delft University of Technology, 1988.
+
+\bibitem{vergers}
+Charles~A. Vergers,
+\newblock {\em Handbook of Electrical Noise},
+\newblock TAB Books, 1979.
+
+\bibitem{carlin}
+H.J. Carlin,
+\newblock ``Singular network elements,''
+\newblock {\em IEEE Trans. Circuit Theory}, vol. 11, pp. 67--72, March 1964.
+
+\bibitem{moschytz}
+G.S. Moschytz,
+\newblock ``Linear integrated networks: Fundamentals,''
+\newblock {\em Bell Laboratory Series}, 1974.
+
+\bibitem{ott}
+Henry~W. Ott,
+\newblock {\em Noise Reduction Techniques in Electron Systems},
+\newblock John Wiley \& Sons, 1976.
+
+\bibitem{sarmiento}
+Arturo Sarmiento, Roberto Casta{\~n}eda, Luis Hern\'andez, and Pr\'ospero
+  L\'opez,
+\newblock ``Hierarchy in noise expressions for nullor-based amplifiers,''
+\newblock in {\em ICED Proceedings}, 2004.
+
+\bibitem{spice}
+T.~Quarles, A.R. Newton, D.O. Perderson, and A.~Sangiovanni,
+\newblock {\em SPICE3 Version 3f3 User's Manual},
+\newblock University of California, Berkeley, Ca., 94720, May 1993.
+
+\bibitem{aplac}
+APLAC Solutions Corporation, Helsinki, Finland,
+\newblock {\em APLAC Circuit Simulation \& Design Tool 7.80 Manual}, 2002.
+
+\bibitem{bfr520}
+Philips Electronics,
+\newblock {\em BFR520 Product data sheet}, September 2004.
+
+\end{thebibliography}

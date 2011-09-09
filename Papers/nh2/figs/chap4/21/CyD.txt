@@ -1,0 +1,100 @@
+radio curvatura en las soluciones
+
+1/2*C^2*(a-b)/fxprimax^2
+
+
+
+radio curvatura en los puntos de retorno
+
+ybiprima * (-1/2*(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)/f11*(f11^2+C)/LambertW(1/C*ln((f11^2+C)/C))*(1+LambertW(1/C*ln((f11^2+C)/C)))*ln((f11^2+C)/C));
+
+
+
+derivadas de H
+
+yprima
+-2/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11/(f11^2+C)*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)
+
+
+ybiprima
+-8/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(3/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))^2/(1+LambertW(1/C*ln((f11^2+C)/C)))^2/ln((f11^2+C)/C)^2-2/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)/(f11^2+C)*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)+4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)-4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))^2/ln((f11^2+C)/C)^2+4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))^2/(1+LambertW(1/C*ln((f11^2+C)/C)))^3/ln((f11^2+C)/C)^2+4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)^2;
+
+
+
+
+curvatura
+CU:= y'' / (1 + (y')^2)^(3/2)
+
+
+radio de curvatura
+
+abs(1/CU);
+
+
+
+
+
+
+sobre C y D
+
+
+El limite de la excursion de la trayectoria homotopica en el eje x, coincide con el eje de simetria.
+De la ecuacion xx, se determina que la expresion dentro de la raiz cuadrada debe ser igual a cero
+justo en el eje de simetria.
+
+
+(a-b)^2-4*LambertW(1/C*ln(C*f11^2+1))=0
+
+
+Ahora se resuelve esta ecuacion para $f(x)$, resultando:
+
+abs(fx)=1/C*(C*(exp(1/4*exp(1/4*b^2-1/2*a*b+1/4*a^2)*C*b^2-1/2*exp(1/4*b^2-1/2*a*b+1/4*a^2)*C*a*b+1/4*exp(1/4*b^2-1/2*a*b+1/4*a^2)*C*a^2)-1))^(1/2);
+
+
+El punto de inicio de la homotopia se encuentra en la excursion maxima de la homotopia, debe satisfacer la expresion anterior.
+
+usando a=1, b=2, f(x)=x-10
+
+
+x-10=1/C*(C*(exp(.321006354171935*C)-1.))^(1/2);
+
+
+La expresion resultante ayuda a comprender la relacion entre C (y D) y el punto de inicio
+de la homotopia. EL punto de inicio se acerca mas al lugar de las raices mientras C acerca a cero y
+por el contrario, el punto de inicio se aleja exponencialmente del lugar de las raices mientras
+C crece.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

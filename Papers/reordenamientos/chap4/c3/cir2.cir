@@ -1,0 +1,8 @@
+TEST DEL METODO DE KHAO MODIFICADO H=.5
+K2 2 0 2
+I1 0 2 2
+G3 0 1 V(K1) 2
+K1 2 1 i=3*u^3
+# Sentenc as de analisis
+DC OP
+end

@@ -1,0 +1,448 @@
+\documentclass[conference]{IEEEtran}
+\hyphenation{op-tical net-works semi-conduc-tor IEEEtran}
+
+
+
+
+\input{/home/hleal/papers/doblelim/macros/lin_alg.tex}
+\input{/home/hleal/papers/doblelim/macros/math_aux.tex}
+\input{/home/hleal/papers/doblelim/macros/jac_mtrx.tex}
+\input{/home/hleal/papers/doblelim/macros/cset_aux.tex}
+
+
+%\usepackage{spconf}
+\newtheorem{Theod}{{\bf Def\text{i}nition}}
+\newtheorem{Theos}{{\bf Statement}}
+\newtheorem{Theor}{{\bf Theorem}}
+\newtheorem{Theoc}{{\bf Corallary}}
+
+\usepackage[dvips]{epsfig}
+\usepackage{epsfig}
+\usepackage{psfrag}
+\usepackage{pifont}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{rotate}
+\usepackage{rotating}
+
+
+
+
+\begin{document}
+
+% paper title
+\title{Numerical continuation scheme for tracing the double bounded homotopy for analysing  nonlinear circuits}
+
+\author{H\'ector V\'azquez-Leal, Luis Hern\'andez-Mart\'inez, Arturo Sarmiento-Reyes and Roberto Casta\~neda-Sheissa \\ National Institute for Astrophysics, Optics and Electronics\\
+Electronics Department, CAD Group\\ P.O. Box 51, 72000, Puebla, Pue., Mexico \\ E-mail {\it  hleal@inaoep.mx}}
+
+
+% avoiding spaces at the end of the author lines is not a problem with
+% conference papers because we don't use \thanks or \IEEEmembership
+
+
+% for over three affiliations, or if they all won't fit within the width
+% of the page, use this alternative format:
+% 
+%\author{\authorblockN{Michael Shell\authorrefmark{1},
+%Homer Simpson\authorrefmark{2},
+%James Kirk\authorrefmark{3}, 
+%Montgomery Scott\authorrefmark{3} and
+%Eldon Tyrell\authorrefmark{4}}
+%\authorblockA{\authorrefmark{1}School of Electrical and Computer Engineering\\
+%Georgia Institute of Technology,
+%Atlanta, Georgia 30332--0250\\ Email: mshell@ece.gatech.edu}
+%\authorblockA{\authorrefmark{2}Twentieth Century Fox, Springfield, USA\\
+%Email: homer@thesimpsons.com}
+%\authorblockA{\authorrefmark{3}Starfleet Academy, San Francisco, California 96678-2391\\
+%Telephone: (800) 555--1212, Fax: (888) 555--1212}
+%\authorblockA{\authorrefmark{4}Tyrell Inc., 123 Replicant Street, Los Angeles, California 90210--4321}}
+
+
+
+% use only for invited papers
+%\specialpapernotice{(Invited Paper)}
+
+% make the title area
+\maketitle
+
+
+
+\begin{abstract}
+A numerical continuation for tracing the double bounded homotopy for obtaining  DC solutions of 
+nonlinear circuits is proposed.
+The {\it double bounded homotopy} is used  to f\text{i}nd multiple DC solutions 
+with the advantage of having
+a stop criterion  which is based on the property of having a double bounded trajectory. 
+The key aspects of the implementation of the numerical continuation are presented in this paper. Besides, in order to
+trace and applied the stop criterion some blocks of the numerical continuation are modif\text{i}ed and explained.
+\end{abstract}
+
+
+\section{Introduction}
+
+Homotopy methods \cite{homo_ArtificialP}\cite{homo_DWolfMulti}\cite{cont_leu1} have an important role in the analysis of
+circuits exhibiting multiple operating points.
+Although, homotopy methods are able to f\text{i}nd more than one solution to
+the equilibrium equation of the circuit, they still show several problems. Among them, it is worthy to mention the {\bf stop criterion}. 
+There are two types of paths of solutions,
+open and closed paths, the main problem is when to stop searching for
+more solutions. For closed paths, this can be solved by testing whether
+a new solution is not indeed a previesly found solution. For open paths, this is a serious
+drawback, because there is no reasonable and reliable stop criterion
+to decide when to stop seeking for more solutions.
+
+The Double Bounded Homotopy (DBH) \cite{homo_iscas05}\cite{homo_iberchip03} has been proposed in order to circumvent the problem
+of the stop criterion. This homotopy possesses symmetrical branches bounded by a double bounding solution line. The symmetry and
+bounding properties of the trajectory of the DBH are depicted in F\text{i}gure \ref{halftrack}. These properties are
+useful in order to implement a reliable stop criterion. 
+
+The numerical continuation methods (also called path following and path tracking) are numerical tools used to
+trace the homotopy trajectories. They are a combination of a variety of numerical methods, focussed on drawing 
+a path in order to accomplish specif\text{i}c needs of a particular homotopy formulation. 
+
+Due to the specific features of the DBH, it becomes necessary to devise a well-suited numerical continuation method
+in order to trace the homotopy trajectory having  a robust stop criterion.
+The next section is dedicate to explain the traditional numerical continuation methods.
+
+\begin{figure}[hbtp]
+\psfrag{xi}{{\small $[x_i,(a+b)/2]$}}
+\psfrag{xf}{{\small $[x_f,(a+b)/2]$}}
+\psfrag{o}{$\lambda$}
+\centerline{
+\epsfxsize=55mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/dbh.eps}}
+\caption{Symmetry and bounding of DBH}
+\label{halftrack}
+\end{figure}
+
+
+\section{Numerical continuation methods}
+
+Some homotopies have global convergence when are applied to solve the equilibrium equation of certain type of circuits. 
+However, without an appropriated numerical continuation method is not possible to ensure that all the solutions of
+the equilibrium equation will be found.  There are some reasons for
+this problem, one of them is related with the
+predictor-corrector steps, if the coeff\text{i}cients of these steps are not properly selected,
+then the numerical continuation fails and losts
+the homotopy trajectory. The other reason is that once the numerical continuation crosses the solution line,
+the algorithm fails to determine the solution because it diverges. It clearly results that it is important to study the characteristics
+of the numerical continuation in order to use them appropriately.
+The numerical continuation scheme consists of a predictor, a corrector, a step control, a f\text{i}nd zero strategy and
+a ``stop criterion''.
+
+\subsubsection{Predictor}
+
+The predictor point for $(x^j,\lambda_j)$ is given by:
+
+\begin{displaymath}
+(\bar{\pig{x}}^{j+1},\bar{\lambda}_{j+1})=(\pig{x}^j,\lambda_j)+h*\pig{t}
+\end{displaymath}
+where $h$ is an appropriate step length and $\pig{t}$ is a normalised tangent vector to the
+homotopy trajectory (see F\text{i}gure \ref{pcorrector}). This predictor can be considered as a step of the Euler
+method  (or some numerical integration method) for solving the differential equation that describes
+the homotopy trajectory (continuation path). 
+Predictor steps are usually based on tangent predictions but there are
+several alternatives like
+ the secant predictor \cite{homo_seydel}, interpolation predictor
+\cite{homo_allgower}, Taylor polynomial predictor \cite{homo_allgower}. 
+
+
+\begin{figure}[hbtp]
+\psfrag{A}{{$(x^j,\lambda_j)$}}
+\psfrag{B}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{C}{{$(x^{j+1},\lambda_{j+1})$}}
+\centerline{
+\epsfxsize=60mm
+\epsffile{/home/hleal/papers/doblelim/figs/pcorrector.eps}}
+\caption{Predictor-corrector steps}
+\label{pcorrector}
+\end{figure}
+
+ 
+\subsubsection{Corrector}
+
+When the predictor step f\text{i}nishes, it is necessary to f\text{i}t the homotopy trajectory by
+using a corrector step. This step  solves the homotopy formulation by starting
+from $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$ (see F\text{i}gure \ref{pcorrector}). The common
+way to solve this equation is by using the Newton-Gauss method \cite{homo_allgower}, which
+can be solved for systems of the type $R^{N+1} \Rightarrow R^N$.
+
+\subsubsection{Step Control}
+
+The Predictor-Corrector scheme can be optimized for tracing acceleration by
+using a step length control. A small constant step length can trace the curve successfully
+but not eff\text{i}ciently, because this process involves too many steps along ``f\text{l}at'' branches.
+Therefore, it is necessary to adapt the step length to the convergence behavior at each
+predictor-corrector step. The basic criterion is to control the step by observing the
+convergence quality of the corrector step. A change on the number of iterations in the corrector step produces
+a compensation factor $\zeta$, which affects the step length as follows:
+
+
+\begin{displaymath}
+h_{j+2}=h_{j+1} \zeta
+\label{zero}
+\end{displaymath}
+
+
+\subsubsection{F\text{i}nd Zero Strategy}
+
+Without an eff\text{i}cient f\text{i}nding zero strategy
+the numerical continuation is incomplete and the homotopy could fail
+to converge to some solutions.
+The tracing of the homotopy trajectory begins at $\lambda=0$ and it ends
+\footnote{In fact if it is wanted to f\text{i}nd multiple solutions the numerical continuation
+should follow beyond $\lambda=1$.} at $\lambda=1$. When the tracing is close to $\lambda=1$, the {\it f\text{i}nd Zero Strategy} starts. The simplest example
+of strategy is to use $[\pig{x}_f,\lambda_f]$ (the last iteration) as the initial point
+to solve the equilibrium equation $\pig{f}(\pig{x})$ with a Newton-like method. 
+
+
+Because the Newton method possesses local convergence, it still could fail
+to f\text{i}nd the solution. In \cite{homo_sosonkina} some techniques are reported
+that implement the {\it f\text{i}nd Zero Strategy} accurately and
+reliably.  The basic idea is
+to use two points ($p_1 < 1$ and $p_2 \geq 1$) around to $\lambda=1$, and to interpolate the point at $\lambda=1$ in order to
+obtain a point closely to the real solution and use a Newton-like method to f\text{i}nd the solution
+of the original system $\pig{f}(\pig{x})$.
+
+\subsubsection{Stop criterion}
+
+In fact, there is not stop criterion in the traditional numerical continuation methods when applied to homotopy trajectory tracing.
+The most common way to stop tracing the trajectory  is to set a maximum allowed number ($ITMAX$) of predictor-corrector steps without f\text{i}nding
+any solution. This technique is ineff\text{i}cient because it can fail
+to f\text{i}nd some solutions on the homotopy trajectory.
+
+All the blocks of the numerical continuation method are depicted in F\text{i}gure \ref{bloquesf}. 
+
+
+
+
+
+\begin{figure}[hbtp]
+\psfrag{p}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{c}{{$(x^{j+1},\lambda_{j+1})$}}
+\psfrag{s}{{$h_{j+2}=h_{j+1}\zeta$}}
+\psfrag{l1}{{\tiny $\lambda=1?$}}
+\psfrag{l1b}{{$  \quad or \qquad   \lambda_{j} \ge 1   \quad and   \quad   \lambda_{j+1} \le 1  $}}
+\psfrag{l2}{{\small $k<k^*$}}
+\psfrag{l}{{\small $\lambda=0$}}
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/bloquesf.eps}}
+\caption{Numerical continuation scheme}
+\label{bloquesf}
+\end{figure}
+
+
+\section{Modif\text{i}ied Numerical continuation}
+
+This section explains the modif\text{i}cations acomplished on the
+scheme above with the idea of providing a realiable stop criterion
+to de DBH. The modifications act on both the find zero strateggy and
+the stop criterion it self.
+
+\begin{enumerate}
+\item { \bf F\text{i}nd Zero Strategy}. The double bounded homotopy
+has the characteristic of never crossing $\lambda=1$ \cite{homo_iscas05}, hence, the f\text{i}ndig zero strategy
+should start after the trajectory   bounces on the bounding line. An
+efficient way to achieve this process is by monitoring the
+change of sign of $\Delta\lambda$ produced in the predictor step. This
+can be done by multiplying
+$\Delta\lambda$ of two consecutive predictor steps. 
+\begin{displaymath}
+sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 
+\label{zero1}
+\end{displaymath}
+This procedure is depicted in F\text{i}gure \ref{halftrack3}, where the  sign of  $\Delta\lambda$ changes in the bouncing  points $A$ and $B$. Besides, in order to apply a quadratic interpolation
+the algorithm needs three points ($A,B,C$).
+
+\begin{figure}[hbtp]
+\psfrag{xi}{{\small $[x_i,(a+b)/2]$}}
+\psfrag{xf}{{\small $[x_f,(a+b)/2]$}}
+\psfrag{o}{$\lambda$}
+\centerline{
+\epsfxsize=50mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/dbh3.eps}}
+\caption{F\text{i}nd Zero Strategy}
+\label{halftrack3}
+\end{figure}
+\item{\bf Stop criterion}. The stop criterion for this homotopy is depicted in F\text{i}gure \ref{halftrack1}. The homotopy trajectory starts at the symmetry axis of
+the homotopy trajectory. Then it traces the half of the trayectory (the symmetrical branch) and stops when it returns to the symmetry axis.
+The advantage of the stop criterion is that the numerical continuation
+has needs only to trace the half side of the trayectory.
+\begin{figure}[hbtp]
+\psfrag{xi}{{\small $[x_i,(a+b)/2]$}}
+\psfrag{xf}{{\small $[x_f,(a+b)/2]$}}
+\psfrag{o}{$\lambda$}
+\centerline{
+\epsfxsize=55mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/dbh2.eps}}
+\caption{Stop criterion}
+\label{halftrack1}
+\end{figure}
+\end{enumerate}
+
+The modif\text{i}ed numerical continuation is depicted in F\text{i}gure \ref{bloques}
+where the dashed blocks are the specif\text{i}c characteristics added to the procedure.
+The scheme is explained as follows: It starts when the predictor  calculates the tangent to
+$(x^j,\lambda_j)$ and using a step length calculates the $(\bar{x}^{j+1},\bar{\lambda}_{j+1})$
+over the tangent. Then, the corrector uses the solution of the predictor in order to obtain
+a new point on the homotopy trajectory, given by  $(x^{j+1},\lambda_{j+1})$.
+At this point, the step control is applied in order to accelerate the tracing.
+Next, the so-called end-zero strategy is applied which is 
+triggered at each solution when the trajectory bounces on
+the solution line.
+F\text{i}nally, the numerical continuation stops tracing when the trajectory returns to the symmetry axis.
+
+\begin{figure}[h]
+\psfrag{p}{{$(\bar{x}^{j+1},\bar{\lambda}_{j+1})$}}
+\psfrag{c}{{$(x^{j+1},\lambda_{j+1})$}}
+\psfrag{s}{{$h_{j+2}=h_{j+1}\zeta$}}
+\psfrag{l1}{{\small $sign(\triangle \lambda_{j+1}  \triangle \lambda_j) \ne -1 $}}
+\psfrag{l2}{{\small $ \lambda \ne (a+b)/2$}}
+%\psfrag{l}{{\small $\lambda=(a+b)/2$}}
+\centerline{
+\epsfxsize=54mm
+\epsffile{/home/hleal/papers/icccas/Template_LaTex/figs/bboques.eps}}
+\caption{Block diagram of the modif\text{i}ed numerical continuation}
+\label{bloques}
+\end{figure}
+
+
+
+\section{Examples}
+
+
+In order to illustrate the use of the DBH with the modifications, a
+first example is to solve the systems of equations given as:
+\begin{displaymath}
+\begin{array}{c}
+f_1(x_1,x_2)=(x_2-1)(x_2-4)(x_2-6)+x_1=0\\
+f_2(x_1,x_2)=(x_1-3)(x_1-6)(x_1-9)+x_2=0
+\end{array}
+\end{displaymath}
+The graphic solution of the system is shown in F\text{i}gure \ref{9sol}.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/doblelimit_mul.eps}}
+\caption{System of f\text{i}ve solutions}
+\label{9sol}
+\end{figure}
+
+The DBH formulation yields:
+\begin{displaymath}
+\begin{array}{c}
+H_1(f_1,\lambda)=100Q+e^{Q}\ln(0.001f_1^2+1)=0\\
+H_2(f_2,\lambda)=100Q+e^{Q}\ln(0.001f_2^2+1)=0\\
+\end{array}
+\end{displaymath}
+where $Q=\lambda(\lambda-1)$; i.e. $a=0$ and $b=1$.
+
+
+
+The homotopy trajectories  are depicted
+in F\text{i}gure \ref{homote}. The starting points lie on the plane def\text{i}ned by $\lambda=0.5$, while,
+the solutions are obtained when $\lambda$ reaches the value of 1.
+
+\begin{figure}[h]
+\psfrag{ll}{$\lambda=0.5$}
+\psfrag{l}{$\lambda$}
+\psfrag{l1}{$\lambda=1$}
+\psfrag{x}{$x_1$}
+\psfrag{y}{$x_2$}
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/doblelimit_mul_sol.eps}}
+\caption{Homotopy trajectory}
+\label{homote}
+\end{figure}
+
+ A second example is given by the latch circuit of F\text{i}gure
+ \ref{circu2}, which  contains
+two NMOS transistors ($M_1$ and $M_2$), two linear resistors
+($R_1$ and $R_2$) and a voltage source ($E$). The model of the transistors is the unif\text{i}ed MOS model
+reported in \cite{homo_BSIM} which is a modif\text{i}ed version of the well-known
+BSIM model.
+
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/circu.eps}
+}
+\caption{Example circuit}
+\label{circu2}
+\end{figure}
+
+The  F\text{i}gure \ref{circugraf} shows the graph of the equilibrium
+equation and the homotopy trajectory of
+the circuit in the space $(v_1,v_2,I_E)$. The homotopy f\text{i}nds
+all three solutions of the circuit.
+
+\begin{figure}[hbtp]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/smitt.eps}
+}
+\caption{Graphic of the equilibrium equation of the circuit and homotopy trajectory}
+\label{circugraf}
+\end{figure}
+
+
+
+A third example is a well-known bench mark circuit reported in
+\cite{homo_chua}. This circuit has 4 bipolar transistors modeled by the half-sided Ebers-Moll model.
+
+The equations system formulation is the same of \cite{homo_chua} which is based
+on the branch voltages $v_1$, $v_2$, $v_3$, $v_4$. F\text{i}gure \ref{chuaf} depicts
+the homotopy trajectory and the six solutions found versus $v_1$.
+
+\begin{figure}[hbt]
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/doblelim/figs/chiaf.eps}}
+\caption{Solution of the Chua's circuit}
+\label{chuaf}
+\end{figure}
+
+
+\begin{figure}[hbt]
+\psfrag{F}{{\tiny $I_D=10^{-9}(e^{40v_D}-1)$}}
+\psfrag{b}{{\tiny $\alpha=0.98$}}
+\centerline{
+\epsfxsize=90mm
+\epsffile{/home/hleal/papers/iscas2004/figs/chua.eps}}
+\caption{Chua's circuit}
+\label{chua}
+\end{figure}
+
+\section{Conclusions}
+
+
+
+A numerical continuation for tracing a double bounded homotopy has
+been presented. The numerical continuation scheme exhibits an improved
+performance regarding stop criterion and finding zero strateggy.
+Some examples ilustrating the aplication of the scheme to nonlinear
+resistive circuits where also are presented.
+
+
+
+\section*{Acknowledgements}
+Hector Vazquez Leal is holder of a scholarship from CONACyT M\'exico under contract 143907. This work has been partially supported by a CONACyT M\'exico research project under grant 42588-Y.
+
+
+
+%\newpage
+\bibliographystyle{IEEEbib}
+ \bibliography{/home/hleal/papers/doblelim/bib/homoto,/home/hleal/papers/doblelim/bib/contin,/home/hleal/papers/doblelim/bib/netwth}
+
+
+\IEEEpeerreviewmaketitle
+
+
+\end{document}
+
+

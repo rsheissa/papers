@@ -1,0 +1,54 @@
+@article{c++1,
+	Author	= "B. Stroustrup",
+	Title	= "What Is Object-oriented Programming? (1991 Revised Version)",
+	journal = "Proc. 1st European Software Festival",
+	Month	= "February",
+	Year	=  1991}
+
+@InProceedings{verhoeven1,
+  author = 	 {C.J.M Verhoeven and A.van Staveren},
+  title = 	 {Sys\-te\-ma\-tic Biasing of Negative-Feedback Amplifiers},
+  booktitle =	 {Proceedings of the Design Automation and Test in Europe Conference},
+  pages =	 {318-322},
+  year =	 1996,
+  organization = {DATE'1999}
+}
+
+
+
+@PhdThesis{stoffels,
+  author = 	 {J.\ Stoffels},
+  title = 	 {Automation in High-Performance Negative Feedback Amplifier Design},
+  school = 	 {Delft University of Technology},
+  year = 	 1988
+}
+
+@Book{verhoeven,
+	Author	= "C.J.M. Verhoeven and A.van Staveren and G.L.E. Monna and M.H.L. Kouwenhoven",
+	Title	= "Strutured Electronic Design, Negative-feedback Amplifiers",
+        Publisher= "Delftese Uitgevers Maatschappij",     
+	Year	= 2001}
+
+@Book{nordholt,
+        Author  = "E.H.\ Nordholt",
+        Title   = "Design of High Performance Negative-feedback amplifiers",
+        Publisher= "Elsevier Scientific",
+        Year    = 1983}
+
+@Article{shannon,
+  author = 	 {C.E. Shannon},
+  title = 	 {A Mathematical Theory of Communication},
+  journal = 	 {The Bell System Theory of Communication},
+  year = 	 1948,
+  volume =	 27,
+  number =	 3,
+  pages =	 {379-432 and 623-656},
+  month =	 {July}
+}
+
+@Book{ott,
+  author =	 "H.W.\ Ott",
+  title = 	 "Noise Reduction Techniques in Electronic Systems",
+  publisher = 	 "John Wiley \& Sons",
+  year = 	 1976}
+

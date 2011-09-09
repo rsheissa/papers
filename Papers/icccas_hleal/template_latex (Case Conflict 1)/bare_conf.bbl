@@ -1,0 +1,79 @@
+\begin{thebibliography}{10}
+
+\bibitem{homo_ogrodzki}
+Jan Ogrodzki,
+\newblock {\em Circuit simulation: methods and algorithms},
+\newblock CRC Press Inc, 1994.
+
+\bibitem{homo_ArtificialP}
+R.~C. Melville and L.~Trajkovi\'{c},
+\newblock ``Artif\text{i}cial parameter homotopy methods for the dc operating
+  point problem,''
+\newblock {\em IEEE transactions on computer-aided design of integrated
+  circuits and systems}, vol. 12, no. 6, pp. 861--877, June 1997.
+
+\bibitem{homo_DWolfMulti}
+Denise~M. Wolf and Seth~R. Sanders,
+\newblock ``Multiparameter homotopy methods for f\text{i}nding dc operating
+  points of nonlinear circuits,''
+\newblock {\em IEEE transactions on circuits and systems-I: fundamental theory
+  and aplications}, vol. 43, no. 10, pp. 824--837, October 1996.
+
+\bibitem{cont_leu1}
+Lieven Vandenberghe and Joos Vandewalle,
+\newblock ``Variable dimension algorithms for solving resistive circuits,''
+\newblock {\em International Journal of Circuit Theory and Applications}, vol.
+  18, no. 5, pp. 443--474, September 1990.
+
+\bibitem{cont_bra}
+F.~H. {Branin, Jr },
+\newblock ``Widely convergent method for finding multiple solutions of
+  simultaneous nonlinear equations,''
+\newblock {\em IBM Journal on Research and Dev.}, vol. 16, pp. 504--522,
+  September 1972.
+
+\bibitem{homo_green}
+Leonid~B. Goldgeisser and Michael~M. Green,
+\newblock ``A novel algorithm that f\text{i}nds multiple operating points of
+  nonlinear circuits automatically,''
+\newblock {\em International Symposium on Circuit and Systems}, pp. 558--561,
+  1998.
+
+\bibitem{homo_seydel}
+R.~Seydel,
+\newblock ``Tracing branches,''
+\newblock {\em World of Bifurcation}, June 1999.
+
+\bibitem{homo_allgower}
+Eugene~L. Allgower and Kurt Georg,
+\newblock {\em Numerical Path Following},
+\newblock 1994.
+
+\bibitem{homo_sosonkina}
+Maria Sosonkina, Layne~T. Watson, and David~E. Stewart,
+\newblock ``Note on the end game in homotopy zero curve tracking,''
+\newblock {\em ACM Transantions On Mathematical Software}, vol. 22, no. 3, pp.
+  281--287, September 1996.
+
+\bibitem{homo_dobletrazado}
+H.~V\'azquez-Leal, L.~Hern\'andez-Mart\'{\i}nez, A.~Sarmiento-Reyes, and R.~S.
+  Murphy-Arteaga,
+\newblock ``Improving multi-parameter homotopy via symbolic analysis techniques
+  for circuit simulation,''
+\newblock {\em 2003 European Conference on Circuit Theory and Design}, vol. II,
+  pp. 402--405, 2003.
+
+\bibitem{homo_BSIM}
+S.H. Jen, B.J. Sheu, and Y.~Oshima,
+\newblock ``A unified approach to submicron dc mos transistor modeling for
+  low-voltage ics,''
+\newblock {\em Analog Integrated Circuits and Signal Processing}, vol. 12, pp.
+  107--118, 1997.
+
+\bibitem{homo_chua}
+A.~Ushida and {L. O. Chua},
+\newblock ``Tracing solution curves of non-linear equations with sharp turning
+  points,''
+\newblock {\em Circuit Theory and Applications}, vol. 12, pp. 1--21, 1984.
+
+\end{thebibliography}

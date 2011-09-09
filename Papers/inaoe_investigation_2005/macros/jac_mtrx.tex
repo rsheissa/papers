@@ -1,0 +1,153 @@
+%
+% List of macros defining
+% Some Jacobians and matrices used for numerical
+% items.
+%
+
+
+			% | d p1_p2 |
+\newcommand{\dpart}[4]	%$|---------|$
+			% | d p3_p4 |
+{\mbox{$
+	\frac{\partial {#1}_{#2} }
+	     {\partial {#3}_{#4} }
+      $}
+}
+
+\newcommand{\bigjac}[2]
+{\mbox{$
+	\left[ 
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{1} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{1} \vspace{3mm}\\
+		\vdots \vspace{3mm}\\ 
+		\dpart{#1}{n}{#2}{1} \vspace{3mm}\\ 
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{2} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{2} \vspace{3mm}\\
+		\vdots \vspace{3mm}\\
+		\dpart{#1}{n}{#2}{2} \vspace{3mm}\\ 
+	\end{array}
+	\begin{array}{c}
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\ddots\vspace{3mm}\\
+		\cdots
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{n} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{n} \vspace{3mm}\\
+		\vdots \vspace{3mm} \\
+		\dpart{#1}{n}{#2}{n} \vspace{3mm}\\
+	\end{array}
+	\right]
+$}}
+
+
+\newcommand{\chuajac}[3]
+{\mbox{$
+	\left[ 
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{1} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{1} \vspace{3mm}\\
+		\vdots \vspace{3mm}\\ 
+		\dpart{#1}{n}{#2}{1} \vspace{3mm}\\ 
+		0
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{2} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{2} \vspace{3mm}\\
+		\vdots \vspace{3mm}\\
+		\dpart{#1}{n}{#2}{2} \vspace{3mm}\\ 
+		0
+	\end{array}
+	\begin{array}{c}
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\vdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\cdots
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{k} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{k} \vspace{3mm}\\
+		\vdots \vspace{3mm} \\
+		\dpart{#1}{n}{#2}{k} \vspace{3mm}\\
+		sgn(\frac{dx_k}{dp})
+	\end{array}
+	\begin{array}{c}
+		\cdots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\ddots\vspace{3mm}\\
+		\cdots\vspace{3mm}\\
+		\cdots
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#2}{n} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#2}{n} \vspace{3mm}\\
+		\vdots \vspace{3mm} \\
+		\dpart{#1}{n}{#2}{n} \vspace{3mm}\\
+		0
+	\end{array}
+	\begin{array}{c}
+		\dpart{#1}{1}{#3}{} \vspace{3mm}\\ 
+		\dpart{#1}{2}{#3}{} \vspace{3mm}\\
+		\vdots \vspace{3mm}\\
+		\dpart{#1}{n}{#3}{} \vspace{3mm}\\
+		0
+	\end{array}
+	\right]
+$}}
+%==============
+%==============
+
+\newcommand{\jacob}[2]
+			{\mbox{$ \left[
+			{\mbox{$ 
+				{\coljac}{#1}{#2}{1}
+			$}}
+			{\mbox{$ 
+				{\coljac}{#1}{#2}{2}
+			$}}
+			{\mbox{$ 
+				{\dotcol}
+			$}}
+			{\mbox{$ 
+				{\coljac}{#1}{#2}{n}
+			$}}
+
+			\rigth] $}}
+
+
+
+\newcommand{\jac}[2]
+{\mbox{$	%\left[
+\pmatrix{
+{\frac{\partial #1_1}{\partial #2_1} }& 
+	{\frac{\partial #1_1}{\partial #2_2} }& 
+		\cdots &
+			{\frac{\partial #1_1}{\partial #2_n} }\cr 
+{\frac{\partial #1_2}{\partial #2_1} }& 
+	{\frac{\partial #1_2}{\partial #2_2} }& 
+		\cdots &
+			{\frac{\partial #1_2}{\partial #2_n} }\cr 
+\vdots& \vdots& \ddots& \vdots\cr
+{\frac{\partial #1_n}{\partial #2_1} }& 
+	{\frac{\partial #1_n}{\partial #2_2} }& 
+		\cdots &
+			{\frac{\partial #1_n}{\partial #2_n} }\cr
+		%\rigth]
+}
+	$}}
+
+
+\newcommand{\coljac}[3]
+{\mbox{$ 
+	\begin{array}{c}
+		\frac{\partial #1_1}{\partial #2_#3}\vspace{3mm} \\ 
+		\frac{\partial #1_2}{\partial #2_#3}\vspace{3mm} \\ 
+		\vdots \vspace{3mm} \\
+		\frac{\partial #1_n}{\partial #2_#3}\vspace{3mm} \\ 
+	\end{array}
+$}}

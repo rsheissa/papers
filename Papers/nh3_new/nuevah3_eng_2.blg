@@ -1,0 +1,57 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: nuevah3_eng_2.aux
+The style file: amsplain.bst
+Database file #1: nuevah3_eng_2.bib
+Warning--missing pages in cont_quasi
+Warning--missing journal name in homo_ogrodzki
+Warning--missing pages in homo_ogrodzki
+Warning--missing journal name in Schwa_book
+Warning--missing pages in Schwa_book
+Warning--missing journal name in homo_shur
+Warning--missing pages in homo_shur
+Warning--missing journal name in homo_sze
+Warning--missing pages in homo_sze
+Warning--missing pages in homo_iberchip03
+Warning--missing pages in homo_iscas05
+You've used 19 entries,
+            2213 wiz_defined-function locations,
+            623 strings with 7020 characters,
+and the built_in function-call counts, 5383 in all, are:
+= -- 458
+> -- 237
+< -- 0
++ -- 100
+- -- 75
+* -- 498
+:= -- 886
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 96
+chr.to.int$ -- 0
+cite$ -- 30
+duplicate$ -- 209
+empty$ -- 463
+format.name$ -- 75
+if$ -- 1094
+int.to.chr$ -- 0
+int.to.str$ -- 19
+missing$ -- 38
+newline$ -- 67
+num.names$ -- 37
+pop$ -- 112
+preamble$ -- 1
+purify$ -- 77
+quote$ -- 0
+skip$ -- 111
+stack$ -- 0
+substring$ -- 311
+swap$ -- 30
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 76
+warning$ -- 11
+while$ -- 49
+width$ -- 21
+write$ -- 164
+(There were 11 warnings)

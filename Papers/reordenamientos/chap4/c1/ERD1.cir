@@ -1,0 +1,11 @@
+CIRCUITO ERD
+V1 1 0 1.2
+R1 1 2 1500
+K1 2 0 i=(17.76*u-103.79*u^2+229.62*u^3-226.31*u^4+83.72*u^5)*1e-3
+
+# Sentencias de analisis
+DC OP h1
+
+end
+
+

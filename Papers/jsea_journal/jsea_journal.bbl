@@ -1,0 +1,74 @@
+\begin{thebibliography}{10}
+
+\bibitem{booch}
+G.~Booch,
+\newblock {\em Object Oriented Design With Applications},
+\newblock The Benjamin/Cummings Publishing Company, Inc., 1991.
+
+\bibitem{pagejones}
+M.~Page-Jones,
+\newblock {\em The Practical Guide to Structured Systems Design},
+\newblock Yourdon Press, 1980.
+
+\bibitem{hecht}
+Alan Hecht and Andy Simmons,
+\newblock {\em Integrating Automated Structured Analysis and Design with Ada
+  Programming Support Environments},
+\newblock NASA, 1986.
+
+\bibitem{joyanes}
+L.~Joyanes-Aguilar,
+\newblock {\em Borland C++},
+\newblock McGraw-Hill, 1993.
+
+\bibitem{scott}
+Michael~Lee Scott,
+\newblock {\em Programming Language Pragmatics},
+\newblock Morgan Kaufmann, 2006.
+
+\bibitem{dale}
+Nell~B. Dale and Chip Weems,
+\newblock {\em Programming and Problem Solving with Java},
+\newblock Jones \& Bartlett Publishers, 2007.
+
+\bibitem{mitchell}
+John~C. Mitchell,
+\newblock {\em Concepts in Programming Languages},
+\newblock Cambridge University Press, 2003.
+
+\bibitem{pierce}
+Benjamin Pierce,
+\newblock {\em Types and Programming Languages},
+\newblock MIT Press, 2002.
+
+\bibitem{connolly}
+Thomas~M. Connolly and Carolyn~E. Begg,
+\newblock {\em Database Systems: A Practical Approach to Design,
+  Implementation, and Management},
+\newblock Pearson Education, 2005.
+
+\bibitem{verhoeven}
+C.J.M. Verhoeven, A.van Staveren, G.L.E. Monna, and M.H.L. Kouwenhoven,
+\newblock {\em Strutured Electronic Design, Negative-feedback Amplifiers},
+\newblock Delftese Uitgevers Maatschappij, 2001.
+
+\bibitem{nordholt}
+E.H. Nordholt,
+\newblock {\em Design of High Performance Negative-feedback amplifiers},
+\newblock Elsevier Scientific, 1983.
+
+\bibitem{qt}
+Trolltech, Oslo, Norway,
+\newblock {\em Qt Reference Documentation}, 2005,
+\newblock Ver. 3.3.4.
+
+\bibitem{bfr520}
+Philips Electronics,
+\newblock {\em BFR520 Product data sheet}, September 2004.
+
+\bibitem{hspice}
+Avant! Software,
+\newblock {\em Star-Hspice Manual}, 2001,
+\newblock \mbox{Release 2001.2}.
+
+\end{thebibliography}

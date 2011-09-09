@@ -1,0 +1,39 @@
+{VERSION 6 0 "IBM INTEL NT" "6.0" }
+{USTYLETAB {CSTYLE "Maple Input" -1 0 "Courier" 0 1 255 0 0 1 0 1 0 0 
+1 0 0 0 0 1 }{CSTYLE "2D Math" -1 2 "Times" 0 1 0 0 0 0 0 0 2 0 0 0 0 
+0 0 1 }{CSTYLE "2D Output" 2 20 "" 0 1 0 0 255 1 0 0 0 0 0 0 0 0 0 1 }
+{PSTYLE "Normal" -1 0 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 
+0 0 0 }0 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }{PSTYLE "Maple Output" 0 11 1 
+{CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 }3 3 0 -1 -1 -1 0 
+0 0 0 0 0 -1 0 }{PSTYLE "" 11 12 1 {CSTYLE "" -1 -1 "" 0 1 0 0 0 0 0 
+0 0 0 0 0 0 0 0 0 }1 0 0 -1 -1 -1 0 0 0 0 0 0 -1 0 }}
+{SECT 0 {EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 151 "-2/(b^2-2*a*b+a^2-4
+*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11/(f11^2+C)*LambertW(1/C*ln((f
+11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C);" }}
+{PARA 11 "" 1 "" {XPPMATH 20 "6#,$*0\"\"#\"\"\",**$)%\"bGF%F&F&*(F%F&%
+\"aGF&F*F&!\"\"*$)F,F%F&F&*&\"\"%F&-%)LambertWG6#*&%\"CGF--%#lnG6#*&,&
+*$)%$f11GF%F&F&F6F&F&F6F-F&F&F-#F-F%F>F&F;F-F2F&,&F&F&F2F&F-F7F-F-" }}
+}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 935 "-8/(b^2-2*a*b+a^2-4*Lamber
+tW(1/C*ln((f11^2+C)/C)))^(3/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^
+2+C)/C))^2/(1+LambertW(1/C*ln((f11^2+C)/C)))^2/ln((f11^2+C)/C)^2-2/(b^
+2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)/(f11^2+C)*LambertW(
+1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)
++4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+
+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/l
+n((f11^2+C)/C)-4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)
+*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f
+11^2+C)/C)))^2/ln((f11^2+C)/C)^2+4/(b^2-2*a*b+a^2-4*LambertW(1/C*ln((f
+11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*ln((f11^2+C)/C))^2/(
+1+LambertW(1/C*ln((f11^2+C)/C)))^3/ln((f11^2+C)/C)^2+4/(b^2-2*a*b+a^2-
+4*LambertW(1/C*ln((f11^2+C)/C)))^(1/2)*f11^2/(f11^2+C)^2*LambertW(1/C*
+ln((f11^2+C)/C))/(1+LambertW(1/C*ln((f11^2+C)/C)))/ln((f11^2+C)/C)^2;
+" }}{PARA 12 "" 1 "" {XPPMATH 20 "6#,.*0\"\")\"\"\",**$)%\"bG\"\"#F&F&
+*(F+F&%\"aGF&F*F&!\"\"*$)F-F+F&F&*&\"\"%F&-%)LambertWG6#*&%\"CGF.-%#ln
+G6#*&,&*$)%$f11GF+F&F&F7F&F&F7F.F&F&F.#!\"$F+F?F+F<!\"#F3F+,&F&F&F3F&F
+BF8FBF.*.F+F&F'#F.F+F<F.F3F&FCF.F8F.F.*0F2F&F'FEF?F+F<FBF3F&FCF.F8F.F&
+*0F2F&F'FEF?F+F<FBF3F&FCFBF8FBF.*0F2F&F'FEF?F+F<FBF3F+FCFAF8FBF&*0F2F&
+F'FEF?F+F<FBF3F&FCF.F8FBF&" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 
+0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "
+> " 0 "" {MPLTEXT 1 0 0 "" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 
+"" }}}{EXCHG {PARA 0 "> " 0 "" {MPLTEXT 1 0 0 "" }}}}{MARK "2 0 0" 0 }
+{VIEWOPTS 1 1 0 1 1 1803 1 1 1 1 }{PAGENUMBERS 0 1 2 33 1 1 }

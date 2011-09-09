@@ -1,0 +1,308 @@
+%!PS-Adobe-3.0 EPSF-2.0
+%%Title: Maple plot
+%%Creator: Maple 
+%%Pages:  1
+%%BoundingBox: 7 95 511 655 
+%%DocumentNeededResources: font Helvetica
+%%EndComments
+20 dict begin
+gsave
+/drawborder false def
+/m {moveto} def
+/l {lineto} def
+/C {setrgbcolor} def
+/Y /setcmykcolor where { %%ifelse Use built-in operator
+       /setcmykcolor get
+   }{ %%ifelse Emulate setcmykcolor with setrgbcolor
+       { %%def
+           1 sub 3 { %%repeat
+               3 index add neg dup 0 lt { pop 0 } if 3 1 roll
+           } repeat setrgbcolor
+       } bind
+   } ifelse def
+/G {setgray} def
+/S {stroke} def
+/NP {newpath} def
+%%%%This draws a filled polygon and avoids bugs/features
+%%%%   of some postscript interpreters
+%%%%GHOSTSCRIPT: has a bug in reversepath - removing
+%%%%the call to reversepath is a sufficient work around
+/P {gsave fill grestore reversepath stroke} def
+%%%%This function is needed for drawing text.  It takes two arguments: a
+%%%%string and a rotation. It outputs width and height.
+/stringbbox {
+    gsave NP 0 0 m    % Set origin for easy calculations.
+    dup rotate exch   % Set orientation, and put string on top.
+    false charpath flattenpath
+    0 exch sub rotate % Undo rotation.
+    pathbbox 4 2 roll pop pop  % Get dimens. of our string.
+    1.1 mul cvi exch 1.1 mul cvi exch % Pad some.
+    grestore} def
+/thin 3 def
+/medium 7 def
+/thick 16 def
+/boundarythick 20 def % thichess of bounding box
+%%IncludeResource: font Helvetica
+72.000000 72.000000 translate
+/defaultTitleFont {/Helvetica findfont 219 scalefont setfont} def
+/defaultFont {/Helvetica findfont 154 scalefont setfont} def
+0.0936 0.0936 scale
+1 setlinejoin
+1 setlinecap
+0.0 setgray
+/inch {72 mul} def
+/fheight 0.35 inch neg def
+    0 G
+medium setlinewidth
+[] 0 setdash defaultFont
+  0.3 G
+medium setlinewidth
+NP 4482 798 m 4500 798 l
+S
+NP 4465 798 m 4482 798 l
+S
+NP 4447 798 m 4465 798 l
+S
+NP 4430 798 m 4447 798 l
+S
+NP 4411 798 m 4430 798 l
+S
+NP 4393 798 m 4411 798 l
+S
+NP 4374 798 m 4393 798 l
+S
+NP 4354 798 m 4374 798 l
+S
+NP 4334 798 m 4354 798 l
+S
+NP 4312 798 m 4334 798 l
+S
+NP 4291 798 m 4312 798 l
+S
+NP 4269 798 m 4291 798 l
+S
+NP 4247 798 m 4269 798 l
+S
+NP 4223 798 m 4247 798 l
+S
+NP 4201 798 m 4223 798 l
+S
+NP 4176 798 m 4201 798 l
+S
+NP 4151 798 m 4176 798 l
+S
+NP 4123 798 m 4151 798 l
+S
+NP 4097 798 m 4123 798 l
+S
+NP 4068 798 m 4097 798 l
+S
+NP 4039 799 m 4068 798 l
+S
+NP 4009 799 m 4039 799 l
+S
+NP 3980 799 m 4009 799 l
+S
+NP 3946 799 m 3980 799 l
+S
+NP 3911 799 m 3946 799 l
+S
+NP 3878 799 m 3911 799 l
+S
+NP 3840 799 m 3878 799 l
+S
+NP 3802 799 m 3840 799 l
+S
+NP 3759 799 m 3802 799 l
+S
+NP 3719 799 m 3759 799 l
+S
+NP 3671 799 m 3719 799 l
+S
+NP 3627 799 m 3671 799 l
+S
+NP 3572 799 m 3627 799 l
+S
+NP 3522 799 m 3572 799 l
+S
+NP 3464 799 m 3522 799 l
+S
+NP 3399 799 m 3464 799 l
+S
+NP 3328 798 m 3399 799 l
+S
+NP 3260 798 m 3328 798 l
+S
+NP 3175 799 m 3260 798 l
+S
+NP 3082 799 m 3175 799 l
+S
+NP 2977 800 m 3082 799 l
+S
+NP 2860 802 m 2977 800 l
+S
+NP 2729 806 m 2860 802 l
+S
+NP 2558 814 m 2729 806 l
+S
+NP 2340 833 m 2558 814 l
+S
+NP 2205 852 m 2340 833 l
+S
+NP 2043 888 m 2205 852 l
+S
+NP 1959 914 m 2043 888 l
+S
+NP 1865 951 m 1959 914 l
+S
+NP 1758 1004 m 1865 951 l
+S
+NP 1635 1087 m 1758 1004 l
+S
+NP 1467 1253 m 1635 1087 l
+S
+NP 1253 1593 m 1467 1253 l
+S
+NP 1189 1734 m 1253 1593 l
+S
+NP 1120 1915 m 1189 1734 l
+S
+NP 1045 2152 m 1120 1915 l
+S
+NP 961 2471 m 1045 2152 l
+S
+NP 916 2673 m 961 2471 l
+S
+NP 868 2914 m 916 2673 l
+S
+NP 817 3203 m 868 2914 l
+S
+NP 763 3554 m 817 3203 l
+S
+NP 705 3987 m 763 3554 l
+S
+NP 642 4529 m 705 3987 l
+S
+NP 574 5221 m 642 4529 l
+S
+NP 500 6122 m 574 5221 l
+S
+    0 G
+NP 500 692 m 500 6230 l
+S
+thin setlinewidth
+NP 449 798 m 500 798 l
+S
+NP 474 1060 m 500 1060 l
+S
+NP 474 1322 m 500 1322 l
+S
+NP 474 1585 m 500 1585 l
+S
+NP 474 1847 m 500 1847 l
+S
+NP 449 2109 m 500 2109 l
+S
+NP 474 2371 m 500 2371 l
+S
+NP 474 2634 m 500 2634 l
+S
+NP 474 2896 m 500 2896 l
+S
+NP 474 3158 m 500 3158 l
+S
+NP 449 3420 m 500 3420 l
+S
+NP 474 3683 m 500 3683 l
+S
+NP 474 3945 m 500 3945 l
+S
+NP 474 4207 m 500 4207 l
+S
+NP 474 4469 m 500 4469 l
+S
+NP 449 4732 m 500 4732 l
+S
+NP 474 4994 m 500 4994 l
+S
+NP 474 5256 m 500 5256 l
+S
+NP 474 5518 m 500 5518 l
+S
+NP 474 5781 m 500 5781 l
+S
+NP 449 6043 m 500 6043 l
+S
+medium setlinewidth
+NP 500 798 m 4500 798 l
+S
+thin setlinewidth
+NP 607 779 m 607 798 l
+S
+NP 702 779 m 702 798 l
+S
+NP 787 760 m 787 798 l
+S
+NP 1346 779 m 1346 798 l
+S
+NP 1673 779 m 1673 798 l
+S
+NP 1905 779 m 1905 798 l
+S
+NP 2084 779 m 2084 798 l
+S
+NP 2231 779 m 2231 798 l
+S
+NP 2356 779 m 2356 798 l
+S
+NP 2463 779 m 2463 798 l
+S
+NP 2558 779 m 2558 798 l
+S
+NP 2643 760 m 2643 798 l
+S
+NP 3202 779 m 3202 798 l
+S
+NP 3529 779 m 3529 798 l
+S
+NP 3761 779 m 3761 798 l
+S
+NP 3941 779 m 3941 798 l
+S
+NP 4088 779 m 4088 798 l
+S
+NP 4212 779 m 4212 798 l
+S
+NP 4320 779 m 4320 798 l
+S
+NP 4415 779 m 4415 798 l
+S
+NP 4499 760 m 4499 798 l
+S
+medium setlinewidth
+(0) dup 0 stringbbox 798 exch sub exch 427 exch sub exch m show
+(0.5) dup 0 stringbbox 2 idiv 2109 exch sub exch 427 exch sub exch m show
+(1) dup 0 stringbbox 2 idiv 3420 exch sub exch 427 exch sub exch m show
+(1.5) dup 0 stringbbox 2 idiv 4732 exch sub exch 427 exch sub exch m show
+(2) dup 0 stringbbox 2 idiv 6043 exch sub exch 427 exch sub exch m show
+(Gain\(linear\)) dup 0 stringbbox 2 idiv 3514 exch sub exch 125 exch sub exch m show
+(1e+07) dup 0 stringbbox 743 exch sub exch 2 idiv 787 exch sub exch m show
+(1e+08) dup 0 stringbbox 743 exch sub exch 2 idiv 2643 exch sub exch m show
+(1e+09) dup 0 stringbbox 743 exch sub exch 2 idiv 4499 exch sub exch m show
+(Freq\(Hz\)) dup 0 stringbbox 355 exch sub exch 2 idiv 2500 exch sub exch m show
+boundarythick setlinewidth
+% The following draws a box around the plot,
+% if the variable drawborder is true
+drawborder { 
+/bd boundarythick 2 idiv def
+[] 0 setdash 
+NP bd bd m bd 6923 bd sub l 
+5000 bd sub 6923 bd sub l 
+5000 bd sub bd l 
+bd bd l S
+} if % end of if to draw the border
+
+showpage
+grestore
+end
+%%EOF

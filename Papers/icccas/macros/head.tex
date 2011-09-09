@@ -1,0 +1,73 @@
+%%%This is a file containing several types of headers
+%%% for SLIDES. To be used with seminar.sty and others
+%%%
+%%% _______ HEADERS of SLIDES ________
+%%% _____ & other related items ______
+%%%
+
+%%%My pessimistic INAOe logo (with the small e)
+\def\inaoe{INAO\kern-0.1667em \lower.5ex\hbox{E}}
+\def\xinaoe{INAO\kern-0.1667em \lower.5ex\begin{rotate}{-45}\hbox{E}\end{rotate}}
+\def\cad{${\cal{C}}$\kern-0.30em \lower-.4ex\hbox{${\cal{A}}$}\kern-0.20em \lower0.8ex \hbox{{${\cal{D}}$}}}
+
+
+%%% Some latex-related logos
+\def\AmSTeX{$\cal{A} \kern-0.16667em\lower.5ex\hbox{$\cal M$}\kern-0.075em\hbox{$\cal S$}$-\TeX}
+\def\AmSLaTeX{$\cal{A} \kern-0.16667em\lower.5ex\hbox{$\cal M$}\kern-0.075em\hbox{$\cal S$}$-\LaTeX}
+\def\LAmSTeX{L\kern -.36em\raise.6ex\hbox{\sixrm A}\kern-.15em\lower.5ex\hbox{$\cal M$}\kern-0.075em\hbox{$\cal S$}-\TeX}
+\def\relat{\bullet\kern-0.567em \raisebox{0.5mm}{\underline{\hspace{4mm}}}\kern-0.567em\bullet}
+
+%% MYitemize environment
+\newenvironment{MYitemize}{%
+\renewcommand{\labelitemi}{\(\spadesuit\)}%
+\begin{itemize}}{\end{itemize}}
+
+%% *** normal ***
+\newcommand{\heading}[1]{\begin{center}\large\bf #1\end{center}}
+
+%% *** with shadowbox box (as in a window) ***
+\newcommand{\Heading}[1]{%
+  \begin{center}
+    \large\bf
+    \shadowbox{#1}%
+  \end{center}
+  \vspace{1ex minus 1ex}}
+
+%% *** with doublebox box (as in a frame) ***
+\newcommand{\Dheading}[1]{%
+  \begin{center}
+    \large\bf
+    \doublebox{#1}%
+  \end{center}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box ***
+\newcommand{\oheading}[1]{%
+  \begin{center}
+    \large\bf
+    \ovalbox{#1}%
+  \end{center}
+  \vspace{1ex minus 1ex}}
+
+%% *** with ovalbox box  PLUS shadow (not visible in xdvi!!!) ***
+\newcommand{\shoheading}[1]{%
+  \begin{center}
+    \large\bf
+    \textshade{roundcorners}{#1}%
+  \end{center}
+  \vspace{1ex minus 1ex}}
+
+%% *** with big_oval box ***
+\newcommand{\Oheading}[1]{%
+  \begin{center}
+    \large\bf
+    \Ovalbox{#1}%
+  \end{center}
+  \vspace{1ex minus 1ex}}
+
+%%%The next files contain the same headers as above but
+%%% shifted to the right and to the left.
+%%%
+\input{/home/jarocho/tex/macros/headR.tex}%%Headers flushed right
+\input{/home/jarocho/tex/macros/headL.tex}%%Headers flushed left
+

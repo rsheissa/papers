@@ -1,0 +1,5 @@
+
+2,3,4,5,6,V1_rc,V2_rc,FF1_rc1,FF1_rc2,FR1_rc1,FR1_rc2,FF2_rc1,FF2_rc2,FR2_rc1,FR2_rc2,1 & 1~1 & 44.760 &  \\ \hline
+1,2,4,5,6,V1_rc,V2_rc,FF1_rc1,FF1_rc2,FR1_rc1,FR1_rc2,FF2_rc1,FF2_rc2,FR2_rc1,FR2_rc2,3 & 1~1 & 44.729 &  \\ \hline
+1,2,3,5,6,V1_rc,V2_rc,FF1_rc1,FF1_rc2,FR1_rc1,FR1_rc2,FF2_rc1,FF2_rc2,FR2_rc1,FR2_rc2,4 & 1~1 & 45.679 &  \\ \hline
+1,2,3,4,6,V1_rc,V2_rc,FF1_rc1,FF1_rc2,FR1_rc1,FR1_rc2,FF2_rc1,FF2_rc2,FR2_rc1,FR2_rc2,5 & 1~1 & 44.770 &  \\ \hline

@@ -1,0 +1,51 @@
+This is BibTeX, Version 0.99c (TeX Live 2009)
+The top-level auxiliary file: reord_eng.aux
+The style file: amsplain.bst
+Database file #1: reord.bib
+Warning--missing pages in cont_quasi
+Warning--missing pages in homo_ECCTD
+Warning--missing journal name in Schwa_book
+Warning--missing pages in Schwa_book
+Warning--missing pages in homo_iscas05
+You've used 18 entries,
+            2213 wiz_defined-function locations,
+            613 strings with 6930 characters,
+and the built_in function-call counts, 4960 in all, are:
+= -- 422
+> -- 212
+< -- 0
++ -- 91
+- -- 66
+* -- 415
+:= -- 819
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 88
+chr.to.int$ -- 0
+cite$ -- 23
+duplicate$ -- 198
+empty$ -- 443
+format.name$ -- 66
+if$ -- 1022
+int.to.chr$ -- 0
+int.to.str$ -- 18
+missing$ -- 36
+newline$ -- 64
+num.names$ -- 35
+pop$ -- 114
+preamble$ -- 1
+purify$ -- 70
+quote$ -- 0
+skip$ -- 110
+stack$ -- 0
+substring$ -- 295
+swap$ -- 23
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 68
+warning$ -- 5
+while$ -- 45
+width$ -- 20
+write$ -- 155
+(There were 5 warnings)

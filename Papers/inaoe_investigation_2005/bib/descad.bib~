@@ -1,0 +1,41 @@
+@article{c++1,
+	Author	= "Stroustrup, B.",
+	Title	= "What Is Object-oriented Programming? (1991 Revised Version)",
+	journal = "Proc. 1st European Software Festival",
+	Month	= "February",
+	Year	=  1991}
+
+@InProceedings{verhoeven1,
+  author = 	 {Verhoeven, C.J.M. and van Staveren, A.},
+  title = 	 {Sys\-te\-ma\-tic Biasing of Negative-Feedback Amplifiers},
+  booktitle =	 {Proceedings of the Design Automation and Test in Europe Conference},
+  pages =	 {318-322},
+  year =	 1996,
+  organization = {DATE'1999}
+}
+
+@PhdThesis{stoffels,
+  author = 	 {Stoffels, J.},
+  title = 	 {Automation in High-Performance Negative Feedback Amplifier Design},
+  school = 	 {Delft University of Technology},
+  year = 	 1988
+}
+
+@Book{verhoeven,
+	Author	= "C.J.M. Verhoeven and A.van Staveren and G.L.E. Monna and M.H.L. Kouwenhoven",
+	Title	= "Strutured Electronic Design, Negative-feedback Amplifiers",
+        Publisher= "Delftese Uitgevers Maatschappij",     
+	Year	= 2001}
+
+@Book{nordholt,
+        Author  = "E.H.\ Nordholt",
+        Title   = "Design of High Performance Negative-feedback amplifiers",
+        Publisher= "Elsevier Scientific",
+        Year    = 1983}
+@Book{booch,
+  author =	 "G. Booch",
+  title = 	 "Object Oriented Design With Applications",
+  publisher = 	 {The Benjamin/Cummings Publishing Company, Inc.},
+  year = 	 1991
+}
+
